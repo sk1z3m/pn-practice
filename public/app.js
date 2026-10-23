@@ -268,6 +268,21 @@
   }
 
   // ---------- practice ----------
+  // Without a study code, the server can't remember what was served, so the browser keeps the list.
+  const LS_SEEN = 'pn_seen';
+  function deviceSeen() { try { return JSON.parse(store.get(LS_SEEN) || '[]'); } catch { return []; } }
+  function rememberSeen(ids) {
+    if (hasCode()) return;
+    const list = deviceSeen().filter((x) => !ids.includes(x)).concat(ids).slice(-2000);
+    store.set(LS_SEEN, JSON.stringify(list));
+  }
+  async function startPractice(course, topics, count) {
+    const body = { course, topics, count };
+    if (!hasCode()) body.seen = deviceSeen();
+    const r = await api('/api/practice/start', { method: 'POST', body });
+    rememberSeen(r.questions.map((q) => q.id));
+    return r;
+  }
   async function practiceSetup(course) {
     const cat = await api('/api/catalog');
     const c = cat.courses.find((x) => x.course === course);
@@ -291,7 +306,7 @@
       const topics = boxes().filter((b) => b.checked).map((b) => b.value);
       if (!topics.length) { document.getElementById('msg').innerHTML = errorBox('Pick at least one topic'); return; }
       try {
-        const r = await api('/api/practice/start', { method: 'POST', body: { course, topics, count: +document.getElementById('count').value } });
+        const r = await startPractice(course, topics, +document.getElementById('count').value);
         runPractice(course, topics, r.questions);
       } catch (e) { document.getElementById('msg').innerHTML = errorBox(e); }
     };
@@ -354,7 +369,7 @@
         }).join('')}` : '<div class="notice good">Perfect round!</div>'}`);
       document.getElementById('again').onclick = async () => {
         try {
-          const r = await api('/api/practice/start', { method: 'POST', body: { course, topics, count: questions.length } });
+          const r = await startPractice(course, topics, questions.length);
           runPractice(course, topics, r.questions);
         } catch (e) { html(errorBox(e)); }
       };
@@ -564,6 +579,8 @@
       <h2>Practice</h2>
       <div class="card">
         <p class="small muted">${r.weeklyCorrect} different questions answered correctly in the last 7 days.</p>
+        ${(r.coverage || []).filter((c) => c.total).map((c) => `<div class="small" style="margin:8px 0 2px"><span>${esc(c.course)}</span><span class="muted" style="float:right">seen ${c.seen} of ${c.total}</span></div>
+          <div class="progress" style="margin:0 0 6px"><div style="width:${pct(c.seen, c.total)}%"></div></div>`).join('')}
         ${r.practice.length ? `<table><thead><tr><th>Course</th><th class="num">Answered</th><th class="num">Correct</th></tr></thead><tbody>
           ${r.practice.map((p) => `<tr><td>${esc(p.course)}</td><td class="num">${p.answered}</td><td class="num">${pct(p.correct, p.answered)}%</td></tr>`).join('')}</tbody></table>`
           : '<div class="empty">No practice yet.</div>'}

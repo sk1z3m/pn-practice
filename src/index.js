@@ -108,7 +108,7 @@ async function me(env, request) {
   const p = await requirePlayer(env, request);
   const now = Date.now();
   const week = now - 7 * 864e5;
-  const [practice, weekly, ranked] = await env.DB.batch([
+  const [practice, weekly, ranked, coverage] = await env.DB.batch([
     env.DB.prepare(`SELECT q.course, COUNT(*) AS answered, SUM(pa.correct) AS correct
       FROM practice_answers pa JOIN questions q ON q.id = pa.question_id
       WHERE pa.player_id = ? GROUP BY q.course ORDER BY q.course`).bind(p.id),
@@ -117,6 +117,9 @@ async function me(env, request) {
     env.DB.prepare(`SELECT t.id, t.title, a.score, a.total, a.submitted_at FROM ranked_attempts a
       JOIN ranked_tests t ON t.id = a.test_id WHERE a.player_id = ? AND a.submitted_at IS NOT NULL
       ORDER BY a.submitted_at DESC`).bind(p.id),
+    env.DB.prepare(`SELECT q.course, COUNT(*) AS total, COUNT(s.question_id) AS seen
+      FROM questions q LEFT JOIN question_seen s ON s.question_id = q.id AND s.player_id = ?
+      WHERE q.status = 'approved' GROUP BY q.course ORDER BY q.course`).bind(p.id),
   ]);
   return json({
     nickname: p.nickname,
@@ -126,6 +129,7 @@ async function me(env, request) {
     practice: practice.results,
     weeklyCorrect: weekly.results[0]?.n || 0,
     ranked: ranked.results,
+    coverage: coverage.results,
   });
 }
 
@@ -181,23 +185,47 @@ async function practiceStart(env, request) {
   const { results: pool } = await env.DB.prepare(sql).bind(...binds).all();
   if (!pool.length) throw new HttpError(404, 'No questions available for that selection yet');
 
-  // Weight toward questions this student last got wrong (3), then unseen (2), then last-correct (1).
+  // Rotation: unseen questions first, then the ones seen longest ago, so a student works through the
+  // whole pool before anything repeats. Up to 30% of a round is spaced review of questions they got
+  // wrong, but only once at least 12 hours have passed since they last saw them.
   const player = await getPlayer(env, request);
-  const last = new Map();
+  const seen = new Map();      // question id -> last time served
+  const lastResult = new Map(); // question id -> 1 correct / 0 wrong (most recent answer)
   if (player) {
-    const { results } = await env.DB.prepare(
-      'SELECT question_id, correct FROM practice_answers WHERE player_id = ? ORDER BY answered_at'
-    ).bind(player.id).all();
-    for (const r of results) last.set(r.question_id, r.correct);
+    const [sv, ans] = await env.DB.batch([
+      env.DB.prepare('SELECT question_id, last_seen FROM question_seen WHERE player_id = ?').bind(player.id),
+      env.DB.prepare('SELECT question_id, correct FROM practice_answers WHERE player_id = ? ORDER BY answered_at').bind(player.id),
+    ]);
+    for (const r of sv.results) seen.set(r.question_id, r.last_seen);
+    for (const r of ans.results) lastResult.set(r.question_id, r.correct);
+  } else if (Array.isArray(body.seen)) {
+    // No study code: the browser sends the ids it has been served (oldest first)
+    body.seen.slice(-2000).forEach((id, i) => { const n = parseInt(id, 10); if (Number.isInteger(n)) seen.set(n, i + 1); });
   }
-  const keyed = pool.map((q) => {
-    const w = !last.has(q.id) ? 2 : last.get(q.id) ? 1 : 3;
-    return { q, k: Math.pow(Math.random(), 1 / w) }; // weighted sampling without replacement
-  });
-  keyed.sort((a, b) => b.k - a.k);
-  const picked = keyed.slice(0, count).map((x) => presentQuestion(x.q));
-  return json({ questions: picked, poolSize: pool.length });
+  const now = Date.now();
+  const REVIEW_GAP = 12 * 3600 * 1000;
+  const fresh = [], review = [], rest = [];
+  for (const q of shuffle(pool)) {
+    if (!seen.has(q.id)) fresh.push(q);
+    else if (player && lastResult.get(q.id) === 0 && now - seen.get(q.id) >= REVIEW_GAP) review.push(q);
+    else rest.push(q);
+  }
+  review.sort((a, b) => seen.get(a.id) - seen.get(b.id));
+  rest.sort((a, b) => seen.get(a.id) - seen.get(b.id)); // longest ago first; ties stay shuffled
+  const reviewSlots = Math.min(review.length, Math.floor(count * 0.3));
+  const chosen = [...review.slice(0, reviewSlots), ...fresh, ...rest, ...review.slice(reviewSlots)].slice(0, count);
+  const picked = shuffle(chosen).map(presentQuestion);
+  if (player) await markSeen(env, player.id, chosen.map((q) => q.id), now);
+  return json({ questions: picked, poolSize: pool.length, unseen: fresh.length });
 }
+
+async function markSeen(env, playerId, ids, now = Date.now()) {
+  if (!ids.length) return;
+  const stmt = env.DB.prepare(`INSERT INTO question_seen (player_id, question_id, times_seen, last_seen) VALUES (?, ?, 1, ?)
+    ON CONFLICT(player_id, question_id) DO UPDATE SET times_seen = times_seen + 1, last_seen = excluded.last_seen`);
+  await env.DB.batch(ids.map((id) => stmt.bind(playerId, id, now)));
+}
+
 
 async function practiceAnswer(env, request) {
   const body = await readBody(request);
@@ -267,6 +295,8 @@ async function rankedStart(env, request, id) {
   if (!a) {
     await env.DB.prepare('INSERT OR IGNORE INTO ranked_attempts (test_id, player_id, started_at) VALUES (?, ?, ?)')
       .bind(id, p.id, now).run();
+    const ids = (await env.DB.prepare('SELECT question_id FROM ranked_questions WHERE test_id = ?').bind(id).all()).results.map((r) => r.question_id);
+    await markSeen(env, p.id, ids, now);
     a = await env.DB.prepare('SELECT * FROM ranked_attempts WHERE test_id = ? AND player_id = ?').bind(id, p.id).first();
   }
   const qs = await loadTestQuestions(env, id);
@@ -544,6 +574,7 @@ async function adminDeleteQuestion(env, id) {
   if (used.n) throw new HttpError(409, 'This question is part of a ranked test — retire it instead of deleting');
   await env.DB.batch([
     env.DB.prepare('DELETE FROM practice_answers WHERE question_id = ?').bind(id),
+    env.DB.prepare('DELETE FROM question_seen WHERE question_id = ?').bind(id),
     env.DB.prepare('DELETE FROM flags WHERE question_id = ?').bind(id),
     env.DB.prepare('DELETE FROM questions WHERE id = ?').bind(id),
   ]);
@@ -632,7 +663,8 @@ async function adminPlayers(env) {
   const { results } = await env.DB.prepare(`SELECT p.id, p.nickname, p.hidden, p.leaderboard_opt_out AS optedOut, p.created_at,
       (SELECT COUNT(*) FROM practice_answers pa WHERE pa.player_id = p.id) AS practiceAnswers,
       (SELECT COUNT(*) FROM ranked_attempts a WHERE a.player_id = p.id AND a.submitted_at IS NOT NULL) AS rankedTests,
-      (SELECT MAX(answered_at) FROM practice_answers pa WHERE pa.player_id = p.id) AS lastPractice
+      (SELECT MAX(answered_at) FROM practice_answers pa WHERE pa.player_id = p.id) AS lastPractice,
+      (SELECT COUNT(*) FROM question_seen s WHERE s.player_id = p.id) AS questionsSeen
     FROM players p ORDER BY p.created_at DESC LIMIT 1000`).all();
   return json({ players: results });
 }
@@ -671,9 +703,10 @@ async function deleteSelf(env, request) {
 
 async function deletePlayerData(env, p) {
   const id = p.id;
-  const [, practice, attempts] = await env.DB.batch([
+  const [, practice, , attempts] = await env.DB.batch([
     env.DB.prepare('UPDATE flags SET player_id = NULL WHERE player_id = ?').bind(id),
     env.DB.prepare('DELETE FROM practice_answers WHERE player_id = ?').bind(id),
+    env.DB.prepare('DELETE FROM question_seen WHERE player_id = ?').bind(id),
     env.DB.prepare('DELETE FROM ranked_attempts WHERE player_id = ?').bind(id),
     env.DB.prepare('DELETE FROM players WHERE id = ?').bind(id),
   ]);

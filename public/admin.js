@@ -471,9 +471,9 @@ Reply with ONLY valid JSON in exactly this format, no other text:
       <p class="small muted">Study codes aren't stored and can't be shown. You can rename a nickname, hide someone from leaderboards, or delete them entirely. "Opted out" means the student chose to stay off leaderboards.</p>
       <div id="msg"></div>
       <div class="card table-wrap">
-        ${r.players.length ? `<table><thead><tr><th>Nickname</th><th>Joined</th><th class="num">Practice</th><th class="num">Ranked</th><th></th></tr></thead><tbody>
+        ${r.players.length ? `<table><thead><tr><th>Nickname</th><th>Joined</th><th class="num">Seen</th><th class="num">Practice</th><th class="num">Ranked</th><th></th></tr></thead><tbody>
         ${r.players.map((p) => `<tr data-id="${p.id}"><td>${esc(p.nickname)}${p.hidden ? ' <span class="pill closed">hidden</span>' : ''}${p.optedOut ? ' <span class="pill">opted out</span>' : ''}</td>
-          <td class="small">${fmtDate(p.created_at)}</td><td class="num">${p.practiceAnswers}</td><td class="num">${p.rankedTests}</td>
+          <td class="small">${fmtDate(p.created_at)}</td><td class="num">${p.questionsSeen}</td><td class="num">${p.practiceAnswers}</td><td class="num">${p.rankedTests}</td>
           <td class="row"><button class="small secondary" data-act="rename">Rename</button>
           <button class="small ghost" data-act="hide" data-h="${p.hidden ? 0 : 1}">${p.hidden ? 'Unhide' : 'Hide'}</button>
           <button class="small danger" data-act="delete" data-nick="${esc(p.nickname)}">Delete</button></td></tr>`).join('')}
