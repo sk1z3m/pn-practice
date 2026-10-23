@@ -468,14 +468,15 @@ Reply with ONLY valid JSON in exactly this format, no other text:
     const r = await api('/api/admin/players');
     html(`
       <h1>Players</h1>
-      <p class="small muted">Study codes aren't stored and can't be shown. You can rename a nickname or hide someone from leaderboards. "Opted out" means the student chose to stay off leaderboards.</p>
+      <p class="small muted">Study codes aren't stored and can't be shown. You can rename a nickname, hide someone from leaderboards, or delete them entirely. "Opted out" means the student chose to stay off leaderboards.</p>
       <div id="msg"></div>
       <div class="card table-wrap">
         ${r.players.length ? `<table><thead><tr><th>Nickname</th><th>Joined</th><th class="num">Practice</th><th class="num">Ranked</th><th></th></tr></thead><tbody>
         ${r.players.map((p) => `<tr data-id="${p.id}"><td>${esc(p.nickname)}${p.hidden ? ' <span class="pill closed">hidden</span>' : ''}${p.optedOut ? ' <span class="pill">opted out</span>' : ''}</td>
           <td class="small">${fmtDate(p.created_at)}</td><td class="num">${p.practiceAnswers}</td><td class="num">${p.rankedTests}</td>
           <td class="row"><button class="small secondary" data-act="rename">Rename</button>
-          <button class="small ${p.hidden ? 'ghost' : 'danger'}" data-act="hide" data-h="${p.hidden ? 0 : 1}">${p.hidden ? 'Unhide' : 'Hide'}</button></td></tr>`).join('')}
+          <button class="small ghost" data-act="hide" data-h="${p.hidden ? 0 : 1}">${p.hidden ? 'Unhide' : 'Hide'}</button>
+          <button class="small danger" data-act="delete" data-nick="${esc(p.nickname)}">Delete</button></td></tr>`).join('')}
         </tbody></table>` : '<div class="empty">No players yet.</div>'}
       </div>`);
     document.querySelectorAll('[data-act]').forEach((b) => (b.onclick = async () => {
@@ -484,6 +485,13 @@ Reply with ONLY valid JSON in exactly this format, no other text:
         if (b.dataset.act === 'rename') {
           const n = prompt('New nickname'); if (!n) return;
           await api(`/api/admin/players/${id}`, { method: 'PUT', body: { nickname: n } });
+        } else if (b.dataset.act === 'delete') {
+          const nick = b.dataset.nick;
+          if (!confirm(`Permanently delete ${nick}?\n\nThis removes their study code, nickname, practice history and ranked test attempts. Their code will stop working. Any questions they flagged stay, but become anonymous.\n\nThis can't be undone.`)) return;
+          const r = await api(`/api/admin/players/${id}`, { method: 'DELETE' });
+          await players();
+          flash(document.getElementById('msg'), `Deleted ${r.deleted}: ${r.practiceAnswers} practice answers and ${r.rankedAttempts} ranked attempts removed.`);
+          return;
         } else {
           await api(`/api/admin/players/${id}`, { method: 'PUT', body: { hidden: !!+b.dataset.h } });
         }

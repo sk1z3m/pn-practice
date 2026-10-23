@@ -654,6 +654,19 @@ async function adminUpdatePlayer(env, request, id) {
   return json({ ok: true });
 }
 
+// Permanently delete a player and their history. Their flags are kept but made anonymous.
+async function adminDeletePlayer(env, id) {
+  const p = await env.DB.prepare('SELECT id, nickname FROM players WHERE id = ?').bind(id).first();
+  if (!p) throw new HttpError(404, 'Player not found');
+  const [, practice, attempts] = await env.DB.batch([
+    env.DB.prepare('UPDATE flags SET player_id = NULL WHERE player_id = ?').bind(id),
+    env.DB.prepare('DELETE FROM practice_answers WHERE player_id = ?').bind(id),
+    env.DB.prepare('DELETE FROM ranked_attempts WHERE player_id = ?').bind(id),
+    env.DB.prepare('DELETE FROM players WHERE id = ?').bind(id),
+  ]);
+  return json({ deleted: p.nickname, practiceAnswers: practice.meta.changes, rankedAttempts: attempts.meta.changes });
+}
+
 // ---------- router ----------
 
 async function route(request, env) {
@@ -701,7 +714,10 @@ async function route(request, env) {
     if (path === '/api/admin/flags' && m === 'GET') return adminFlags(env, url);
     if (path === '/api/admin/flags/resolve' && m === 'POST') return adminResolveFlags(env, request);
     if (path === '/api/admin/players' && m === 'GET') return adminPlayers(env);
-    if ((x = path.match(/^\/api\/admin\/players\/([\w-]+)$/)) && m === 'PUT') return adminUpdatePlayer(env, request, x[1]);
+    if ((x = path.match(/^\/api\/admin\/players\/([\w-]+)$/))) {
+      if (m === 'PUT') return adminUpdatePlayer(env, request, x[1]);
+      if (m === 'DELETE') return adminDeletePlayer(env, x[1]);
+    }
   }
   return fail('Not found', 404);
 }
