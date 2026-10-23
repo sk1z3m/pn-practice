@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>PN Practice Admin</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f6f8b'/%3E%3Cpath d='M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    main { max-width: 980px; }
+    header.top .inner { max-width: 980px; }
+    .qrow { display: grid; grid-template-columns: 22px 1fr; gap: 10px; }
+    .qrow ol { margin: 6px 0; padding-left: 22px; }
+    .qrow li.ans { color: var(--good); font-weight: 600; }
+    .bar { position: sticky; top: 52px; background: var(--bg); padding: 8px 0; z-index: 4; }
+    pre.prompt { white-space: pre-wrap; font-size: .85rem; background: var(--accent-soft); padding: 12px; border-radius: 8px; margin: 8px 0; }
+    .picker { max-height: 360px; overflow: auto; border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; }
+    .picker .check { align-items: flex-start; border-bottom: 1px solid var(--line); }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    @media (max-width: 600px) { .grid2 { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="inner">
+      <a class="brand" href="/admin">PN Practice · Admin</a>
+      <nav id="nav" style="display:none">
+        <a href="#questions" data-tab="questions">Questions</a>
+        <a href="#import" data-tab="import">Import</a>
+        <a href="#ranked" data-tab="ranked">Ranked</a>
+        <a href="#players" data-tab="players">Players</a>
+        <a href="/" target="_blank">Site ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main id="app"><p class="muted">Loading…</p></main>
+  <script src="/admin.js"></script>
+</body>
+</html>

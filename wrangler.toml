@@ -1,0 +1,14 @@
+name = "pn-practice"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+html_handling = "auto-trailing-slash"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "pn-practice-db"
+database_id = "32e1194a-4e6f-40dc-aa43-1d7c207de8e9"
+migrations_dir = "migrations"
