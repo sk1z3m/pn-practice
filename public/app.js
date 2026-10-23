@@ -270,6 +270,7 @@
   // ---------- practice ----------
   // Without a study code, the server can't remember what was served, so the browser keeps the list.
   const LS_SEEN = 'pn_seen';
+  const MAX_Q = 100; // largest practice round
   function deviceSeen() { try { return JSON.parse(store.get(LS_SEEN) || '[]'); } catch { return []; } }
   function rememberSeen(ids) {
     if (hasCode()) return;
@@ -294,19 +295,52 @@
         <strong>Topics</strong>
         <div class="row small" style="margin:4px 0"><a href="#" id="all">All</a> · <a href="#" id="none">None</a></div>
         <div id="topics">${c.topics.map((t) => `<label class="check"><input type="checkbox" value="${esc(t.topic)}" checked> ${esc(t.topic)} <span class="muted small">(${t.n})</span></label>`).join('')}</div>
-        <label class="field" style="margin-top:12px"><span>Number of questions</span>
-          <select id="count">${[5, 10, 20, 30].map((n) => `<option ${n === 10 ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
+        <div class="field" style="margin-top:12px"><span>Number of questions</span>
+          <div class="seg" id="countSeg" role="radiogroup" aria-label="Number of questions">
+            ${[10, 20, 40].map((n) => `<button type="button" role="radio" data-n="${n}" aria-checked="${n === 10}" class="${n === 10 ? 'on' : ''}">${n}</button>`).join('')}
+            <button type="button" role="radio" data-n="custom" aria-checked="false">Custom</button>
+          </div>
+          <div id="customWrap" hidden style="margin-top:8px">
+            <input type="number" id="customCount" min="1" max="${MAX_Q}" inputmode="numeric" placeholder="How many? (1–${MAX_Q})">
+          </div>
+          <div class="small muted" id="availNote" style="margin-top:6px"></div>
+        </div>
         <div id="msg"></div>
         <button id="go">Start practice</button>
       </div>`);
     const boxes = () => [...document.querySelectorAll('#topics input')];
-    document.getElementById('all').onclick = (e) => { e.preventDefault(); boxes().forEach((b) => (b.checked = true)); };
-    document.getElementById('none').onclick = (e) => { e.preventDefault(); boxes().forEach((b) => (b.checked = false)); };
+    const counts = Object.fromEntries(c.topics.map((t) => [t.topic, t.n]));
+    const available = () => boxes().filter((b) => b.checked).reduce((sum, b) => sum + (counts[b.value] || 0), 0);
+    let choice = 10;
+    const seg = document.getElementById('countSeg'), customWrap = document.getElementById('customWrap'), customInput = document.getElementById('customCount');
+    const wanted = () => (choice === 'custom' ? parseInt(customInput.value, 10) : choice);
+    const updateNote = () => {
+      const n = available(), w = wanted();
+      document.getElementById('availNote').textContent = !n ? 'Pick at least one topic.'
+        : Number.isInteger(w) && w > n ? `Only ${n} question${n === 1 ? '' : 's'} in the topics you picked, so you'll get all ${n}.`
+        : `${n} question${n === 1 ? '' : 's'} available in the topics you picked.`;
+    };
+    seg.onclick = (e) => {
+      const b = e.target.closest('button'); if (!b) return;
+      seg.querySelectorAll('button').forEach((x) => { x.classList.toggle('on', x === b); x.setAttribute('aria-checked', x === b); });
+      choice = b.dataset.n === 'custom' ? 'custom' : +b.dataset.n;
+      customWrap.hidden = choice !== 'custom';
+      if (choice === 'custom') customInput.focus();
+      updateNote();
+    };
+    customInput.oninput = () => { document.getElementById('msg').innerHTML = ''; updateNote(); };
+    document.getElementById('topics').onchange = updateNote;
+    document.getElementById('all').onclick = (e) => { e.preventDefault(); boxes().forEach((b) => (b.checked = true)); updateNote(); };
+    document.getElementById('none').onclick = (e) => { e.preventDefault(); boxes().forEach((b) => (b.checked = false)); updateNote(); };
+    updateNote();
     document.getElementById('go').onclick = async () => {
       const topics = boxes().filter((b) => b.checked).map((b) => b.value);
       if (!topics.length) { document.getElementById('msg').innerHTML = errorBox('Pick at least one topic'); return; }
+      const n = wanted();
+      if (!Number.isInteger(n) || n < 1 || n > MAX_Q) { document.getElementById('msg').innerHTML = errorBox(`Enter a number from 1 to ${MAX_Q}`); customInput.focus(); return; }
+      document.getElementById('msg').innerHTML = '';
       try {
-        const r = await startPractice(course, topics, +document.getElementById('count').value);
+        const r = await startPractice(course, topics, n);
         runPractice(course, topics, r.questions);
       } catch (e) { document.getElementById('msg').innerHTML = errorBox(e); }
     };

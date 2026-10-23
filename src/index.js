@@ -172,7 +172,7 @@ async function practiceStart(env, request) {
   const body = await readBody(request);
   const course = cleanText(body.course, 100);
   const topics = Array.isArray(body.topics) ? body.topics.map((t) => cleanText(t, 100)).filter(Boolean) : [];
-  const count = Math.min(Math.max(parseInt(body.count, 10) || 10, 1), 50);
+  const count = Math.min(Math.max(parseInt(body.count, 10) || 10, 1), 100);
   if (!course) throw new HttpError(400, 'Pick a course');
 
   let sql = `SELECT id, course, topic, stem, options FROM questions
