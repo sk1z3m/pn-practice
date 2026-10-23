@@ -24,7 +24,7 @@
     });
     let data = {};
     try { data = await res.json(); } catch {}
-    if (res.status === 401) { ss.del(); adminKey = null; login('Session expired or wrong password.'); throw new Error('Wrong admin password'); }
+    if (res.status === 401) { ss.del(); adminKey = null; login('That password didn\'t match the ADMIN_KEY secret. Check capitals and spaces.'); throw new Error('Wrong admin password'); }
     if (!res.ok) throw new Error(data.error || `Request failed (${res.status})`);
     return data;
   }
@@ -38,7 +38,7 @@
     html(`<h1>Admin sign in</h1>
       <div class="card" style="max-width:420px">
         ${msg ? `<div class="notice error">${esc(msg)}</div>` : ''}
-        <form id="f"><label class="field"><span>Admin password</span><input type="password" id="pw" autocomplete="current-password" required></label>
+        <form id="f"><label class="field"><span>Admin password</span><input type="password" id="pw" autocomplete="current-password" autocapitalize="off" autocorrect="off" spellcheck="false" required></label>
         <button>Sign in</button></form>
       </div>`);
     document.getElementById('f').onsubmit = async (e) => {

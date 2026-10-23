@@ -358,9 +358,10 @@ function timingSafeEqual(a, b) {
   return d === 0;
 }
 function requireAdmin(env, request) {
-  if (!env.ADMIN_KEY) throw new HttpError(503, 'Admin is disabled: set the ADMIN_KEY secret in Cloudflare');
-  const key = request.headers.get('x-admin-key') || '';
-  if (!timingSafeEqual(key, env.ADMIN_KEY)) throw new HttpError(401, 'Wrong admin password');
+  const expected = String(env.ADMIN_KEY || '').trim();
+  if (!expected) throw new HttpError(503, 'Admin is disabled: the ADMIN_KEY secret is not reaching the Worker');
+  const key = (request.headers.get('x-admin-key') || '').trim();
+  if (!timingSafeEqual(key, expected)) throw new HttpError(401, 'Wrong admin password');
 }
 
 function validateQuestion(raw, n) {
@@ -575,6 +576,9 @@ async function route(request, env) {
   if ((x = path.match(/^\/api\/leaderboard\/ranked\/(\d+)$/)) && m === 'GET') return leaderboardRanked(env, request, +x[1]);
   if (path === '/api/leaderboard/overall' && m === 'GET') return leaderboardOverall(env, request);
   if (path === '/api/leaderboard/practice' && m === 'GET') return leaderboardPractice(env, request);
+
+  // Public: says only whether an admin password is configured (never the password itself).
+  if (path === '/api/admin/status' && m === 'GET') return json({ configured: !!String(env.ADMIN_KEY || '').trim() });
 
   if (path.startsWith('/api/admin')) {
     requireAdmin(env, request);
