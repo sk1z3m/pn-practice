@@ -574,7 +574,12 @@
           ${r.ranked.map((t) => `<tr><td><a href="#/leaderboard/test${t.id}">${esc(t.title)}</a></td><td class="num">${t.score}/${t.total}</td></tr>`).join('')}</tbody></table>`
           : '<div class="empty">No ranked tests taken yet.</div>'}
       </div>
-      <p class="small"><a href="#" id="signout">Sign out on this device</a></p>`);
+      <p class="small"><a href="#" id="signout">Sign out on this device</a></p>
+      <h2>Delete my account</h2>
+      <div class="card" id="delCard">
+        <p class="small" style="margin-bottom:10px">Permanently removes your study code, nickname, practice history and ranked test scores. Your code will stop working and this can't be undone. Any questions you flagged stay for review, but without your name.</p>
+        <button class="small danger" id="delStart">Delete my account</button>
+      </div>`);
     document.getElementById('lbToggle').onclick = async (e) => {
       e.target.disabled = true;
       try {
@@ -594,6 +599,27 @@
         document.querySelector('main h1').textContent = res.nickname;
         msg.innerHTML = `<div class="notice good small">Nickname changed to ${esc(res.nickname)}.</div>`;
       } catch (err) { msg.innerHTML = errorBox(err); }
+    };
+    document.getElementById('delStart').onclick = () => {
+      const card = document.getElementById('delCard');
+      card.innerHTML = `<p class="small"><strong>Are you sure?</strong> Type <strong>DELETE</strong> below to permanently delete <strong>${esc(r.nickname)}</strong>.</p>
+        <input type="text" id="delConfirm" autocomplete="off" autocapitalize="characters" placeholder="DELETE">
+        <div id="delMsg" style="margin-top:8px"></div>
+        <div class="row" style="margin-top:10px"><button class="small danger" id="delGo" disabled>Delete permanently</button><button class="small ghost" id="delCancel">Cancel</button></div>`;
+      const input = document.getElementById('delConfirm'), go = document.getElementById('delGo');
+      input.focus();
+      input.oninput = () => { go.disabled = input.value.trim().toUpperCase() !== 'DELETE'; };
+      document.getElementById('delCancel').onclick = () => mePage();
+      go.onclick = async () => {
+        go.disabled = true;
+        try {
+          await api('/api/me/delete', { method: 'POST', body: { confirm: input.value } });
+          store.del(LS_CODE); store.del(LS_NICK); store.del('pn_skip');
+          html(`<h1>Account deleted</h1>
+            <div class="card"><p>Your study code, nickname and scores have been removed. Thanks for studying with PN Practice.</p>
+            <a class="btn" href="#/welcome">Back to start</a></div>`);
+        } catch (err) { document.getElementById('delMsg').innerHTML = errorBox(err); go.disabled = false; }
+      };
     };
     let shown = false;
     document.getElementById('reveal').onclick = (e) => {

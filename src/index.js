@@ -658,13 +658,26 @@ async function adminUpdatePlayer(env, request, id) {
 async function adminDeletePlayer(env, id) {
   const p = await env.DB.prepare('SELECT id, nickname FROM players WHERE id = ?').bind(id).first();
   if (!p) throw new HttpError(404, 'Player not found');
+  return json(await deletePlayerData(env, p));
+}
+
+// Students can delete their own account; they must send confirm: "DELETE"
+async function deleteSelf(env, request) {
+  const p = await requirePlayer(env, request);
+  const body = await readBody(request);
+  if (String(body.confirm || '').trim().toUpperCase() !== 'DELETE') throw new HttpError(400, 'Type DELETE to confirm');
+  return json(await deletePlayerData(env, p));
+}
+
+async function deletePlayerData(env, p) {
+  const id = p.id;
   const [, practice, attempts] = await env.DB.batch([
     env.DB.prepare('UPDATE flags SET player_id = NULL WHERE player_id = ?').bind(id),
     env.DB.prepare('DELETE FROM practice_answers WHERE player_id = ?').bind(id),
     env.DB.prepare('DELETE FROM ranked_attempts WHERE player_id = ?').bind(id),
     env.DB.prepare('DELETE FROM players WHERE id = ?').bind(id),
   ]);
-  return json({ deleted: p.nickname, practiceAnswers: practice.meta.changes, rankedAttempts: attempts.meta.changes });
+  return { deleted: p.nickname, practiceAnswers: practice.meta.changes, rankedAttempts: attempts.meta.changes };
 }
 
 // ---------- router ----------
@@ -678,6 +691,7 @@ async function route(request, env) {
   if (path === '/api/players' && m === 'POST') return createPlayer(env, request);
   if (path === '/api/me' && m === 'GET') return me(env, request);
   if (path === '/api/me/settings' && m === 'POST') return updateSettings(env, request);
+  if (path === '/api/me/delete' && m === 'POST') return deleteSelf(env, request);
   if (path === '/api/catalog' && m === 'GET') return catalog(env);
   if (path === '/api/practice/start' && m === 'POST') return practiceStart(env, request);
   if (path === '/api/practice/answer' && m === 'POST') return practiceAnswer(env, request);
