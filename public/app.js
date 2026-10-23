@@ -49,7 +49,7 @@
     [/^\/ranked\/(\d+)$/, (m) => rankedIntro(+m[1])],
     [/^\/review\/(\d+)$/, (m) => rankedReview(+m[1])],
     [/^\/leaderboard(?:\/(\w+))?$/, (m) => leaderboard(m[1])],
-    [/^\/me$/, mePage],
+    [/^\/(?:profile|me)$/, mePage],
   ];
   let lastHash = location.hash;
   async function router() {
@@ -237,8 +237,8 @@
         <li><strong>Ranked overall:</strong> total points across all ranked tests</li>
         <li><strong>Practice this week:</strong> questions you've answered correctly in practice</li>
       </ul>
-      <p class="small">If you stay on, your <strong>nickname</strong> and scores are visible to other students. If you opt out, you can still use everything (practice, ranked tests, your own scores in <strong>Me</strong>), but your nickname won't appear on any leaderboard.</p>
-      <p class="small muted">You can change this any time in the <strong>Me</strong> tab.</p>
+      <p class="small">If you stay on, your <strong>nickname</strong> and scores are visible to other students. If you opt out, you can still use everything (practice, ranked tests, your own scores in <strong>Profile</strong>), but your nickname won't appear on any leaderboard.</p>
+      <p class="small muted">You can change this any time in the <strong>Profile</strong> tab.</p>
       <div class="msg"></div>
       <div class="modal-actions">
         <button class="secondary" data-lb="out">Opt out of leaderboards</button>
@@ -253,7 +253,7 @@
       try {
         await api('/api/me/settings', { method: 'POST', body: { onLeaderboard: b.dataset.lb === 'in', lbPrompted: true } });
         wrap.remove();
-        if (b.dataset.lb === 'out') toast('You\'re off the leaderboards. Change this any time in Me.');
+        if (b.dataset.lb === 'out') toast('You\'re off the leaderboards. Change this any time in Profile.');
       } catch (err) {
         wrap.querySelector('.msg').innerHTML = errorBox(err);
         wrap.querySelectorAll('button').forEach((x) => (x.disabled = false));
@@ -507,7 +507,7 @@
             <div class="card" style="text-align:center">
               <div class="big-score">${res.score} / ${res.total}</div>
               <div>${pct(res.score, res.total)}% · ${fmtDur(res.durationMs)}${res.optedOut ? '' : ` · currently <strong>#${res.rank}</strong>`}</div>
-              ${res.optedOut ? '<div class="small muted" style="margin-top:6px">You\'ve opted out of leaderboards, so this score is private. Change it any time in Me.</div>' : ''}
+              ${res.optedOut ? '<div class="small muted" style="margin-top:6px">You\'ve opted out of leaderboards, so this score is private. Change it any time in Profile.</div>' : ''}
             </div>
             <p class="small muted">Correct answers and rationales unlock when the test closes on ${fmtDate(res.closes_at)}.</p>
             <div class="row"><a class="btn" href="#/leaderboard/test${id}">See leaderboard</a><a class="btn secondary" href="#/">Home</a></div>`);
@@ -553,7 +553,7 @@
       <div id="board" class="card"><p class="muted">Loading…</p></div>`);
     document.querySelectorAll('.tabs button').forEach((b) => (b.onclick = () => (location.hash = `#/leaderboard/${b.dataset.k}`)));
     const board = document.getElementById('board');
-    const optedOutNote = (r) => (r.youOptedOut ? '<div class="notice small">You\'ve opted out, so you won\'t appear here. <a href="#/me">Change in Me</a></div>' : '');
+    const optedOutNote = (r) => (r.youOptedOut ? '<div class="notice small">You\'ve opted out, so you won\'t appear here. <a href="#/profile">Change in Profile</a></div>' : '');
     const table = (head, rows) => rows.length
       ? `<div class="table-wrap"><table><thead><tr>${head}</tr></thead><tbody>${rows.join('')}</tbody></table></div>`
       : '<div class="empty">No one on the board yet. Be the first!</div>';
