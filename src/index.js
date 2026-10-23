@@ -60,7 +60,7 @@ const NICK_RE = /^[A-Za-z0-9 _.'\-]{2,20}$/;
 async function getPlayer(env, request) {
   const code = normalizeCode(request.headers.get('x-player-code'));
   if (!code) return null;
-  return env.DB.prepare('SELECT id, nickname, hidden FROM players WHERE code_hash = ?')
+  return env.DB.prepare('SELECT id, nickname, hidden, leaderboard_opt_out, lb_prompted FROM players WHERE code_hash = ?')
     .bind(await sha256(code)).first();
 }
 async function requirePlayer(env, request) {
@@ -121,10 +121,34 @@ async function me(env, request) {
   return json({
     nickname: p.nickname,
     hidden: !!p.hidden,
+    onLeaderboard: !p.leaderboard_opt_out,
+    lbPrompted: !!p.lb_prompted,
     practice: practice.results,
     weeklyCorrect: weekly.results[0]?.n || 0,
     ranked: ranked.results,
   });
+}
+
+// Student settings: leaderboard participation, explainer seen, nickname change
+async function updateSettings(env, request) {
+  const p = await requirePlayer(env, request);
+  const body = await readBody(request);
+  const sets = [], binds = [];
+  if (body.onLeaderboard != null) { sets.push('leaderboard_opt_out = ?'); binds.push(body.onLeaderboard ? 0 : 1); }
+  if (body.lbPrompted) sets.push('lb_prompted = 1');
+  let nickname = p.nickname;
+  if (body.nickname != null) {
+    nickname = cleanText(body.nickname, 40).replace(/\s+/g, ' ');
+    if (!NICK_RE.test(nickname)) throw new HttpError(400, 'Nickname must be 2–20 letters, numbers, spaces, or . _ - \'');
+    if (nickname !== p.nickname) {
+      const taken = await env.DB.prepare('SELECT 1 FROM players WHERE nickname_lc = ? AND id != ?').bind(nickname.toLowerCase(), p.id).first();
+      if (taken) throw new HttpError(409, 'That nickname is taken');
+      sets.push('nickname = ?', 'nickname_lc = ?'); binds.push(nickname, nickname.toLowerCase());
+    }
+  }
+  if (sets.length) await env.DB.prepare(`UPDATE players SET ${sets.join(', ')} WHERE id = ?`).bind(...binds, p.id).run();
+  const r = await env.DB.prepare('SELECT nickname, leaderboard_opt_out, lb_prompted FROM players WHERE id = ?').bind(p.id).first();
+  return json({ nickname: r.nickname, onLeaderboard: !r.leaderboard_opt_out, lbPrompted: !!r.lb_prompted });
 }
 
 async function catalog(env) {
@@ -278,10 +302,10 @@ async function rankedSubmit(env, request, id) {
   if (!res.meta.changes) throw new HttpError(409, 'Already submitted');
 
   const rank = await env.DB.prepare(`SELECT COUNT(*) + 1 AS r FROM ranked_attempts a JOIN players p ON p.id = a.player_id
-    WHERE a.test_id = ? AND a.submitted_at IS NOT NULL AND p.hidden = 0 AND a.id != ?
+    WHERE a.test_id = ? AND a.submitted_at IS NOT NULL AND p.hidden = 0 AND p.leaderboard_opt_out = 0 AND a.id != ?
     AND (a.score > ? OR (a.score = ? AND (a.submitted_at - a.started_at) < ?))`)
     .bind(id, a.id, score, score, now - a.started_at).first();
-  return json({ score, total: qs.length, durationMs: now - a.started_at, rank: rank.r, closes_at: t.closes_at });
+  return json({ score, total: qs.length, durationMs: now - a.started_at, rank: p.leaderboard_opt_out ? null : rank.r, optedOut: !!p.leaderboard_opt_out, closes_at: t.closes_at });
 }
 
 async function rankedReview(env, request, id) {
@@ -321,10 +345,11 @@ async function leaderboardRanked(env, request, id) {
   const { results } = await env.DB.prepare(`SELECT p.id AS pid, p.nickname, a.score, a.total,
       (a.submitted_at - a.started_at) AS durationMs
     FROM ranked_attempts a JOIN players p ON p.id = a.player_id
-    WHERE a.test_id = ? AND a.submitted_at IS NOT NULL AND p.hidden = 0
+    WHERE a.test_id = ? AND a.submitted_at IS NOT NULL AND p.hidden = 0 AND p.leaderboard_opt_out = 0
     ORDER BY a.score DESC, durationMs ASC LIMIT 100`).bind(id).all();
   return json({
     test: { id: t.id, title: t.title, status: testStatus(t, Date.now()) },
+    youOptedOut: !!player?.leaderboard_opt_out,
     rows: results.map((r, i) => ({ rank: i + 1, nickname: r.nickname, score: r.score, total: r.total, durationMs: r.durationMs, you: player?.id === r.pid })),
   });
 }
@@ -333,9 +358,9 @@ async function leaderboardOverall(env, request) {
   const player = await getPlayer(env, request);
   const { results } = await env.DB.prepare(`SELECT p.id AS pid, p.nickname, SUM(a.score) AS points, COUNT(*) AS tests
     FROM ranked_attempts a JOIN players p ON p.id = a.player_id
-    WHERE a.submitted_at IS NOT NULL AND p.hidden = 0
+    WHERE a.submitted_at IS NOT NULL AND p.hidden = 0 AND p.leaderboard_opt_out = 0
     GROUP BY p.id ORDER BY points DESC, tests ASC LIMIT 100`).all();
-  return json({ rows: results.map((r, i) => ({ rank: i + 1, nickname: r.nickname, points: r.points, tests: r.tests, you: player?.id === r.pid })) });
+  return json({ youOptedOut: !!player?.leaderboard_opt_out, rows: results.map((r, i) => ({ rank: i + 1, nickname: r.nickname, points: r.points, tests: r.tests, you: player?.id === r.pid })) });
 }
 
 async function leaderboardPractice(env, request) {
@@ -343,9 +368,9 @@ async function leaderboardPractice(env, request) {
   // Distinct questions answered correctly in the last 7 days — can't be farmed by repeating the same question.
   const { results } = await env.DB.prepare(`SELECT p.id AS pid, p.nickname, COUNT(DISTINCT pa.question_id) AS correct
     FROM practice_answers pa JOIN players p ON p.id = pa.player_id
-    WHERE pa.correct = 1 AND pa.answered_at > ? AND p.hidden = 0
+    WHERE pa.correct = 1 AND pa.answered_at > ? AND p.hidden = 0 AND p.leaderboard_opt_out = 0
     GROUP BY p.id ORDER BY correct DESC LIMIT 100`).bind(Date.now() - 7 * 864e5).all();
-  return json({ rows: results.map((r, i) => ({ rank: i + 1, nickname: r.nickname, correct: r.correct, you: player?.id === r.pid })) });
+  return json({ youOptedOut: !!player?.leaderboard_opt_out, rows: results.map((r, i) => ({ rank: i + 1, nickname: r.nickname, correct: r.correct, you: player?.id === r.pid })) });
 }
 
 // ---------- flags ----------
@@ -604,7 +629,7 @@ async function adminDeleteAttempt(env, id) {
 }
 
 async function adminPlayers(env) {
-  const { results } = await env.DB.prepare(`SELECT p.id, p.nickname, p.hidden, p.created_at,
+  const { results } = await env.DB.prepare(`SELECT p.id, p.nickname, p.hidden, p.leaderboard_opt_out AS optedOut, p.created_at,
       (SELECT COUNT(*) FROM practice_answers pa WHERE pa.player_id = p.id) AS practiceAnswers,
       (SELECT COUNT(*) FROM ranked_attempts a WHERE a.player_id = p.id AND a.submitted_at IS NOT NULL) AS rankedTests,
       (SELECT MAX(answered_at) FROM practice_answers pa WHERE pa.player_id = p.id) AS lastPractice
@@ -639,6 +664,7 @@ async function route(request, env) {
 
   if (path === '/api/players' && m === 'POST') return createPlayer(env, request);
   if (path === '/api/me' && m === 'GET') return me(env, request);
+  if (path === '/api/me/settings' && m === 'POST') return updateSettings(env, request);
   if (path === '/api/catalog' && m === 'GET') return catalog(env);
   if (path === '/api/practice/start' && m === 'POST') return practiceStart(env, request);
   if (path === '/api/practice/answer' && m === 'POST') return practiceAnswer(env, request);

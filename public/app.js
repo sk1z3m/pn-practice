@@ -181,7 +181,8 @@
   async function home() {
     if (!hasCode() && !store.get('pn_skip')) { location.hash = '#/welcome'; return; }
     html('<p class="muted">Loading…</p>');
-    const [cat, ranked] = await Promise.all([api('/api/catalog'), api('/api/ranked')]);
+    const [cat, ranked, me] = await Promise.all([api('/api/catalog'), api('/api/ranked'), hasCode() ? api('/api/me').catch(() => null) : null]);
+    if (me) store.set(LS_NICK, me.nickname);
     const nick = store.get(LS_NICK);
     const open = ranked.tests.filter((t) => t.status === 'open');
     const upcoming = ranked.tests.filter((t) => t.status === 'upcoming');
@@ -221,6 +222,49 @@
       ${upcoming.length ? `<h2>Coming up</h2>${upcoming.map(rankedCard).join('')}` : ''}
       ${closed.length ? `<h2>Recently closed</h2>${closed.map(rankedCard).join('')}` : ''}
     `);
+    if (me && !me.lbPrompted && !document.querySelector('.modal-back')) leaderboardWindow();
+  }
+
+  // ---------- leaderboard explainer (shown once per study code) ----------
+  function leaderboardWindow() {
+    const wrap = document.createElement('div');
+    wrap.className = 'modal-back';
+    wrap.innerHTML = `<div class="modal" role="dialog" aria-modal="true" aria-labelledby="lbTitle">
+      <h2 id="lbTitle" style="margin-top:0">About the leaderboards</h2>
+      <p>PN Practice has leaderboards to make studying a little competitive:</p>
+      <ul class="small" style="margin:0 0 12px;padding-left:20px">
+        <li><strong>Ranked tests:</strong> your score and time on each test</li>
+        <li><strong>Ranked overall:</strong> total points across all ranked tests</li>
+        <li><strong>Practice this week:</strong> questions you've answered correctly in practice</li>
+      </ul>
+      <p class="small">If you stay on, your <strong>nickname</strong> and scores are visible to other students. If you opt out, you can still use everything (practice, ranked tests, your own scores in <strong>Me</strong>), but your nickname won't appear on any leaderboard.</p>
+      <p class="small muted">You can change this any time in the <strong>Me</strong> tab.</p>
+      <div class="msg"></div>
+      <div class="modal-actions">
+        <button class="secondary" data-lb="out">Opt out of leaderboards</button>
+        <button data-lb="in">Stay on leaderboards</button>
+      </div>
+    </div>`;
+    document.body.appendChild(wrap);
+    wrap.querySelector('[data-lb="in"]').focus();
+    wrap.addEventListener('click', async (e) => {
+      const b = e.target.closest('[data-lb]'); if (!b) return;
+      wrap.querySelectorAll('button').forEach((x) => (x.disabled = true));
+      try {
+        await api('/api/me/settings', { method: 'POST', body: { onLeaderboard: b.dataset.lb === 'in', lbPrompted: true } });
+        wrap.remove();
+        if (b.dataset.lb === 'out') toast('You\'re off the leaderboards. Change this any time in Me.');
+      } catch (err) {
+        wrap.querySelector('.msg').innerHTML = errorBox(err);
+        wrap.querySelectorAll('button').forEach((x) => (x.disabled = false));
+      }
+    });
+  }
+  function toast(text) {
+    const t = document.createElement('div');
+    t.className = 'toast'; t.textContent = text;
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 4000);
   }
 
   // ---------- practice ----------
@@ -413,7 +457,8 @@
             <h1>Submitted</h1>
             <div class="card" style="text-align:center">
               <div class="big-score">${res.score} / ${res.total}</div>
-              <div>${pct(res.score, res.total)}% · ${fmtDur(res.durationMs)} · currently <strong>#${res.rank}</strong></div>
+              <div>${pct(res.score, res.total)}% · ${fmtDur(res.durationMs)}${res.optedOut ? '' : ` · currently <strong>#${res.rank}</strong>`}</div>
+              ${res.optedOut ? '<div class="small muted" style="margin-top:6px">You\'ve opted out of leaderboards, so this score is private. Change it any time in Me.</div>' : ''}
             </div>
             <p class="small muted">Correct answers and rationales unlock when the test closes on ${fmtDate(res.closes_at)}.</p>
             <div class="row"><a class="btn" href="#/leaderboard/test${id}">See leaderboard</a><a class="btn secondary" href="#/">Home</a></div>`);
@@ -459,21 +504,22 @@
       <div id="board" class="card"><p class="muted">Loading…</p></div>`);
     document.querySelectorAll('.tabs button').forEach((b) => (b.onclick = () => (location.hash = `#/leaderboard/${b.dataset.k}`)));
     const board = document.getElementById('board');
+    const optedOutNote = (r) => (r.youOptedOut ? '<div class="notice small">You\'ve opted out, so you won\'t appear here. <a href="#/me">Change in Me</a></div>' : '');
     const table = (head, rows) => rows.length
       ? `<div class="table-wrap"><table><thead><tr>${head}</tr></thead><tbody>${rows.join('')}</tbody></table></div>`
       : '<div class="empty">No one on the board yet. Be the first!</div>';
     if (which === 'overall') {
       const r = await api('/api/leaderboard/overall');
-      board.innerHTML = `<p class="small muted">Total correct answers across all ranked tests.</p>` + table('<th>#</th><th>Nickname</th><th class="num">Points</th><th class="num">Tests</th>',
+      board.innerHTML = optedOutNote(r) + `<p class="small muted">Total correct answers across all ranked tests.</p>` + table('<th>#</th><th>Nickname</th><th class="num">Points</th><th class="num">Tests</th>',
         r.rows.map((x) => `<tr class="${x.you ? 'you' : ''}"><td>${x.rank}</td><td>${esc(x.nickname)}</td><td class="num">${x.points}</td><td class="num">${x.tests}</td></tr>`));
     } else if (which === 'practice') {
       const r = await api('/api/leaderboard/practice');
-      board.innerHTML = `<p class="small muted">Different questions answered correctly in practice over the last 7 days.</p>` + table('<th>#</th><th>Nickname</th><th class="num">Correct</th>',
+      board.innerHTML = optedOutNote(r) + `<p class="small muted">Different questions answered correctly in practice over the last 7 days.</p>` + table('<th>#</th><th>Nickname</th><th class="num">Correct</th>',
         r.rows.map((x) => `<tr class="${x.you ? 'you' : ''}"><td>${x.rank}</td><td>${esc(x.nickname)}</td><td class="num">${x.correct}</td></tr>`));
     } else {
       const id = +which.replace('test', '');
       const r = await api(`/api/leaderboard/ranked/${id}`);
-      board.innerHTML = `<p class="small muted">Highest score wins; fastest time breaks ties.${r.test.status === 'closed' ? ` <a href="#/review/${id}">Review answers</a>` : ''}</p>` + table('<th>#</th><th>Nickname</th><th class="num">Score</th><th class="num">Time</th>',
+      board.innerHTML = optedOutNote(r) + `<p class="small muted">Highest score wins; fastest time breaks ties.${r.test.status === 'closed' ? ` <a href="#/review/${id}">Review answers</a>` : ''}</p>` + table('<th>#</th><th>Nickname</th><th class="num">Score</th><th class="num">Time</th>',
         r.rows.map((x) => `<tr class="${x.you ? 'you' : ''}"><td>${x.rank}</td><td>${esc(x.nickname)}</td><td class="num">${x.score}/${x.total}</td><td class="num">${fmtDur(x.durationMs)}</td></tr>`));
     }
   }
@@ -491,6 +537,24 @@
     html(`
       <h1>${esc(r.nickname)}</h1>
       ${r.hidden ? '<div class="notice small">An admin has hidden you from leaderboards.</div>' : ''}
+      <h2>Leaderboards</h2>
+      <div class="card">
+        <div class="row"><strong>${r.onLeaderboard ? 'You\'re on the leaderboards' : 'You\'ve opted out'}</strong><span class="pill ${r.onLeaderboard ? 'open' : 'closed'}">${r.onLeaderboard ? 'Visible' : 'Private'}</span></div>
+        <p class="small muted" style="margin:6px 0 10px">${r.onLeaderboard
+          ? 'Your nickname and scores appear on the ranked and practice leaderboards.'
+          : 'Your nickname doesn\'t appear on any leaderboard. You can still take ranked tests, and your scores show here.'}</p>
+        <div id="lbMsg"></div>
+        <button class="${r.onLeaderboard ? 'secondary' : ''} small" id="lbToggle">${r.onLeaderboard ? 'Opt out of leaderboards' : 'Join the leaderboards'}</button>
+      </div>
+      <h2>Nickname</h2>
+      <div class="card">
+        <form id="nickForm" class="row">
+          <input type="text" id="newNick" value="${esc(r.nickname)}" maxlength="20" autocomplete="off" style="flex:1;min-width:160px">
+          <button class="small">Save</button>
+        </form>
+        <div id="nickMsg" style="margin-top:8px"></div>
+        <p class="small muted" style="margin:6px 0 0">Shown on leaderboards. Don't use your full name. Your study code stays the same.</p>
+      </div>
       <div class="card">
         <strong>Your study code</strong>
         <p class="small muted" style="margin:4px 0 0">Use it to sign in on another device. Keep it private.</p>
@@ -511,6 +575,26 @@
           : '<div class="empty">No ranked tests taken yet.</div>'}
       </div>
       <p class="small"><a href="#" id="signout">Sign out on this device</a></p>`);
+    document.getElementById('lbToggle').onclick = async (e) => {
+      e.target.disabled = true;
+      try {
+        await api('/api/me/settings', { method: 'POST', body: { onLeaderboard: !r.onLeaderboard, lbPrompted: true } });
+        mePage();
+      } catch (err) { document.getElementById('lbMsg').innerHTML = errorBox(err); e.target.disabled = false; }
+    };
+    document.getElementById('nickForm').onsubmit = async (e) => {
+      e.preventDefault();
+      const msg = document.getElementById('nickMsg');
+      const nickname = document.getElementById('newNick').value.trim();
+      if (nickname === r.nickname) { msg.innerHTML = '<div class="notice small">That\'s already your nickname.</div>'; return; }
+      try {
+        const res = await api('/api/me/settings', { method: 'POST', body: { nickname } });
+        store.set(LS_NICK, res.nickname);
+        r.nickname = res.nickname;
+        document.querySelector('main h1').textContent = res.nickname;
+        msg.innerHTML = `<div class="notice good small">Nickname changed to ${esc(res.nickname)}.</div>`;
+      } catch (err) { msg.innerHTML = errorBox(err); }
+    };
     let shown = false;
     document.getElementById('reveal').onclick = (e) => {
       shown = !shown;
