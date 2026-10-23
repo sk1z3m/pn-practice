@@ -70,6 +70,49 @@
     }
     location.hash = '#/';
   }
+
+  // ---------- flag a question ----------
+  const FLAG_REASONS = [
+    ['wrong_answer', 'Wrong answer marked correct'],
+    ['rationale', 'Rationale is wrong or unclear'],
+    ['unclear', 'Question is confusing or has a typo'],
+    ['not_in_slides', 'Not covered in our slides'],
+    ['other', 'Other'],
+  ];
+  function flagWidget(qid, context) {
+    return `<div class="flag" data-qid="${qid}" data-context="${context}"><button type="button" class="linkbtn" data-flag-open>⚑ Flag this question</button></div>`;
+  }
+  document.addEventListener('click', async (e) => {
+    const box = e.target.closest('.flag');
+    if (!box) return;
+    const qid = box.dataset.qid;
+    if (e.target.closest('[data-flag-open]')) {
+      box.innerHTML = `<div class="flagform">
+        <div class="small" style="font-weight:600;margin-bottom:4px">What's wrong with this question?</div>
+        ${FLAG_REASONS.map(([k, label]) => `<label class="check small"><input type="radio" name="fr-${qid}" value="${k}"> ${label}</label>`).join('')}
+        <textarea class="small" maxlength="500" placeholder="Optional: what should it say? (e.g. slide 24 says…)"></textarea>
+        <div class="fmsg"></div>
+        <div class="row"><button type="button" class="small" data-flag-send>Send</button><button type="button" class="small ghost" data-flag-cancel>Cancel</button></div>
+      </div>`;
+      return;
+    }
+    if (e.target.closest('[data-flag-cancel]')) { box.innerHTML = flagWidget(qid, box.dataset.context).replace(/^<div[^>]*>|<\/div>$/g, ''); return; }
+    const send = e.target.closest('[data-flag-send]');
+    if (send) {
+      const reason = box.querySelector(`input[name="fr-${qid}"]:checked`)?.value;
+      const msg = box.querySelector('.fmsg');
+      if (!reason) { msg.innerHTML = '<div class="notice error small">Pick a reason</div>'; return; }
+      send.disabled = true;
+      try {
+        await api('/api/flags', { method: 'POST', body: { questionId: +qid, reason, comment: box.querySelector('textarea').value, context: box.dataset.context } });
+        box.innerHTML = '<div class="small" style="color:var(--good)">⚑ Thanks, an admin will review this question.</div>';
+      } catch (err) {
+        if (err.status === 409) box.innerHTML = `<div class="small muted">${esc(err.message)}</div>`;
+        else { msg.innerHTML = errorBox(err); send.disabled = false; }
+      }
+    }
+  });
+
   window.addEventListener('hashchange', router);
 
   // ---------- welcome / study code ----------
@@ -237,7 +280,7 @@
               if (bi === r.answer) b.classList.add('correct');
               else if (bi === choice) b.classList.add('wrong');
             });
-            document.getElementById('fb').innerHTML = `<div class="rationale"><div class="verdict" style="color:var(--${r.correct ? 'good' : 'bad'})">${r.correct ? 'Correct' : 'Not quite'}</div>${esc(r.rationale || '')}${r.source ? `<div class="small muted" style="margin-top:6px">Source: ${esc(r.source)}</div>` : ''}</div>`;
+            document.getElementById('fb').innerHTML = `<div class="rationale"><div class="verdict" style="color:var(--${r.correct ? 'good' : 'bad'})">${r.correct ? 'Correct' : 'Not quite'}</div>${esc(r.rationale || '')}${r.source ? `<div class="small muted" style="margin-top:6px">Source: ${esc(r.source)}</div>` : ''}</div>` + flagWidget(q.id, 'practice');
             document.getElementById('next').style.display = '';
           } catch (e) {
             document.getElementById('fb').innerHTML = errorBox(e);
@@ -329,6 +372,7 @@
           <div class="small muted" style="margin-bottom:6px">Question ${i + 1} of ${qs.length}</div>
           <div class="stem">${esc(q.stem)}</div>
           <div class="options">${q.options.map((o, k) => `<button class="option ${answers[q.id] === o.i ? 'selected' : ''}" data-i="${o.i}"><span class="letter">${L(k)}</span><span>${esc(o.text)}</span></button>`).join('')}</div>
+          ${flagWidget(q.id, 'ranked')}
         </div>
         <div class="row"><button class="ghost" id="prev" ${i === 0 ? 'disabled' : ''}>Back</button><span class="spacer"></span>
           ${i + 1 < qs.length ? '<button id="next">Next</button>' : '<button id="finish">Review &amp; submit</button>'}</div>
@@ -399,6 +443,7 @@
         <div class="stem" style="margin-top:4px">${esc(q.stem)}</div>
         <div class="options">${q.options.map((o, k) => `<div class="option ${k === q.answer ? 'correct' : k === q.yourChoice ? 'wrong' : ''}"><span class="letter">${L(k)}</span><span>${esc(o)}${k === q.yourChoice ? ' <em class="small">(your answer)</em>' : ''}</span></div>`).join('')}</div>
         <div class="rationale small">${esc(q.rationale)}${q.source ? `<div class="muted" style="margin-top:4px">Source: ${esc(q.source)}</div>` : ''}</div>
+        ${flagWidget(q.id, 'review')}
       </div>`).join('')}`);
   }
 

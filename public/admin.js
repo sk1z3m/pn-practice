@@ -53,12 +53,13 @@
   }
 
   // ---------- tabs ----------
-  const tabs = { questions, import: importTab, ranked, players };
+  const tabs = { questions, import: importTab, flags, ranked, players };
   async function start() {
     nav.style.display = '';
     const tab = location.hash.replace('#', '') || 'questions';
     nav.querySelectorAll('[data-tab]').forEach((a) => a.classList.toggle('active', a.dataset.tab === tab.split('/')[0]));
     const fn = tabs[tab.split('/')[0]] || questions;
+    refreshFlagCount();
     html('<p class="muted">Loading…</p>');
     try { await fn(tab.split('/').slice(1)); } catch (e) { if (adminKey) html(err(e)); }
   }
@@ -126,7 +127,7 @@
     return `<div class="card" data-id="${q.id}"><div class="qrow">
       <input type="checkbox" class="sel" value="${q.id}">
       <div>
-        <div class="row small muted"><span class="pill ${q.status}">${q.status}</span><span>#${q.id} · ${esc(q.course)} · ${esc(q.topic)}</span>${q.inRanked ? '<span class="pill">in ranked test</span>' : ''}</div>
+        <div class="row small muted"><span class="pill ${q.status}">${q.status}</span><span>#${q.id} · ${esc(q.course)} · ${esc(q.topic)}</span>${q.inRanked ? '<span class="pill">in ranked test</span>' : ''}${q.openFlags ? `<a class="pill flagged" href="#flags" style="text-decoration:none">⚑ ${q.openFlags} open flag${q.openFlags === 1 ? '' : 's'}</a>` : ''}</div>
         <div style="font-weight:600;margin-top:6px">${esc(q.stem)}</div>
         <ol type="A">${q.options.map((o, i) => `<li class="${i === q.answer ? 'ans' : ''}">${esc(o)}${i === q.answer ? ' ✓' : ''}</li>`).join('')}</ol>
         <div class="small">${esc(q.rationale) || '<em class="muted">No rationale</em>'}</div>
@@ -168,9 +169,80 @@
         await api(`/api/admin/questions/${q.id}`, { method: 'PUT', body: {
           course: fd.get('course'), topic: fd.get('topic'), stem: fd.get('stem'), options, answer,
           rationale: fd.get('rationale'), source: fd.get('source') } });
-        done();
+        done(true);
       } catch (e2) { flash(f.querySelector('.msg'), e2.message, false); }
     };
+  }
+
+
+  // ---------- flags ----------
+  async function refreshFlagCount() {
+    try {
+      const r = await api('/api/admin/flags?status=open');
+      const n = r.counts.open || 0;
+      document.getElementById('flagCount').textContent = n ? ` (${n})` : '';
+    } catch {}
+  }
+  let flagStatus = 'open';
+  async function flags() {
+    const r = await api('/api/admin/flags?status=' + flagStatus);
+    const c = r.counts;
+    html(`
+      <h1>Flagged questions</h1>
+      <p class="small muted">Students flag questions they think are wrong or unclear. Check each against its source slide, then edit or retire the question and mark the flags resolved, or dismiss them if the question is fine.</p>
+      <div class="tabs">${[['open', 'Open'], ['resolved', 'Resolved'], ['dismissed', 'Dismissed']].map(([k, l]) => `<button data-fs="${k}" class="${k === flagStatus ? 'active' : ''}">${l} (${c[k] || 0})</button>`).join('')}</div>
+      <div id="msg"></div>
+      <div id="list">${r.groups.length ? r.groups.map(flagCard).join('') : `<div class="card empty">${flagStatus === 'open' ? 'No open flags. Nice.' : 'Nothing here.'}</div>`}</div>`);
+    document.querySelectorAll('[data-fs]').forEach((b) => (b.onclick = () => { flagStatus = b.dataset.fs; flags().catch((e) => html(err(e))); }));
+    const byId = Object.fromEntries(r.groups.map((g) => [g.question.id, g]));
+    document.getElementById('list').onclick = async (e) => {
+      const b = e.target.closest('button'); if (!b) return;
+      const card = b.closest('[data-qid]'); const qid = +card.dataset.qid; const g = byId[qid];
+      try {
+        if (b.dataset.act === 'resolve' || b.dataset.act === 'dismiss' || b.dataset.act === 'reopen') {
+          const status = { resolve: 'resolved', dismiss: 'dismissed', reopen: 'open' }[b.dataset.act];
+          await api('/api/admin/flags/resolve', { method: 'POST', body: { questionId: qid, status } });
+          flags(); refreshFlagCount();
+        }
+        if (b.dataset.act === 'retire') {
+          if (!confirm('Retire this question so students no longer see it, and mark its flags resolved?')) return;
+          await api(`/api/admin/questions/${qid}`, { method: 'PUT', body: { status: 'retired' } });
+          await api('/api/admin/flags/resolve', { method: 'POST', body: { questionId: qid, status: 'resolved' } });
+          flags(); refreshFlagCount();
+        }
+        if (b.dataset.act === 'edit') {
+          const q = { ...g.question };
+          const holder = card.querySelector('.qbody');
+          editQuestion(q, holder, async (saved) => {
+            if (saved && confirm('Saved. Mark this question\'s flags as resolved?')) await api('/api/admin/flags/resolve', { method: 'POST', body: { questionId: qid, status: 'resolved' } });
+            flags(); refreshFlagCount();
+          });
+        }
+      } catch (e2) { flash(document.getElementById('msg'), e2.message, false); }
+    };
+  }
+  function flagCard(g) {
+    const q = g.question;
+    return `<div class="card" data-qid="${q.id}">
+      <div class="row small muted"><span class="pill flagged">⚑ ${g.flags.length}</span><span>#${q.id} · ${esc(q.course)} · ${esc(q.topic)}</span>${q.status !== 'approved' ? `<span class="pill ${q.status}">${q.status}</span>` : ''}</div>
+      <div class="qbody">
+        <div style="font-weight:600;margin-top:6px">${esc(q.stem)}</div>
+        <ol type="A" style="margin:6px 0;padding-left:22px">${q.options.map((o, i) => `<li style="${i === q.answer ? 'color:var(--good);font-weight:600' : ''}">${esc(o)}${i === q.answer ? ' ✓' : ''}</li>`).join('')}</ol>
+        <div class="small">${esc(q.rationale)}</div>
+        <div class="small muted" style="margin-top:4px">Source: ${esc(q.source) || '—'}</div>
+      </div>
+      <div style="margin-top:10px;border-top:1px solid var(--line);padding-top:8px">
+        ${g.flags.map((f) => `<div class="small" style="padding:4px 0"><strong>${esc(f.reasonLabel)}</strong>${f.comment ? `: “${esc(f.comment)}”` : ''}
+          <span class="muted">· ${[f.nickname || 'no code', f.context, fmtDate(f.created_at)].filter(Boolean).map(esc).join(' · ')}</span></div>`).join('')}
+      </div>
+      <div class="row" style="margin-top:10px">
+        ${flagStatus === 'open' ? `<button class="small secondary" data-act="edit">Edit question</button>
+          <button class="small ghost" data-act="retire">Retire question</button>
+          <span class="spacer"></span>
+          <button class="small" data-act="resolve">Mark resolved</button>
+          <button class="small ghost" data-act="dismiss">Dismiss</button>`
+        : '<button class="small ghost" data-act="reopen">Reopen</button>'}
+      </div></div>`;
   }
 
   // ---------- import ----------

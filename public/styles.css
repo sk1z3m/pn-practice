@@ -142,3 +142,12 @@ td.num, th.num { text-align: right; white-space: nowrap; }
   header.top nav { gap: 10px; font-size: .88rem; }
   .card { padding: 14px; }
 }
+
+/* flag a question */
+.flag { margin-top: 10px; }
+.linkbtn { background: none; border: none; padding: 2px 0; color: var(--muted); font-size: .85rem; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.linkbtn:hover { color: var(--accent); }
+.flagform { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; background: var(--bg); display: grid; gap: 4px; }
+.flagform textarea { min-height: 60px; margin: 4px 0; }
+.check.small input { width: 16px; height: 16px; }
+.pill.flagged { background: var(--bad-soft); color: var(--bad); }

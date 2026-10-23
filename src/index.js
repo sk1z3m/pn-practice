@@ -348,6 +348,77 @@ async function leaderboardPractice(env, request) {
   return json({ rows: results.map((r, i) => ({ rank: i + 1, nickname: r.nickname, correct: r.correct, you: player?.id === r.pid })) });
 }
 
+// ---------- flags ----------
+
+const FLAG_REASONS = {
+  wrong_answer: 'Wrong answer marked correct',
+  rationale: 'Rationale is wrong or unclear',
+  unclear: 'Question is confusing or has a typo',
+  not_in_slides: 'Not covered in our slides',
+  other: 'Other',
+};
+
+async function createFlag(env, request) {
+  const body = await readBody(request);
+  const qid = parseInt(body.questionId, 10);
+  const reason = String(body.reason || '');
+  if (!FLAG_REASONS[reason]) throw new HttpError(400, 'Pick a reason');
+  const comment = cleanText(body.comment, 500);
+  const context = ['practice', 'ranked', 'review'].includes(body.context) ? body.context : '';
+  const q = await env.DB.prepare('SELECT id FROM questions WHERE id = ?').bind(qid).first();
+  if (!q) throw new HttpError(404, 'Question not found');
+  const player = await getPlayer(env, request);
+  if (player) {
+    const dup = await env.DB.prepare("SELECT 1 FROM flags WHERE question_id = ? AND player_id = ? AND status = 'open'")
+      .bind(qid, player.id).first();
+    if (dup) throw new HttpError(409, "You've already flagged this question. Thanks, it's waiting for review.");
+  }
+  await env.DB.prepare('INSERT INTO flags (question_id, player_id, reason, comment, context, created_at) VALUES (?, ?, ?, ?, ?, ?)')
+    .bind(qid, player?.id ?? null, reason, comment, context, Date.now()).run();
+  return json({ ok: true });
+}
+
+async function adminFlags(env, url) {
+  const status = ['open', 'resolved', 'dismissed'].includes(url.searchParams.get('status')) ? url.searchParams.get('status') : 'open';
+  const { results } = await env.DB.prepare(`SELECT f.id, f.question_id, f.reason, f.comment, f.context, f.status, f.created_at, f.resolved_at,
+      p.nickname, q.course, q.topic, q.stem, q.options, q.answer, q.rationale, q.source, q.status AS qstatus
+    FROM flags f JOIN questions q ON q.id = f.question_id LEFT JOIN players p ON p.id = f.player_id
+    WHERE f.status = ? ORDER BY f.created_at DESC LIMIT 1000`).bind(status).all();
+  const groups = new Map();
+  for (const r of results) {
+    if (!groups.has(r.question_id)) {
+      groups.set(r.question_id, {
+        question: { id: r.question_id, course: r.course, topic: r.topic, stem: r.stem, options: JSON.parse(r.options),
+          answer: r.answer, rationale: r.rationale, source: r.source, status: r.qstatus },
+        flags: [],
+      });
+    }
+    groups.get(r.question_id).flags.push({ id: r.id, reason: r.reason, reasonLabel: FLAG_REASONS[r.reason] || r.reason,
+      comment: r.comment, context: r.context, nickname: r.nickname, created_at: r.created_at, resolved_at: r.resolved_at });
+  }
+  const counts = await env.DB.prepare('SELECT status, COUNT(*) AS n FROM flags GROUP BY status').all();
+  const list = [...groups.values()].sort((a, b) => b.flags.length - a.flags.length);
+  return json({ status, groups: list, counts: Object.fromEntries(counts.results.map((c) => [c.status, c.n])) });
+}
+
+async function adminResolveFlags(env, request) {
+  const body = await readBody(request);
+  const status = body.status === 'dismissed' ? 'dismissed' : body.status === 'open' ? 'open' : 'resolved';
+  const now = Date.now();
+  if (body.questionId != null) {
+    const qid = parseInt(body.questionId, 10);
+    const from = status === 'open' ? "status != 'open'" : "status = 'open'";
+    const r = await env.DB.prepare(`UPDATE flags SET status = ?, resolved_at = ? WHERE question_id = ? AND ${from}`)
+      .bind(status, status === 'open' ? null : now, qid).run();
+    return json({ updated: r.meta.changes });
+  }
+  const ids = (body.ids || []).map((x) => parseInt(x, 10)).filter(Number.isInteger);
+  if (!ids.length) throw new HttpError(400, 'Nothing to update');
+  const stmt = env.DB.prepare('UPDATE flags SET status = ?, resolved_at = ? WHERE id = ?');
+  await env.DB.batch(ids.map((id) => stmt.bind(status, status === 'open' ? null : now, id)));
+  return json({ updated: ids.length });
+}
+
 // ---------- admin ----------
 
 function timingSafeEqual(a, b) {
@@ -388,7 +459,8 @@ async function adminQuestions(env, request, url) {
   const q = url.searchParams.get('q');
   let sql = `SELECT q.*, (SELECT COUNT(*) FROM ranked_questions rq WHERE rq.question_id = q.id) AS inRanked,
       (SELECT COUNT(*) FROM practice_answers pa WHERE pa.question_id = q.id) AS answered,
-      (SELECT SUM(correct) FROM practice_answers pa WHERE pa.question_id = q.id) AS answeredCorrect
+      (SELECT SUM(correct) FROM practice_answers pa WHERE pa.question_id = q.id) AS answeredCorrect,
+      (SELECT COUNT(*) FROM flags f WHERE f.question_id = q.id AND f.status = 'open') AS openFlags
     FROM questions q WHERE 1=1`;
   const b = [];
   if (status) { sql += ' AND q.status = ?'; b.push(status); }
@@ -447,6 +519,7 @@ async function adminDeleteQuestion(env, id) {
   if (used.n) throw new HttpError(409, 'This question is part of a ranked test — retire it instead of deleting');
   await env.DB.batch([
     env.DB.prepare('DELETE FROM practice_answers WHERE question_id = ?').bind(id),
+    env.DB.prepare('DELETE FROM flags WHERE question_id = ?').bind(id),
     env.DB.prepare('DELETE FROM questions WHERE id = ?').bind(id),
   ]);
   return json({ ok: true });
@@ -576,6 +649,7 @@ async function route(request, env) {
   if ((x = path.match(/^\/api\/leaderboard\/ranked\/(\d+)$/)) && m === 'GET') return leaderboardRanked(env, request, +x[1]);
   if (path === '/api/leaderboard/overall' && m === 'GET') return leaderboardOverall(env, request);
   if (path === '/api/leaderboard/practice' && m === 'GET') return leaderboardPractice(env, request);
+  if (path === '/api/flags' && m === 'POST') return createFlag(env, request);
 
   // Public: says only whether an admin password is configured (never the password itself).
   if (path === '/api/admin/status' && m === 'GET') return json({ configured: !!String(env.ADMIN_KEY || '').trim() });
@@ -598,6 +672,8 @@ async function route(request, env) {
     }
     if ((x = path.match(/^\/api\/admin\/ranked\/(\d+)\/results$/)) && m === 'GET') return adminRankedResults(env, +x[1]);
     if ((x = path.match(/^\/api\/admin\/attempts\/(\d+)$/)) && m === 'DELETE') return adminDeleteAttempt(env, +x[1]);
+    if (path === '/api/admin/flags' && m === 'GET') return adminFlags(env, url);
+    if (path === '/api/admin/flags/resolve' && m === 'POST') return adminResolveFlags(env, request);
     if (path === '/api/admin/players' && m === 'GET') return adminPlayers(env);
     if ((x = path.match(/^\/api\/admin\/players\/([\w-]+)$/)) && m === 'PUT') return adminUpdatePlayer(env, request, x[1]);
   }
