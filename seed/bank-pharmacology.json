@@ -1,0 +1,4107 @@
+{
+ "course": "Pharmacology",
+ "questions": [
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "A post-op patient on morphine has a respiratory rate of 8 and is difficult to rouse. What should the nurse do FIRST?",
+   "options": [
+    "Document the finding and reassess in 1 hour",
+    "Withhold the opioid, stimulate the patient, and support the airway",
+    "Give the next dose early to prevent breakthrough pain",
+    "Give acetylcysteine"
+   ],
+   "answer": 1,
+   "rationale": "Respiratory depression is the most serious opioid adverse effect. Withhold the dose and contact the physician if RR is under 10. Support ABCs, then naloxone per order. [slides 24, 39]",
+   "source": "Pain Part 1 Quiz · slides 24, 39"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "What is the drug of choice to reverse opioid-induced respiratory depression?",
+   "options": [
+    "Flumazenil",
+    "Acetylcysteine",
+    "Naloxone (Narcan)",
+    "Methadone"
+   ],
+   "answer": 2,
+   "rationale": "Naloxone is a pure opioid antagonist. Flumazenil reverses benzos; acetylcysteine is the acetaminophen antidote. [slide 33]",
+   "source": "Pain Part 1 Quiz · slide 33"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Naloxone is given for a suspected overdose but the patient does not improve. What does this suggest?",
+   "options": [
+    "The dose was too high",
+    "The condition may not be an opioid overdose",
+    "The patient is opioid tolerant",
+    "Naloxone needs 24 hours to work"
+   ],
+   "answer": 1,
+   "rationale": "Failure to significantly reverse the effects means the condition may not be related to opioid overdose. [slide 33]",
+   "source": "Pain Part 1 Quiz · slide 33"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "1 mg of IV hydromorphone (Dilaudid) is equivalent to how much morphine?",
+   "options": [
+    "1 mg",
+    "3 mg",
+    "7 mg",
+    "10 mg"
+   ],
+   "answer": 2,
+   "rationale": "Equianalgesia: 1 mg IV/IM hydromorphone = 7 mg morphine (about 7× stronger). [slides 22, 30]",
+   "source": "Pain Part 1 Quiz · slides 22, 30"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Why is meperidine not recommended for long-term use?",
+   "options": [
+    "It causes hypertension",
+    "Its metabolite normeperidine accumulates and can cause seizures",
+    "It has no analgesic effect",
+    "It causes liver failure"
+   ],
+   "answer": 1,
+   "rationale": "Normeperidine is a neurotoxic metabolite that can cause seizures. [slide 17]",
+   "source": "Pain Part 1 Quiz · slide 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which opioid has a prolonged half-life that has caused unintentional overdoses, and can prolong the QT interval?",
+   "options": [
+    "Codeine",
+    "Fentanyl",
+    "Methadone",
+    "Morphine"
+   ],
+   "answer": 2,
+   "rationale": "Methadone: long-acting synthetic mu agonist; long half-life → unintentional overdoses; prolonged QT → dysrhythmias. [slide 32]",
+   "source": "Pain Part 1 Quiz · slide 32"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which opioid is the prototype for all opioid drugs?",
+   "options": [
+    "Morphine sulphate",
+    "Codeine sulphate",
+    "Hydromorphone",
+    "Oxycodone"
+   ],
+   "answer": 0,
+   "rationale": "Morphine: naturally occurring alkaloid from the opium poppy, the prototype; Schedule I; for severe pain. [slide 29]",
+   "source": "Pain Part 1 Quiz · slide 29"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which group of drugs has an analgesic ceiling effect?",
+   "options": [
+    "Morphine, fentanyl, hydromorphone",
+    "Codeine, pentazocine, nalbuphine",
+    "Methadone, oxycodone, meperidine",
+    "Naloxone, acetaminophen, gabapentin"
+   ],
+   "answer": 1,
+   "rationale": "Ceiling effect: analgesia stops improving with higher doses, but side effects may increase. [slide 19]",
+   "source": "Pain Part 1 Quiz · slide 19"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which finding suggests a possible opioid overdose?",
+   "options": [
+    "Dilated pupils",
+    "Pinpoint pupils",
+    "Hypertension",
+    "Diarrhea"
+   ],
+   "answer": 1,
+   "rationale": "Pinpoint pupils indicate possible overdose. Classic triad: pinpoint pupils, respiratory depression, decreased LOC. [slide 24]",
+   "source": "Pain Part 1 Quiz · slide 24"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "A patient on long-term opioids needs a larger dose for the same pain relief. This is:",
+   "options": [
+    "Addiction",
+    "Psychological dependence",
+    "Tolerance",
+    "Withdrawal"
+   ],
+   "answer": 2,
+   "rationale": "Tolerance is an expected adaptation and should not be confused with psychological dependence (addiction). [slides 26–27]",
+   "source": "Pain Part 1 Quiz · slides 26–27"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "What is the maximum daily dose of acetaminophen for a healthy adult?",
+   "options": [
+    "2 g/day",
+    "3 g/day",
+    "4 g/day",
+    "6 g/day"
+   ],
+   "answer": 2,
+   "rationale": "4 g/day; 2 000 mg is being considered for older adults and liver disease. Watch combination products. [slide 35]",
+   "source": "Pain Part 1 Quiz · slide 35"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "What is the antidote for acetaminophen overdose, and which organ is damaged?",
+   "options": [
+    "Naloxone; kidneys",
+    "Acetylcysteine; liver",
+    "Flumazenil; liver",
+    "Acetylcysteine; lungs"
+   ],
+   "answer": 1,
+   "rationale": "Overdose causes hepatic necrosis; antidote is acetylcysteine. Monitor ALT/AST. [slides 36–37]",
+   "source": "Pain Part 1 Quiz · slides 36–37"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which statement about acetaminophen is correct?",
+   "options": [
+    "It has strong anti-inflammatory effects",
+    "It is analgesic and antipyretic with little to no anti-inflammatory effect",
+    "It inhibits platelet aggregation",
+    "It is safe in liver failure"
+   ],
+   "answer": 1,
+   "rationale": "Analgesic and antipyretic, little/no anti-inflammatory effect. Contraindicated in liver dysfunction and G6PD deficiency. [slides 34, 36]",
+   "source": "Pain Part 1 Quiz · slides 34, 36"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which drug is an adjuvant for neuropathic pain?",
+   "options": [
+    "Gabapentin",
+    "Naloxone",
+    "Meperidine",
+    "Codeine"
+   ],
+   "answer": 0,
+   "rationale": "Neuropathic pain adjuvants: amitriptyline, gabapentin or pregabalin. [slide 18]",
+   "source": "Pain Part 1 Quiz · slide 18"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which teaching point is correct for a patient going home on an opioid?",
+   "options": [
+    "Limit fluids to prevent urinary retention",
+    "Increase fluids and fibre to prevent constipation, and change positions slowly",
+    "Take OTC sleep aids if needed",
+    "Wait until pain is severe before taking a dose"
+   ],
+   "answer": 1,
+   "rationale": "Prevent constipation with fluids and fibre; change positions slowly (orthostatic hypotension); no OTCs without checking; medicate before pain is severe. [slides 39–40]",
+   "source": "Pain Part 1 Quiz · slides 39–40"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which three properties do ALL NSAIDs share?",
+   "options": [
+    "Analgesic, anti-inflammatory, antipyretic",
+    "Analgesic, antiplatelet, sedative",
+    "Anti-inflammatory, anticoagulant, antiemetic",
+    "Antipyretic, antiplatelet, antispasmodic"
+   ],
+   "answer": 0,
+   "rationale": "All NSAIDs are analgesic, anti-inflammatory and antipyretic. Aspirin has all three PLUS platelet inhibition. [slide 3]",
+   "source": "Pain Part 2 Quiz · slide 3"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which COX enzyme helps maintain and protect the GI mucosa?",
+   "options": [
+    "COX-1",
+    "COX-2",
+    "COX-3",
+    "Leukotriene"
+   ],
+   "answer": 0,
+   "rationale": "COX-1 protects the GI lining; COX-2 makes prostaglandins for inflammation. Blocking COX-1 causes GI adverse effects. [slide 7]",
+   "source": "Pain Part 2 Quiz · slide 7"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which NSAID is the most commonly used?",
+   "options": [
+    "Naproxen",
+    "Ibuprofen (Motrin, Advil)",
+    "Ketorolac",
+    "Celecoxib"
+   ],
+   "answer": 1,
+   "rationale": "Ibuprofen is the most commonly used NSAID; naproxen is second. [slide 9]",
+   "source": "Pain Part 2 Quiz · slide 9"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "A patient has received ketorolac (Toradol) for 6 days. What is the main concern?",
+   "options": [
+    "It is only for short-term use (up to 5–7 days) and can impair the kidneys",
+    "It must be given for at least 10 days to work",
+    "It causes Reye's syndrome",
+    "It has no analgesic effect"
+   ],
+   "answer": 0,
+   "rationale": "Ketorolac is a powerful analgesic (comparable to morphine) for short-term use only. Adverse effects include kidney impairment: monitor creatinine and BUN. [slide 8]",
+   "source": "Pain Part 2 Quiz · slide 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Celecoxib (Celebrex) should NOT be given to a patient with which allergy?",
+   "options": [
+    "Penicillin",
+    "Sulpha",
+    "Latex",
+    "Codeine"
+   ],
+   "answer": 1,
+   "rationale": "Celecoxib, the only remaining COX-2 inhibitor, is contraindicated with a known sulpha allergy. It has little effect on platelets. [slide 11]",
+   "source": "Pain Part 2 Quiz · slide 11"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Why might misoprostol be ordered with an NSAID?",
+   "options": [
+    "To increase pain relief",
+    "To prevent GI bleeding by replacing blocked prostaglandins",
+    "To reverse NSAID overdose",
+    "To reduce fever"
+   ],
+   "answer": 1,
+   "rationale": "Misoprostol is a synthetic prostaglandin E1 analogue (NOT an NSAID). It inhibits gastric acid and protects the stomach lining. [slide 12]",
+   "source": "Pain Part 2 Quiz · slide 12"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which NSAID is better tolerated in terms of GI adverse effects?",
+   "options": [
+    "Indomethacin",
+    "Nabumetone",
+    "Aspirin",
+    "Ketorolac"
+   ],
+   "answer": 1,
+   "rationale": "Nabumetone (an enolic acid derivative) is better tolerated for GI adverse events than some other NSAIDs. [slide 10]",
+   "source": "Pain Part 2 Quiz · slide 10"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "How does aspirin prevent clots?",
+   "options": [
+    "Reversibly blocks COX-2 in the liver",
+    "Irreversibly inhibits COX-1 in platelets, reducing thromboxane A2",
+    "Activates vitamin K",
+    "Dissolves existing clots"
+   ],
+   "answer": 1,
+   "rationale": "Aspirin irreversibly inhibits platelet COX-1 → less thromboxane A2 → less platelet aggregation. Other NSAIDs lack this antiplatelet effect. [slide 14]",
+   "source": "Pain Part 2 Quiz · slide 14"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "A parent wants to give aspirin to a 10-year-old with influenza. What is the risk?",
+   "options": [
+    "Salicylism",
+    "Reye's syndrome",
+    "Serotonin syndrome",
+    "Stevens-Johnson syndrome"
+   ],
+   "answer": 1,
+   "rationale": "Reye's syndrome: life-threatening neurological deficits and liver damage, triggered by salicylates during a viral illness. No salicylates for children and teens. [slides 15, 21]",
+   "source": "Pain Part 2 Quiz · slides 15, 21"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "A patient on high-dose aspirin reports ringing in the ears. This is a sign of:",
+   "options": [
+    "Expected therapeutic effect",
+    "Salicylate intoxication (salicylism)",
+    "Allergic reaction",
+    "Hypoglycemia only"
+   ],
+   "answer": 1,
+   "rationale": "Tinnitus, hearing loss, dim vision, headache, dizziness, confusion, N/V/D and hyperventilation are signs of salicylism. [slide 15]",
+   "source": "Pain Part 2 Quiz · slide 15"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "When should aspirin be given to a patient having an MI?",
+   "options": [
+    "Only after a confirmed ECG",
+    "At the first sign of MI, often chewable",
+    "After 24 hours",
+    "Never; it worsens MI"
+   ],
+   "answer": 1,
+   "rationale": "Aspirin should be given at the first sign of MI and is one of the first drugs given in the ED (often chewable) if no contraindications. [slide 13]",
+   "source": "Pain Part 2 Quiz · slide 13"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which serious NSAID adverse effect is linked to their effect on prostaglandins in the kidney?",
+   "options": [
+    "Hypokalemia",
+    "Acute kidney injury",
+    "Kidney stones",
+    "Polyuria"
+   ],
+   "answer": 1,
+   "rationale": "Kidney function depends partly on prostaglandins. Risk is higher with dehydration, heart failure, liver dysfunction, diuretics or ACE inhibitors. [slides 16–17]",
+   "source": "Pain Part 2 Quiz · slides 16–17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "The Health Canada warning about increased CV thrombotic events (MI, stroke) applies to:",
+   "options": [
+    "Aspirin only",
+    "All NSAIDs except aspirin",
+    "Celecoxib only",
+    "Acetaminophen"
+   ],
+   "answer": 1,
+   "rationale": "All NSAIDs except aspirin share the warning. Older adults are at greater risk. [slide 18]",
+   "source": "Pain Part 2 Quiz · slide 18"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which instruction is correct for a patient taking an NSAID?",
+   "options": [
+    "Take on an empty stomach",
+    "Take with food, milk or an antacid, and report black or bloody stools",
+    "Crush enteric-coated tablets for faster effect",
+    "Expect full effect within 1 hour"
+   ],
+   "answer": 1,
+   "rationale": "NSAIDs cause GI distress, so take with food, milk or antacid. Watch for bleeding in the stool. Don't crush EC tablets. Effects may take 1 week or more. [slides 21–22]",
+   "source": "Pain Part 2 Quiz · slides 21–22"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which statement about CBD (cannabidiol) is correct?",
+   "options": [
+    "It is the main psychoactive ingredient that causes the 'high'",
+    "It is non-psychotropic, with anti-inflammatory, antiepileptic and antiemetic properties",
+    "It is an opioid",
+    "It is approved as first-line therapy for pain"
+   ],
+   "answer": 1,
+   "rationale": "THC is psychoactive (the 'high'). CBD is non-psychotropic with anti-inflammatory, antiepileptic, antiemetic and muscle-relaxing properties. Medical uses: adjunct for MS, cancer pain, anorexia/vomiting with chemo or AIDS. [slides 24–25]",
+   "source": "Pain Part 2 Quiz · slides 24–25"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Opioids relieve pain by binding to which receptors?",
+   "options": [
+    "Mu (opiate) receptors",
+    "GABA receptors",
+    "H1 receptors",
+    "Dopamine D2 receptors"
+   ],
+   "answer": 0,
+   "rationale": "Opioids bind mu (opiate) receptors to relieve pain. [slide 17]",
+   "source": "Opioids Focused Quiz · slide 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which pair are MILD opioid agonists?",
+   "options": [
+    "Hydromorphone and methadone",
+    "Oxycodone and meperidine",
+    "Morphine and fentanyl",
+    "Codeine and hydrocodone"
+   ],
+   "answer": 3,
+   "rationale": "Mild: codeine, hydrocodone. Strong: morphine, hydromorphone, oxycodone, meperidine, fentanyl, methadone. [slide 17]",
+   "source": "Opioids Focused Quiz · slide 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "An opioid that turns off some pain receptors and blocks others, giving weaker relief, is a(n):",
+   "options": [
+    "Agonist–antagonist (partial/mixed agonist)",
+    "Pure antagonist",
+    "Adjuvant",
+    "Full agonist"
+   ],
+   "answer": 0,
+   "rationale": "Agonist–antagonists (partial or mixed agonists) cause a weaker pain response than full agonists. [slide 20]",
+   "source": "Opioids Focused Quiz · slide 20"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "An opioid antagonist:",
+   "options": [
+    "Is used for chronic pain",
+    "Binds the receptor and causes strong analgesia",
+    "Binds the receptor with no response and reverses opioid effects",
+    "Increases opioid absorption"
+   ],
+   "answer": 2,
+   "rationale": "Antagonists (nonanalgesic, competitive) bind with no response and reverse opioid effects, e.g., naloxone. [slides 20, 33]",
+   "source": "Opioids Focused Quiz · slides 20, 33"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which opioid is the prototype for all opioids?",
+   "options": [
+    "Morphine sulphate",
+    "Codeine",
+    "Fentanyl",
+    "Methadone"
+   ],
+   "answer": 0,
+   "rationale": "Morphine: naturally occurring alkaloid from the opium poppy; Schedule I; severe pain; oral, injectable, rectal, ER forms. [slide 29]",
+   "source": "Opioids Focused Quiz · slide 29"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Codeine is more commonly used as:",
+   "options": [
+    "An anticonvulsant",
+    "An antipsychotic",
+    "An antitussive",
+    "An antiemetic"
+   ],
+   "answer": 2,
+   "rationale": "Codeine: less effective, ceiling effect, more commonly an antitussive; GI disturbance; combined with acetaminophen as Tylenol #3. [slide 28]",
+   "source": "Opioids Focused Quiz · slide 28"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which forms of fentanyl are on the slides?",
+   "options": [
+    "Rectal suppository only",
+    "Oral tablets only",
+    "Injection, transdermal patch (Duragesic Mat), sublingual effervescent tablet (Fentora)",
+    "Inhaled powder"
+   ],
+   "answer": 2,
+   "rationale": "Fentanyl is a synthetic Schedule I opioid for moderate to severe pain. [slide 31]",
+   "source": "Opioids Focused Quiz · slide 31"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which opioid provides a steady effect without intense highs and lows because it stays in the body longer?",
+   "options": [
+    "Meperidine",
+    "Codeine",
+    "Methadone",
+    "Hydromorphone"
+   ],
+   "answer": 2,
+   "rationale": "Methadone is a long-acting agonist; its prolonged half-life also causes unintentional overdoses; prolonged QT. [slide 32]",
+   "source": "Opioids Focused Quiz · slide 32"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "A patient receiving meperidine long term develops seizures. Why?",
+   "options": [
+    "Allergic reaction",
+    "Too little dose",
+    "Low sodium",
+    "Accumulation of normeperidine, a neurotoxic metabolite"
+   ],
+   "answer": 3,
+   "rationale": "Normeperidine accumulates and can cause seizures, so meperidine isn't recommended long term. [slide 17]",
+   "source": "Opioids Focused Quiz · slide 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "The order reads hydromorphone 1 mg IV. This is roughly equal to:",
+   "options": [
+    "0.1 mg morphine",
+    "70 mg morphine",
+    "1 mg morphine",
+    "7 mg morphine"
+   ],
+   "answer": 3,
+   "rationale": "1 mg IV/IM hydromorphone = 7 mg morphine (7× stronger). Don't confuse hydromorphone with morphine. [slides 22, 30]",
+   "source": "Opioids Focused Quiz · slides 22, 30"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which drugs have an analgesic ceiling effect?",
+   "options": [
+    "Codeine, pentazocine, nalbuphine",
+    "Fentanyl and methadone",
+    "Oxycodone and morphine",
+    "Morphine and hydromorphone"
+   ],
+   "answer": 0,
+   "rationale": "Ceiling effect: maximum analgesia is reached; higher doses add side effects, not relief. [slide 19]",
+   "source": "Opioids Focused Quiz · slide 19"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Tolerance and physical dependence with long-term opioid use are:",
+   "options": [
+    "Rare and dangerous",
+    "Only seen in children",
+    "Signs of addiction",
+    "Expected and should not be confused with addiction"
+   ],
+   "answer": 3,
+   "rationale": "Both are expected with long-term treatment; addiction (psychological dependence) is compulsive use for effects other than pain relief. [slides 26–27]",
+   "source": "Opioids Focused Quiz · slides 26–27"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "How is opioid withdrawal prevented after chronic use?",
+   "options": [
+    "Gradual dosage reduction",
+    "Double the dose",
+    "Stop abruptly",
+    "Switch to naloxone"
+   ],
+   "answer": 0,
+   "rationale": "Gradual dosage reduction after chronic opioid use. [slide 27]",
+   "source": "Opioids Focused Quiz · slide 27"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "What is the MOST serious opioid adverse effect?",
+   "options": [
+    "Urinary retention",
+    "Constipation",
+    "Respiratory depression from CNS depression",
+    "Itching"
+   ],
+   "answer": 2,
+   "rationale": "CNS depression leading to respiratory depression is the most serious adverse effect. [slide 24]",
+   "source": "Opioids Focused Quiz · slide 24"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which finding suggests possible opioid overdose?",
+   "options": [
+    "Hypertension",
+    "Dilated pupils",
+    "Pinpoint pupils",
+    "Fever"
+   ],
+   "answer": 2,
+   "rationale": "Pinpoint pupils indicate possible overdose. [slide 24]",
+   "source": "Opioids Focused Quiz · slide 24"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Opioids must be used with extreme caution in which patient?",
+   "options": [
+    "Patient with a migraine",
+    "Patient with elevated intracranial pressure",
+    "Patient with a broken arm",
+    "Patient with osteoarthritis"
+   ],
+   "answer": 1,
+   "rationale": "Caution: respiratory insufficiency, ↑ICP, morbid obesity/sleep apnea, paralytic ileus, pregnancy. Contraindicated in severe asthma. [slide 23]",
+   "source": "Opioids Focused Quiz · slide 23"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which drug combination increases the risk of respiratory depression?",
+   "options": [
+    "Opioid + acetaminophen alone",
+    "Opioid + benzodiazepine",
+    "Opioid + vitamin C",
+    "Opioid + stool softener"
+   ],
+   "answer": 1,
+   "rationale": "Opioid interactions: alcohol, antihistamines, barbiturates, benzodiazepines, promethazine, MAOIs. [slide 25]",
+   "source": "Opioids Focused Quiz · slide 25"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "A patient on morphine has a respiratory rate of 9. What does the nurse do?",
+   "options": [
+    "Encourage deep breathing and give the dose",
+    "Give the dose and recheck later",
+    "Withhold the dose and contact the physician",
+    "Give half the dose"
+   ],
+   "answer": 2,
+   "rationale": "Withhold and contact the physician if VS are abnormal, especially RR less than 10 breaths/min. [slide 39]",
+   "source": "Opioids Focused Quiz · slide 39"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "When should opioids be given for best pain control?",
+   "options": [
+    "Only at bedtime",
+    "Before pain becomes severe",
+    "Only when pain is 10/10",
+    "Once a day only"
+   ],
+   "answer": 1,
+   "rationale": "Medicate before pain becomes severe; pain is the 'fifth vital sign' (0–10 scale). [slides 38–39]",
+   "source": "Opioids Focused Quiz · slides 38–39"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which teaching point prevents a common opioid adverse effect?",
+   "options": [
+    "Limit fluids",
+    "Take with grapefruit juice",
+    "Adequate fluid and fibre intake to prevent constipation",
+    "Stay in bed"
+   ],
+   "answer": 2,
+   "rationale": "Constipation is common and may be prevented with fluids and fibre. Also change positions slowly (orthostatic hypotension). [slide 40]",
+   "source": "Opioids Focused Quiz · slide 40"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Ketorolac, diclofenac, indomethacin and mefenamic acid belong to which NSAID class?",
+   "options": [
+    "Acetic acid derivatives",
+    "Propionic acid derivatives",
+    "Enolic acid derivatives",
+    "Salicylates"
+   ],
+   "answer": 0,
+   "rationale": "Acetic acid derivatives: diclofenac (Voltaren), indomethacin, sulindac, etodolac, ketorolac (Toradol), mefenamic acid (Ponstan). [slide 5]",
+   "source": "NSAIDs Focused Quiz · slide 5"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Ibuprofen and naproxen belong to which NSAID class?",
+   "options": [
+    "Propionic acid derivatives",
+    "Acetic acid derivatives",
+    "Enolic acid derivatives",
+    "COX-2 inhibitors"
+   ],
+   "answer": 0,
+   "rationale": "Propionic acid derivatives: flurbiprofen, ibuprofen, ketoprofen, naproxen, oxaprozin, tiaprofenic acid. [slide 6]",
+   "source": "NSAIDs Focused Quiz · slide 6"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Meloxicam, piroxicam and nabumetone are:",
+   "options": [
+    "Salicylates",
+    "COX-2 inhibitors",
+    "Propionic acid derivatives",
+    "Enolic acid derivatives"
+   ],
+   "answer": 3,
+   "rationale": "Enolic acid derivatives; used for mild to moderate OA, RA and gouty arthritis. [slides 5, 10]",
+   "source": "NSAIDs Focused Quiz · slides 5, 10"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Mefenamic acid (Ponstan) is noted on the slides as used for:",
+   "options": [
+    "Migraine",
+    "MI prevention",
+    "Gout",
+    "Menstrual cramps"
+   ],
+   "answer": 3,
+   "rationale": "Handwritten note on the slide on slide 5: mefenamic acid → menstrual cramps.",
+   "source": "NSAIDs Focused Quiz"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which brand name matches meloxicam?",
+   "options": [
+    "Voltaren",
+    "Celebrex",
+    "Mobicox",
+    "Naprosyn"
+   ],
+   "answer": 2,
+   "rationale": "Meloxicam = Mobicox (noted 'most common' on slide 5). Voltaren = diclofenac; Naprosyn = naproxen; Celebrex = celecoxib.",
+   "source": "NSAIDs Focused Quiz"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "NSAIDs relieve pain and inflammation mainly by:",
+   "options": [
+    "Blocking dopamine",
+    "Blocking the COX enzyme, reducing prostaglandins",
+    "Enhancing GABA",
+    "Blocking mu receptors"
+   ],
+   "answer": 1,
+   "rationale": "NSAIDs block COX, inhibiting the prostaglandin (and/or leukotriene) pathway. Prostaglandins cause pain, redness, swelling and fever. [slide 7]",
+   "source": "NSAIDs Focused Quiz · slide 7"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Why do NSAIDs cause GI irritation?",
+   "options": [
+    "They block COX-1, which protects the GI mucosa",
+    "They increase stomach acid directly",
+    "They kill gut bacteria",
+    "They block histamine"
+   ],
+   "answer": 0,
+   "rationale": "COX-1 maintains and protects the GI lining; NSAIDs inactivate protective prostaglandins. [slides 7, 12]",
+   "source": "NSAIDs Focused Quiz · slides 7, 12"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which statement about aspirin's antiplatelet effect is correct?",
+   "options": [
+    "It irreversibly inhibits COX-1 in platelets, reducing thromboxane A2",
+    "It activates platelets",
+    "All NSAIDs share it equally",
+    "It reversibly blocks COX-2"
+   ],
+   "answer": 0,
+   "rationale": "Aspirin irreversibly inhibits platelet COX-1 → less thromboxane A2. Other NSAIDs lack this antiplatelet effect. [slide 14]",
+   "source": "NSAIDs Focused Quiz · slide 14"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which NSAID's analgesic effect is comparable to morphine?",
+   "options": [
+    "Ibuprofen",
+    "Nabumetone",
+    "Piroxicam",
+    "Ketorolac (Toradol)"
+   ],
+   "answer": 3,
+   "rationale": "Ketorolac is used mainly for its powerful analgesic effects; short-term only (5–7 days). [slide 8]",
+   "source": "NSAIDs Focused Quiz · slide 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which NSAID is the second most commonly used and has fewer interactions with ACE inhibitors?",
+   "options": [
+    "Celecoxib",
+    "Ibuprofen",
+    "Indomethacin",
+    "Naproxen"
+   ],
+   "answer": 3,
+   "rationale": "Naproxen: second most common, somewhat better adverse effect profile than ibuprofen. [slide 9]",
+   "source": "NSAIDs Focused Quiz · slide 9"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which adverse effects are listed for celecoxib?",
+   "options": [
+    "Tinnitus and Reye's syndrome",
+    "Respiratory depression",
+    "Headache, sinus irritation, diarrhea, dizziness, lower-extremity edema, hypertension",
+    "Hypoglycemia only"
+   ],
+   "answer": 2,
+   "rationale": "Celecoxib AEs: headache, sinus irritation, diarrhea, fatigue, dizziness, lower-extremity edema, HTN. Little platelet effect; no sulpha allergy. [slide 11]",
+   "source": "NSAIDs Focused Quiz · slide 11"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Indomethacin by the oral or rectal route can:",
+   "options": [
+    "Cause rebound congestion",
+    "Bother the stomach",
+    "Cause hypertensive crisis",
+    "Cause respiratory depression"
+   ],
+   "answer": 1,
+   "rationale": "Handwritten note on the slide: oral and rectal routes can bother the stomach. Used for RA, OA, bursitis, ankylosing spondylitis, acute gout. [slide 8]",
+   "source": "NSAIDs Focused Quiz · slide 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "What daily aspirin doses are used to prevent thrombotic events, and which is better?",
+   "options": [
+    "81 mg only",
+    "81 mg or 325 mg; equally beneficial",
+    "500 mg only",
+    "1 g; 325 mg is better"
+   ],
+   "answer": 1,
+   "rationale": "Daily 81 mg or 325 mg tablets; both appear equally beneficial for preventing thrombotic events. [slide 13]",
+   "source": "NSAIDs Focused Quiz · slide 13"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which finding suggests chronic salicylate intoxication?",
+   "options": [
+    "Weight gain",
+    "Pinpoint pupils",
+    "Tinnitus, hearing loss, confusion and hyperventilation",
+    "Bradycardia and constipation"
+   ],
+   "answer": 2,
+   "rationale": "Salicylism: ↑HR, tinnitus, hearing loss, dim vision, headache, dizziness, confusion, N/V/D, sweating, thirst, hyperventilation, glucose changes. [slide 15]",
+   "source": "NSAIDs Focused Quiz · slide 15"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which patient should NOT receive an NSAID?",
+   "options": [
+    "A patient with peptic ulcer disease",
+    "A patient with osteoarthritis",
+    "A patient with a sprained ankle",
+    "A patient with dysmenorrhea"
+   ],
+   "answer": 0,
+   "rationale": "Contraindications: drug allergy and bleeding risk, including peptic ulcer disease, vitamin K deficiency, rhinitis (nosebleeds). [slide 16]",
+   "source": "NSAIDs Focused Quiz · slide 16"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which patients are at highest risk of NSAID kidney toxicity?",
+   "options": [
+    "Patients taking vitamin C",
+    "Young athletes",
+    "Patients who are dehydrated, have heart failure or liver dysfunction, or take diuretics or ACE inhibitors",
+    "Patients on antihistamines"
+   ],
+   "answer": 2,
+   "rationale": "Kidney function depends partly on prostaglandins; these factors increase risk. [slide 17]",
+   "source": "NSAIDs Focused Quiz · slide 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which drug is given to reduce NSAID-related GI bleeding?",
+   "options": [
+    "Naloxone",
+    "Flumazenil",
+    "Misoprostol",
+    "Acetylcysteine"
+   ],
+   "answer": 2,
+   "rationale": "Misoprostol, a synthetic prostaglandin E1 analogue (not an NSAID), replaces blocked prostaglandins. [slides 12, 16]",
+   "source": "NSAIDs Focused Quiz · slides 12, 16"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Before starting NSAID therapy, which labs are appropriate?",
+   "options": [
+    "Thyroid panel only",
+    "Blood alcohol",
+    "Cardiac, kidney and liver function, CBC and platelet count",
+    "Lithium level"
+   ],
+   "answer": 2,
+   "rationale": "Assess for GI lesions/PUD and bleeding disorders; check cardiac, kidney, liver function, CBC, platelets; take a medication history. [slide 20]",
+   "source": "NSAIDs Focused Quiz · slide 20"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "How long might it take to see the therapeutic effect of NSAIDs for joint pain?",
+   "options": [
+    "They work only IV",
+    "5 minutes",
+    "1 week or more",
+    "6 months"
+   ],
+   "answer": 2,
+   "rationale": "Explain that therapeutic effects may not be seen for 1 week or more: less swelling, pain, stiffness, tenderness. [slide 21]",
+   "source": "NSAIDs Focused Quiz · slide 21"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which teaching is correct for enteric-coated aspirin?",
+   "options": [
+    "Do not crush or chew it; report any unusual bleeding such as in the stool",
+    "Stop it if you feel nauseous without telling anyone",
+    "Take it with alcohol",
+    "Crush it to work faster"
+   ],
+   "answer": 0,
+   "rationale": "EC tablets should not be crushed or chewed. Watch for unusual bleeding (stool) and report GI pain. [slide 22]",
+   "source": "NSAIDs Focused Quiz · slide 22"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Benzodiazepines are often called what?",
+   "options": [
+    "'Statin' drugs",
+    "'Pril' drugs",
+    "'Olol' drugs",
+    "'Pam' drugs"
+   ],
+   "answer": 3,
+   "rationale": "Benzos are referred to as 'pam' drugs (diazepam, lorazepam, clonazepam...). [Sed 6; Psych 7]",
+   "source": "Benzodiazepines Quiz · Sed 6; Psych 7"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Why are nonbenzodiazepines now prescribed more often than benzos for sleep?",
+   "options": [
+    "They are cheaper",
+    "Less addictive, with favourable adverse effect profiles",
+    "They have no interactions",
+    "They work faster IV"
+   ],
+   "answer": 1,
+   "rationale": "Nonbenzodiazepines are currently more frequently prescribed: less addictive, favourable safety. [Sed 6]",
+   "source": "Benzodiazepines Quiz · Sed 6"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Benzodiazepines work by enhancing which neurotransmitter?",
+   "options": [
+    "Serotonin",
+    "Norepinephrine",
+    "GABA",
+    "Dopamine"
+   ],
+   "answer": 2,
+   "rationale": "GABA is the brain's main calming neurotransmitter (the brake pedal); benzos help it press harder. [Sed 8–9]",
+   "source": "Benzodiazepines Quiz · Sed 8–9"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Compared with barbiturates, benzodiazepines:",
+   "options": [
+    "Have a lower therapeutic index",
+    "Suppress REM sleep more",
+    "Do not suppress REM sleep as much",
+    "Cause more respiratory depression alone"
+   ],
+   "answer": 2,
+   "rationale": "Benzos do not suppress REM sleep as much as barbiturates do. [Sed 8]",
+   "source": "Benzodiazepines Quiz · Sed 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which is NOT an indication for benzodiazepines?",
+   "options": [
+    "Alcohol withdrawal",
+    "Hypertensive crisis",
+    "Skeletal muscle relaxation",
+    "Acute seizures"
+   ],
+   "answer": 1,
+   "rationale": "Indications: sedation, sleep induction, muscle relaxation, anxiety/agitation, anxiety-related depression, acute seizures, alcohol withdrawal. [Sed 7]",
+   "source": "Benzodiazepines Quiz · Sed 7"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which benzo is long acting?",
+   "options": [
+    "Midazolam",
+    "Lorazepam (Ativan)",
+    "Diazepam (Valium)",
+    "Alprazolam (Xanax)"
+   ],
+   "answer": 2,
+   "rationale": "Long acting: clonazepam (Rivotril), diazepam (Valium), flurazepam (Dalmane). [Sed 10]",
+   "source": "Benzodiazepines Quiz · Sed 10"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "The slide notes say which benzo is the most common Rx?",
+   "options": [
+    "Clonazepam",
+    "Lorazepam (Ativan)",
+    "Flurazepam",
+    "Triazolam"
+   ],
+   "answer": 1,
+   "rationale": "Note on slide 10: lorazepam most common Rx; alprazolam, bromazepam and lorazepam most common PRN.",
+   "source": "Benzodiazepines Quiz"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Clonazepam's brand name and slide note?",
+   "options": [
+    "Xanax; most common PRN",
+    "Rivotril; often for sleep",
+    "Dalmane; surgery",
+    "Valium; first benzo"
+   ],
+   "answer": 1,
+   "rationale": "Clonazepam (Rivotril), long acting; note: often for sleep. [Sed 10]",
+   "source": "Benzodiazepines Quiz · Sed 10"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which benzo was the first clinically available?",
+   "options": [
+    "Diazepam (Valium)",
+    "Midazolam",
+    "Temazepam",
+    "Lorazepam"
+   ],
+   "answer": 0,
+   "rationale": "Diazepam: first benzo; anxiety, alcohol withdrawal, status epilepticus, preop sedation, muscle spasms. Avoid in hepatic dysfunction. [Sed 14; Psych 10]",
+   "source": "Benzodiazepines Quiz · Sed 14; Psych 10"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which benzo causes amnesia and is used for procedural sedation?",
+   "options": [
+    "Clonazepam",
+    "Diazepam",
+    "Midazolam (Versed)",
+    "Temazepam"
+   ],
+   "answer": 2,
+   "rationale": "Midazolam: preop and procedural sedation; amnesia, anxiolysis, sedation; IV in adults, oral liquid for children. [Sed 14]",
+   "source": "Benzodiazepines Quiz · Sed 14"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Temazepam (Restoril) should be taken about how long before bed?",
+   "options": [
+    "5 minutes",
+    "1 hour",
+    "4 hours",
+    "In the morning"
+   ],
+   "answer": 1,
+   "rationale": "Temazepam has a long onset; take about 1 hour before bed. It's a metabolite of diazepam. [Sed 14]",
+   "source": "Benzodiazepines Quiz · Sed 14"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which benzo can be given IV/IM for acute agitation and by continuous infusion for ventilated patients?",
+   "options": [
+    "Lorazepam (Ativan)",
+    "Bromazepam",
+    "Flurazepam",
+    "Triazolam"
+   ],
+   "answer": 0,
+   "rationale": "Lorazepam: intermediate acting; IV/IM for agitation; infusion for ventilated patients; alcohol withdrawal; notes: panic attacks, stressful situations (planes). [Psych 11]",
+   "source": "Benzodiazepines Quiz · Psych 11"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "What is the antidote for benzodiazepine overdose?",
+   "options": [
+    "Acetylcysteine",
+    "Naloxone",
+    "Benztropine",
+    "Flumazenil"
+   ],
+   "answer": 3,
+   "rationale": "Flumazenil reverses benzos; otherwise symptomatic and supportive care. [Sed 12; Psych 8]",
+   "source": "Benzodiazepines Quiz · Sed 12; Psych 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Benzo overdose rarely causes respiratory depression UNLESS:",
+   "options": [
+    "Taken at night",
+    "Taken with other CNS depressants such as alcohol or opioids",
+    "Taken with water",
+    "Taken with food"
+   ],
+   "answer": 1,
+   "rationale": "Overdose: somnolence, confusion, coma, diminished reflexes; respiratory depression rare unless combined with other CNS depressants. [Sed 12]",
+   "source": "Benzodiazepines Quiz · Sed 12"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which juice interacts with benzodiazepines?",
+   "options": [
+    "Orange",
+    "Grapefruit",
+    "Cranberry",
+    "Apple"
+   ],
+   "answer": 1,
+   "rationale": "Grapefruit juice; also azole antifungals, verapamil, diltiazem, protease inhibitors, macrolides, kava, valerian. [Sed 13]",
+   "source": "Benzodiazepines Quiz · Sed 13"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Benzo interactions are more likely in patients with:",
+   "options": [
+    "Renal or hepatic compromise",
+    "Arthritis",
+    "High blood pressure",
+    "Asthma"
+   ],
+   "answer": 0,
+   "rationale": "Interactions are more likely with renal or hepatic compromise (kidneys not excreting properly). [Psych 9]",
+   "source": "Benzodiazepines Quiz · Psych 9"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which adverse effect is listed as most common in the elderly?",
+   "options": [
+    "Paradoxical excitement / dizziness",
+    "Hypertension",
+    "Tinnitus",
+    "Weight loss"
+   ],
+   "answer": 0,
+   "rationale": "Adverse effects: headache, drowsiness, paradoxical excitement, dizziness (most common in elderly), cognitive impairment, 'hangover', fall hazard. [Sed 11]",
+   "source": "Benzodiazepines Quiz · Sed 11"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "An older adult takes a benzo at bedtime. Top priority?",
+   "options": [
+    "Limit fluids",
+    "Fall prevention: side rails/bed alarm, call light, assist with ambulation",
+    "Check blood glucose",
+    "Encourage caffeine in the morning"
+   ],
+   "answer": 1,
+   "rationale": "Benzos are a fall hazard for older adults; monitor for oversedation and CNS depression. [Sed 11, 25; Psych 13]",
+   "source": "Benzodiazepines Quiz · Sed 11, 25; Psych 13"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which teaching is correct for a patient taking a benzo for sleep?",
+   "options": [
+    "Avoid alcohol and other CNS depressants; check before OTC meds",
+    "Alcohol helps it work",
+    "Take it in the morning",
+    "Double the dose if you can't sleep"
+   ],
+   "answer": 0,
+   "rationale": "Avoid alcohol and CNS depressants; check with the prescriber before other meds. Take hypnotics 30–60 min before bed. [Sed 24]",
+   "source": "Benzodiazepines Quiz · Sed 24"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Most benzodiazepines used for sleep can cause:",
+   "options": [
+    "Hypertensive crisis",
+    "REM rebound and next-day tiredness",
+    "Tardive dyskinesia",
+    "Reye's syndrome"
+   ],
+   "answer": 1,
+   "rationale": "Most benzos cause REM rebound and a tired feeling the next day; use caution in older adults. [Sed 24]",
+   "source": "Benzodiazepines Quiz · Sed 24"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "What is the difference between a sedative and a hypnotic?",
+   "options": [
+    "Sedatives cause sleep; hypnotics calm",
+    "Sedatives reduce nervousness and excitability; hypnotics cause sleep and are more potent",
+    "They are identical",
+    "Hypnotics are only given IV"
+   ],
+   "answer": 1,
+   "rationale": "A sedative can become a hypnotic at a large enough dose: sedative-hypnotics are dose dependent. [Sed 3–5]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 3–5"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "What are the three main groups of sedative-hypnotics?",
+   "options": [
+    "Barbiturates, benzodiazepines, miscellaneous drugs",
+    "Antihistamines, decongestants, expectorants",
+    "Opioids, NSAIDs, acetaminophen",
+    "SSRIs, TCAs, MAOIs"
+   ],
+   "answer": 0,
+   "rationale": "Barbiturates, benzodiazepines and miscellaneous drugs. [Sed 5]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 5"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "REM interference means:",
+   "options": [
+    "The patient can't fall asleep",
+    "The patient sleepwalks",
+    "REM increases after stopping a drug",
+    "A drug disrupts the amount or quality of REM sleep"
+   ],
+   "answer": 3,
+   "rationale": "REM interference = a drug disrupts REM. REM rebound = REM returns in excess when a REM-suppressing drug is suddenly stopped. [Sed 2]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 2"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Why are barbiturates rarely used today?",
+   "options": [
+    "They don't cause sedation",
+    "They only come as patches",
+    "They are too expensive",
+    "They are habit forming with a low therapeutic index"
+   ],
+   "answer": 3,
+   "rationale": "Introduced in 1903; habit forming, low therapeutic index; replaced by safer benzodiazepines. [Sed 16]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 16"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Where do barbiturates act, and how?",
+   "options": [
+    "Spinal cord; block mu receptors",
+    "Brainstem reticular formation; potentiate GABA",
+    "Basal ganglia; block dopamine",
+    "Kidneys; increase sodium"
+   ],
+   "answer": 1,
+   "rationale": "The reticular formation controls alertness; potentiating GABA inhibits impulses in the cerebral cortex → less anxiety, relaxation, sedation. [Sed 17]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which is a barbiturate indication?",
+   "options": [
+    "Anticonvulsant",
+    "Hypertension",
+    "Depression",
+    "Pain relief"
+   ],
+   "answer": 0,
+   "rationale": "Indications: sedatives, anticonvulsants, anaesthesia for surgery. [Sed 16]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 16"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which hematological adverse effects can barbiturates cause?",
+   "options": [
+    "Hemophilia",
+    "Hyperkalemia",
+    "Agranulocytosis and thrombocytopenia",
+    "Polycythemia"
+   ],
+   "answer": 2,
+   "rationale": "Also CV: vasodilation, hypotension; resp: respiratory depression; other: Stevens-Johnson syndrome. [Sed 18]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 18"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "A barbiturate overdose most often leads to:",
+   "options": [
+    "Liver failure",
+    "Hypertensive crisis",
+    "Seizures from serotonin excess",
+    "Respiratory depression and respiratory arrest"
+   ],
+   "answer": 3,
+   "rationale": "Overdose → respiratory depression/arrest; CNS depression from sleep to coma and death. [Sed 19]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 19"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "How is a barbiturate overdose treated?",
+   "options": [
+    "Naloxone",
+    "Flumazenil",
+    "Symptomatic and supportive: airway, ventilation/O2, fluids, alkalization, activated charcoal",
+    "Acetylcysteine"
+   ],
+   "answer": 2,
+   "rationale": "There's no antidote for barbiturates. [Sed 19]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 19"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "A patient on warfarin starts a barbiturate. What may happen?",
+   "options": [
+    "Reduced anticoagulant response, possible clot formation",
+    "Hypertensive crisis",
+    "Increased bleeding",
+    "No change"
+   ],
+   "answer": 0,
+   "rationale": "Barbiturates increase metabolism of anticoagulants → reduced response → possible clots. MAOIs prolong barbiturate effects. [Sed 20]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 20"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Phenobarbital is used today for:",
+   "options": [
+    "Depression",
+    "Preventing tonic-clonic and febrile seizures, and neonatal hyperbilirubinemia",
+    "Insomnia (first-line hypnotic)",
+    "Pain"
+   ],
+   "answer": 1,
+   "rationale": "Phenobarbital: prototypical long-acting barbiturate; rarely a sedative and no longer recommended as a hypnotic. [Sed 21]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 21"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Zopiclone (Imovane, Rhovane) is unique because of its:",
+   "options": [
+    "Very long half-life",
+    "Antidepressant effect",
+    "IV-only route",
+    "Very short half-life"
+   ],
+   "answer": 3,
+   "rationale": "Short-acting benzo-like drug; short-term insomnia treatment for 7–10 days. [Sed 15]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 15"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Compared with benzodiazepine hypnotics, zolpidem (Sublinox) causes:",
+   "options": [
+    "Less daytime sleepiness",
+    "Respiratory depression on its own",
+    "More daytime sleepiness",
+    "More REM rebound"
+   ],
+   "answer": 0,
+   "rationale": "Zolpidem: short-acting nonbenzodiazepine hypnotic with lower daytime sleepiness. [Sed 15]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 15"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "OTC sleep aids such as Sleep-Eze and Unisom-2 contain:",
+   "options": [
+    "Barbiturates",
+    "Opioids",
+    "Antihistamines",
+    "Benzodiazepines"
+   ],
+   "answer": 2,
+   "rationale": "Doxylamine (Unisom-2), diphenhydramine (Sleep-Eze), acetaminophen/diphenhydramine (Extra Strength Tylenol Nighttime). With alcohol: respiratory depression or arrest. [Sed 22]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 22"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Before starting a sedative-hypnotic, which BP readings are taken?",
+   "options": [
+    "Leg BP",
+    "Arm only, sitting",
+    "Supine and erect",
+    "No BP needed"
+   ],
+   "answer": 2,
+   "rationale": "Baseline VS and I&O, including supine and erect BP; history; contraindications and interactions. [Sed 23]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 23"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "After stopping a 3–4 week hypnotic regimen, a patient may experience:",
+   "options": [
+    "Hypertension",
+    "Permanent insomnia",
+    "Seizures every time",
+    "Rebound insomnia for a few nights"
+   ],
+   "answer": 3,
+   "rationale": "Rebound insomnia may occur for a few nights after a 3–4 week regimen is discontinued. [Sed 24]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 24"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which is a therapeutic effect of a hypnotic?",
+   "options": [
+    "Increased daytime drowsiness",
+    "Weight gain",
+    "Increased REM rebound",
+    "Shorter sleep-induction time and fewer awakenings"
+   ],
+   "answer": 3,
+   "rationale": "Better sleep, fewer awakenings, shorter sleep induction, few 'hangover' effects, improved well-being. [Sed 26]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 26"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which safety measure is listed for patients on hypnotics?",
+   "options": [
+    "Side rails up or bed alarm, call light in reach, assist with ambulation",
+    "Encourage walking alone at night",
+    "Remove the call light",
+    "Allow smoking in bed"
+   ],
+   "answer": 0,
+   "rationale": "Safety: side rails/bed alarm, no smoking, assist older adults with ambulation, call light within reach. [Sed 25]",
+   "source": "Barbiturates & Sleep Aids Quiz · Sed 25"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which antidepressants are FIRST generation?",
+   "options": [
+    "SSRIs and SNRIs",
+    "Bupropion and mirtazapine",
+    "Atypical antipsychotics",
+    "Tricyclics, tetracyclics and MAOIs"
+   ],
+   "answer": 3,
+   "rationale": "First generation: tricyclics, tetracyclics, MAOIs. Second generation: SSRIs, SNRIs, miscellaneous. [Psych 20]",
+   "source": "Antidepressants Quiz · Psych 20"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Where do TCAs fit in treatment today?",
+   "options": [
+    "Only IV in hospital",
+    "First-line for everyone",
+    "Second-line: when SSRIs fail, or as an adjunct",
+    "Only for children"
+   ],
+   "answer": 2,
+   "rationale": "TCAs have largely been replaced by SSRIs as first-line drugs. [Psych 21]",
+   "source": "Antidepressants Quiz · Psych 21"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "How do TCAs work?",
+   "options": [
+    "Block dopamine receptors",
+    "Block reuptake of serotonin and norepinephrine so they build up at nerve endings",
+    "Enhance GABA",
+    "Inhibit the MAO enzyme"
+   ],
+   "answer": 1,
+   "rationale": "Reuptake blockers: the 'email' stays in the inbox longer, so the message is read many times. [Psych 22]",
+   "source": "Antidepressants Quiz · Psych 22"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Imipramine is used for which childhood condition?",
+   "options": [
+    "Croup",
+    "Asthma",
+    "ADHD",
+    "Enuresis (bed-wetting)"
+   ],
+   "answer": 3,
+   "rationale": "TCA indications: neuropathic pain (diabetes), insomnia, childhood enuresis (imipramine), OCD (clomipramine), sometimes anorexia. [Psych 21]",
+   "source": "Antidepressants Quiz · Psych 21"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Amitriptyline (Elavil) is contraindicated in:",
+   "options": [
+    "Recent myocardial infarction",
+    "Osteoarthritis",
+    "Neuropathic pain",
+    "Insomnia"
+   ],
+   "answer": 0,
+   "rationale": "Contraindications: drug allergy, pregnancy, recent MI. AEs: dry mouth, constipation, blurred vision, urinary retention, dysrhythmias, hypotension. [Psych 25]",
+   "source": "Antidepressants Quiz · Psych 25"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Death from TCA overdose usually results from:",
+   "options": [
+    "Seizures or dysrhythmias",
+    "Kidney stones",
+    "Hypertensive crisis",
+    "Liver failure"
+   ],
+   "answer": 0,
+   "rationale": "TCA overdose is lethal; 70–80% die before reaching the hospital. No antidote: activated charcoal, alkalinize urine, manage seizures and dysrhythmias. [Psych 24]",
+   "source": "Antidepressants Quiz · Psych 24"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which adverse effects are listed for TCAs on slide 23?",
+   "options": [
+    "Tinnitus and Reye's syndrome",
+    "Sedation, impotence, orthostatic hypotension, weight gain, 'cholinergic (think dry)'",
+    "Hypertension and diarrhea",
+    "Insomnia and weight loss"
+   ],
+   "answer": 1,
+   "rationale": "Slide 23 as written. Dry effects = dry mouth, constipation, urinary retention, blurred vision. [Psych 23, 25]",
+   "source": "Antidepressants Quiz · Psych 23, 25"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which MAOI is selective and used for Parkinson's?",
+   "options": [
+    "Phenelzine",
+    "Tranylcypromine",
+    "Selegiline",
+    "Sertraline"
+   ],
+   "answer": 2,
+   "rationale": "Nonselective: phenelzine, tranylcypromine. Selective: selegiline (Parkinson's). [Psych 26]",
+   "source": "Antidepressants Quiz · Psych 26"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "What happens if a patient on an MAOI eats aged cheese or salami?",
+   "options": [
+    "Serotonin syndrome",
+    "Hypertensive crisis",
+    "Hypoglycemia",
+    "Nothing"
+   ],
+   "answer": 1,
+   "rationale": "Tyramine → hypertensive crisis → possible cerebral hemorrhage, stroke, coma, death. [Psych 27]",
+   "source": "Antidepressants Quiz · Psych 27"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which food is SAFE for a patient on an MAOI?",
+   "options": [
+    "Fava beans",
+    "Red wine (Chianti)",
+    "Fresh chicken",
+    "Pepperoni"
+   ],
+   "answer": 2,
+   "rationale": "Avoid aged cheese, smoked/pickled/aged meats and fish, yeast extracts, red wine, fava beans; limit chocolate, soy sauce, yogurt. [Psych 27]",
+   "source": "Antidepressants Quiz · Psych 27"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "In the MAOI mnemonic, what does the 'O' stand for?",
+   "options": [
+    "OTC meds: cold and cough meds, NSAIDs",
+    "Orthostatic hypotension",
+    "Overdose",
+    "Oral only"
+   ],
+   "answer": 0,
+   "rationale": "M: Major headache (hypertension). A: Avoid tyramine. O: OTC meds. I: Increased suicide risk. [Psych 28]",
+   "source": "Antidepressants Quiz · Psych 28"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "How long is the washout when switching from an MAOI to an SSRI, TCA or SNRI?",
+   "options": [
+    "2 weeks",
+    "2 months",
+    "None needed",
+    "24 hours"
+   ],
+   "answer": 0,
+   "rationale": "2-week washout to prevent serotonin syndrome. [Psych 26]",
+   "source": "Antidepressants Quiz · Psych 26"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which is the prototypical SSRI?",
+   "options": [
+    "Paroxetine (Paxil)",
+    "Fluoxetine (Prozac)",
+    "Sertraline (Zoloft)",
+    "Citalopram (Celexa)"
+   ],
+   "answer": 1,
+   "rationale": "Fluoxetine: depression, bulimia, OCD, panic disorder, PMDD; contraindicated with concurrent MAOI. [Psych 34]",
+   "source": "Antidepressants Quiz · Psych 34"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Match the brand: escitalopram is…",
+   "options": [
+    "Luvox",
+    "Celexa",
+    "Cipralex",
+    "Paxil"
+   ],
+   "answer": 2,
+   "rationale": "Fluoxetine = Prozac, sertraline = Zoloft, paroxetine = Paxil, fluvoxamine = Luvox, citalopram = Celexa, escitalopram = Cipralex. [Psych 29]",
+   "source": "Antidepressants Quiz · Psych 29"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Signs of 'SSRI syndrome' (too much serotonin) include:",
+   "options": [
+    "Hypoglycemia",
+    "Bradycardia and cold skin",
+    "Pinpoint pupils",
+    "Sweating, fever, rigid muscles, restlessness, tachycardia"
+   ],
+   "answer": 3,
+   "rationale": "Too much serotonin in the system. [Psych 31]",
+   "source": "Antidepressants Quiz · Psych 31"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which antidepressant is also used to help people quit smoking?",
+   "options": [
+    "Bupropion (Wellbutrin/Zyban)",
+    "Duloxetine",
+    "Mirtazapine",
+    "Trazodone"
+   ],
+   "answer": 0,
+   "rationale": "Bupropion: Zyban was the first nicotine-free Rx for nicotine dependence; also added when SSRIs cause sexual side effects. [Psych 32]",
+   "source": "Antidepressants Quiz · Psych 32"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Duloxetine (Cymbalta) is described as 'dual action' because it treats:",
+   "options": [
+    "Nausea and pain",
+    "Blood pressure and mood",
+    "Pain and mood",
+    "Sleep and appetite"
+   ],
+   "answer": 2,
+   "rationale": "Depression, GAD, diabetic neuropathy, fibromyalgia, chronic back pain, OA. Watch hepatotoxicity; serotonin syndrome with SSRIs/triptans. [Psych 33]",
+   "source": "Antidepressants Quiz · Psych 33"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which antidepressant is sedating and used as an appetite stimulant?",
+   "options": [
+    "Duloxetine",
+    "Mirtazapine (Remeron)",
+    "Fluoxetine",
+    "Bupropion"
+   ],
+   "answer": 1,
+   "rationale": "Mirtazapine: sedation, increased appetite, abnormal dreams, dry mouth, constipation. [Psych 35]",
+   "source": "Antidepressants Quiz · Psych 35"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "A patient started an antidepressant 1 week ago and says it isn't working. What should the nurse say?",
+   "options": [
+    "Double the dose",
+    "It may take several weeks to see the effect; take it every day",
+    "Stop it and try another",
+    "Take it only on bad days"
+   ],
+   "answer": 1,
+   "rationale": "Inform patients it may take several weeks; must be taken every day; no abrupt withdrawal. [Psych 36, 38, 53]",
+   "source": "Antidepressants Quiz · Psych 36, 38, 53"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Why are antidepressant patients monitored closely in the first weeks?",
+   "options": [
+    "For hypertension",
+    "For bleeding",
+    "For hyperglycemia",
+    "For suicidal tendencies (black box warning)"
+   ],
+   "answer": 3,
+   "rationale": "Monitor closely, assess suicidal tendencies, provide support; dispense small amounts. [Psych 36, 52–53]",
+   "source": "Antidepressants Quiz · Psych 36, 52–53"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Antipsychotics are mainly used to treat:",
+   "options": [
+    "Seizures only",
+    "Schizophrenia and other psychoses",
+    "Bacterial infections",
+    "Hypertension"
+   ],
+   "answer": 1,
+   "rationale": "Drug-induced psychoses, schizophrenia, autism; also extreme mania (with lithium), BPD, resistant depression, Tourette's, nausea, intractable hiccups. [Psych 40]",
+   "source": "Antipsychotics Quiz · Psych 40"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "What is the hallmark of psychosis?",
+   "options": [
+    "Chronic pain",
+    "Low mood",
+    "Loss of contact with reality",
+    "Excessive sleep"
+   ],
+   "answer": 2,
+   "rationale": "Psychosis impairs mental function so the person can't do ADLs; hallmark is loss of contact with reality. [Psych 6]",
+   "source": "Antipsychotics Quiz · Psych 6"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "How do antipsychotics work?",
+   "options": [
+    "Block dopamine receptors in the brain, decreasing CNS dopamine",
+    "Increase dopamine release",
+    "Block mu receptors",
+    "Enhance GABA"
+   ],
+   "answer": 0,
+   "rationale": "Block dopamine receptors in the limbic system and basal ganglia → tranquilizing effect in psychotic patients. [Psych 41]",
+   "source": "Antipsychotics Quiz · Psych 41"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Conventional (first-generation) antipsychotics include which group?",
+   "options": [
+    "SSRIs",
+    "Phenothiazines",
+    "Benzodiazepines",
+    "Salicylates"
+   ],
+   "answer": 1,
+   "rationale": "Types on slide 41: conventional/first-generation (phenothiazines), second-generation, atypical. [Psych 41]",
+   "source": "Antipsychotics Quiz · Psych 41"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Prochlorperazine is listed as an antipsychotic used as a(n):",
+   "options": [
+    "Antiemetic",
+    "Analgesic",
+    "Antidepressant",
+    "Anticoagulant"
+   ],
+   "answer": 0,
+   "rationale": "Prochlorperazine (antiemetic) is listed under antipsychotic indications. [Psych 41]",
+   "source": "Antipsychotics Quiz · Psych 41"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Atypical antipsychotics block which TWO receptors?",
+   "options": [
+    "H1 and H2",
+    "Mu and kappa",
+    "D2 dopamine and 5-HT2 serotonin",
+    "Alpha and beta"
+   ],
+   "answer": 2,
+   "rationale": "Blocking D2 'turns down the volume'; blocking 5-HT2 lets dopamine rise where it's too low. Better balance = improved efficacy and safety. [Psych 47]",
+   "source": "Antipsychotics Quiz · Psych 47"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which brand matches quetiapine?",
+   "options": [
+    "Risperdal",
+    "Seroquel",
+    "Zyprexa",
+    "Abilify"
+   ],
+   "answer": 1,
+   "rationale": "Clozaril, Risperdal, Zyprexa (olanzapine), Seroquel (quetiapine), Zeldox, Abilify (aripiprazole), Invega, Saphris, Latuda. [Psych 46]",
+   "source": "Antipsychotics Quiz · Psych 46"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which brand matches aripiprazole?",
+   "options": [
+    "Invega",
+    "Abilify",
+    "Zeldox",
+    "Latuda"
+   ],
+   "answer": 1,
+   "rationale": "Aripiprazole = Abilify; lurasidone = Latuda; paliperidone = Invega; ziprasidone = Zeldox. [Psych 46]",
+   "source": "Antipsychotics Quiz · Psych 46"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Clozapine (Clozaril) causes minor or no EPS, but its key adverse effect is:",
+   "options": [
+    "Tinnitus",
+    "Reye's syndrome",
+    "Blood dyscrasias",
+    "Hypertensive crisis"
+   ],
+   "answer": 2,
+   "rationale": "Clozapine selectively blocks dopamine in the mesolimbic region; watch for blood dyscrasias. [Psych 48]",
+   "source": "Antipsychotics Quiz · Psych 48"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Risperidone (Risperdal) is noted for:",
+   "options": [
+    "Treating pain",
+    "Causing severe EPS at any dose",
+    "Treating schizophrenia including negative symptoms, with minimal EPS at 1–6 mg/day",
+    "Being IV only"
+   ],
+   "answer": 2,
+   "rationale": "Oral and long-acting injectable forms. [Psych 49]",
+   "source": "Antipsychotics Quiz · Psych 49"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Haloperidol (Haldol) is contraindicated in patients with:",
+   "options": [
+    "Parkinson's disease",
+    "Migraine",
+    "Asthma",
+    "Osteoarthritis"
+   ],
+   "answer": 0,
+   "rationale": "Contraindications: hypersensitivity, Parkinson's disease, large amounts of CNS depressants. [Psych 45]",
+   "source": "Antipsychotics Quiz · Psych 45"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Why is haloperidol useful for nonadherent patients with schizophrenia?",
+   "options": [
+    "It's taken once a year",
+    "It cures schizophrenia",
+    "It's available IM",
+    "It has no side effects"
+   ],
+   "answer": 2,
+   "rationale": "Oral and IM forms; useful when patients are nonadherent. Report tremors, N/V or uncontrollable shaking. [Psych 45]",
+   "source": "Antipsychotics Quiz · Psych 45"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "High fever, unstable blood pressure and myoglobinemia suggest:",
+   "options": [
+    "Neuroleptic malignant syndrome (NMS)",
+    "Tardive dyskinesia",
+    "Lithium toxicity",
+    "Acute dystonia"
+   ],
+   "answer": 0,
+   "rationale": "NMS is potentially life threatening. [Psych 43]",
+   "source": "Antipsychotics Quiz · Psych 43"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Painful muscle spasms soon after starting an antipsychotic are:",
+   "options": [
+    "Tardive dyskinesia",
+    "Agranulocytosis",
+    "Acute dystonia (an EPS)",
+    "Serotonin syndrome"
+   ],
+   "answer": 2,
+   "rationale": "EPS listed: pseudoparkinsonism-akathisia (distressing muscle restlessness) and acute dystonia (painful muscle spasms). [Psych 43]",
+   "source": "Antipsychotics Quiz · Psych 43"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which drugs treat EPS?",
+   "options": [
+    "Lithium and buspirone",
+    "Misoprostol and aspirin",
+    "Naloxone and flumazenil",
+    "Benztropine (Kynesia) and trihexyphenidyl"
+   ],
+   "answer": 3,
+   "rationale": "Benztropine (Kynesia) and trihexyphenidyl hydrochloride. [Psych 43]",
+   "source": "Antipsychotics Quiz · Psych 43"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Involuntary lip, tongue and facial movements after long-term antipsychotic use are:",
+   "options": [
+    "Acute dystonia",
+    "NMS",
+    "Akathisia",
+    "Tardive dyskinesia"
+   ],
+   "answer": 3,
+   "rationale": "Tardive dyskinesia: involuntary oral/facial contractions and choreoathetosis; occurs with continuous long-term therapy. [Psych 44]",
+   "source": "Antipsychotics Quiz · Psych 44"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which metabolic effects are listed for antipsychotics?",
+   "options": [
+    "Hypercalcemia",
+    "Hypothyroidism only",
+    "Weight loss and hypoglycemia",
+    "Insulin resistance, weight gain, lipid changes, cardiometabolic syndrome"
+   ],
+   "answer": 3,
+   "rationale": "Also agranulocytosis and hemolytic anemia. [Psych 43–44]",
+   "source": "Antipsychotics Quiz · Psych 43–44"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which teaching is correct for antipsychotics?",
+   "options": [
+    "Stand up quickly to prevent dizziness",
+    "Alcohol is fine in moderation",
+    "Take antacids with each dose",
+    "Wear sunscreen because of photosensitivity"
+   ],
+   "answer": 3,
+   "rationale": "Sunscreen; no antacids within 1 hour of a dose; avoid alcohol/CNS depressants; oral forms with meals; change positions slowly. [Psych 50]",
+   "source": "Antipsychotics Quiz · Psych 50"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "How long should a patient wait between an antipsychotic dose and an antacid?",
+   "options": [
+    "No wait needed",
+    "1 day",
+    "At least 1 hour",
+    "5 minutes"
+   ],
+   "answer": 2,
+   "rationale": "Avoid taking antacids within 1 hour of a dose. [Psych 50]",
+   "source": "Antipsychotics Quiz · Psych 50"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which action helps ensure a patient on psychotherapeutic drugs actually takes the oral dose?",
+   "options": [
+    "Check the mouth to make sure it was swallowed",
+    "Give a month's supply",
+    "Leave it at the bedside",
+    "Crush it in coffee"
+   ],
+   "answer": 0,
+   "rationale": "Check the mouth; dispense small amounts; assess risk of harm to self and others (black box warning). [Psych 52]",
+   "source": "Antipsychotics Quiz · Psych 52"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "A patient on hydromorphone has RR 9 and is hard to rouse. What should the nurse do?",
+   "options": [
+    "Encourage fluids and fibre",
+    "Withhold the dose, support the airway, and notify the physician; naloxone per order",
+    "Give the next dose as scheduled",
+    "Give flumazenil"
+   ],
+   "answer": 1,
+   "rationale": "Respiratory depression is the most serious opioid adverse effect. Withhold if RR is under 10 and contact the physician. Naloxone reverses opioids. [slides 24, 33, 39]",
+   "source": "CNS Drugs Full Quiz · slides 24, 33, 39"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "1 mg IV hydromorphone (Dilaudid) equals how much morphine?",
+   "options": [
+    "5 mg",
+    "7 mg",
+    "10 mg",
+    "1 mg"
+   ],
+   "answer": 1,
+   "rationale": "Equianalgesia: 1 mg IV/IM hydromorphone = 7 mg morphine. [slides 22, 30]",
+   "source": "CNS Drugs Full Quiz · slides 22, 30"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which opioid has a long half-life linked to unintentional overdoses and QT prolongation?",
+   "options": [
+    "Methadone",
+    "Codeine",
+    "Meperidine",
+    "Fentanyl"
+   ],
+   "answer": 0,
+   "rationale": "Methadone: long-acting synthetic mu agonist; prolonged half-life → overdoses; prolonged QT → dysrhythmias. [slide 32]",
+   "source": "CNS Drugs Full Quiz · slide 32"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which opioid's metabolite (normeperidine) can cause seizures?",
+   "options": [
+    "Hydromorphone",
+    "Oxycodone",
+    "Meperidine",
+    "Morphine"
+   ],
+   "answer": 2,
+   "rationale": "Meperidine is not recommended long term because normeperidine accumulates and can cause seizures. [slide 17]",
+   "source": "CNS Drugs Full Quiz · slide 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "What is the antidote for acetaminophen overdose?",
+   "options": [
+    "Acetylcysteine",
+    "Naloxone",
+    "Flumazenil",
+    "Vitamin K"
+   ],
+   "answer": 0,
+   "rationale": "Acetaminophen overdose causes hepatic necrosis; antidote is acetylcysteine. Max 4 g/day for healthy adults. [slides 35, 37]",
+   "source": "CNS Drugs Full Quiz · slides 35, 37"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Which drugs show an analgesic ceiling effect?",
+   "options": [
+    "Hydromorphone and methadone",
+    "Gabapentin and pregabalin",
+    "Morphine and fentanyl",
+    "Codeine, pentazocine, nalbuphine"
+   ],
+   "answer": 3,
+   "rationale": "Ceiling effect: no better pain relief at higher doses, but more side effects. [slide 19]",
+   "source": "CNS Drugs Full Quiz · slide 19"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Why is aspirin avoided in children and teens with a viral illness?",
+   "options": [
+    "Risk of serotonin syndrome",
+    "Risk of hypertension",
+    "It doesn't reduce fever",
+    "Risk of Reye's syndrome"
+   ],
+   "answer": 3,
+   "rationale": "Reye's syndrome: progressive neurological deficits and liver damage, triggered by salicylates during viral illness. [slides 15, 21]",
+   "source": "CNS Drugs Full Quiz · slides 15, 21"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Ketorolac (Toradol) is limited to how long, and which labs are watched?",
+   "options": [
+    "No limit; CBC",
+    "Up to 5–7 days; creatinine and BUN",
+    "Up to 5–7 days; INR",
+    "Up to 30 days; ALT and AST"
+   ],
+   "answer": 1,
+   "rationale": "Short-term use only (5–7 days) for moderate to severe pain. Adverse effects include kidney impairment: monitor creatinine and BUN. [slide 8]",
+   "source": "CNS Drugs Full Quiz · slide 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Celecoxib (Celebrex) is contraindicated with which allergy?",
+   "options": [
+    "Sulpha",
+    "Egg",
+    "Penicillin",
+    "Iodine"
+   ],
+   "answer": 0,
+   "rationale": "Celecoxib, the only remaining COX-2 inhibitor, should not be used with a sulpha allergy. Little effect on platelets. [slide 11]",
+   "source": "CNS Drugs Full Quiz · slide 11"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "What is misoprostol's role with NSAIDs?",
+   "options": [
+    "A synthetic prostaglandin that helps prevent GI bleeding",
+    "An antiplatelet drug",
+    "An antidote for NSAID overdose",
+    "It's an NSAID that boosts pain relief"
+   ],
+   "answer": 0,
+   "rationale": "Misoprostol (NOT an NSAID) replaces prostaglandins blocked by NSAIDs: inhibits gastric acid and protects the stomach lining. [slide 12]",
+   "source": "CNS Drugs Full Quiz · slide 12"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "A patient on high-dose aspirin reports tinnitus. This suggests:",
+   "options": [
+    "An allergic reaction",
+    "Expected effect",
+    "Salicylate intoxication (salicylism)",
+    "Reye's syndrome"
+   ],
+   "answer": 2,
+   "rationale": "Tinnitus and hearing loss are signs of salicylism; also N/V, confusion, hyperventilation. [slide 15]",
+   "source": "CNS Drugs Full Quiz · slide 15"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which is the most commonly used NSAID?",
+   "options": [
+    "Meloxicam",
+    "Ibuprofen",
+    "Indomethacin",
+    "Naproxen"
+   ],
+   "answer": 1,
+   "rationale": "Ibuprofen (Motrin, Advil) is most common; naproxen is second, with fewer interactions with ACE inhibitors. [slide 9]",
+   "source": "CNS Drugs Full Quiz · slide 9"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "What is REM rebound?",
+   "options": [
+    "Daytime sleepiness",
+    "Sleepwalking from zolpidem",
+    "Increased REM when a REM-suppressing drug is suddenly stopped",
+    "Decreased REM while taking a hypnotic"
+   ],
+   "answer": 2,
+   "rationale": "REM rebound occurs when a medication that suppresses REM is suddenly stopped. REM interference is when a drug disrupts REM. [slide 2]",
+   "source": "CNS Drugs Full Quiz · slide 2"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Barbiturates are rarely used today mainly because they:",
+   "options": [
+    "Are habit forming with a low therapeutic index",
+    "Only come as injections",
+    "Are expensive",
+    "Don't cause sleep"
+   ],
+   "answer": 0,
+   "rationale": "Barbiturates are habit forming with a low therapeutic index; benzodiazepines are safer. [slide 16]",
+   "source": "CNS Drugs Full Quiz · slide 16"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "What is the treatment for a barbiturate overdose?",
+   "options": [
+    "Naloxone",
+    "Acetylcysteine",
+    "Symptomatic and supportive care (airway, ventilation, activated charcoal)",
+    "Flumazenil"
+   ],
+   "answer": 2,
+   "rationale": "There is no antidote. Maintain airway, assisted ventilation/O2, fluids, alkalization, activated charcoal. [slide 19]",
+   "source": "CNS Drugs Full Quiz · slide 19"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Phenobarbital is used to:",
+   "options": [
+    "Treat insomnia as a first-line hypnotic",
+    "Prevent tonic-clonic and febrile seizures and treat neonatal hyperbilirubinemia",
+    "Reverse benzodiazepines",
+    "Treat depression"
+   ],
+   "answer": 1,
+   "rationale": "Phenobarbital is the prototypical long-acting barbiturate; no longer recommended as a hypnotic. [slide 21]",
+   "source": "CNS Drugs Full Quiz · slide 21"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Zopiclone (Imovane) is used for insomnia for how long?",
+   "options": [
+    "7 to 10 days",
+    "Only one dose",
+    "3 to 6 months",
+    "Indefinitely"
+   ],
+   "answer": 0,
+   "rationale": "Zopiclone is a short-acting benzodiazepine-like drug with a very short half-life, for short-term insomnia (7–10 days). [slide 15]",
+   "source": "CNS Drugs Full Quiz · slide 15"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "When should a hypnotic be taken?",
+   "options": [
+    "Every 4 hours",
+    "With breakfast",
+    "30 to 60 minutes before bedtime",
+    "Only when waking at night"
+   ],
+   "answer": 2,
+   "rationale": "Take 30–60 minutes before bed (depends on onset). Rebound insomnia may occur for a few nights after stopping a 3–4 week regimen. [slide 24]",
+   "source": "CNS Drugs Full Quiz · slide 24"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which food/drink interacts with benzodiazepines?",
+   "options": [
+    "Aged cheese",
+    "Leafy greens",
+    "Grapefruit juice",
+    "Bananas"
+   ],
+   "answer": 2,
+   "rationale": "Grapefruit juice; also azole antifungals, verapamil, diltiazem, macrolides, alcohol and other CNS depressants. [Sed 13]",
+   "source": "CNS Drugs Full Quiz · Sed 13"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which benzo is used for preop/procedural sedation and causes amnesia?",
+   "options": [
+    "Clonazepam (Rivotril)",
+    "Midazolam (Versed)",
+    "Temazepam (Restoril)",
+    "Flurazepam (Dalmane)"
+   ],
+   "answer": 1,
+   "rationale": "Midazolam causes amnesia, anxiolysis and sedation; IV in adults, oral liquid for children. [Sed 14]",
+   "source": "CNS Drugs Full Quiz · Sed 14"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "An older adult is started on lorazepam at night. The nurse's top priority is:",
+   "options": [
+    "Checking blood glucose",
+    "Fall prevention",
+    "Increasing fluids",
+    "Monitoring for hypertension"
+   ],
+   "answer": 1,
+   "rationale": "Benzos are a fall hazard for older adults (dizziness, oversedation, paradoxical excitement). Bed alarm, call light, assist with ambulation. [Sed 11, 25]",
+   "source": "CNS Drugs Full Quiz · Sed 11, 25"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Sedatives & hypnotics",
+   "stem": "Which is a long-acting benzodiazepine?",
+   "options": [
+    "Diazepam (Valium)",
+    "Alprazolam (Xanax)",
+    "Triazolam",
+    "Lorazepam (Ativan)"
+   ],
+   "answer": 0,
+   "rationale": "Long-acting: clonazepam, diazepam, flurazepam. Intermediate: alprazolam, bromazepam, lorazepam, temazepam. [Sed 10]",
+   "source": "CNS Drugs Full Quiz · Sed 10"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "How does buspirone differ from benzodiazepines?",
+   "options": [
+    "It works within minutes",
+    "It is highly sedating",
+    "It is non-sedating, non-habit forming, and taken on a schedule (not PRN)",
+    "It is given IV for agitation"
+   ],
+   "answer": 2,
+   "rationale": "Buspirone takes time to work and is given on a schedule. Don't give with MAOIs; serotonin syndrome risk with SSRIs. [Psych 7, 12]",
+   "source": "CNS Drugs Full Quiz · Psych 7, 12"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "What is the maintenance serum level for lithium?",
+   "options": [
+    "2.0–3.0 mmol/L",
+    "0.6–1.2 mmol/L",
+    "1.5–2.0 mmol/L",
+    "0.1–0.5 mmol/L"
+   ],
+   "answer": 1,
+   "rationale": "Maintenance 0.6–1.2 mmol/L; acute mania 1–1.5. Toxicity begins over 1.5–2.0. [Psych 16]",
+   "source": "CNS Drugs Full Quiz · Psych 16"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "A patient on lithium has vomiting, tremor and confusion. What does this suggest?",
+   "options": [
+    "Expected adjustment",
+    "Lithium toxicity",
+    "Hypertensive crisis",
+    "Serotonin syndrome"
+   ],
+   "answer": 1,
+   "rationale": "GI discomfort, tremor, confusion, somnolence and seizures are signs of lithium toxicity. Hold and notify. [Psych 16]",
+   "source": "CNS Drugs Full Quiz · Psych 16"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Why is the sodium level important with lithium?",
+   "options": [
+    "Low sodium lowers lithium levels",
+    "Keeping sodium normal (135–145) helps maintain therapeutic lithium levels",
+    "Lithium raises sodium dangerously",
+    "It isn't related"
+   ],
+   "answer": 1,
+   "rationale": "Normal sodium helps maintain therapeutic lithium levels; low sodium → lithium retained → toxicity. [Psych 16]",
+   "source": "CNS Drugs Full Quiz · Psych 16"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "What is the most serious adverse effect of lithium?",
+   "options": [
+    "Weight gain",
+    "Cardiac dysrhythmia",
+    "Dry mouth",
+    "Hypothyroidism"
+   ],
+   "answer": 1,
+   "rationale": "Most serious: cardiac dysrhythmia. Long-term: hypothyroidism. [Psych 17]",
+   "source": "CNS Drugs Full Quiz · Psych 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "A patient on phenelzine (an MAOI) should avoid which food?",
+   "options": [
+    "Aged cheddar cheese",
+    "Fresh chicken",
+    "Rice",
+    "Apples"
+   ],
+   "answer": 0,
+   "rationale": "Tyramine foods (aged cheese, cured meats, red wine, fava beans, yeast extracts) → hypertensive crisis. [Psych 27]",
+   "source": "CNS Drugs Full Quiz · Psych 27"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "How long is the washout period when switching from an MAOI to an SSRI?",
+   "options": [
+    "6 months",
+    "3 days",
+    "2 weeks",
+    "24 hours"
+   ],
+   "answer": 2,
+   "rationale": "A 2-week washout is needed due to serotonin syndrome risk. [Psych 26]",
+   "source": "CNS Drugs Full Quiz · Psych 26"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which antidepressant is also used for smoking cessation?",
+   "options": [
+    "Duloxetine",
+    "Amitriptyline",
+    "Bupropion",
+    "Trazodone"
+   ],
+   "answer": 2,
+   "rationale": "Bupropion (Zyban) was the first nicotine-free Rx for nicotine dependence; also used when SSRIs cause sexual side effects. [Psych 32]",
+   "source": "CNS Drugs Full Quiz · Psych 32"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "TCA overdose is dangerous mainly because of:",
+   "options": [
+    "Seizures and dysrhythmias",
+    "Hypertensive crisis",
+    "Liver failure",
+    "Kidney stones"
+   ],
+   "answer": 0,
+   "rationale": "TCA overdose is lethal (70–80% die before hospital); death from seizures or dysrhythmias; no antidote. [Psych 24]",
+   "source": "CNS Drugs Full Quiz · Psych 24"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Amitriptyline (Elavil) is commonly used for:",
+   "options": [
+    "Mania",
+    "Smoking cessation",
+    "Insomnia and neuropathic pain",
+    "Schizophrenia"
+   ],
+   "answer": 2,
+   "rationale": "Oldest, most widely used TCA; commonly for insomnia and neuropathic pain. Contraindicated after recent MI and in pregnancy. [Psych 25]",
+   "source": "CNS Drugs Full Quiz · Psych 25"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "High fever, unstable BP and myoglobinemia in a patient on an antipsychotic suggest:",
+   "options": [
+    "Tardive dyskinesia",
+    "Acute dystonia",
+    "Neuroleptic malignant syndrome",
+    "Lithium toxicity"
+   ],
+   "answer": 2,
+   "rationale": "NMS is potentially life-threatening: high fever, unstable BP, myoglobinemia. [Psych 43]",
+   "source": "CNS Drugs Full Quiz · Psych 43"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which drug treats extrapyramidal symptoms (EPS) like acute dystonia?",
+   "options": [
+    "Clozapine",
+    "Haloperidol",
+    "Flumazenil",
+    "Benztropine (Kynesia)"
+   ],
+   "answer": 3,
+   "rationale": "EPS (pseudoparkinsonism-akathisia, acute dystonia) are treated with benztropine and trihexyphenidyl. [Psych 43]",
+   "source": "CNS Drugs Full Quiz · Psych 43"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Clozapine (Clozaril) has minor or no EPS, but its key adverse effect is:",
+   "options": [
+    "Hypertensive crisis",
+    "Blood dyscrasias",
+    "Reye's syndrome",
+    "Tinnitus"
+   ],
+   "answer": 1,
+   "rationale": "Clozapine can cause blood dyscrasias, so blood counts are monitored. [Psych 48]",
+   "source": "CNS Drugs Full Quiz · Psych 48"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which nursing action is important when giving oral psychotherapeutic drugs?",
+   "options": [
+    "Crush all tablets",
+    "Give a 30-day supply to improve adherence",
+    "Allow the patient to stop when feeling better",
+    "Check the mouth to make sure doses are swallowed, and dispense small amounts"
+   ],
+   "answer": 3,
+   "rationale": "Check the mouth; dispense small amounts to reduce suicide risk; avoid abrupt withdrawal. [Psych 52–53]",
+   "source": "CNS Drugs Full Quiz · Psych 52–53"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Lithium is the drug of choice for:",
+   "options": [
+    "Mania (bipolar disorder)",
+    "Schizophrenia",
+    "Insomnia",
+    "Neuropathic pain"
+   ],
+   "answer": 0,
+   "rationale": "Lithium is the drug of choice for mania; thought to potentiate serotonergic neurotransmission. [Psych 16]",
+   "source": "CNS Drugs Practice Test · Psych 16"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "What is the target lithium level for ACUTE mania?",
+   "options": [
+    "0.1–0.4 mmol/L",
+    "1 to 1.5 mmol/L",
+    "2.0–3.0 mmol/L",
+    "5 mmol/L"
+   ],
+   "answer": 1,
+   "rationale": "Acute mania 1–1.5 mmol/L; maintenance 0.6–1.2 mmol/L. [Psych 16]",
+   "source": "CNS Drugs Practice Test · Psych 16"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Long-term lithium therapy may cause:",
+   "options": [
+    "Hyperthyroidism",
+    "Hypothyroidism",
+    "Diabetes insipidus only",
+    "Liver failure"
+   ],
+   "answer": 1,
+   "rationale": "Long-term treatment may cause hypothyroidism. Most serious AE: cardiac dysrhythmia. [Psych 17]",
+   "source": "CNS Drugs Practice Test · Psych 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which lithium adverse effect involves involuntary wavelike movements of the extremities?",
+   "options": [
+    "Ataxia",
+    "Choreoathetotic movements",
+    "Akathisia",
+    "Dystonia"
+   ],
+   "answer": 1,
+   "rationale": "Choreoathetosis = involuntary wavelike movements; ataxia = generalized loss of coordination. [Psych 17]",
+   "source": "CNS Drugs Practice Test · Psych 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Buspirone should be given:",
+   "options": [
+    "PRN for panic attacks",
+    "On a scheduled basis, not PRN",
+    "IV only",
+    "Only at bedtime for sleep"
+   ],
+   "answer": 1,
+   "rationale": "Buspirone lacks sedative effect, takes time to work and is given on a schedule. [Psych 12]",
+   "source": "CNS Drugs Practice Test · Psych 12"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Buspirone should NOT be given with:",
+   "options": [
+    "MAOIs",
+    "Acetaminophen",
+    "Antacids",
+    "Vitamin D"
+   ],
+   "answer": 0,
+   "rationale": "Do not administer with MAOIs; serotonin syndrome risk with SSRIs. [Psych 7]",
+   "source": "CNS Drugs Practice Test · Psych 7"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which is a therapeutic effect of anxiolytics?",
+   "options": [
+    "Fewer anxiety and panic attacks, improved sleep and appetite",
+    "Increased hallucinations",
+    "Weight loss",
+    "Increased tension"
+   ],
+   "answer": 0,
+   "rationale": "Also improved alertness, cognition and mood; less fear and irritability; more interest in self and others. [Psych 13]",
+   "source": "CNS Drugs Practice Test · Psych 13"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "St. John's wort has severe interactions with:",
+   "options": [
+    "MAOIs and SSRIs",
+    "Acetaminophen",
+    "Antacids",
+    "Insulin"
+   ],
+   "answer": 0,
+   "rationale": "Also a tyramine food–drug interaction; side effects include photosensitivity. [Psych 51]",
+   "source": "CNS Drugs Practice Test · Psych 51"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "A patient started haloperidol yesterday and now has a sudden, painful spasm of the neck and eyes. This is:",
+   "options": [
+    "Neuroleptic malignant syndrome",
+    "Tardive dyskinesia",
+    "Serotonin syndrome",
+    "Acute dystonia"
+   ],
+   "answer": 3,
+   "rationale": "Early + painful spasm = acute dystonia (an EPS). Treated with benztropine (Kynesia). [Psych 43]",
+   "source": "Night Before Quiz (CNS) · Psych 43"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "After 6 years on an antipsychotic, a patient has lip smacking and tongue thrusting. This is:",
+   "options": [
+    "Pseudoparkinsonism",
+    "Tardive dyskinesia",
+    "Acute dystonia",
+    "Akathisia"
+   ],
+   "answer": 1,
+   "rationale": "Late (tardy) + mouth/face movements = tardive dyskinesia, from long-term therapy. [Psych 44]",
+   "source": "Night Before Quiz (CNS) · Psych 44"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which drug treats acute dystonia?",
+   "options": [
+    "Haloperidol",
+    "Lithium",
+    "Flumazenil",
+    "Benztropine (Kynesia)"
+   ],
+   "answer": 3,
+   "rationale": "EPS are treated with benztropine or trihexyphenidyl. [Psych 43]",
+   "source": "Night Before Quiz (CNS) · Psych 43"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Haloperidol is contraindicated in Parkinson's disease because:",
+   "options": [
+    "It raises blood sugar",
+    "It causes tinnitus",
+    "It blocks dopamine, which Parkinson's already lacks",
+    "It interacts with tyramine"
+   ],
+   "answer": 2,
+   "rationale": "Antipsychotics block dopamine; Parkinson's is a dopamine deficiency. Also contraindicated: hypersensitivity, large amounts of CNS depressants. [Psych 41, 45]",
+   "source": "Night Before Quiz (CNS) · Psych 41, 45"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Prochlorperazine is an antipsychotic used mainly as a(n):",
+   "options": [
+    "Antidepressant",
+    "Anticonvulsant",
+    "Analgesic",
+    "Antiemetic"
+   ],
+   "answer": 3,
+   "rationale": "Prochlorperazine (antiemetic): for nausea. [Psych 41]",
+   "source": "Night Before Quiz (CNS) · Psych 41"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "A patient on lithium has vomiting, a coarse tremor and confusion. What does this suggest?",
+   "options": [
+    "Expected side effects",
+    "Serotonin syndrome",
+    "Tardive dyskinesia",
+    "Lithium toxicity"
+   ],
+   "answer": 3,
+   "rationale": "Signs of lithium toxicity: GI discomfort, tremor, confusion, somnolence, seizures. Hold and notify. [Psych 16]",
+   "source": "Night Before Quiz (CNS) · Psych 16"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Which teaching is correct for a patient on an antipsychotic?",
+   "options": [
+    "Alcohol is fine in moderation",
+    "Take antacids with each dose",
+    "Wear sunscreen and change positions slowly",
+    "Stop it when you feel better"
+   ],
+   "answer": 2,
+   "rationale": "Photosensitivity → sunscreen; no antacids within 1 hour of a dose; avoid alcohol; change positions slowly. [Psych 50]",
+   "source": "Night Before Quiz (CNS) · Psych 50"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Which NSAID side effect is the handwritten note on the slide about indomethacin?",
+   "options": [
+    "Oral and rectal routes can bother the stomach",
+    "Causes hypertensive crisis",
+    "Causes respiratory depression",
+    "Causes REM rebound"
+   ],
+   "answer": 0,
+   "rationale": "NSAIDs irritate the GI tract; respiratory depression belongs to opioids. [Pain 2, slide 8]",
+   "source": "Night Before Quiz (CNS) · Pain 2, slide 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "High fever, unstable BP and myoglobinemia in a patient on an antipsychotic:",
+   "options": [
+    "Acute dystonia",
+    "Lithium toxicity",
+    "Neuroleptic malignant syndrome",
+    "Tardive dyskinesia"
+   ],
+   "answer": 2,
+   "rationale": "NMS is potentially life threatening. [Psych 43]",
+   "source": "Night Before Quiz (CNS) · Psych 43"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "CNS mixed review",
+   "stem": "Match the antidote to benzodiazepine overdose:",
+   "options": [
+    "Acetylcysteine",
+    "Flumazenil",
+    "Benztropine",
+    "Naloxone"
+   ],
+   "answer": 1,
+   "rationale": "Opioids → naloxone. Benzos → flumazenil. Acetaminophen → acetylcysteine. Barbiturates and TCAs → no antidote.",
+   "source": "Night Before Quiz (CNS)"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Hold an opioid and call the physician if the respiratory rate is below:",
+   "options": [
+    "5",
+    "10",
+    "16",
+    "20"
+   ],
+   "answer": 1,
+   "rationale": "The slides: RR less than 10 breaths/min. [Pain 1, slide 39]",
+   "source": "Night Before Quiz (CNS) · Pain 1, slide 39"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Maximum daily acetaminophen for a healthy adult:",
+   "options": [
+    "8 g",
+    "4 g",
+    "2 g",
+    "6 g"
+   ],
+   "answer": 1,
+   "rationale": "4 g/day; 2 000 mg considered for older adults and liver disease. [Pain 1, slide 35]",
+   "source": "Night Before Quiz (CNS) · Pain 1, slide 35"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Ketorolac (Toradol) is limited to:",
+   "options": [
+    "3 months",
+    "No limit",
+    "30 days",
+    "5–7 days"
+   ],
+   "answer": 3,
+   "rationale": "Short-term only; watch kidneys (creatinine, BUN). [Pain 2, slide 8]",
+   "source": "Night Before Quiz (CNS) · Pain 2, slide 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: NSAIDs & cannabis",
+   "stem": "Why no aspirin for a teen with the flu?",
+   "options": [
+    "Reye's syndrome",
+    "Serotonin syndrome",
+    "It won't lower fever",
+    "Salicylism only"
+   ],
+   "answer": 0,
+   "rationale": "Salicylates during viral illness can trigger Reye's syndrome. [Pain 2, slides 15, 21]",
+   "source": "Night Before Quiz (CNS) · Pain 2, slides 15, 21"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "A patient on phenelzine eats aged cheddar. Risk?",
+   "options": [
+    "Bleeding",
+    "Hypertensive crisis",
+    "Respiratory depression",
+    "Hypoglycemia"
+   ],
+   "answer": 1,
+   "rationale": "MAOI + tyramine = hypertensive crisis (major headache). [Psych 27–28]",
+   "source": "Night Before Quiz (CNS) · Psych 27–28"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Washout when switching from an MAOI to an SSRI:",
+   "options": [
+    "24 hours",
+    "None",
+    "2 days",
+    "2 weeks"
+   ],
+   "answer": 3,
+   "rationale": "2 weeks to avoid serotonin syndrome. [Psych 26]",
+   "source": "Night Before Quiz (CNS) · Psych 26"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Clozapine's key adverse effect to monitor:",
+   "options": [
+    "Tinnitus",
+    "Hypothyroidism",
+    "Blood dyscrasias",
+    "Hypertensive crisis"
+   ],
+   "answer": 2,
+   "rationale": "Clozapine: minor/no EPS but blood dyscrasias. [Psych 48]",
+   "source": "Night Before Quiz (CNS) · Psych 48"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Psychotherapeutics",
+   "stem": "Most serious adverse effect of lithium:",
+   "options": [
+    "Insomnia",
+    "Dry mouth",
+    "Weight gain",
+    "Cardiac dysrhythmia"
+   ],
+   "answer": 3,
+   "rationale": "Long-term: hypothyroidism. [Psych 17]",
+   "source": "Night Before Quiz (CNS) · Psych 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Pain: opioids & acetaminophen",
+   "stem": "Hydromorphone 1 mg IV equals morphine:",
+   "options": [
+    "1 mg",
+    "3 mg",
+    "7 mg",
+    "10 mg"
+   ],
+   "answer": 2,
+   "rationale": "Equianalgesia: 1 mg hydromorphone = 7 mg morphine. [Pain 1, slides 22, 30]",
+   "source": "Night Before Quiz (CNS) · Pain 1, slides 22, 30"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Treatment of the common cold is:",
+   "options": [
+    "Curative",
+    "Symptomatic only",
+    "Always antibiotic",
+    "Always antiviral"
+   ],
+   "answer": 1,
+   "rationale": "Symptomatic only, not curative; it doesn't eliminate the pathogen [P1 slide 3].",
+   "source": "Respiratory Part 1 Retest · P1 slide 3"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Health Canada recommends OTC cough and cold products NOT be given to children younger than:",
+   "options": [
+    "2 years",
+    "6 years",
+    "12 years",
+    "18 years"
+   ],
+   "answer": 1,
+   "rationale": "Under 6 years: not effective in small children [slide 4].",
+   "source": "Respiratory Part 1 Retest · slide 4"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "How do H1 antihistamines work?",
+   "options": [
+    "They push histamine off its receptors",
+    "They compete with histamine for unoccupied H1 receptors",
+    "They destroy histamine",
+    "They increase histamine release"
+   ],
+   "answer": 1,
+   "rationale": "They block unoccupied receptors but can't push off histamine already bound, so they work better at preventing than reversing effects; give them early [slide 8].",
+   "source": "Respiratory Part 1 Retest · slide 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "H2 blockers are mainly used to:",
+   "options": [
+    "Treat allergies",
+    "Reduce gastric acid",
+    "Stop coughing",
+    "Open airways"
+   ],
+   "answer": 1,
+   "rationale": "H2 antagonists reduce gastric acid (peptic ulcer disease) [slide 11].",
+   "source": "Respiratory Part 1 Retest · slide 11"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Which is a NON-sedating antihistamine?",
+   "options": [
+    "Diphenhydramine (Benadryl)",
+    "Dimenhydrinate (Gravol)",
+    "Loratadine (Claritin)",
+    "Promethazine"
+   ],
+   "answer": 2,
+   "rationale": "Non-sedating: loratadine, cetirizine, fexofenadine. Traditional (sedating): diphenhydramine, dimenhydrinate, chlorpheniramine, promethazine [slide 13].",
+   "source": "Respiratory Part 1 Retest · slide 13"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Why do non-sedating antihistamines cause less drowsiness?",
+   "options": [
+    "They work peripherally, with fewer CNS effects",
+    "They are weaker",
+    "They are taken at night",
+    "They don't block H1 receptors"
+   ],
+   "answer": 0,
+   "rationale": "They work peripherally and have a longer duration (once-daily dosing) [slide 14].",
+   "source": "Respiratory Part 1 Retest · slide 14"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "The MOST common adverse effects of antihistamines are:",
+   "options": [
+    "Diarrhea and hyperactivity",
+    "Anticholinergic (drying) effects like dry mouth and urinary retention",
+    "Hypertension and tachycardia",
+    "Cough and wheeze"
+   ],
+   "answer": 1,
+   "rationale": "Dry mouth, difficulty urinating, constipation, vision changes; plus drowsiness [slide 17].",
+   "source": "Respiratory Part 1 Retest · slide 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Antihistamines should NOT be used as the sole treatment for:",
+   "options": [
+    "Hay fever",
+    "Motion sickness",
+    "An acute asthma attack",
+    "Insomnia"
+   ],
+   "answer": 2,
+   "rationale": "Not sole therapy for acute asthma; salbutamol or epinephrine treat that [slide 16].",
+   "source": "Respiratory Part 1 Retest · slide 16"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Key teaching for a patient taking an antihistamine:",
+   "options": [
+    "Take on an empty stomach",
+    "Avoid alcohol and driving",
+    "Double the dose if drowsy",
+    "Stop if mouth gets dry"
+   ],
+   "answer": 1,
+   "rationale": "Avoid driving/heavy machinery, alcohol and CNS depressants; take with meals; sugarless gum or candy for dry mouth [slides 19–20].",
+   "source": "Respiratory Part 1 Retest · slides 19–20"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Which decongestant causes REBOUND congestion with use beyond several days?",
+   "options": [
+    "Oral pseudoephedrine",
+    "Topical adrenergic sprays (e.g., oxymetazoline)",
+    "Intranasal steroids",
+    "Intranasal ipratropium"
+   ],
+   "answer": 1,
+   "rationale": "Topical adrenergics: prompt, potent, but cause rebound congestion with sustained use. Oral pseudoephedrine and intranasal steroids don't [slides 24, 26–27].",
+   "source": "Respiratory Part 1 Retest · slides 24, 26–27"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Compared with topical decongestants, oral pseudoephedrine has:",
+   "options": [
+    "Faster onset, more potent",
+    "Delayed onset, prolonged effect, no rebound",
+    "Rebound congestion",
+    "No systemic effects"
+   ],
+   "answer": 1,
+   "rationale": "Oral: prolonged but delayed effect, less potent than topical, no rebound [slide 24].",
+   "source": "Respiratory Part 1 Retest · slide 24"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "How do adrenergic decongestants relieve congestion?",
+   "options": [
+    "Thin mucus",
+    "Vasoconstriction that shrinks swollen nasal tissue",
+    "Block histamine",
+    "Suppress the cough centre"
+   ],
+   "answer": 1,
+   "rationale": "They constrict small blood vessels, shrinking engorged mucosa so secretions drain [slides 24–26].",
+   "source": "Respiratory Part 1 Retest · slides 24–26"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Pseudoephedrine requires caution in a patient with:",
+   "options": [
+    "Productive cough",
+    "Hypertension",
+    "Seasonal allergies",
+    "Rhinitis"
+   ],
+   "answer": 1,
+   "rationale": "Contraindications for adrenergics: uncontrolled cardiovascular disease/HTN, acute-angle glaucoma, diabetes, hyperthyroidism, prostatitis, history of TIA/CVA [slide 28].",
+   "source": "Respiratory Part 1 Retest · slide 28"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Adverse effects of oral pseudoephedrine include:",
+   "options": [
+    "Drowsiness and bradycardia",
+    "Nervousness, insomnia, palpitations, tremors",
+    "Dry cough",
+    "Constipation only"
+   ],
+   "answer": 1,
+   "rationale": "Systemic adrenergic stimulation of heart, vessels and CNS [slide 30].",
+   "source": "Respiratory Part 1 Retest · slide 30"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Patients taking nasal decongestants should avoid:",
+   "options": [
+    "Dairy",
+    "Caffeine",
+    "Water",
+    "Vitamin C"
+   ],
+   "answer": 1,
+   "rationale": "Avoid caffeine; report fever, cough or symptoms lasting over 1 week [slide 32].",
+   "source": "Respiratory Part 1 Retest · slide 32"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Combining a nasal decongestant with an MAOI can cause:",
+   "options": [
+    "Low blood sugar",
+    "Raised blood pressure",
+    "Sedation",
+    "Diarrhea"
+   ],
+   "answer": 1,
+   "rationale": "MAOIs plus sympathomimetic decongestants raise BP [slide 31].",
+   "source": "Respiratory Part 1 Retest · slide 31"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "The main adverse effect of intranasal steroids is:",
+   "options": [
+    "Rebound congestion",
+    "Local mucosal dryness and irritation",
+    "Hypertension",
+    "Sedation"
+   ],
+   "answer": 1,
+   "rationale": "Local dryness and irritation; no rebound [slide 29].",
+   "source": "Respiratory Part 1 Retest · slide 29"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Antitussives are primarily used for:",
+   "options": [
+    "Productive coughs",
+    "Non-productive (dry) coughs",
+    "Asthma attacks",
+    "Thick mucus"
+   ],
+   "answer": 1,
+   "rationale": "Antitussives stop or reduce coughing, mainly for non-productive coughs or when coughing is harmful (e.g., after hernia repair) [slide 34].",
+   "source": "Respiratory Part 1 Retest · slide 34"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Dextromethorphan differs from codeine in that it:",
+   "options": [
+    "Is an opioid",
+    "Has no analgesic effect and no CNS depression",
+    "Causes constipation",
+    "Is used for productive coughs"
+   ],
+   "answer": 1,
+   "rationale": "Dextromethorphan suppresses the cough centre like opioids but is non-opioid, with no analgesia or CNS depression [slide 35].",
+   "source": "Respiratory Part 1 Retest · slide 35"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Where do antitussives act?",
+   "options": [
+    "Bronchial smooth muscle",
+    "The cough centre in the medulla",
+    "Nasal mucosa",
+    "Stomach lining"
+   ],
+   "answer": 1,
+   "rationale": "Direct action on the cough centre in the medulla [slide 35].",
+   "source": "Respiratory Part 1 Retest · slide 35"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Antitussives are contraindicated in a patient with:",
+   "options": [
+    "Seasonal allergies",
+    "Respiratory depression",
+    "Hypertension",
+    "A productive cold"
+   ],
+   "answer": 1,
+   "rationale": "Drug allergy, opioid dependency, respiratory depression, other CNS depressants [slide 36].",
+   "source": "Respiratory Part 1 Retest · slide 36"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Guaifenesin (Robitussin) is classified as:",
+   "options": [
+    "Antitussive",
+    "Expectorant",
+    "Antihistamine",
+    "Decongestant"
+   ],
+   "answer": 1,
+   "rationale": "Expectorant: aids removal of mucus by thinning secretions [slide 39].",
+   "source": "Respiratory Part 1 Retest · slide 39"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "A patient taking an expectorant should be encouraged to:",
+   "options": [
+    "Restrict fluids",
+    "Increase fluid intake (if permitted)",
+    "Lie flat",
+    "Avoid coughing"
+   ],
+   "answer": 1,
+   "rationale": "More fluids help loosen and liquefy secretions [slide 42].",
+   "source": "Respiratory Part 1 Retest · slide 42"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "Expectorants are used for:",
+   "options": [
+    "Dry, hacking coughs",
+    "Productive coughs",
+    "Acute asthma",
+    "Anaphylaxis"
+   ],
+   "answer": 1,
+   "rationale": "Productive coughs from colds, bronchitis, sinusitis, influenza, pertussis and more [slide 41].",
+   "source": "Respiratory Part 1 Retest · slide 41"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: colds, allergies & cough",
+   "stem": "What is the drug of choice for anaphylaxis?",
+   "options": [
+    "Diphenhydramine",
+    "Epinephrine",
+    "Pseudoephedrine",
+    "Guaifenesin"
+   ],
+   "answer": 1,
+   "rationale": "Excess histamine causes bronchoconstriction, vasodilation and a BP drop; epinephrine is the treatment [slide 7].",
+   "source": "Respiratory Part 1 Retest · slide 7"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Asthma airflow obstruction is caused by all of these EXCEPT:",
+   "options": [
+    "Bronchospasm",
+    "Inflammation and edema of the bronchial mucosa",
+    "Viscous mucus",
+    "Collapsed alveoli"
+   ],
+   "answer": 3,
+   "rationale": "Alveolar ducts and alveoli stay open; airflow TO them is obstructed by bronchospasm, inflammation, edema and thick mucus [P2 slide 3].",
+   "source": "Respiratory Part 2 Pre-test · P2 slide 3"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Chronic bronchitis is defined as cough and sputum for at least:",
+   "options": [
+    "1 month a year",
+    "3 months in each of 2 consecutive years",
+    "6 months",
+    "2 weeks"
+   ],
+   "answer": 1,
+   "rationale": "At least 3 months in each of 2 consecutive years [slide 6].",
+   "source": "Respiratory Part 2 Pre-test · slide 6"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "The three classes of bronchodilators are:",
+   "options": [
+    "Beta-agonists, anticholinergics, xanthine derivatives",
+    "Antihistamines, decongestants, expectorants",
+    "Corticosteroids, LTRAs, mast cell stabilizers",
+    "SABA, LABA, ICS"
+   ],
+   "answer": 0,
+   "rationale": "Beta-adrenergic agonists, anticholinergics, xanthine derivatives [slide 7].",
+   "source": "Respiratory Part 2 Pre-test · slide 7"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Salbutamol (Ventolin) is a:",
+   "options": [
+    "LABA",
+    "SABA (rescue)",
+    "Corticosteroid",
+    "Anticholinergic"
+   ],
+   "answer": 1,
+   "rationale": "Short-acting beta₂ agonist; 'rescue puffer' [slide 8].",
+   "source": "Respiratory Part 2 Pre-test · slide 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Salmeterol (Serevent) must:",
+   "options": [
+    "Be used alone for acute attacks",
+    "Never be used alone; always with an inhaled corticosteroid",
+    "Be taken as often as needed",
+    "Be crushed before use"
+   ],
+   "answer": 1,
+   "rationale": "LABA for maintenance; never used alone; max 1 puff twice daily [slide 16].",
+   "source": "Respiratory Part 2 Pre-test · slide 16"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Symbicort (budesonide/formoterol) combines:",
+   "options": [
+    "SABA + anticholinergic",
+    "LABA + inhaled corticosteroid",
+    "Antihistamine + decongestant",
+    "LTRA + LABA"
+   ],
+   "answer": 1,
+   "rationale": "A LABA + glucocorticoid combo; can also be used as a reliever in moderate to severe asthma [slide 9].",
+   "source": "Respiratory Part 2 Pre-test · slide 9"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Epinephrine (EpiPen) is classified as a:",
+   "options": [
+    "Selective beta₂ agonist",
+    "Nonselective adrenergic (alpha, beta₁, beta₂)",
+    "Anticholinergic",
+    "Xanthine"
+   ],
+   "answer": 1,
+   "rationale": "Nonselective adrenergic stimulating alpha, beta₁ and beta₂ receptors. Salbutamol = selective beta₂ [slide 10].",
+   "source": "Respiratory Part 2 Pre-test · slide 10"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "How do beta₂ agonists cause bronchodilation?",
+   "options": [
+    "Block acetylcholine",
+    "Activate cAMP, which relaxes airway smooth muscle",
+    "Block leukotrienes",
+    "Reduce inflammation"
+   ],
+   "answer": 1,
+   "rationale": "Beta₂ activation → cAMP → smooth muscle relaxation → dilation [slide 11].",
+   "source": "Respiratory Part 2 Pre-test · slide 11"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "A diabetic patient starts salbutamol. What should the nurse monitor?",
+   "options": [
+    "Blood glucose, which can rise",
+    "Potassium only",
+    "Liver enzymes",
+    "Hearing"
+   ],
+   "answer": 0,
+   "rationale": "Beta-agonists can increase blood glucose [slide 14].",
+   "source": "Respiratory Part 2 Pre-test · slide 14"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Overusing salbutamol can cause:",
+   "options": [
+    "Bradycardia and drowsiness",
+    "Loss of beta₂ selectivity → tachycardia, palpitations, tremors, anxiety, nausea",
+    "Oral thrush",
+    "Liver failure"
+   ],
+   "answer": 1,
+   "rationale": "At high doses, beta₁ receptors are stimulated too [slide 39].",
+   "source": "Respiratory Part 2 Pre-test · slide 39"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Ipratropium (Atrovent) works by:",
+   "options": [
+    "Stimulating beta₂ receptors",
+    "Blocking acetylcholine receptors so bronchoconstriction is prevented",
+    "Blocking leukotrienes",
+    "Inhibiting phosphodiesterase"
+   ],
+   "answer": 1,
+   "rationale": "ACh causes bronchoconstriction; anticholinergics block it [slide 18].",
+   "source": "Respiratory Part 2 Pre-test · slide 18"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Ipratropium is indicated for:",
+   "options": [
+    "Acute asthma attacks",
+    "Preventing bronchospasm in COPD",
+    "Allergic rhinitis only",
+    "Anaphylaxis"
+   ],
+   "answer": 1,
+   "rationale": "Prevention of COPD bronchospasm; not for acute symptoms; also reduces secretions [slide 17].",
+   "source": "Respiratory Part 2 Pre-test · slide 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "The most common adverse effect of anticholinergic bronchodilators is:",
+   "options": [
+    "Hypoglycemia",
+    "Dry mouth or throat",
+    "Diarrhea",
+    "Productive cough"
+   ],
+   "answer": 1,
+   "rationale": "Also urinary retention, palpitations, increased IOP [slide 19].",
+   "source": "Respiratory Part 2 Pre-test · slide 19"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Which teaching is correct for theophylline?",
+   "options": [
+    "Crush timed-release tablets for easier swallowing",
+    "Smoking increases its metabolism and can lower its levels",
+    "It's used for immediate asthma relief",
+    "Charcoal-broiled food raises its levels"
+   ],
+   "answer": 1,
+   "rationale": "Smoking enhances xanthine metabolism. Don't crush timed-release. Charcoal-broiled/high-protein/low-carb foods reduce levels [slides 24–25].",
+   "source": "Respiratory Part 2 Pre-test · slides 24–25"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Which is an adverse effect of xanthines like theophylline?",
+   "options": [
+    "Bradycardia",
+    "Sinus tachycardia and palpitations",
+    "Constipation",
+    "Weight gain"
+   ],
+   "answer": 1,
+   "rationale": "N/V, anorexia, GERD, tachycardia, dysrhythmias, increased urination, hyperglycemia [slide 23].",
+   "source": "Respiratory Part 2 Pre-test · slide 23"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Xanthines are contraindicated in a patient with:",
+   "options": [
+    "Seasonal allergies",
+    "A seizure disorder",
+    "Hypotension",
+    "Glaucoma"
+   ],
+   "answer": 1,
+   "rationale": "Contraindications: allergy, uncontrolled dysrhythmias, seizure disorders, hyperthyroidism, peptic ulcers [slide 23].",
+   "source": "Respiratory Part 2 Pre-test · slide 23"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Xanthine derivatives cause bronchodilation by:",
+   "options": [
+    "Decreasing cAMP",
+    "Inhibiting phosphodiesterase, which INCREASES cAMP",
+    "Blocking acetylcholine",
+    "Blocking histamine"
+   ],
+   "answer": 1,
+   "rationale": "They inhibit the enzyme that breaks down cAMP, so cAMP rises (slide 22's 'decreased' is a typo).",
+   "source": "Respiratory Part 2 Pre-test"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Montelukast (Singulair) is used for:",
+   "options": [
+    "Acute asthma attacks",
+    "Long-term prevention of asthma",
+    "Nasal congestion",
+    "COPD exacerbations only"
+   ],
+   "answer": 1,
+   "rationale": "LTRA for prophylaxis and long-term asthma treatment; not for acute attacks; safe from age 2 [slide 27].",
+   "source": "Respiratory Part 2 Pre-test · slide 27"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Teaching for montelukast:",
+   "options": [
+    "Take only when wheezing",
+    "Take every night, even when symptoms improve",
+    "Take with grapefruit",
+    "Stop after 1 week"
+   ],
+   "answer": 1,
+   "rationale": "Every night on a continuous schedule; improvement in about 1 week [slides 27, 30].",
+   "source": "Respiratory Part 2 Pre-test · slides 27, 30"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "What should be monitored with leukotriene receptor antagonists?",
+   "options": [
+    "Hearing",
+    "Liver function",
+    "Blood glucose",
+    "Eye pressure"
+   ],
+   "answer": 1,
+   "rationale": "Both montelukast and zafirlukast may cause liver dysfunction [slides 29–30].",
+   "source": "Respiratory Part 2 Pre-test · slides 29–30"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Leukotrienes cause:",
+   "options": [
+    "Bronchodilation",
+    "Inflammation, bronchoconstriction and mucus production",
+    "Sedation",
+    "Vasoconstriction"
+   ],
+   "answer": 1,
+   "rationale": "LTRAs block them, preventing these effects [slide 28].",
+   "source": "Respiratory Part 2 Pre-test · slide 28"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Inhaled corticosteroids like fluticasone are used for:",
+   "options": [
+    "Rescue during acute attacks",
+    "Long-term control of persistent asthma",
+    "Allergic conjunctivitis",
+    "Cough suppression"
+   ],
+   "answer": 1,
+   "rationale": "Not sole therapy for acute attacks; full effect can take weeks [slides 31–33].",
+   "source": "Respiratory Part 2 Pre-test · slides 31–33"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "The most common adverse effect of inhaled corticosteroids is:",
+   "options": [
+    "Hypertension",
+    "Oral fungal infection (thrush)",
+    "Tachycardia",
+    "Hyperglycemia"
+   ],
+   "answer": 1,
+   "rationale": "Also pharyngeal irritation, cough, dry mouth; systemic effects are rare [slide 33].",
+   "source": "Respiratory Part 2 Pre-test · slide 33"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "A patient uses salbutamol and fluticasone. Correct order?",
+   "options": [
+    "Fluticasone first, then salbutamol",
+    "Salbutamol first, wait several minutes, then fluticasone",
+    "Both at the same time",
+    "Order doesn't matter"
+   ],
+   "answer": 1,
+   "rationale": "Bronchodilator first opens airways so the steroid reaches deeper [slide 40].",
+   "source": "Respiratory Part 2 Pre-test · slide 40"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Systemic corticosteroids combined with furosemide raise the risk of:",
+   "options": [
+    "Hyperkalemia",
+    "Hypokalemia",
+    "Hypoglycemia",
+    "Bradycardia"
+   ],
+   "answer": 1,
+   "rationale": "Greater risk of hypokalemia with diuretics; steroids may also raise glucose [slide 34].",
+   "source": "Respiratory Part 2 Pre-test · slide 34"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Oral corticosteroids for an asthma exacerbation are usually limited to:",
+   "options": [
+    "1 day",
+    "About 5 days or a tapering dose",
+    "3 months",
+    "Lifelong use"
+   ],
+   "answer": 1,
+   "rationale": "Oral steroids usually limited to 5 days or a taper [slide 32].",
+   "source": "Respiratory Part 2 Pre-test · slide 32"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Roflumilast (Daxas) is a:",
+   "options": [
+    "LABA",
+    "Phosphodiesterase-4 inhibitor for COPD",
+    "Monoclonal antibody",
+    "Antihistamine"
+   ],
+   "answer": 1,
+   "rationale": "Prevents COPD exacerbations; adverse effects include weight loss and psychiatric symptoms [slide 35].",
+   "source": "Respiratory Part 2 Pre-test · slide 35"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Omalizumab (Xolair) requires close monitoring for:",
+   "options": [
+    "Anaphylaxis",
+    "Hypoglycemia",
+    "Constipation",
+    "Hair loss"
+   ],
+   "answer": 0,
+   "rationale": "Monoclonal antibody binding IgE, given by injection; potential for anaphylaxis [slide 36].",
+   "source": "Respiratory Part 2 Pre-test · slide 36"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "Normal respiratory rate the nurse expects on assessment before respiratory drugs:",
+   "options": [
+    "8–10",
+    "12–20",
+    "22–30",
+    "30–40"
+   ],
+   "answer": 1,
+   "rationale": "Respirations 12–20/min, plus skin colour, vital signs, SpO₂, sputum, allergies, history, other meds [slide 38].",
+   "source": "Respiratory Part 2 Pre-test · slide 38"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Respiratory: asthma & COPD",
+   "stem": "A patient has trouble coordinating breathing with their inhaler. The nurse should:",
+   "options": [
+    "Switch to oral meds",
+    "Provide a spacer",
+    "Double the dose",
+    "Stop the inhaler"
+   ],
+   "answer": 1,
+   "rationale": "Provide a spacer; demonstrate and get a return demonstration [slide 41].",
+   "source": "Respiratory Part 2 Pre-test · slide 41"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Which is NOT a function of the skin?",
+   "options": [
+    "Synthesizes vitamin D",
+    "Regulates body temperature",
+    "Produces insulin",
+    "Provides a site for drug absorption"
+   ],
+   "answer": 2,
+   "rationale": "Skin functions: protective barrier, senses temperature/pressure/pain, regulates temperature, excretes fluid and electrolytes, stores fat, synthesizes vitamin D, site for drug absorption [slide 3].",
+   "source": "Integumentary Drugs Quiz · slide 3"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "The two layers of the skin are the:",
+   "options": [
+    "Dermis and epidermis",
+    "Epidermis and fascia",
+    "Dermis and subcutaneous fat",
+    "Stratum and corneum"
+   ],
+   "answer": 0,
+   "rationale": "The skin, the body's largest organ, has two layers: dermis and epidermis [slide 2].",
+   "source": "Integumentary Drugs Quiz · slide 2"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Which area is commonly affected by psoriasis?",
+   "options": [
+    "Palms of the hands",
+    "Scalp",
+    "Eyelids",
+    "Soles of the feet"
+   ],
+   "answer": 1,
+   "rationale": "Commonly affected: nails, genitals, scalp and lower back [slide 4].",
+   "source": "Integumentary Drugs Quiz · slide 4"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Which description matches psoriasis lesions?",
+   "options": [
+    "Fluid-filled blisters",
+    "Thick, reddened skin covered in silvery scales",
+    "Pale, raised, itchy wheals",
+    "Dark, flat patches"
+   ],
+   "answer": 1,
+   "rationale": "Psoriasis: thick, reddened skin covered in silvery scales [slide 4]. Pale, raised, itchy bumps describe urticaria.",
+   "source": "Integumentary Drugs Quiz · slide 4"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Topical corticosteroids have all of these actions EXCEPT:",
+   "options": [
+    "Anti-inflammatory",
+    "Antipruritic (anti-itch)",
+    "Vasoconstrictive",
+    "Antibacterial"
+   ],
+   "answer": 3,
+   "rationale": "Their actions are anti-inflammatory, antipruritic and vasoconstrictive. They don't kill bacteria; they can actually allow bacterial overgrowth [slides 6, 8].",
+   "source": "Integumentary Drugs Quiz · slides 6, 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Which type of corticosteroid is used specifically for psoriasis?",
+   "options": [
+    "Fluorinated corticosteroids",
+    "1% hydrocortisone",
+    "Inhaled corticosteroids",
+    "Mineralocorticoids"
+   ],
+   "answer": 0,
+   "rationale": "Fluorinated corticosteroids are used for psoriasis. 1% hydrocortisone is the low-potency OTC option [slide 6].",
+   "source": "Integumentary Drugs Quiz · slide 6"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Which topical corticosteroid is available over the counter?",
+   "options": [
+    "Betamethasone",
+    "1% hydrocortisone",
+    "Fluorinated steroids",
+    "Methotrexate"
+   ],
+   "answer": 1,
+   "rationale": "1% hydrocortisone is available OTC [slide 6].",
+   "source": "Integumentary Drugs Quiz · slide 6"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "A patient applies a topical steroid to their scalp for months. Which adverse effect is especially linked to scalp use?",
+   "options": [
+    "Alopecia",
+    "Hyperpigmentation",
+    "Hypertension",
+    "Tachycardia"
+   ],
+   "answer": 0,
+   "rationale": "Alopecia, particularly when used on the scalp. Also: acne, contact dermatitis, skin fragility, hypopigmentation, burning, dryness, itch [slide 7].",
+   "source": "Integumentary Drugs Quiz · slide 7"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "What interaction can occur with topical corticosteroids?",
+   "options": [
+    "Toxicity when oral and topical steroids are used together",
+    "Reduced effect when taken with food",
+    "Increased bleeding with NSAIDs",
+    "Serotonin syndrome"
+   ],
+   "answer": 0,
+   "rationale": "Toxicity can occur when oral and topical use are combined [slide 8].",
+   "source": "Integumentary Drugs Quiz · slide 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Which patients have higher systemic absorption of topical medications?",
+   "options": [
+    "Middle-aged adults",
+    "Very young and very old patients",
+    "Athletes",
+    "Patients with oily skin"
+   ],
+   "answer": 1,
+   "rationale": "Systemic absorption is higher in very young and very old patients because their skin may be more permeable [slide 14]. This is also why children get less potent steroids.",
+   "source": "Integumentary Drugs Quiz · slide 14"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "When must the nurse wear gloves with methotrexate?",
+   "options": [
+    "Only for IV doses",
+    "Only for IM injections",
+    "When handling it in any form",
+    "Gloves are not needed for oral tablets"
+   ],
+   "answer": 2,
+   "rationale": "Wear gloves when handling methotrexate in any form, and when applying topical medications [slide 15].",
+   "source": "Integumentary Drugs Quiz · slide 15"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Which are adverse effects of methotrexate?",
+   "options": [
+    "Glossitis, gingivitis and mild leukopenia",
+    "Hypertension and weight gain",
+    "Hair growth and acne",
+    "Bradycardia and hypoglycemia"
+   ],
+   "answer": 0,
+   "rationale": "Methotrexate adverse effects: headache, glossitis, gingivitis, mild leukopenia, nausea [slide 13].",
+   "source": "Integumentary Drugs Quiz · slide 13"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "A patient on methotrexate asks about herbal supplements. Which should they avoid?",
+   "options": [
+    "Vitamin C",
+    "Echinacea",
+    "Calcium",
+    "Fish oil"
+   ],
+   "answer": 1,
+   "rationale": "Methotrexate should not be taken with echinacea. Also use caution with live immunizations [slide 13].",
+   "source": "Integumentary Drugs Quiz · slide 13"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Which routes is methotrexate available in?",
+   "options": [
+    "Topical only",
+    "PO only",
+    "IM, IV and PO",
+    "Inhaled and topical"
+   ],
+   "answer": 2,
+   "rationale": "Methotrexate is available in IM, IV and PO preparations [slide 12].",
+   "source": "Integumentary Drugs Quiz · slide 12"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "When are systemic antipsoriatic drugs (biologics, methotrexate) used?",
+   "options": [
+    "As first-line for all psoriasis",
+    "When topical corticosteroid therapy has not been successful",
+    "Only during pregnancy",
+    "Only for sunburn"
+   ],
+   "answer": 1,
+   "rationale": "Systemic antipsoriatics are used when topical corticosteroid therapy isn't successful [slide 10].",
+   "source": "Integumentary Drugs Quiz · slide 10"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Biologics are also referred to as:",
+   "options": [
+    "Antimetabolites",
+    "Biological response modifiers",
+    "Folate antagonists",
+    "Keratolytics"
+   ],
+   "answer": 1,
+   "rationale": "Biologics are biological response modifiers: they alter the body's response to autoimmune, inflammatory, infectious diseases and cancer [slide 10].",
+   "source": "Integumentary Drugs Quiz · slide 10"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "How does lidocaine produce local anesthesia?",
+   "options": [
+    "By constricting skin blood vessels",
+    "By inhibiting the transport of sodium ions across neuronal membranes",
+    "By blocking histamine receptors",
+    "By reducing inflammation"
+   ],
+   "answer": 1,
+   "rationale": "Lidocaine blocks sodium transport across nerve membranes, numbing skin receptor nerve endings [slide 18].",
+   "source": "Integumentary Drugs Quiz · slide 18"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "What is the half-life of topical lidocaine?",
+   "options": [
+    "15 minutes",
+    "1.5–2 hours",
+    "8 hours",
+    "24 hours"
+   ],
+   "answer": 1,
+   "rationale": "Short half-life: 1.5–2 hours [slide 18].",
+   "source": "Integumentary Drugs Quiz · slide 18"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "A patient has severe sunburn. Besides the skin, what should the nurse assess for?",
+   "options": [
+    "Weakness, fever, chills and shock",
+    "Hyperglycemia",
+    "Bradycardia",
+    "Urinary retention"
+   ],
+   "answer": 0,
+   "rationale": "With severe sunburn, assess for weakness, fever, chills and shock [slide 19].",
+   "source": "Integumentary Drugs Quiz · slide 19"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Besides lidocaine, which other topical anesthetic is listed for sunburn?",
+   "options": [
+    "Benzocaine",
+    "Betamethasone",
+    "Calamine",
+    "Hydrocortisone"
+   ],
+   "answer": 0,
+   "rationale": "Topical anesthetics for sunburn: benzocaine and lidocaine [slide 17].",
+   "source": "Integumentary Drugs Quiz · slide 17"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Which topical form penetrates the MOST?",
+   "options": [
+    "Lotion",
+    "Cream",
+    "Gel",
+    "Ointment"
+   ],
+   "answer": 3,
+   "rationale": "Ointments penetrate most (greasy, stays on longest), then gels, creams and lotions [slide 7].",
+   "source": "Sunday Retests: Pharm: Integumentary · slide 7"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Topical corticosteroids can allow bacteria and fungi to grow on the skin because they:",
+   "options": [
+    "Dry the skin",
+    "Cause immunosuppression",
+    "Increase sweating",
+    "Cause vasodilation"
+   ],
+   "answer": 1,
+   "rationale": "Local immunosuppression lets bacteria and fungi overgrow [slide 8]. Steroids are vasoconstrictive.",
+   "source": "Sunday Retests: Pharm: Integumentary · slide 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Which is a biologic used for psoriasis?",
+   "options": [
+    "Betamethasone",
+    "Methotrexate",
+    "Etanercept (Enbrel)",
+    "Lidocaine"
+   ],
+   "answer": 2,
+   "rationale": "Biologics: etanercept, adalimumab, ustekinumab (-cept, -mab). Methotrexate = antimetabolite; betamethasone = topical steroid [slide 10].",
+   "source": "Sunday Retests: Pharm: Integumentary · slide 10"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "A patient on methotrexate wants ibuprofen for a headache. The nurse's main concern is:",
+   "options": [
+    "Ibuprofen works less well",
+    "Risk of methotrexate toxicity",
+    "More sedation",
+    "No concern"
+   ],
+   "answer": 1,
+   "rationale": "NSAIDs and ASA with methotrexate can cause toxicity [slide 13].",
+   "source": "Sunday Retests: Pharm: Integumentary · slide 13"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "After months of heavy use, a steroid cream “doesn't work as well as it used to.” This is:",
+   "options": [
+    "Tachyphylaxis",
+    "Rebound congestion",
+    "Hypopigmentation",
+    "Contact dermatitis"
+   ],
+   "answer": 0,
+   "rationale": "Tachyphylaxis: the drug weakens with long-term use or overuse [slide 8].",
+   "source": "Sunday Retests: Pharm: Integumentary · slide 8"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Why isn't phototherapy combined with immunosuppressants?",
+   "options": [
+    "It makes the immunosuppressant ineffective",
+    "Increased skin cancer risk",
+    "It causes rebound psoriasis",
+    "Liver toxicity"
+   ],
+   "answer": 1,
+   "rationale": "Phototherapy plus immunosuppression raises skin cancer risk [slide 5].",
+   "source": "Sunday Retests: Pharm: Integumentary · slide 5"
+  },
+  {
+   "course": "Pharmacology",
+   "topic": "Integumentary drugs",
+   "stem": "Which is true of topical lidocaine for sunburn?",
+   "options": [
+    "Apply it generously to open blisters",
+    "Use extreme caution with complex burns because of rapid systemic absorption",
+    "Its half-life is 12 hours",
+    "It works by constricting blood vessels"
+   ],
+   "answer": 1,
+   "rationale": "Not on open sores; half-life 1.5–2 h; rapid systemic absorption through complex burns [slide 18].",
+   "source": "Sunday Retests: Pharm: Integumentary · slide 18"
+  }
+ ]
+}

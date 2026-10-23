@@ -1,0 +1,4219 @@
+{
+ "course": "Maternal/Child",
+ "questions": [
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "A newborn's umbilical cord is inspected after birth. Which finding is expected?",
+   "options": [
+    "One artery and two veins",
+    "Two arteries and one vein",
+    "Two arteries and two veins",
+    "One artery and one vein"
+   ],
+   "answer": 1,
+   "rationale": "AVA = Artery–Vein–Artery. The two arteries carry deoxygenated blood and waste away from the fetus, and the one vein carries oxygenated blood to the fetus. Wharton's jelly cushions the vessels.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which fetal shunt connects the pulmonary artery to the aorta, bypassing the lungs?",
+   "options": [
+    "Foramen ovale",
+    "Ductus venosus",
+    "Ductus arteriosus",
+    "Umbilical vein"
+   ],
+   "answer": 2,
+   "rationale": "The ductus arteriosus connects the pulmonary artery to the aorta. The foramen ovale connects the right and left atria, also bypassing the lungs. The ductus venosus bypasses the liver.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which placental hormone is the basis for most pregnancy tests?",
+   "options": [
+    "Human placental lactogen (hPL)",
+    "Progesterone",
+    "Human chorionic gonadotropin (hCG)",
+    "Estrogen"
+   ],
+   "answer": 2,
+   "rationale": "hCG keeps the corpus luteum making estrogen and progesterone. It's detectable in maternal blood at implantation, about 7–9 days after fertilization. hPL decreases maternal insulin sensitivity.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "A patient's last menstrual period began on March 10, 2026. Using Nägele's rule, what is the estimated date of birth?",
+   "options": [
+    "December 3, 2026",
+    "December 17, 2026",
+    "January 17, 2027",
+    "December 10, 2026"
+   ],
+   "answer": 1,
+   "rationale": "March 10 + 7 days = March 17. Going back 3 months gives December 17. That still falls in 2026, so the year doesn't change: December 17, 2026.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "A patient is pregnant for the 3rd time. She had twins at 36 weeks (both living) and one miscarriage at 10 weeks. What is her GTPAL?",
+   "options": [
+    "G3 T0 P1 A1 L2",
+    "G3 T0 P2 A1 L2",
+    "G2 T0 P1 A1 L2",
+    "G3 T1 P0 A1 L2"
+   ],
+   "answer": 0,
+   "rationale": "G3: this is her 3rd pregnancy. T0: no births at 37 weeks or later. P1: the twins count as one preterm birth (20 to under 37 weeks). A1: the 10-week loss. L2: two living children.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Which of the following is a POSITIVE sign of pregnancy?",
+   "options": [
+    "Positive serum hCG test",
+    "Chadwick sign",
+    "Quickening",
+    "Fetal movement felt by the examiner"
+   ],
+   "answer": 3,
+   "rationale": "Positive signs are an audible fetal heartbeat, fetal movement felt by the examiner, and ultrasound visualization. A pregnancy test and Chadwick sign are probable signs. Quickening is presumptive because the patient feels it.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Why should the nurse encourage side-lying (preferably left) rest in the third trimester?",
+   "options": [
+    "To relieve bladder pressure",
+    "To prevent supine hypotension",
+    "To encourage fetal movement",
+    "To reduce heartburn"
+   ],
+   "answer": 1,
+   "rationale": "Lying flat lets the uterus compress the inferior vena cava, reducing return to the heart and risking fetal hypoxia. “Left is best.”",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A patient at 34 weeks reports sudden, painless, bright-red vaginal bleeding. Which action should the nurse AVOID?",
+   "options": [
+    "Monitoring the fetal heart rate",
+    "Performing a vaginal examination",
+    "Assessing maternal vital signs",
+    "Preparing for a possible Caesarean birth"
+   ],
+   "answer": 1,
+   "rationale": "Painless bright-red bleeding suggests placenta previa, where the placenta lies over or near the cervix. A vaginal exam could cause hemorrhage. The other actions are all appropriate.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A patient receiving magnesium sulphate for severe pre-eclampsia has absent deep tendon reflexes and a respiratory rate of 10. Which medication should be available?",
+   "options": [
+    "Naloxone",
+    "Oxytocin",
+    "Calcium gluconate",
+    "Nifedipine"
+   ],
+   "answer": 2,
+   "rationale": "These are signs of magnesium toxicity. Calcium gluconate reverses the effects of magnesium sulphate. Naloxone reverses opioids, not magnesium.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "When should Rh immune globulin be given to an Rh-negative pregnant patient?",
+   "options": [
+    "At 28 weeks and within 72 hours of birth of an Rh-positive infant",
+    "At 20 weeks and within 7 days of birth",
+    "Only if the infant is Rh-negative",
+    "At the first prenatal visit only"
+   ],
+   "answer": 0,
+   "rationale": "RhIG is given at 28 weeks and within 72 hours of birth of an Rh-positive infant. It's also given after amniocentesis, a miscarriage or abortion, and abdominal trauma.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A patient with suspected ectopic pregnancy suddenly reports severe lower abdominal pain and right shoulder pain. What does the nurse suspect?",
+   "options": [
+    "Normal round ligament pain",
+    "Tubal rupture with internal bleeding",
+    "Hyperemesis gravidarum",
+    "Braxton Hicks contractions"
+   ],
+   "answer": 1,
+   "rationale": "Sudden severe pain with referred shoulder pain suggests rupture. Watch for hypovolemic shock: rising weak pulse, falling BP, urine output under 30 mL/h, and cold, clammy skin.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 6: Labour & birth",
+   "stem": "On the fetal monitor, the nurse sees late decelerations. Using VEAL CHOP, what is the most likely cause?",
+   "options": [
+    "Head compression",
+    "Cord compression",
+    "Placental insufficiency",
+    "Normal fetal well-being"
+   ],
+   "answer": 2,
+   "rationale": "Variable = Cord compression, Early = Head compression, Accelerations = OK, Late = Placental insufficiency. Improve oxygenation: change position, decrease or stop oxytocin, increase IV fluids, give O₂, and notify the HCP.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 6: Labour & birth",
+   "stem": "Which finding should the nurse report to the health care provider immediately?",
+   "options": [
+    "Contractions every 3 minutes lasting 60 seconds",
+    "6 contractions in 10 minutes",
+    "Uterus soft between contractions",
+    "60 seconds of rest between contractions"
+   ],
+   "answer": 1,
+   "rationale": "Report more than 5 contractions in 10 minutes, contractions lasting over 90 seconds, a firm resting tone, or less than 30 seconds of rest between contractions.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 6: Labour & birth",
+   "stem": "Which finding is characteristic of TRUE labour rather than prelabour?",
+   "options": [
+    "Contractions ease when walking",
+    "Discomfort felt mainly in the abdomen and groin",
+    "Progressive cervical effacement and dilation",
+    "No bloody show"
+   ],
+   "answer": 2,
+   "rationale": "True labour causes progressive cervical change. Its contractions get stronger with walking and often start in the lower back. Prelabour contractions ease with walking and cause no cervical change.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 7: Pain management in labour",
+   "stem": "A labouring patient reports tingling hands and numbness around the mouth during breathing exercises. What should the nurse do?",
+   "options": [
+    "Have her breathe faster",
+    "Have her breathe into cupped hands and slow her exhalation",
+    "Give oxygen at 10 L/min",
+    "Have her hold her breath while pushing"
+   ],
+   "answer": 1,
+   "rationale": "These are signs of hyperventilation. Slow the breathing (especially exhalation), breathe into cupped hands or a paper bag, or hold the breath a few seconds before exhaling.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 7: Pain management in labour",
+   "stem": "A postpartum patient who had an epidural has a fundus that is high and displaced to the right. What is the priority action?",
+   "options": [
+    "Increase the epidural rate",
+    "Assess for bladder distention",
+    "Massage the breasts",
+    "Apply a cold pack to the abdomen"
+   ],
+   "answer": 1,
+   "rationale": "Epidurals cause urinary retention. A full bladder displaces the uterus and increases the risk of postpartum hemorrhage. Check the bladder and help her void, or catheterize.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Immediately after an amniotomy, the fetal heart rate drops to 90 bpm. What does the nurse suspect?",
+   "options": [
+    "Umbilical cord prolapse",
+    "Uterine infection",
+    "Meconium passage",
+    "Normal response to amniotomy"
+   ],
+   "answer": 0,
+   "rationale": "An FHR outside 110–160 bpm after an amniotomy suggests cord prolapse. Other complications are infection (temperature of 38 °C or higher) and placental abruption. Green fluid means meconium.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "A patient on an oxytocin infusion develops uterine tachysystole. What is the nurse's FIRST action?",
+   "options": [
+    "Increase the oxytocin to finish labour faster",
+    "Stop the oxytocin or decrease it by half",
+    "Place the patient supine",
+    "Give a fluid restriction"
+   ],
+   "answer": 1,
+   "rationale": "Stop or halve the oxytocin. Then increase the mainline IV fluids, reposition (not supine), give O₂ at 8–10 L/min by face mask if SpO₂ is under 96%, and notify the HCP.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "What is the main purpose of tocolytic therapy in preterm labour?",
+   "options": [
+    "To speed up labour",
+    "To delay birth long enough to give corticosteroids that mature the fetal lungs",
+    "To soften the cervix",
+    "To prevent postpartum hemorrhage"
+   ],
+   "answer": 1,
+   "rationale": "Tocolytics (e.g., nifedipine first-line) stop contractions long enough to give 1–2 doses of steroids 24–48 hours before birth, so the fetal lungs can mature.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Which is a CONTRAINDICATION to labour induction?",
+   "options": [
+    "Pre-eclampsia",
+    "Prolonged pregnancy",
+    "Placenta previa",
+    "Ruptured membranes without labour"
+   ],
+   "answer": 2,
+   "rationale": "Contraindications include placenta previa, cord prolapse, abnormal lie, active genital herpes, a previous classical C/S incision, and previous uterine rupture. The other three options are indications for induction.",
+   "source": "Maternity Quiz 2 Practice"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Where does fertilization normally take place?",
+   "options": [
+    "In the cervix",
+    "In the outer third of the fallopian tube",
+    "In the uterine cavity",
+    "On the surface of the ovary"
+   ],
+   "answer": 1,
+   "rationale": "Fertilization occurs in the outer third of the fallopian tube, near the ovary. The zygote then travels to the uterus, arriving around day 3, and implants in the upper posterior uterine wall.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which germ layer develops into the nervous system, skin, hair and nails?",
+   "options": [
+    "Mesoderm",
+    "Endoderm",
+    "Ectoderm",
+    "Trophoblast"
+   ],
+   "answer": 2,
+   "rationale": "Ectoderm forms the skin, hair, nails, nervous system and tooth enamel. Mesoderm forms bones, muscles, heart, blood vessels and kidneys. Endoderm forms the linings of the GI and respiratory tracts, plus the liver and pancreas.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which placental hormone decreases maternal insulin sensitivity so more glucose is available for the fetus?",
+   "options": [
+    "Progesterone",
+    "Estrogen",
+    "Human placental lactogen (hPL)",
+    "hCG"
+   ],
+   "answer": 2,
+   "rationale": "hPL decreases maternal insulin sensitivity and glucose use, which helps explain gestational diabetes. Progesterone reduces uterine contractions. hCG keeps the corpus luteum active.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which is NOT a function of amniotic fluid?",
+   "options": [
+    "Maintains a constant fetal temperature",
+    "Allows fetal movement and symmetrical growth",
+    "Cushions the fetus and cord",
+    "Provides oxygen to the fetus"
+   ],
+   "answer": 3,
+   "rationale": "Oxygen comes through the placenta and umbilical vein, not the amniotic fluid. Amniotic fluid keeps the temperature constant, cushions the fetus and cord, acts as a barrier to infection, and allows movement and symmetrical growth.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "A pregnant patient asks which foods to avoid. Which choice is SAFE?",
+   "options": [
+    "Unpasteurized apple cider",
+    "Refrigerated smoked salmon",
+    "Brie cheese",
+    "Well-cooked chicken"
+   ],
+   "answer": 3,
+   "rationale": "Foods to avoid (Box 4.6) carry a Listeria risk: unpasteurized dairy and juices, refrigerated smoked seafood, soft and blue-veined cheeses, deli meats, pâté, and raw or undercooked meat, eggs and seafood. Well-cooked meat is safe.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "What is the recommended daily folic acid intake in pregnancy, and why?",
+   "options": [
+    "0.4 mg, to prevent neural tube defects",
+    "27 mg, to prevent anemia",
+    "1000 mg, for fetal bone growth",
+    "71 mg, for fetal tissue growth"
+   ],
+   "answer": 0,
+   "rationale": "Folic acid 0.4 mg/day (more if high risk) prevents neural tube defects. 27 mg is the iron recommendation, 1000 mg is calcium, and 71 g is protein.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Which vaccine is contraindicated during pregnancy?",
+   "options": [
+    "COVID-19",
+    "Influenza",
+    "MMR",
+    "Tdap"
+   ],
+   "answer": 2,
+   "rationale": "Live virus vaccines like MMR are contraindicated, and pregnancy should be avoided for 1 month after MMR. Tdap (after 26 weeks), influenza and COVID-19 are recommended.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "A patient at 18 weeks reports she has started feeling the baby move. What is this called, and what type of sign is it?",
+   "options": [
+    "Lightening, presumptive",
+    "Quickening, positive",
+    "Quickening, presumptive",
+    "Ballottement, probable"
+   ],
+   "answer": 2,
+   "rationale": "Quickening is the first fetal movement felt by the pregnant person, so it's presumptive. Movement felt by the examiner is a positive sign.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Why should a pregnant patient avoid hot tubs and overheating, especially in the first trimester?",
+   "options": [
+    "Risk of preterm labour",
+    "Risk of neural tube defects",
+    "Risk of gestational diabetes",
+    "Risk of supine hypotension"
+   ],
+   "answer": 1,
+   "rationale": "A raised core temperature early in pregnancy is linked to neural tube defects. Exercise is encouraged (150 min/week), but patients should avoid overheating and drink extra fluids.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A patient at 32 weeks has dark-red vaginal bleeding, abdominal pain and a rigid, board-like uterus. What does the nurse suspect?",
+   "options": [
+    "Placenta previa",
+    "Ectopic pregnancy",
+    "Threatened miscarriage",
+    "Placental abruption"
+   ],
+   "answer": 3,
+   "rationale": "Placental abruption causes painful dark-red bleeding and a tender, rigid uterus. Watch for DIC and hemorrhage, and prepare for an immediate C/S. Previa is painless and bright red.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "HELLP syndrome stands for:",
+   "options": [
+    "Hemorrhage, Elevated Lipids, Low Potassium",
+    "Hyperglycemia, Edema, Low Protein",
+    "Hemolysis, Elevated Liver enzymes, Low Platelets",
+    "Hypertension, Edema, Low Lymphocytes, Proteinuria"
+   ],
+   "answer": 2,
+   "rationale": "HELLP is a severe complication of pre-eclampsia: Hemolysis, Elevated Liver enzymes, Low Platelets.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A 50 g glucose challenge test at 26 weeks results in 8.4 mmol/L. What is the next step?",
+   "options": [
+    "Repeat the test at 36 weeks",
+    "Diagnose GDM and start insulin",
+    "No action; the result is normal",
+    "Do a 3-hour glucose tolerance test"
+   ],
+   "answer": 3,
+   "rationale": "A result above 7.8 mmol/L needs further testing with a 3-hour glucose tolerance test. One abnormal result on that test is diagnostic for GDM.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A newborn's mother is hepatitis B positive. What should the infant receive, and when?",
+   "options": [
+    "Nothing until the infant is tested",
+    "Antibiotics for 7 days",
+    "Hep B immune globulin and hep B vaccine within 12 hours of birth",
+    "Hep B vaccine only, at 2 months"
+   ],
+   "answer": 2,
+   "rationale": "Infants of HBsAg-positive mothers get hepatitis B immune globulin plus the hep B vaccine within 12 hours of birth.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Which instruction is appropriate for an HIV-positive mother living in Canada?",
+   "options": [
+    "Breastfeed exclusively for 6 months",
+    "Do not breastfeed",
+    "Pump and discard milk for 2 weeks, then breastfeed",
+    "Breastfeed only if the viral load is undetectable"
+   ],
+   "answer": 1,
+   "rationale": "HIV can pass through breast milk, so breastfeeding is not recommended in industrialized countries. With treatment and no breastfeeding, transmission is under 1%.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 6: Labour & birth",
+   "stem": "At 1 minute, a newborn has HR 110, a weak cry, some flexion, a grimace with suction, and a pink body with blue extremities. What is the Apgar score?",
+   "options": [
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "answer": 1,
+   "rationale": "HR over 100 = 2. Weak cry/slow respirations = 1. Some flexion = 1. Grimace = 1. Pink body with blue extremities = 1. Total: 2 + 1 + 1 + 1 + 1 = 6. A score of 7–10 is normal, so this baby needs some help.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 6: Labour & birth",
+   "stem": "After the membranes rupture, the nurse notes green-tinged amniotic fluid. What does this suggest?",
+   "options": [
+    "Infection",
+    "Normal finding",
+    "Meconium passage, possible fetal compromise",
+    "Maternal bleeding"
+   ],
+   "answer": 2,
+   "rationale": "Normal amniotic fluid is clear with white flecks of vernix. Green fluid means meconium, which can signal fetal compromise. A foul odour suggests infection.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 6: Labour & birth",
+   "stem": "A perineal tear extends through the anal sphincter into the rectal mucosa. What degree is it?",
+   "options": [
+    "First",
+    "Second",
+    "Third",
+    "Fourth"
+   ],
+   "answer": 3,
+   "rationale": "First degree: skin or mucosa. Second: deeper perineal tissue. Third: includes the anal sphincter. Fourth: through the sphincter into the rectal mucosa.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 6: Labour & birth",
+   "stem": "A labouring patient has intense back pain. The fetus is occiput posterior. Which position might help?",
+   "options": [
+    "Lithotomy",
+    "Trendelenburg",
+    "Hands and knees with pelvic rocking",
+    "Supine with legs flat"
+   ],
+   "answer": 2,
+   "rationale": "OP position causes back labour. Hands and knees with pelvic rocking, leaning forward, side-lying, or lunging can help the fetus rotate. Supine is not beneficial.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 6: Labour & birth",
+   "stem": "Why is vitamin K given IM to the newborn within 6 hours of birth?",
+   "options": [
+    "To prevent eye infection",
+    "To assist with blood clotting",
+    "To prevent jaundice",
+    "To prevent hypoglycemia"
+   ],
+   "answer": 1,
+   "rationale": "Vitamin K (AquaMEPHYTON) helps blood clotting. Erythromycin eye ointment prevents ophthalmia neonatorum.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 7: Pain management in labour",
+   "stem": "Which childbirth method is based on breaking the fear–tension–pain cycle?",
+   "options": [
+    "Leboyer",
+    "Dick-Read",
+    "Lamaze",
+    "Bradley"
+   ],
+   "answer": 1,
+   "rationale": "Dick-Read focuses on the fear–tension–pain cycle. Bradley is partner-coached childbirth. Lamaze promotes the Healthy Birth Practices.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 7: Pain management in labour",
+   "stem": "Shortly after an epidural is started, the patient's BP drops to 88/50. What is the expected first intervention?",
+   "options": [
+    "Have her push",
+    "Give naloxone",
+    "Increase IV fluids and turn the patient to her side",
+    "Stop all monitoring"
+   ],
+   "answer": 2,
+   "rationale": "Maternal hypotension is a common adverse effect of an epidural. An IV is required to counter it: increase fluids, turn her to the side (avoid supine), and notify the anaesthetist.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 7: Pain management in labour",
+   "stem": "Opioids given in labour can cause respiratory depression in the newborn. Which drug reverses it?",
+   "options": [
+    "Calcium gluconate",
+    "Naloxone",
+    "Atosiban",
+    "Vitamin K"
+   ],
+   "answer": 1,
+   "rationale": "Naloxone reverses opioid respiratory depression. Give the smallest opioid dose that relieves pain to reduce the risk.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "What is the difference between induction and augmentation of labour?",
+   "options": [
+    "Induction starts labour; augmentation stimulates contractions already started",
+    "Induction uses oxytocin; augmentation uses prostaglandins",
+    "Induction is for preterm birth; augmentation is for term birth",
+    "There is no difference"
+   ],
+   "answer": 0,
+   "rationale": "Induction starts labour before it begins naturally. Augmentation stimulates contractions after labour has begun naturally.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Indomethacin used as a tocolytic is limited to 48–72 hours before 32 weeks. Why?",
+   "options": [
+    "It softens the cervix",
+    "It causes water intoxication",
+    "It can close the fetal ductus arteriosus too early",
+    "It causes maternal tachycardia"
+   ],
+   "answer": 2,
+   "rationale": "Indomethacin (a prostaglandin inhibitor) can cause premature closure of the fetal ductus arteriosus. Terbutaline causes maternal tachycardia, and oxytocin can cause water intoxication.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "What is the main purpose of Cervidil (prostaglandin E₂)?",
+   "options": [
+    "To mature fetal lungs",
+    "To prevent postpartum hemorrhage",
+    "To soften (ripen) the cervix",
+    "To stop preterm contractions"
+   ],
+   "answer": 2,
+   "rationale": "Cervidil is given intravaginally as a sustained release to ripen the cervix. A key adverse effect of prostaglandins is uterine tachysystole.",
+   "source": "Maternity Quiz 2 Practice Set 2"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "During which period of development is the developing baby called an embryo?",
+   "options": [
+    "Fertilization to week 2",
+    "Week 2 to week 8",
+    "Week 9 to birth",
+    "Week 12 to week 20"
+   ],
+   "answer": 1,
+   "rationale": "Zygote: the cell formed at fertilization. Embryo: week 2 to week 8. Fetus: week 9 until birth. The embryonic period is when organs form, so it's the most vulnerable time for teratogens.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "A patient asks how long sperm can survive after intercourse. What should the nurse teach?",
+   "options": [
+    "Up to 12 hours",
+    "Up to 24 hours",
+    "Up to 7 days",
+    "Up to 14 days"
+   ],
+   "answer": 2,
+   "rationale": "Sperm can survive up to 7 days near the cervix, so pregnancy can result from intercourse up to 5 days before ovulation.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "What is the main function of the yolk sac?",
+   "options": [
+    "Filters fetal waste",
+    "Forms the fetal portion of the placenta",
+    "Starts red blood cell production until the fetal liver takes over",
+    "Produces hCG"
+   ],
+   "answer": 2,
+   "rationale": "The yolk sac forms on day 9 and starts red blood cell production until the fetal liver takes over around 6 weeks. The chorion forms the fetal portion of the placenta.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Identical (monozygotic) twins develop from:",
+   "options": [
+    "One ovum fertilized by two sperm",
+    "One fertilized ovum that divides",
+    "Two ova fertilized by two sperm",
+    "Two ova fertilized by one sperm"
+   ],
+   "answer": 1,
+   "rationale": "Monozygotic (identical) twins come from one fertilized ovum that splits. Dizygotic (fraternal) twins come from two separately fertilized ova.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "A healthy patient at 32 weeks with an uncomplicated pregnancy asks how often she'll be seen. What does the nurse say?",
+   "options": [
+    "Every 2–3 weeks",
+    "Every 6 weeks",
+    "Every 4 weeks",
+    "Weekly"
+   ],
+   "answer": 0,
+   "rationale": "Up to 28 weeks: every 4 weeks. 29–36 weeks: every 2–3 weeks. 37 weeks to birth: weekly.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "On a routine urinalysis at 30 weeks, the nurse finds protein in the urine. Which condition should the nurse be concerned about?",
+   "options": [
+    "Pre-eclampsia",
+    "Placenta previa",
+    "Hyperemesis gravidarum",
+    "Gestational diabetes"
+   ],
+   "answer": 0,
+   "rationale": "Protein in the urine may indicate pre-eclampsia. Ketones can signal inadequate intake, as in hyperemesis. Urine is checked at every prenatal visit.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "By about how much does maternal blood volume increase during pregnancy?",
+   "options": [
+    "10–15%",
+    "20–25%",
+    "40–50%",
+    "75–100%"
+   ],
+   "answer": 2,
+   "rationale": "Blood volume rises about 40–50% (~1500 mL). This causes dilutional anemia and provides a reserve for blood loss at birth. Heart rate rises 10–15 bpm, and BP stays about the same.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "A 16-year-old pregnant patient needs extra emphasis on which nutrient?",
+   "options": [
+    "Sodium",
+    "Vitamin C",
+    "Vitamin K",
+    "Calcium"
+   ],
+   "answer": 3,
+   "rationale": "Teens need 1300 mg/day of calcium (adults 1000 mg), because their own bones are still growing. Pregnant adolescents also face two stressful transitions at once.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Which finding distinguishes hyperemesis gravidarum from normal morning sickness?",
+   "options": [
+    "Weight loss of more than 5% of pre-pregnancy weight",
+    "Nausea that resolves by 12 weeks",
+    "Mild food aversions",
+    "Nausea in the morning only"
+   ],
+   "answer": 0,
+   "rationale": "Hyperemesis is persistent, severe vomiting that starts before 16 weeks, with weight loss over 5% and an inability to eat and drink normally. It may need IV fluids, antiemetics or TPN.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A patient with an unruptured ectopic pregnancy is to receive medication instead of surgery. Which drug is used?",
+   "options": [
+    "Oxytocin",
+    "Misoprostol",
+    "Magnesium sulphate",
+    "Methotrexate"
+   ],
+   "answer": 3,
+   "rationale": "Methotrexate stops cell division of the pregnancy tissue. Other options are watchful waiting or surgery. The priority is always to control bleeding.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Which blood pressure reading meets the criteria for SEVERE pre-eclampsia?",
+   "options": [
+    "138/88",
+    "142/92",
+    "152/98",
+    "162/112"
+   ],
+   "answer": 3,
+   "rationale": "Severe: 160/110 or higher on two readings 15 minutes apart. Non-severe: 140/90 or higher on two readings 15 minutes apart, with proteinuria and possible adverse conditions.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Which patient is the best candidate for low-dose aspirin, started at 12–14 weeks?",
+   "options": [
+    "A patient who is Rh-negative",
+    "A patient with hyperemesis",
+    "A patient with placenta previa",
+    "A patient with a history of pre-eclampsia"
+   ],
+   "answer": 3,
+   "rationale": "Low-dose aspirin starting at 12–14 weeks is recommended for patients at high risk of pre-eclampsia, such as those who had it in a previous pregnancy.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A pregnant patient has active genital herpes lesions when labour begins. What is the plan of care?",
+   "options": [
+    "Isolate the infant from the mother for 2 weeks",
+    "Delay birth until lesions heal",
+    "Caesarean birth",
+    "Vaginal birth with antibiotics"
+   ],
+   "answer": 2,
+   "rationale": "Active genital lesions mean a Caesarean birth to avoid newborn infection. After birth, avoid contact with lesions; isolation isn't needed, and breastfeeding is fine if there are no breast lesions.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A patient who is bleeding heavily has a urine output of 20 mL/h. What does this suggest?",
+   "options": [
+    "Normal output in pregnancy",
+    "Overhydration",
+    "Possible hypovolemic shock",
+    "Urinary tract infection"
+   ],
+   "answer": 2,
+   "rationale": "Urine output under 30 mL/h is a sign of hypovolemic shock, along with a rising weak pulse, falling BP, a rising respiratory rate, and pale, cold, clammy skin.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 6: Labour & birth",
+   "stem": "A patient at 38 weeks says she can breathe more easily but now has to urinate more often. What has most likely happened?",
+   "options": [
+    "Rupture of membranes",
+    "Placental separation",
+    "Lightening",
+    "Quickening"
+   ],
+   "answer": 2,
+   "rationale": "Lightening is when the fetus descends into the pelvis. It relieves pressure on the diaphragm but increases bladder pressure. It's one of the signs of impending labour.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 6: Labour & birth",
+   "stem": "On the fetal monitor, decelerations mirror each contraction, starting and ending with it. What is the cause, and what action is needed?",
+   "options": [
+    "Head compression; continue routine care",
+    "Fetal sleep; no action",
+    "Placental insufficiency; give oxygen",
+    "Cord compression; reposition the patient"
+   ],
+   "answer": 0,
+   "rationale": "Early decelerations come from head compression. They're expected and need no intervention. VEAL CHOP: Variable = Cord, Early = Head, Accelerations = OK, Late = Placental insufficiency.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 6: Labour & birth",
+   "stem": "How can an anxious, fearful labouring patient's psyche affect labour?",
+   "options": [
+    "It increases oxytocin release",
+    "It speeds up labour",
+    "It has no effect on labour",
+    "Catecholamines inhibit contractions and reduce blood flow to the placenta"
+   ],
+   "answer": 3,
+   "rationale": "Fear and anxiety release catecholamines, which inhibit uterine contractions and divert blood flow from the placenta. A relaxed, supported patient copes better.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 6: Labour & birth",
+   "stem": "Which pelvis type is most favourable for vaginal birth?",
+   "options": [
+    "Android",
+    "Platypelloid",
+    "Gynecoid",
+    "Anthropoid"
+   ],
+   "answer": 2,
+   "rationale": "The gynecoid (round, typical female) pelvis is most favourable. Android (heart-shaped) and platypelloid (flat) are less favourable. Anthropoid is oval and often linked to OP births.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 6: Labour & birth",
+   "stem": "A patient attempting a trial of labour after Caesarean (TOLAC) reports sudden severe lower abdominal pain, and the FHR becomes abnormal. What does the nurse suspect?",
+   "options": [
+    "Precipitous labour",
+    "Placenta previa",
+    "Uterine scar rupture",
+    "Normal transition"
+   ],
+   "answer": 2,
+   "rationale": "The main TOLAC risk is uterine scar rupture. It can disrupt placental blood flow and cause hemorrhage. Signs are severe lower abdominal pain and an abnormal FHR.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 7: Pain management in labour",
+   "stem": "Why does the nurse teach open-glottis pushing (blowing out or exhaling while pushing)?",
+   "options": [
+    "To prevent prolonged breath-holding",
+    "To speed up dilation",
+    "To reduce the urge to push",
+    "To prevent hyperventilation"
+   ],
+   "answer": 0,
+   "rationale": "Panting or blowing out keeps the glottis open and prevents prolonged breath-holding (Valsalva) during pushing, which supports maternal and fetal oxygenation.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 7: Pain management in labour",
+   "stem": "A patient who had an epidural develops a severe headache that worsens when she sits up. What treatment may be done?",
+   "options": [
+    "Increase the epidural rate",
+    "Give naloxone",
+    "Epidural blood patch",
+    "Apply heat to the lower back"
+   ],
+   "answer": 2,
+   "rationale": "A postdural puncture headache comes from a spinal fluid leak. An epidural blood patch (10–15 mL of her own blood injected into the epidural space) seals the leak.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 7: Pain management in labour",
+   "stem": "What is the difference between an analgesic and an anesthetic?",
+   "options": [
+    "An analgesic is always given IV; an anesthetic is always inhaled",
+    "An analgesic blocks movement; an anesthetic blocks pain only",
+    "An analgesic blocks pain; an anesthetic blocks pain and motor responses",
+    "There is no difference"
+   ],
+   "answer": 2,
+   "rationale": "An analgesic blocks pain only. An anesthetic blocks both pain and motor responses. Regional anesthesia means loss of sensation in an area; general means loss of consciousness and sensation.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "After an amniotomy, the patient's temperature is 38.2 °C. What does this suggest?",
+   "options": [
+    "Normal response to labour",
+    "Dehydration only",
+    "Infection",
+    "Cord prolapse"
+   ],
+   "answer": 2,
+   "rationale": "A temperature of 38 °C or higher after amniotomy suggests infection. Also watch the FHR (outside 110–160 suggests cord prolapse) and the fluid's colour, odour and amount.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Which is a complication of oxytocin infusion?",
+   "options": [
+    "Premature closure of the ductus arteriosus",
+    "Hypoglycemia",
+    "Water intoxication",
+    "Postdural headache"
+   ],
+   "answer": 2,
+   "rationale": "Oxytocin complications: water intoxication, uterine tachysystole, uterine rupture. It's a high-alert drug given by infusion pump on a secondary line, with continuous fetal monitoring.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Which tocolytic is commonly used as the first-line oral agent?",
+   "options": [
+    "Terbutaline",
+    "Indomethacin",
+    "Nifedipine",
+    "Atosiban"
+   ],
+   "answer": 2,
+   "rationale": "Nifedipine (a calcium channel blocker) is first-line oral because it lowers neonatal risks and has a favourable side-effect profile. Terbutaline causes maternal tachycardia, and indomethacin can close the ductus arteriosus.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "A precipitous labour is a birth completed in less than:",
+   "options": [
+    "1 hour",
+    "3 hours",
+    "6 hours",
+    "12 hours"
+   ],
+   "answer": 1,
+   "rationale": "Precipitous labour is a birth in under 3 hours. Risks include uterine rupture, cervical lacerations, fetal hypoxia, and birth injury such as intracranial hemorrhage.",
+   "source": "Maternity Quiz 2 Practice Set 3"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "What is Chadwick sign?",
+   "options": [
+    "Softening of the lower uterine segment",
+    "Bluish-purple colour of the cervix, vagina and vulva",
+    "Fetus rebounds when pushed",
+    "Softening of the cervix"
+   ],
+   "answer": 1,
+   "rationale": "Chadwick sign is the bluish-purple colour of the cervix, vagina and vulva caused by increased blood supply. It's a probable sign.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "What is Goodell sign?",
+   "options": [
+    "Softening of the cervix",
+    "Bluish colour of the vagina",
+    "Irregular painless contractions",
+    "First fetal movement felt by the mother"
+   ],
+   "answer": 0,
+   "rationale": "Goodell sign is softening of the cervix. It's a probable sign.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "What is Hegar sign?",
+   "options": [
+    "Darkening of the areola",
+    "Bluish colour of the cervix",
+    "Softening of the cervix",
+    "Softening of the lower uterine segment (isthmus)"
+   ],
+   "answer": 3,
+   "rationale": "Hegar sign is softening of the lower uterine segment, just above the cervix. It's a probable sign.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "On exam, the nurse practitioner notes the cervix is soft. Which sign is this, and how is it classified?",
+   "options": [
+    "Hegar, presumptive",
+    "Goodell, positive",
+    "Goodell, probable",
+    "Chadwick, probable"
+   ],
+   "answer": 2,
+   "rationale": "A soft cervix is Goodell sign. All the eponymous signs (Goodell, Chadwick, Hegar, McDonald) are probable, because the examiner finds them but something other than pregnancy could cause them.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Bluish discoloration of the vaginal mucosa is noted. Which sign is this?",
+   "options": [
+    "McDonald",
+    "Chadwick",
+    "Hegar",
+    "Goodell"
+   ],
+   "answer": 1,
+   "rationale": "Bluish discoloration of the cervix, vagina or vulva is Chadwick sign. Estrogen-driven increased blood supply causes it.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Which sign of pregnancy describes being able to flex the uterus easily against the cervix?",
+   "options": [
+    "Goodell sign",
+    "Ballottement",
+    "McDonald sign",
+    "Chadwick sign"
+   ],
+   "answer": 2,
+   "rationale": "McDonald sign is when the uterus can be easily flexed against the cervix. It's a probable sign listed with Goodell, Chadwick and Hegar on the slides.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Which is a PRESUMPTIVE sign of pregnancy?",
+   "options": [
+    "Ultrasound visualization of the fetus",
+    "Positive pregnancy test",
+    "Amenorrhea",
+    "Chadwick sign"
+   ],
+   "answer": 2,
+   "rationale": "Presumptive signs are what the patient reports: amenorrhea, nausea, breast tenderness, fatigue, urinary frequency, quickening. A pregnancy test and Chadwick sign are probable. Ultrasound is positive.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Why is a positive pregnancy test only a PROBABLE sign, not positive?",
+   "options": [
+    "It is never accurate",
+    "It is felt by the patient",
+    "It is only accurate after 20 weeks",
+    "It detects hCG, which can occasionally be present without a viable pregnancy"
+   ],
+   "answer": 3,
+   "rationale": "Probable signs can have other causes. Pregnancy tests detect hCG, which can occur in conditions other than a normal pregnancy. Only signs from the fetus itself (heartbeat, movement felt by the examiner, ultrasound) are positive.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Which set lists only POSITIVE signs of pregnancy?",
+   "options": [
+    "Braxton Hicks, ballottement, positive hCG",
+    "Fetal heartbeat, movement felt by examiner, ultrasound of fetus",
+    "Goodell, Chadwick, Hegar",
+    "Quickening, amenorrhea, nausea"
+   ],
+   "answer": 1,
+   "rationale": "Positive signs come directly from the fetus: audible fetal heartbeat, fetal movement felt by the examiner, and ultrasound visualization.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Quickening is:",
+   "options": [
+    "Descent of the fetus into the pelvis",
+    "Rapid fetal heart rate, a probable sign",
+    "The first fetal movement felt by the pregnant person, a presumptive sign",
+    "Fetal movement felt by the examiner, a positive sign"
+   ],
+   "answer": 2,
+   "rationale": "Quickening is the first fetal movement felt by the pregnant person, so it's presumptive. Movement felt by the examiner is positive. Descent into the pelvis is lightening.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Fetal movement is a presumptive sign when felt by ____, but a positive sign when felt by ____.",
+   "options": [
+    "the examiner / the patient",
+    "the patient / the examiner",
+    "the partner / the patient",
+    "the patient / the partner"
+   ],
+   "answer": 1,
+   "rationale": "Who feels it decides the category. Felt by the patient = presumptive (quickening). Felt by the examiner = positive.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "During a vaginal exam, the examiner taps the cervix and the fetus floats up and rebounds. What is this called?",
+   "options": [
+    "Braxton Hicks",
+    "Ballottement",
+    "Quickening",
+    "Lightening"
+   ],
+   "answer": 1,
+   "rationale": "Ballottement is when the fetus rebounds after a tap on the cervix or lower uterus. It's a probable sign.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "How are Braxton Hicks contractions classified, and what are they like?",
+   "options": [
+    "Presumptive; felt only in the third trimester",
+    "Probable; irregular and usually painless",
+    "Positive; regular and painful",
+    "Positive; they dilate the cervix"
+   ],
+   "answer": 1,
+   "rationale": "Braxton Hicks contractions are irregular, usually painless contractions that don't dilate the cervix. They're a probable sign.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Which of these is NOT a probable sign of pregnancy?",
+   "options": [
+    "Abdominal enlargement",
+    "Hegar sign",
+    "Fetal outline felt by palpation",
+    "Urinary frequency"
+   ],
+   "answer": 3,
+   "rationale": "Urinary frequency is presumptive because the patient reports it. Hegar sign, abdominal enlargement and fetal outline by palpation are probable signs found by the examiner.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Match the sign: softening of the CERVIX vs. softening of the LOWER UTERINE SEGMENT.",
+   "options": [
+    "Hegar / Goodell",
+    "Goodell / Hegar",
+    "Chadwick / Goodell",
+    "Goodell / Chadwick"
+   ],
+   "answer": 1,
+   "rationale": "Goodell = soft cervix. Hegar = soft lower uterine segment (higher up). Chadwick = colour change.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "The slides list five early eponymous signs: Chadwick, Ladin, Piskacek, Hegar, and which other?",
+   "options": [
+    "Goodell",
+    "Leopold",
+    "Apgar",
+    "Nägele"
+   ],
+   "answer": 0,
+   "rationale": "The five are Chadwick, Ladin, Piskacek, Hegar and Goodell. Leopold's are palpation maneuvers, Nägele's is the due-date rule, and Apgar scores the newborn.",
+   "source": "Signs of Pregnancy Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "The period during birth is called:",
+   "options": [
+    "Antepartum",
+    "Intrapartum",
+    "Postpartum",
+    "Preconception"
+   ],
+   "answer": 1,
+   "rationale": "Preconception = before pregnancy; antepartum = before birth (prenatal); intrapartum = during birth; postpartum = after birth [slide 4].",
+   "source": "Prenatal Care Quiz · slide 4"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "What is the main goal of preconception care?",
+   "options": [
+    "Calculating the due date",
+    "Ensuring a person considering pregnancy is in optimal health",
+    "Screening for gestational diabetes",
+    "Teaching breastfeeding"
+   ],
+   "answer": 1,
+   "rationale": "Preconception care aims for optimal health before pregnancy, including a reproductive health plan and assessing social determinants of health [slide 5].",
+   "source": "Prenatal Care Quiz · slide 5"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Which social determinant is specifically assessed in preconception care?",
+   "options": [
+    "Blood type",
+    "Food insecurity",
+    "Eye colour",
+    "Shoe size"
+   ],
+   "answer": 1,
+   "rationale": "Poverty, food insecurity, unsafe neighbourhoods, lack of education and inadequate social support [slide 5].",
+   "source": "Prenatal Care Quiz · slide 5"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "LMP began May 20, 2026. Using Naegele's rule, the EDB is:",
+   "options": [
+    "Feb 13, 2027",
+    "Feb 27, 2027",
+    "Mar 27, 2027",
+    "Aug 27, 2026"
+   ],
+   "answer": 1,
+   "rationale": "May 20 − 3 months = Feb 20; + 7 days = Feb 27; + 1 year = Feb 27, 2027.",
+   "source": "Prenatal Care Quiz"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "LMP began November 19, 2026. The EDB is:",
+   "options": [
+    "Aug 12, 2027",
+    "Aug 26, 2027",
+    "Aug 26, 2026",
+    "Sep 26, 2027"
+   ],
+   "answer": 1,
+   "rationale": "November (11) − 3 = August (8); 19 + 7 = 26; August comes after November, so it's next year: Aug 26, 2027.",
+   "source": "Prenatal Care Quiz"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "LMP began June 7, 2026 and ended June 12. The EDB is:",
+   "options": [
+    "Mar 14, 2027",
+    "Mar 19, 2027",
+    "Mar 7, 2027",
+    "Apr 14, 2027"
+   ],
+   "answer": 0,
+   "rationale": "Always use the FIRST day of the LMP. June 7 − 3 months = Mar 7; + 7 days = Mar 14, 2027. The end date is a distractor.",
+   "source": "Prenatal Care Quiz"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Naegele's rule assumes:",
+   "options": [
+    "A 21-day cycle",
+    "A 28-day cycle",
+    "A 35-day cycle",
+    "Ovulation on day 1"
+   ],
+   "answer": 1,
+   "rationale": "It assumes a regular 28-day cycle, so it's an estimate. A first-trimester dating ultrasound (after 7 weeks) should be offered when possible [slide 7].",
+   "source": "Prenatal Care Quiz · slide 7"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "An average pregnancy lasts:",
+   "options": [
+    "36 weeks (252 days)",
+    "38 weeks (266 days)",
+    "40 weeks (280 days), plus or minus 2 weeks",
+    "42 weeks (294 days)"
+   ],
+   "answer": 2,
+   "rationale": "40 weeks (280 days) from the first day of the LMP, plus or minus 2 weeks [slide 7].",
+   "source": "Prenatal Care Quiz · slide 7"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "The second trimester covers:",
+   "options": [
+    "Weeks 1–13",
+    "Weeks 14–26",
+    "Weeks 27–40",
+    "Weeks 20–37"
+   ],
+   "answer": 1,
+   "rationale": "Trimester 1: weeks 1–13. Trimester 2: weeks 14–26. Trimester 3: week 27 to term [slide 9].",
+   "source": "Prenatal Care Quiz · slide 9"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "For an uncomplicated pregnancy, how often are prenatal visits from conception to 28 weeks?",
+   "options": [
+    "Weekly",
+    "Every 2–3 weeks",
+    "Every 4 weeks",
+    "Every 8 weeks"
+   ],
+   "answer": 2,
+   "rationale": "Conception–28 weeks: every 4 weeks. 29–36 weeks: every 2–3 weeks. 37 weeks to birth: weekly [slide 15].",
+   "source": "Prenatal Care Quiz · slide 15"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "A patient at 38 weeks should have prenatal visits:",
+   "options": [
+    "Weekly",
+    "Every 2 weeks",
+    "Every 4 weeks",
+    "Only if there are complications"
+   ],
+   "answer": 0,
+   "rationale": "From 37 weeks to birth, visits are weekly [slide 15].",
+   "source": "Prenatal Care Quiz · slide 15"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "About how many prenatal visits are typical in a pregnancy?",
+   "options": [
+    "2–4",
+    "7–11",
+    "15–20",
+    "One per week"
+   ],
+   "answer": 1,
+   "rationale": "7–11 visits, though no research supports an optimal number. More are added if complications arise [slide 10].",
+   "source": "Prenatal Care Quiz · slide 10"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "At what point in pregnancy is blood glucose screening done?",
+   "options": [
+    "8–10 weeks",
+    "18–22 weeks",
+    "24–28 weeks",
+    "36 weeks"
+   ],
+   "answer": 2,
+   "rationale": "Blood glucose screening is done between 24 and 28 weeks [slide 14].",
+   "source": "Prenatal Care Quiz · slide 14"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "The fetal anatomy ultrasound is done at:",
+   "options": [
+    "11–14 weeks",
+    "18–22 weeks",
+    "24–28 weeks",
+    "32 weeks"
+   ],
+   "answer": 1,
+   "rationale": "Fetal anatomy ultrasound: 18–22 weeks. Nuchal translucency and multiple marker screening: 11–14 weeks [slide 13].",
+   "source": "Prenatal Care Quiz · slide 13"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Leopold's manoeuvres are used at prenatal visits to assess:",
+   "options": [
+    "Fetal heart rate",
+    "Fetal presentation and position",
+    "Fundal height",
+    "Cervical dilation"
+   ],
+   "answer": 1,
+   "rationale": "Leopold's manoeuvres = abdominal palpation to find presentation and position. Fundal height tracks fetal growth [slide 14].",
+   "source": "Prenatal Care Quiz · slide 14"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Which is checked at EVERY routine prenatal visit?",
+   "options": [
+    "Amniocentesis",
+    "Urinalysis for protein and ketones",
+    "Cell-free DNA screening",
+    "Fetal anatomy ultrasound"
+   ],
+   "answer": 1,
+   "rationale": "Every visit: risk factors, vital signs and weight, urinalysis (protein, ketones), fundal height, Leopold's, FHR, fetal movement, mental health, discomforts [slide 14].",
+   "source": "Prenatal Care Quiz · slide 14"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Which is part of the psychosocial history in a prenatal assessment?",
+   "options": [
+    "Assessment for intimate partner violence",
+    "Menstrual history",
+    "Contraceptive history",
+    "Surgical history"
+   ],
+   "answer": 0,
+   "rationale": "Psychosocial history includes cultural practices and IPV assessment. The others are separate history components [slide 12].",
+   "source": "Prenatal Care Quiz · slide 12"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "A woman who has never been pregnant is a:",
+   "options": [
+    "Nullipara",
+    "Nulligravida",
+    "Primigravida",
+    "Multigravida"
+   ],
+   "answer": 1,
+   "rationale": "Nulligravida = never pregnant. Nullipara = no births past 20 weeks (she could have been pregnant). Primigravida = first pregnancy.",
+   "source": "Prenatal Care Quiz"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "A woman pregnant for the first time is a:",
+   "options": [
+    "Primipara",
+    "Primigravida",
+    "Multigravida",
+    "Nulligravida"
+   ],
+   "answer": 1,
+   "rationale": "-gravida counts pregnancies; -para counts births past 20 weeks. First pregnancy = primigravida.",
+   "source": "Prenatal Care Quiz"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Katie is pregnant for the 4th time. She had one child at 34 weeks, one at 39 weeks, and a miscarriage at 8 weeks. Her GTPAL is:",
+   "options": [
+    "G3 T1 P1 A1 L2",
+    "G4 T1 P1 A1 L2",
+    "G4 T2 P0 A1 L2",
+    "G4 T1 P1 A0 L2"
+   ],
+   "answer": 1,
+   "rationale": "G4 (includes current). T1 (39 wk). P1 (34 wk). A1 (8 wk). L2 [slide 19].",
+   "source": "Prenatal Care Quiz · slide 19"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Currently pregnant, plus twins born at 36 weeks (both living) and a stillbirth at 24 weeks. GTPAL?",
+   "options": [
+    "G4 T0 P3 A0 L2",
+    "G3 T0 P2 A0 L2",
+    "G3 T0 P1 A1 L2",
+    "G4 T0 P2 A0 L2"
+   ],
+   "answer": 1,
+   "rationale": "G3 (current + twins as ONE + stillbirth). T0. P2 (twins = one birth at 36 wk; the 24-wk stillbirth counts). A0 (24 wk is past 20). L2.",
+   "source": "Prenatal Care Quiz"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "A loss at 18 weeks counts in GTPAL as:",
+   "options": [
+    "Preterm",
+    "Abortion",
+    "Term",
+    "It isn't counted"
+   ],
+   "answer": 1,
+   "rationale": "Any loss before 20 weeks = A. After 20 and before 37 weeks = preterm, even if the baby didn't survive.",
+   "source": "Prenatal Care Quiz"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Quickening is a ___ sign of pregnancy.",
+   "options": [
+    "Presumptive",
+    "Probable",
+    "Positive",
+    "Not a sign"
+   ],
+   "answer": 0,
+   "rationale": "Quickening = first fetal movement felt by the mother. Felt by her and could have other causes = presumptive.",
+   "source": "Prenatal Care Quiz"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "A positive pregnancy test (serum or urine) is a ___ sign.",
+   "options": [
+    "Presumptive",
+    "Probable",
+    "Positive",
+    "Diagnostic"
+   ],
+   "answer": 1,
+   "rationale": "Probable, because other conditions can raise hCG. Classic trick question [slide 20].",
+   "source": "Prenatal Care Quiz · slide 20"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Which is a POSITIVE sign of pregnancy?",
+   "options": [
+    "Chadwick sign",
+    "Braxton Hicks contractions",
+    "Fetal movement felt by the examiner",
+    "Amenorrhea"
+   ],
+   "answer": 2,
+   "rationale": "Positive signs can only be caused by a fetus: audible fetal heartbeat, fetal movement felt by the examiner, ultrasound visualization [slide 20].",
+   "source": "Prenatal Care Quiz · slide 20"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Goodell sign is:",
+   "options": [
+    "Bluish-purple cervix",
+    "Softening of the cervix",
+    "Softening of the lower uterine segment",
+    "Irregular painless contractions"
+   ],
+   "answer": 1,
+   "rationale": "Goodell = softening of the cervix. Chadwick = bluish colour. Hegar = soft lower uterine segment. Braxton Hicks = practice contractions. All probable signs.",
+   "source": "Prenatal Care Quiz"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Prenatal care",
+   "stem": "Chadwick sign (bluish-purple cervix and vagina) is classified as:",
+   "options": [
+    "Presumptive",
+    "Probable",
+    "Positive",
+    "A danger sign"
+   ],
+   "answer": 1,
+   "rationale": "Chadwick, Goodell, Hegar, McDonald, Braxton Hicks, ballottement and a positive test are all probable signs [slide 20].",
+   "source": "Prenatal Care Quiz · slide 20"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "By how much does maternal blood volume increase in pregnancy?",
+   "options": [
+    "10–15%",
+    "20–25%",
+    "40–50%",
+    "75–100%"
+   ],
+   "answer": 2,
+   "rationale": "Blood volume rises about 40–50%, for placental exchange, expanded maternal tissue, and a reserve for blood loss at birth [Part 2, slide 11].",
+   "source": "Pregnancy Adaptations Retest · Part 2, slide 11"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "What happens to blood pressure in a normal pregnancy?",
+   "options": [
+    "It rises 10–15 mm Hg",
+    "It stays the same",
+    "It drops significantly",
+    "It doubles"
+   ],
+   "answer": 1,
+   "rationale": "BP remains the same. Pulse rises 10–15 bpm and BMR rises 10–20% [slide 11]. A rising BP points to hypertensive disorders (Ch 5).",
+   "source": "Pregnancy Adaptations Retest · slide 11"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Maternal pulse rate typically increases by:",
+   "options": [
+    "2–5 bpm",
+    "10–15 bpm",
+    "30–40 bpm",
+    "It doesn't change"
+   ],
+   "answer": 1,
+   "rationale": "Pulse increases by 10–15 beats per minute [slide 11].",
+   "source": "Pregnancy Adaptations Retest · slide 11"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Physiological (dilutional) anemia in pregnancy happens because:",
+   "options": [
+    "Iron is lost through the placenta",
+    "Plasma volume rises more than red cell mass",
+    "The bone marrow stops working",
+    "Blood is lost at each visit"
+   ],
+   "answer": 1,
+   "rationale": "Blood volume expands faster than red cells, diluting the hemoglobin, so it's called dilutional anemia [slide 13].",
+   "source": "Pregnancy Adaptations Retest · slide 13"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Why is the risk of thrombophlebitis higher in the 2nd and 3rd trimesters?",
+   "options": [
+    "Lower blood volume",
+    "Increased clotting factors",
+    "Lower heart rate",
+    "More physical activity"
+   ],
+   "answer": 1,
+   "rationale": "Clotting factors increase in the 2nd and 3rd trimesters, raising the risk of thrombophlebitis [slide 13].",
+   "source": "Pregnancy Adaptations Retest · slide 13"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "A pregnant patient lying flat on her back becomes dizzy and lightheaded. What's happening and what's the fix?",
+   "options": [
+    "Hyperventilation; breathe into a bag",
+    "Supine hypotension from vena cava compression; turn her onto her left side",
+    "Hypoglycemia; give juice",
+    "Pre-eclampsia; check urine protein"
+   ],
+   "answer": 1,
+   "rationale": "Supine hypotension (aortocaval compression): the uterus compresses the inferior vena cava, reducing return to the heart and risking fetal hypoxia. Turn to the side, preferably the left [slide 12].",
+   "source": "Pregnancy Adaptations Retest · slide 12"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Why should the nurse encourage side-lying sleep in the third trimester?",
+   "options": [
+    "To relieve bladder pressure",
+    "To prevent hypotension",
+    "To facilitate sleep",
+    "To encourage fetal movement"
+   ],
+   "answer": 1,
+   "rationale": "Side-lying prevents supine hypotension [slide 14 question].",
+   "source": "Pregnancy Adaptations Retest · slide 14 question"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Oxygen consumption in pregnancy increases by about:",
+   "options": [
+    "5%",
+    "20–40%",
+    "60–80%",
+    "It decreases"
+   ],
+   "answer": 1,
+   "rationale": "O₂ consumption rises 20–40%. Breathing is deeper, but the respiratory rate increases only slightly [slide 10].",
+   "source": "Pregnancy Adaptations Retest · slide 10"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "A pregnant patient complains of nasal stuffiness and nosebleeds. The cause is:",
+   "options": [
+    "A cold",
+    "Increased estrogen causing swelling of mucous membranes",
+    "Low iron",
+    "High blood pressure"
+   ],
+   "answer": 1,
+   "rationale": "Estrogen causes edema of the nose, pharynx, mouth and trachea mucous membranes, so stuffiness and epistaxis are common [slide 10].",
+   "source": "Pregnancy Adaptations Retest · slide 10"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Dyspnea in late pregnancy usually improves after:",
+   "options": [
+    "Quickening",
+    "Lightening",
+    "Braxton Hicks",
+    "Amniotomy"
+   ],
+   "answer": 1,
+   "rationale": "The diaphragm rises about 4 cm, causing dyspnea until the fetus descends into the pelvis (lightening) [slide 10].",
+   "source": "Pregnancy Adaptations Retest · slide 10"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Which GI change contributes to constipation and heartburn in pregnancy?",
+   "options": [
+    "Faster gastric emptying",
+    "Delayed gastric emptying and slower intestinal movement",
+    "Increased gastric acid",
+    "Decreased saliva"
+   ],
+   "answer": 1,
+   "rationale": "Delayed gastric emptying and intestinal movement cause constipation, bloating, hemorrhoids and heartburn. Gastric acid actually decreases [slide 15].",
+   "source": "Pregnancy Adaptations Retest · slide 15"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Pregnant patients are more susceptible to which infection?",
+   "options": [
+    "UTIs",
+    "Pneumonia",
+    "Otitis media",
+    "Conjunctivitis"
+   ],
+   "answer": 0,
+   "rationale": "Increased susceptibility to UTIs; also more frequent urination in the 1st and 3rd trimesters [slide 17].",
+   "source": "Pregnancy Adaptations Retest · slide 17"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "The dark line down the middle of the abdomen in pregnancy is called:",
+   "options": [
+    "Chloasma",
+    "Linea nigra",
+    "Striae",
+    "Spider nevi"
+   ],
+   "answer": 1,
+   "rationale": "Linea nigra = dark midline. Chloasma = the 'mask of pregnancy' on the face. Striae = stretch marks [slide 18].",
+   "source": "Pregnancy Adaptations Retest · slide 18"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Higher vaginal glycogen levels in pregnancy promote:",
+   "options": [
+    "Bacterial vaginosis",
+    "Candida (yeast) infections",
+    "Herpes outbreaks",
+    "Syphilis"
+   ],
+   "answer": 1,
+   "rationale": "Higher glycogen promotes Candida albicans growth [slide 8].",
+   "source": "Pregnancy Adaptations Retest · slide 8"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "What is the recommended total weight gain for a person with a normal pre-pregnancy BMI (18.5–24.9)?",
+   "options": [
+    "5–9 kg (11–20 lb)",
+    "7–11.5 kg (15–25 lb)",
+    "11.5–16 kg (25–35 lb)",
+    "12.5–18 kg (28–40 lb)"
+   ],
+   "answer": 2,
+   "rationale": "Normal BMI: 11.5–16 kg (25–35 lb). Underweight: 12.5–18. Overweight: 7–11.5. Obese: 5–9 [slide 24].",
+   "source": "Pregnancy Adaptations Retest · slide 24"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Recommended weight gain in the FIRST trimester is:",
+   "options": [
+    "0.5–2 kg",
+    "3–5 kg",
+    "5–7 kg",
+    "None at all"
+   ],
+   "answer": 0,
+   "rationale": "First trimester: 0.5–2.0 kg (1.1–4.4 lb) [slide 23].",
+   "source": "Pregnancy Adaptations Retest · slide 23"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Daily protein requirement in pregnancy:",
+   "options": [
+    "30 g",
+    "50 g",
+    "71 g",
+    "120 g"
+   ],
+   "answer": 2,
+   "rationale": "Protein: 71 g/day [slide 26].",
+   "source": "Pregnancy Adaptations Retest · slide 26"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Daily iron requirement in pregnancy:",
+   "options": [
+    "8 mg",
+    "18 mg",
+    "27 mg",
+    "60 mg"
+   ],
+   "answer": 2,
+   "rationale": "Iron: 27 mg/day, which usually requires a multivitamin [slide 26].",
+   "source": "Pregnancy Adaptations Retest · slide 26"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Daily folic acid requirement in pregnancy (standard risk):",
+   "options": [
+    "0.04 mg",
+    "0.4 mg",
+    "4 mg",
+    "40 mg"
+   ],
+   "answer": 1,
+   "rationale": "Folic acid: 0.4 mg/day, more if high risk for neural tube defects [slide 26].",
+   "source": "Pregnancy Adaptations Retest · slide 26"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Daily calcium requirement for a pregnant ADOLESCENT:",
+   "options": [
+    "800 mg",
+    "1000 mg",
+    "1300 mg",
+    "2000 mg"
+   ],
+   "answer": 2,
+   "rationale": "Calcium: 1300 mg/day for teens, 1000 mg/day for adults [slide 26].",
+   "source": "Pregnancy Adaptations Retest · slide 26"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Folic acid in pregnancy mainly prevents:",
+   "options": [
+    "Anemia",
+    "Neural tube defects",
+    "Gestational diabetes",
+    "Preterm labour"
+   ],
+   "answer": 1,
+   "rationale": "Folic acid prevents neural tube defects; ideally started before conception.",
+   "source": "Pregnancy Adaptations Retest"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Which food should a pregnant patient AVOID?",
+   "options": [
+    "Hard cheddar cheese",
+    "Pasteurized milk",
+    "Refrigerated smoked seafood",
+    "Well-cooked chicken"
+   ],
+   "answer": 2,
+   "rationale": "Avoid refrigerated smoked seafood, uncooked hot dogs, non-dried deli meats, raw/unpasteurized dairy, soft and blue-veined cheeses, raw eggs, raw sprouts, pâté, unpasteurized juice (Box 4.6) [slide 27].",
+   "source": "Pregnancy Adaptations Retest · slide 27"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Recommended exercise in pregnancy is:",
+   "options": [
+    "30 minutes once a week",
+    "150 minutes of moderate activity per week over at least 3 days",
+    "Complete rest",
+    "300 minutes of vigorous activity"
+   ],
+   "answer": 1,
+   "rationale": "150 min/week of moderate activity, at least 3 days a week, aerobic plus resistance; use the talk test [slide 30].",
+   "source": "Pregnancy Adaptations Retest · slide 30"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Why should pregnant patients avoid overheating during exercise?",
+   "options": [
+    "It causes nausea",
+    "Elevated body temperature is linked to neural tube defects",
+    "It lowers blood sugar",
+    "It causes Braxton Hicks"
+   ],
+   "answer": 1,
+   "rationale": "Avoid overheating and increase fluids [slide 30]. Textbook: high core temperature, especially in the 1st trimester, is linked to neural tube defects.",
+   "source": "Pregnancy Adaptations Retest · slide 30"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Air travel is generally considered safe up to:",
+   "options": [
+    "28 weeks",
+    "32 weeks",
+    "36 weeks",
+    "40 weeks"
+   ],
+   "answer": 2,
+   "rationale": "Air travel is generally safe up to 36 weeks; avoid sitting for long periods [slide 35].",
+   "source": "Pregnancy Adaptations Retest · slide 35"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "The Tdap (whooping cough) vaccine is recommended:",
+   "options": [
+    "Before conception only",
+    "In the first trimester",
+    "After 26 weeks",
+    "After birth only"
+   ],
+   "answer": 2,
+   "rationale": "Tdap after 26 weeks protects the fetus and newborn [slide 36].",
+   "source": "Pregnancy Adaptations Retest · slide 36"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "How much alcohol is considered safe in pregnancy?",
+   "options": [
+    "One drink per week",
+    "One drink per day",
+    "Only wine",
+    "None"
+   ],
+   "answer": 3,
+   "rationale": "No amount of alcohol is safe. Risk: fetal alcohol spectrum disorder (FASD) [slide 34].",
+   "source": "Pregnancy Adaptations Retest · slide 34"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "Which is a FIRST-trimester discomfort?",
+   "options": [
+    "Leg cramps",
+    "Varicose veins",
+    "Nausea",
+    "Round ligament pain"
+   ],
+   "answer": 2,
+   "rationale": "1st trimester: nausea, breast tenderness, urinary frequency, nasal stuffiness, epistaxis, leukorrhea, fatigue. The others are 2nd/3rd trimester [slide 38].",
+   "source": "Pregnancy Adaptations Retest · slide 38"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "A pregnant teen faces which unique psychosocial challenge?",
+   "options": [
+    "Being an 'elderly primip'",
+    "Coping with two stress-laden transitions at once: adolescence and parenthood",
+    "Sibling regression",
+    "Partner exclusion"
+   ],
+   "answer": 1,
+   "rationale": "The pregnant adolescent copes with two stressful transitions at the same time [slide 41].",
+   "source": "Pregnancy Adaptations Retest · slide 41"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 4: Pregnancy adaptations",
+   "stem": "A patient discloses that her partner is abusing her. What's the nurse's priority?",
+   "options": [
+    "Tell the partner to leave",
+    "Keep it strictly confidential and refer to resources; the decision to leave is hers",
+    "Call the police immediately",
+    "Document it in front of the partner"
+   ],
+   "answer": 1,
+   "rationale": "Disclosures must be kept absolutely confidential, since her life may be in danger if the abuser learns of it. Refer to shelters; the decision to leave is her own [slide 40].",
+   "source": "Pregnancy Adaptations Retest · slide 40"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Which is a danger sign in pregnancy that should be reported?",
+   "options": [
+    "Mild ankle swelling at the end of the day",
+    "Decreased fetal movement after 26–28 weeks",
+    "Occasional Braxton Hicks",
+    "Increased vaginal discharge"
+   ],
+   "answer": 1,
+   "rationale": "Danger signs include decreased or absent fetal movement after 26–28 weeks, bleeding, fluid gush before 37 weeks, severe headache, blurred vision, epigastric pain, face/hand swelling, fever over 37.8 °C [slide 5].",
+   "source": "Pregnancy Complications Retest · slide 5"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A pregnant patient has a severe headache, blurred vision and epigastric pain. These danger signs most suggest:",
+   "options": [
+    "Placenta previa",
+    "Pre-eclampsia",
+    "Hyperemesis gravidarum",
+    "Ectopic pregnancy"
+   ],
+   "answer": 1,
+   "rationale": "Headache, visual changes, epigastric pain and swelling of the face/hands point to pre-eclampsia.",
+   "source": "Pregnancy Complications Retest"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Hyperemesis gravidarum is defined by persistent vomiting starting before 16 weeks and weight loss of more than:",
+   "options": [
+    "1%",
+    "5%",
+    "10%",
+    "20%"
+   ],
+   "answer": 1,
+   "rationale": "More than 5% of pre-pregnancy weight [slide 8].",
+   "source": "Pregnancy Complications Retest · slide 8"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Priority nursing care for hyperemesis gravidarum:",
+   "options": [
+    "Encourage large meals",
+    "Accurate intake and output; correct dehydration",
+    "Bed rest only",
+    "Start oxytocin"
+   ],
+   "answer": 1,
+   "rationale": "Correct dehydration and electrolyte/acid–base imbalance; accurate I&O; avoid triggers; antiemetics; TPN in extreme cases [slides 9–10].",
+   "source": "Pregnancy Complications Retest · slides 9–10"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A patient is actively bleeding during a miscarriage. The nurse should:",
+   "options": [
+    "Encourage oral fluids",
+    "Keep her NPO and monitor vital signs for shock",
+    "Discharge her home",
+    "Insert a tampon"
+   ],
+   "answer": 1,
+   "rationale": "If actively bleeding, keep NPO; monitor VS for hypovolemic shock; document bleeding and save clots/tissue [slide 11].",
+   "source": "Pregnancy Complications Retest · slide 11"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Which is correct discharge teaching after a miscarriage?",
+   "options": [
+    "Use tampons for 2 weeks",
+    "Pregnancy can occur before the first period returns",
+    "Temperature checks aren't needed",
+    "Sexual activity can resume immediately"
+   ],
+   "answer": 1,
+   "rationale": "Also: no tampons, temperature every 8 h for 3 days, report bleeding or infection, iron if prescribed [slide 12].",
+   "source": "Pregnancy Complications Retest · slide 12"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Where do 95% of ectopic pregnancies occur?",
+   "options": [
+    "Ovary",
+    "Cervix",
+    "Fallopian tube",
+    "Abdomen"
+   ],
+   "answer": 2,
+   "rationale": "95% are in the fallopian tube [slide 15].",
+   "source": "Pregnancy Complications Retest · slide 15"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A patient with a suspected ectopic pregnancy reports new shoulder pain. This suggests:",
+   "options": [
+    "Muscle strain",
+    "Tubal rupture with internal bleeding",
+    "Normal pregnancy",
+    "Gallstones"
+   ],
+   "answer": 1,
+   "rationale": "Shoulder pain is referred from blood irritating the diaphragm after rupture. Report increasing or shoulder pain [slides 16–17].",
+   "source": "Pregnancy Complications Retest · slides 16–17"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Which drug may treat an unruptured ectopic pregnancy by stopping cell division?",
+   "options": [
+    "Magnesium sulphate",
+    "Methotrexate",
+    "Oxytocin",
+    "Nifedipine"
+   ],
+   "answer": 1,
+   "rationale": "Methotrexate inhibits cell division. Other options: no action, or surgery [slide 17].",
+   "source": "Pregnancy Complications Retest · slide 17"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Which is a sign of hypovolemic shock?",
+   "options": [
+    "Bradycardia",
+    "Rising BP",
+    "Urine output under 30 mL/h",
+    "Warm, flushed skin"
+   ],
+   "answer": 2,
+   "rationale": "Shock: rising weak pulse, rising RR, falling BP, urine under 30 mL/h, pale cold clammy skin, thirst [slide 18].",
+   "source": "Pregnancy Complications Retest · slide 18"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Painless, bright-red vaginal bleeding in late pregnancy suggests:",
+   "options": [
+    "Placental abruption",
+    "Placenta previa",
+    "Ectopic pregnancy",
+    "Pre-eclampsia"
+   ],
+   "answer": 1,
+   "rationale": "Previa = bright red, painless. Abruption = dark red, painful, with a board-like uterus [slides 20, 22].",
+   "source": "Pregnancy Complications Retest · slides 20, 22"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Dark-red bleeding with a tender, board-like uterus suggests:",
+   "options": [
+    "Placenta previa",
+    "Placental abruption",
+    "Hyperemesis",
+    "Normal labour"
+   ],
+   "answer": 1,
+   "rationale": "Abruption: premature separation, dark red bleeding with pain, rigid tender uterus [slides 22–23].",
+   "source": "Pregnancy Complications Retest · slides 22–23"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Which is a major predisposing factor for placental abruption?",
+   "options": [
+    "Folic acid use",
+    "Hypertension",
+    "Breastfeeding",
+    "Low BMI"
+   ],
+   "answer": 1,
+   "rationale": "Hypertension, cocaine, tobacco, poor nutrition, abdominal trauma, previous abruption [slide 22].",
+   "source": "Pregnancy Complications Retest · slide 22"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A serious complication of placental abruption that depletes clotting factors is:",
+   "options": [
+    "HELLP",
+    "DIC",
+    "GDM",
+    "Polyhydramnios"
+   ],
+   "answer": 1,
+   "rationale": "Disseminated intravascular coagulation (DIC); also postpartum hemorrhage [slide 24].",
+   "source": "Pregnancy Complications Retest · slide 24"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Usual treatment for placental abruption:",
+   "options": [
+    "Bed rest until term",
+    "Immediate Caesarean birth; blood and clotting factor replacement",
+    "Induction with misoprostol",
+    "Methotrexate"
+   ],
+   "answer": 1,
+   "rationale": "Immediate C-section with blood and clotting factor replacement [slide 24].",
+   "source": "Pregnancy Complications Retest · slide 24"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Gestational hypertension is defined as hypertension that begins:",
+   "options": [
+    "Before pregnancy",
+    "Before 20 weeks",
+    "After 20 weeks",
+    "Only during labour"
+   ],
+   "answer": 2,
+   "rationale": "Chronic HTN exists before pregnancy or before 20 weeks; gestational HTN starts after 20 weeks [slide 28].",
+   "source": "Pregnancy Complications Retest · slide 28"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "BP readings for SEVERE pre-eclampsia:",
+   "options": [
+    "≥140/90",
+    "≥150/100",
+    "≥160/110",
+    "≥180/120"
+   ],
+   "answer": 2,
+   "rationale": "Non-severe: ≥140/90. Severe: ≥160/110, two readings 15 minutes apart [slide 30].",
+   "source": "Pregnancy Complications Retest · slide 30"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Eclampsia is defined by:",
+   "options": [
+    "Proteinuria",
+    "Generalized tonic-clonic seizures",
+    "BP over 160/110",
+    "Epigastric pain"
+   ],
+   "answer": 1,
+   "rationale": "Eclampsia = generalized tonic-clonic seizures; magnesium sulphate is given [slide 28].",
+   "source": "Pregnancy Complications Retest · slide 28"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Magnesium sulphate is given in pre-eclampsia to:",
+   "options": [
+    "Lower blood sugar",
+    "Prevent seizures",
+    "Stop bleeding",
+    "Induce labour"
+   ],
+   "answer": 1,
+   "rationale": "Seizure prevention. Antihypertensives treat BP [slide 34].",
+   "source": "Pregnancy Complications Retest · slide 34"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "The antidote for magnesium sulphate toxicity is:",
+   "options": [
+    "Naloxone",
+    "Vitamin K",
+    "Calcium gluconate",
+    "Protamine"
+   ],
+   "answer": 2,
+   "rationale": "Calcium gluconate reverses magnesium sulphate [slide 34].",
+   "source": "Pregnancy Complications Retest · slide 34"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "High-risk patients may take low-dose aspirin to prevent pre-eclampsia starting at:",
+   "options": [
+    "4–6 weeks",
+    "12–14 weeks",
+    "24–28 weeks",
+    "36 weeks"
+   ],
+   "answer": 1,
+   "rationale": "Low-dose aspirin started between 12 and 14 weeks [slide 32].",
+   "source": "Pregnancy Complications Retest · slide 32"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Rh incompatibility puts the baby at risk when the:",
+   "options": [
+    "Mother is Rh-positive and baby Rh-negative",
+    "Mother is Rh-negative and baby Rh-positive",
+    "Both are Rh-negative",
+    "Both are Rh-positive"
+   ],
+   "answer": 1,
+   "rationale": "An Rh-negative mother makes antibodies against Rh-positive fetal blood; the next pregnancy is at risk of hemolytic disease of the newborn [slide 37].",
+   "source": "Pregnancy Complications Retest · slide 37"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Rh immune globulin is given at which point in pregnancy?",
+   "options": [
+    "12 weeks",
+    "20 weeks",
+    "28 weeks",
+    "36 weeks"
+   ],
+   "answer": 2,
+   "rationale": "At 28 weeks and within 72 h of the birth of an Rh-positive baby; also after amniocentesis, miscarriage/abortion, abdominal trauma [slide 39].",
+   "source": "Pregnancy Complications Retest · slide 39"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "After the birth of an Rh-positive baby, Rh immune globulin must be given within:",
+   "options": [
+    "24 hours",
+    "48 hours",
+    "72 hours",
+    "1 week"
+   ],
+   "answer": 2,
+   "rationale": "Within 72 hours [slide 39].",
+   "source": "Pregnancy Complications Retest · slide 39"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "GDM screening (glucose challenge test) is done at:",
+   "options": [
+    "8–12 weeks",
+    "18–22 weeks",
+    "24–28 weeks",
+    "34–36 weeks"
+   ],
+   "answer": 2,
+   "rationale": "24–28 weeks: 50 g challenge, then a 3-h test if over 7.8; one abnormal 3-h value is diagnostic [slide 43].",
+   "source": "Pregnancy Complications Retest · slide 43"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A newborn of a mother with GDM should be monitored most closely for:",
+   "options": [
+    "Hyperglycemia",
+    "Hypoglycemia",
+    "Jaundice only",
+    "Hypertension"
+   ],
+   "answer": 1,
+   "rationale": "Hypoglycemia, respiratory distress, and injury from macrosomia [slide 46].",
+   "source": "Pregnancy Complications Retest · slide 46"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Herpes: when is a Caesarean birth indicated?",
+   "options": [
+    "Any history of herpes",
+    "Active genital lesions at the time of labour",
+    "Only type 1 herpes",
+    "Never"
+   ],
+   "answer": 1,
+   "rationale": "C-section if active genital lesions are present [slide 50].",
+   "source": "Pregnancy Complications Retest · slide 50"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "A baby born to a hepatitis B–positive mother should receive:",
+   "options": [
+    "Only the hep B vaccine at 2 months",
+    "HBIG plus the hep B vaccine within 12 hours of birth",
+    "Penicillin",
+    "Nothing until 6 months"
+   ],
+   "answer": 1,
+   "rationale": "HBIG plus hep B vaccine within 12 h of birth [slide 51].",
+   "source": "Pregnancy Complications Retest · slide 51"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Which is correct teaching for an HIV-positive mother in Canada?",
+   "options": [
+    "Breastfeeding is encouraged",
+    "Breastfeeding is not recommended",
+    "Isolate the newborn",
+    "Stop all antiretrovirals at birth"
+   ],
+   "answer": 1,
+   "rationale": "Not recommended to breastfeed in industrialized countries; adequately treated, non-breastfeeding mothers have under 1% transmission [slides 53–54].",
+   "source": "Pregnancy Complications Retest · slides 53–54"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 5: Pregnancy complications",
+   "stem": "Untreated syphilis in pregnancy is treated with:",
+   "options": [
+    "Methotrexate",
+    "Penicillin",
+    "Acyclovir",
+    "Erythromycin ointment"
+   ],
+   "answer": 1,
+   "rationale": "Penicillin. Untreated, 70–100% of newborns get congenital syphilis [slide 55].",
+   "source": "Pregnancy Complications Retest · slide 55"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Ductus venosus: what does it bypass?",
+   "options": [
+    "The lungs",
+    "The liver",
+    "The heart",
+    "The kidneys"
+   ],
+   "answer": 1,
+   "rationale": "Ductus venosus bypasses the LIVER. Memory hook: venosus → vein → umbilical vein → liver.",
+   "source": "Fetal Development Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Ductus venosus: what is its route?",
+   "options": [
+    "Right atrium to left atrium",
+    "Pulmonary artery to aorta",
+    "Umbilical vein to inferior vena cava",
+    "Aorta to umbilical arteries"
+   ],
+   "answer": 2,
+   "rationale": "Umbilical vein → inferior vena cava, skipping the liver.",
+   "source": "Fetal Development Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Ductus venosus: when does it close?",
+   "options": [
+    "Within 2 hours of birth",
+    "Within 15 hours of birth",
+    "Functionally when the cord is cut; permanently in about 1 week",
+    "At 3 months"
+   ],
+   "answer": 2,
+   "rationale": "Closes when the cord is cut, permanently in about 1 week, then becomes a ligament [slide 42].",
+   "source": "Fetal Development Drill · slide 42"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Foramen ovale: what is its route?",
+   "options": [
+    "Right atrium to left atrium",
+    "Pulmonary artery to aorta",
+    "Umbilical vein to inferior vena cava",
+    "Right ventricle to left ventricle"
+   ],
+   "answer": 0,
+   "rationale": "Right atrium → left atrium (an opening in the atrial wall), bypassing the lungs.",
+   "source": "Fetal Development Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Foramen ovale: when does it close?",
+   "options": [
+    "When the cord is cut",
+    "Within 2 hours; permanently by 3 months",
+    "Within 15 hours; permanently in about 3 weeks",
+    "Within 1 week"
+   ],
+   "answer": 1,
+   "rationale": "Within 2 hours of birth, permanently by age 3 months [slide 42].",
+   "source": "Fetal Development Drill · slide 42"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Ductus arteriosus: what is its route?",
+   "options": [
+    "Right atrium to left atrium",
+    "Pulmonary artery to aorta",
+    "Umbilical vein to inferior vena cava",
+    "Aorta to pulmonary vein"
+   ],
+   "answer": 1,
+   "rationale": "Pulmonary artery → aorta. Memory hook: arteriosus → arteries → pulmonary artery and aorta.",
+   "source": "Fetal Development Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Ductus arteriosus: when does it close?",
+   "options": [
+    "Within 2 hours; permanently by 3 months",
+    "Within 15 hours; permanently in about 3 weeks",
+    "When the cord is cut",
+    "At 6 months"
+   ],
+   "answer": 1,
+   "rationale": "Within 15 hours, permanently in about 3 weeks [slide 42]. (Ch 8 link: indomethacin can close it too early.)",
+   "source": "Fetal Development Drill · slide 42"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which TWO shunts bypass the lungs?",
+   "options": [
+    "Ductus venosus and foramen ovale",
+    "Foramen ovale and ductus arteriosus",
+    "Ductus venosus and ductus arteriosus",
+    "All three"
+   ],
+   "answer": 1,
+   "rationale": "Foramen ovale and ductus arteriosus bypass the lungs. Ductus venosus is the odd one out: it bypasses the liver.",
+   "source": "Fetal Development Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "After permanent closure, which shunts become ligaments?",
+   "options": [
+    "Foramen ovale and ductus venosus",
+    "Ductus arteriosus and ductus venosus",
+    "Only the foramen ovale",
+    "None of them"
+   ],
+   "answer": 1,
+   "rationale": "The two ducts (ductus arteriosus and ductus venosus) become ligaments [slide 42].",
+   "source": "Fetal Development Drill · slide 42"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Put the shunt closures in order, fastest first:",
+   "options": [
+    "Ductus venosus (cord cut) → foramen ovale (2 h) → ductus arteriosus (15 h)",
+    "Foramen ovale → ductus arteriosus → ductus venosus",
+    "Ductus arteriosus → foramen ovale → ductus venosus",
+    "They all close at the same time"
+   ],
+   "answer": 0,
+   "rationale": "Cord cut (ductus venosus) → 2 h (foramen ovale) → 15 h (ductus arteriosus). Permanent: 1 week → 3 weeks (DA) → 3 months (FO).",
+   "source": "Fetal Development Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "An 8-week-old developing human is called:",
+   "options": [
+    "A zygote",
+    "An embryo",
+    "A fetus",
+    "A morula"
+   ],
+   "answer": 1,
+   "rationale": "Embryo = weeks 2–8. At week 8 it's still an embryo; it becomes a fetus at week 9.",
+   "source": "Fetal Development Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "A 10-week-old developing human is called:",
+   "options": [
+    "A zygote",
+    "An embryo",
+    "A fetus",
+    "A blastocyst"
+   ],
+   "answer": 2,
+   "rationale": "Fetus = week 9 to birth.",
+   "source": "Fetal Development Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "The age of viability (per the slides) is:",
+   "options": [
+    "20 weeks",
+    "22 weeks",
+    "24 weeks",
+    "26 weeks"
+   ],
+   "answer": 1,
+   "rationale": "22 weeks of gestation, with NICU care to survive [slide 23]. Don't confuse it with 20 weeks, the cut-off for abortion vs. preterm in GTPAL.",
+   "source": "Fetal Development Drill · slide 23"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which number is the GTPAL cut-off between an abortion and a preterm birth, NOT the age of viability?",
+   "options": [
+    "20 weeks",
+    "22 weeks",
+    "37 weeks",
+    "24 weeks"
+   ],
+   "answer": 0,
+   "rationale": "20 weeks separates abortion from preterm in GTPAL (Ch 4). Viability is 22 weeks. Term is 37 weeks or more.",
+   "source": "Fetal Development Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Approximate amniotic fluid volume at 20 weeks:",
+   "options": [
+    "30 mL",
+    "350 mL",
+    "700–1000 mL",
+    "Over 2000 mL"
+   ],
+   "answer": 1,
+   "rationale": "About 30 mL at 10 weeks → 350 mL at 20 weeks → 700–1000 mL at 37 weeks [slide 17].",
+   "source": "Fetal Development Drill · slide 17"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Approximate amniotic fluid volume at 37 weeks:",
+   "options": [
+    "30 mL",
+    "350 mL",
+    "700–1000 mL",
+    "5000 mL"
+   ],
+   "answer": 2,
+   "rationale": "700–1000 mL at 37 weeks. Over 1000 mL at term = polyhydramnios (per the slides).",
+   "source": "Fetal Development Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "hCG is detectable in maternal blood how soon after fertilization?",
+   "options": [
+    "1–2 days",
+    "7–9 days",
+    "3 weeks",
+    "6 weeks"
+   ],
+   "answer": 1,
+   "rationale": "As soon as implantation occurs, usually 7–9 days after fertilization [slide 32].",
+   "source": "Fetal Development Drill · slide 32"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which is NOT a function of progesterone in pregnancy?",
+   "options": [
+    "Maintains the uterine lining",
+    "Reduces uterine contractions",
+    "Causes the corpus luteum to persist",
+    "Prepares breast glands for lactation"
+   ],
+   "answer": 2,
+   "rationale": "Keeping the corpus luteum going is hCG's job. Progesterone: lining, fewer contractions, breasts, maternal metabolism, male reproductive tract (via testosterone) [slide 30].",
+   "source": "Fetal Development Drill · slide 30"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which is a NON-pregnancy effect of estrogen?",
+   "options": [
+    "Decreased insulin sensitivity",
+    "Increased skin pigmentation",
+    "Persistence of the corpus luteum",
+    "Reduced uterine contractions"
+   ],
+   "answer": 1,
+   "rationale": "Estrogen side effects: more skin pigment, vascular changes in nose and mouth, more saliva [slide 31].",
+   "source": "Fetal Development Drill · slide 31"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Match the hormone: makes more glucose available to the fetus.",
+   "options": [
+    "Progesterone",
+    "Estrogen",
+    "hCG",
+    "hPL"
+   ],
+   "answer": 3,
+   "rationale": "hPL decreases maternal insulin sensitivity and glucose use.",
+   "source": "Fetal Development Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "When does the morula enter the uterus?",
+   "options": [
+    "Day 1",
+    "Day 3",
+    "Day 9",
+    "Day 14"
+   ],
+   "answer": 1,
+   "rationale": "The morula enters the uterus on the third day, then floats for another 2–4 days [slide 13].",
+   "source": "Fetal Development Drill · slide 13"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "The yolk sac forms on day 9 and makes red blood cells until which organ takes over (around 6 weeks)?",
+   "options": [
+    "Fetal liver",
+    "Spleen",
+    "Bone marrow",
+    "Placenta"
+   ],
+   "answer": 0,
+   "rationale": "The yolk sac initiates RBC production until the fetal liver takes over around 6 weeks [slide 20].",
+   "source": "Fetal Development Drill · slide 20"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "The trophoblast (outer blastocyst layer) develops into the:",
+   "options": [
+    "Embryo",
+    "Amnion",
+    "Chorion",
+    "Yolk sac"
+   ],
+   "answer": 2,
+   "rationale": "Outer layer (trophoblast) → chorion. Inner cell mass → embryo and embryonic membranes [slide 13].",
+   "source": "Fetal Development Drill · slide 13"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Normal umbilical cord length is about:",
+   "options": [
+    "15 cm",
+    "35 cm",
+    "55 cm (22 in)",
+    "100 cm"
+   ],
+   "answer": 2,
+   "rationale": "About 55 cm (22 inches); it usually inserts near the centre of the placenta [slide 35].",
+   "source": "Fetal Development Drill · slide 35"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Sperm can survive up to ___ days, so intercourse up to ___ days before ovulation can result in pregnancy.",
+   "options": [
+    "2; 1",
+    "7; 5",
+    "14; 10",
+    "3; 7"
+   ],
+   "answer": 1,
+   "rationale": "Sperm survive up to 7 days; pregnancy can occur with intercourse up to 5 days before ovulation [slide 10].",
+   "source": "Fetal Development Drill · slide 10"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which germ layer gives rise to muscle, bone and the heart?",
+   "options": [
+    "Ectoderm",
+    "Mesoderm",
+    "Endoderm",
+    "Trophoblast"
+   ],
+   "answer": 1,
+   "rationale": "Mesoderm (middle): muscle, bone, cartilage, heart and vessels, kidneys, reproductive organs. Ecto = outer (skin, nerves). Endo = inner (GI and respiratory linings).",
+   "source": "Fetal Development Drill"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Twins occur in about 1 in every ___ pregnancies.",
+   "options": [
+    "12",
+    "43",
+    "100",
+    "250"
+   ],
+   "answer": 1,
+   "rationale": "About 1 in 43 pregnancies, more often with fertility drugs [slide 43].",
+   "source": "Fetal Development Drill · slide 43"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which parent's gamete determines the biological sex of the baby?",
+   "options": [
+    "The mother's ovum, which carries X or Y",
+    "The father's sperm, which carries X or Y",
+    "Both contribute equally to sex determination",
+    "The placenta determines sex after implantation"
+   ],
+   "answer": 1,
+   "rationale": "The ovum always carries an X. The sperm carries either an X or a Y, so the sperm decides: XX = female, XY = male [slides 6, 11].",
+   "source": "Fetal Development Retest · slides 6, 11"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Where does implantation usually occur?",
+   "options": [
+    "Lower anterior uterine wall",
+    "Upper posterior uterine wall",
+    "Fallopian tube",
+    "Cervical canal"
+   ],
+   "answer": 1,
+   "rationale": "Implantation usually happens in the upper section of the posterior uterine wall [slide 14].",
+   "source": "Fetal Development Retest · slide 14"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Body cells contain 46 chromosomes. How many does each gamete (sperm or ovum) contain after meiosis?",
+   "options": [
+    "46",
+    "92",
+    "23",
+    "22"
+   ],
+   "answer": 2,
+   "rationale": "Meiosis produces haploid gametes with 23 chromosomes, including one sex chromosome [slide 6].",
+   "source": "Fetal Development Retest · slide 6"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which germ layer develops into the nervous system and skin?",
+   "options": [
+    "Ectoderm",
+    "Mesoderm",
+    "Endoderm",
+    "Trophoblast"
+   ],
+   "answer": 0,
+   "rationale": "Ectoderm (outer layer): skin, hair, nails, nervous system, sense organs. Mesoderm: muscle, bone, heart. Endoderm: linings of the GI and respiratory tracts [Box 3.1].",
+   "source": "Fetal Development Retest"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which germ layer forms the lining of the GI and respiratory tracts?",
+   "options": [
+    "Ectoderm",
+    "Mesoderm",
+    "Endoderm",
+    "Chorion"
+   ],
+   "answer": 2,
+   "rationale": "Endoderm (inner layer) forms the linings of the GI and respiratory tracts, plus the liver, pancreas, thyroid and bladder [Box 3.1].",
+   "source": "Fetal Development Retest"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "A patient has blood drawn to see if she is pregnant. Which hormone is responsible for a positive result?",
+   "options": [
+    "Estrogen",
+    "Human placental lactogen (hPL)",
+    "Human chorionic gonadotropin (hCG)",
+    "Follicle-stimulating hormone (FSH)"
+   ],
+   "answer": 2,
+   "rationale": "hCG is detectable 7–9 days after fertilization and is the basis of pregnancy tests. It keeps the corpus luteum producing estrogen and progesterone [slide 32].",
+   "source": "Fetal Development Retest · slide 32"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which placental hormone reduces uterine contractions, helping prevent miscarriage and preterm labour?",
+   "options": [
+    "Estrogen",
+    "Progesterone",
+    "hCG",
+    "hPL"
+   ],
+   "answer": 1,
+   "rationale": "Progesterone maintains the uterine lining and reduces uterine contractions. It also prepares breasts for lactation [slide 30].",
+   "source": "Fetal Development Retest · slide 30"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which hormone stimulates uterine growth and increases blood flow to uterine vessels?",
+   "options": [
+    "Estrogen",
+    "Progesterone",
+    "hCG",
+    "hPL"
+   ],
+   "answer": 0,
+   "rationale": "Estrogen stimulates uterine growth, increases uterine blood flow, and develops breast glandular tissue [slide 31].",
+   "source": "Fetal Development Retest · slide 31"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "How many vessels does a normal umbilical cord have, and what do they carry?",
+   "options": [
+    "1 artery to the fetus, 2 veins away",
+    "2 arteries away from the fetus, 1 vein to the fetus",
+    "2 arteries to the fetus, 1 vein away",
+    "2 arteries and 2 veins"
+   ],
+   "answer": 1,
+   "rationale": "AVA: 2 arteries carry deoxygenated blood and waste away from the fetus; 1 vein carries oxygenated blood to the fetus [slides 35–36].",
+   "source": "Fetal Development Retest · slides 35–36"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "What substance covers and cushions the umbilical cord vessels?",
+   "options": [
+    "Vernix",
+    "Wharton's jelly",
+    "Amniotic fluid",
+    "Meconium"
+   ],
+   "answer": 1,
+   "rationale": "Wharton's jelly covers and cushions the cord vessels [slide 35].",
+   "source": "Fetal Development Retest · slide 35"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "The embryonic stage of development lasts from:",
+   "options": [
+    "Fertilization to week 2",
+    "Week 2 to week 8",
+    "Week 9 to birth",
+    "Week 12 to week 20"
+   ],
+   "answer": 1,
+   "rationale": "Zygote = fertilization; embryo = weeks 2–8; fetus = week 9 to birth [slide 23].",
+   "source": "Fetal Development Retest · slide 23"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "According to the slides, the age of viability is:",
+   "options": [
+    "20 weeks",
+    "22 weeks",
+    "24 weeks",
+    "28 weeks"
+   ],
+   "answer": 1,
+   "rationale": "Viability is 22 weeks of gestation, but the baby needs NICU care to survive [slide 23].",
+   "source": "Fetal Development Retest · slide 23"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Amniotic fluid exceeding 1000 mL at term is called:",
+   "options": [
+    "Megahydramnios",
+    "Oligohydramnios",
+    "Tetramnios",
+    "Polyhydramnios"
+   ],
+   "answer": 3,
+   "rationale": "Polyhydramnios = too much amniotic fluid. The slides uses over 1000 mL at term. Oligohydramnios = too little [slide 18].",
+   "source": "Fetal Development Retest · slide 18"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "A teratogen is:",
+   "options": [
+    "A hormone produced by the placenta",
+    "Anything that can cause birth defects",
+    "A type of twin pregnancy",
+    "An enzyme that breaks down amniotic fluid"
+   ],
+   "answer": 1,
+   "rationale": "A teratogen is any substance or factor that causes birth defects, such as drugs, alcohol, smoking or infection [slide 4].",
+   "source": "Fetal Development Retest · slide 4"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which fetal shunt allows blood to bypass the liver?",
+   "options": [
+    "Foramen ovale",
+    "Ductus arteriosus",
+    "Ductus venosus",
+    "Umbilical artery"
+   ],
+   "answer": 2,
+   "rationale": "The ductus venosus bypasses the liver (umbilical vein to inferior vena cava). The foramen ovale and ductus arteriosus bypass the lungs.",
+   "source": "Fetal Development Retest"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "The foramen ovale connects which two structures?",
+   "options": [
+    "Right atrium and left atrium",
+    "Pulmonary artery and aorta",
+    "Umbilical vein and inferior vena cava",
+    "Right and left ventricles"
+   ],
+   "answer": 0,
+   "rationale": "The foramen ovale shunts blood from the right atrium to the left atrium, bypassing the lungs. It closes within 2 hours of birth [slide 42].",
+   "source": "Fetal Development Retest · slide 42"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Why does the fetus need shunts that bypass the lungs?",
+   "options": [
+    "The lungs are not yet formed",
+    "The fetus gets oxygen from the placenta, not the lungs",
+    "To prevent infection",
+    "To increase blood pressure"
+   ],
+   "answer": 1,
+   "rationale": "The placenta is the organ of fetal respiration, so most blood can skip the fluid-filled lungs.",
+   "source": "Fetal Development Retest"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which shunt closes functionally when the umbilical cord is cut?",
+   "options": [
+    "Foramen ovale",
+    "Ductus arteriosus",
+    "Ductus venosus",
+    "None; they all close at 3 months"
+   ],
+   "answer": 2,
+   "rationale": "Ductus venosus closes when the cord is cut (permanently in about 1 week). Foramen ovale: within 2 h. Ductus arteriosus: within 15 h [slide 42].",
+   "source": "Fetal Development Retest · slide 42"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Identical twins are:",
+   "options": [
+    "Dizygotic, from two separate ova",
+    "Monozygotic, from a single fertilized ovum",
+    "Dizygotic, from one ovum and two sperm",
+    "Always the result of fertility drugs"
+   ],
+   "answer": 1,
+   "rationale": "Monozygotic = one fertilized ovum = identical. Dizygotic = two ova = fraternal [slide 43].",
+   "source": "Fetal Development Retest · slide 43"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 3: Fetal development",
+   "stem": "Which is a concern related to multifetal pregnancy?",
+   "options": [
+    "Uterine overdistention increasing the risk of preterm labour",
+    "Reduced maternal nutritional needs",
+    "Decreased risk of anemia",
+    "Smaller uterine size"
+   ],
+   "answer": 0,
+   "rationale": "Textbook: overdistention raises the risk of preterm labour and postpartum hemorrhage; shared placental nutrition raises the risk of growth restriction and anemia.",
+   "source": "Fetal Development Retest"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Oxytocin is running and the patient has 6 contractions in 10 minutes. First action?",
+   "options": [
+    "Stop the oxytocin or cut it by half",
+    "Increase oxytocin",
+    "Place her supine",
+    "Give methylergonovine"
+   ],
+   "answer": 0,
+   "rationale": "This is tachysystole. Stop or halve the oxytocin, increase the mainline IV, reposition off the back, give O2 at 8–10 L/min if SpO2 is under 96%, and notify the provider.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Most common UTERINE incision for a Caesarean?",
+   "options": [
+    "Classic",
+    "Low transverse",
+    "Low vertical",
+    "Pfannenstiel"
+   ],
+   "answer": 1,
+   "rationale": "Low transverse is the most common uterine incision. Pfannenstiel (transverse) is the most common skin incision.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "The fundus is high and pushed to the right. First action?",
+   "options": [
+    "Help her empty her bladder",
+    "Give oxytocin",
+    "Call the provider",
+    "Document as normal"
+   ],
+   "answer": 0,
+   "rationale": "A full bladder displaces the uterus and can lead to PPH.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "Lochia serosa begins around:",
+   "options": [
+    "Day 1",
+    "Day 4",
+    "Week 3",
+    "Week 6"
+   ],
+   "answer": 1,
+   "rationale": "Rubra comes first, then serosa from day 4 (lasting 2–4 weeks), then alba (yellow/clear) until 4–6 weeks.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "Bright red trickle of blood with a FIRM fundus suggests:",
+   "options": [
+    "Atony",
+    "Laceration",
+    "Normal lochia",
+    "Subinvolution"
+   ],
+   "answer": 1,
+   "rationale": "A firm uterus with bright red, continuous bleeding points to trauma (a laceration).",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Perineum care in the first 24 hours:",
+   "options": [
+    "Heat",
+    "Cold packs",
+    "Nothing",
+    "Sitz bath only"
+   ],
+   "answer": 1,
+   "rationale": "Cold for the first 24 hours reduces swelling. After that, heat (sitz bath) increases blood flow.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Best Rubin phase for teaching:",
+   "options": [
+    "Taking-in",
+    "Taking-hold",
+    "Letting-go",
+    "Any phase equally"
+   ],
+   "answer": 1,
+   "rationale": "In taking-hold the patient is more independent and eager to learn. Taking-in is the dependent, retelling-the-birth phase.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Prolactin vs oxytocin — which is correct?",
+   "options": [
+    "Prolactin = let-down; oxytocin = milk production",
+    "Prolactin = milk production; oxytocin = let-down",
+    "Both cause let-down",
+    "Neither affects lactation"
+   ],
+   "answer": 1,
+   "rationale": "Prolactin makes milk. Oxytocin causes let-down and uterine contractions (afterpains).",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Late hunger cue?",
+   "options": [
+    "Rooting",
+    "Crying",
+    "Hand-to-mouth",
+    "Sucking motions"
+   ],
+   "answer": 1,
+   "rationale": "Crying is a late hunger cue.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "Breast milk in the fridge at 4°C is good for:",
+   "options": [
+    "24 h",
+    "48 h",
+    "96 h",
+    "2 weeks"
+   ],
+   "answer": 2,
+   "rationale": "Fridge 96 hours, room temperature 4 hours, freezer 6–12 months. Never microwave it.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "Most common cause of PPH?",
+   "options": [
+    "Tone",
+    "Trauma",
+    "Tissue",
+    "Thrombin"
+   ],
+   "answer": 0,
+   "rationale": "Tone (uterine atony) is the most common of the 4 T's.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "First sign of hypovolemic shock?",
+   "options": [
+    "Low BP",
+    "Tachycardia",
+    "Confusion",
+    "Low urine output"
+   ],
+   "answer": 1,
+   "rationale": "Tachycardia comes first. Suspect shock if the postpartum pulse is over 100. Low BP is late.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "Mastitis — should she keep breastfeeding?",
+   "options": [
+    "Yes, or pump",
+    "No, stop permanently",
+    "Only from the unaffected side, forever",
+    "Switch to formula until the antibiotics finish"
+   ],
+   "answer": 0,
+   "rationale": "Keep emptying the breast. Treat with antibiotics, heat, fluids and rest.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "Postpartum infection temperature criterion:",
+   "options": [
+    "≥ 38°C in the first 6 hours only",
+    "≥ 38°C after the first 24 h, on 2 days within the first 10 days",
+    "≥ 37.5°C once",
+    "Any chills"
+   ],
+   "answer": 1,
+   "rationale": "38°C or higher after the first 24 hours, on at least 2 days within the first 10 days.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "Newborn normal HR and RR:",
+   "options": [
+    "HR 110–160, RR 30–60",
+    "HR 80–100, RR 12–20",
+    "HR 160–200, RR 60–80",
+    "HR 100–120, RR 20–30"
+   ],
+   "answer": 0,
+   "rationale": "HR 110–160 (apical, 1 full minute), RR 30–60, temp 36.5–37.5°C axillary.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Swelling that CROSSES suture lines:",
+   "options": [
+    "Cephalohematoma",
+    "Caput succedaneum",
+    "Fontanelle",
+    "Moulding"
+   ],
+   "answer": 1,
+   "rationale": "Caput crosses. A cephalohematoma (blood under the periosteum) does not.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "Newborn hypoglycemia after 12 hours of age is glucose below:",
+   "options": [
+    "1.0 mmol/L",
+    "2.6 mmol/L",
+    "4.0 mmol/L",
+    "5.5 mmol/L"
+   ],
+   "answer": 1,
+   "rationale": "Below 2.6 mmol/L after 12 hours (it may be 1.8 in the first hour). Signs: jittery, poor suck, high-pitched cry, low temp.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "Jaundice at 20 hours of age is:",
+   "options": [
+    "Physiological",
+    "Pathological — needs serum bilirubin",
+    "Normal if feeding well",
+    "Kernicterus"
+   ],
+   "answer": 1,
+   "rationale": "Physiological jaundice appears on days 2–3. In the first 24 hours it is pathological.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "Dry, cracked, peeling skin, long nails and little vernix suggest:",
+   "options": [
+    "Preterm",
+    "Post-term",
+    "Down syndrome",
+    "NAS"
+   ],
+   "answer": 1,
+   "rationale": "These are post-term features. Preterm babies have thin skin, abundant vernix and lanugo, and few sole creases.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Tremors, high-pitched cry, sneezing and yawning at 30 hours point to:",
+   "options": [
+    "Hypoglycemia",
+    "Neonatal abstinence syndrome",
+    "Meconium aspiration",
+    "PKU"
+   ],
+   "answer": 1,
+   "rationale": "NAS/NOWS starts within 24–48 hours. Care: keep mother and baby together, skin-to-skin, swaddle, vertical rocking, quiet room, breastfeeding usually encouraged.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Before starting oxytocin, the cervix must be soft/ripe. Which drug is given to soften it?",
+   "options": [
+    "Prostaglandin E2 (Cervidil)",
+    "Nifedipine",
+    "Methylergonovine",
+    "Rh immune globulin"
+   ],
+   "answer": 0,
+   "rationale": "Cervidil (prostaglandin E2, intravaginal, sustained release) softens the cervix. Misoprostol can cause tachysystole.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Oxytocin's water-retaining effect can cause:",
+   "options": [
+    "Uterine rupture",
+    "Water intoxication",
+    "Hypoglycemia",
+    "Mastitis"
+   ],
+   "answer": 1,
+   "rationale": "The three oxytocin complications are water intoxication, uterine tachysystole and uterine rupture.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "A patient had a classic uterine incision last birth. This pregnancy:",
+   "options": [
+    "Induction is preferred",
+    "A previous classic incision contraindicates induction",
+    "Amniotomy is safe",
+    "Incision type doesn't matter"
+   ],
+   "answer": 1,
+   "rationale": "A previous classic incision (or uterine rupture) is a contraindication to induction because of rupture risk.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "After the first day, the fundus descends about:",
+   "options": [
+    "0.5 cm/day",
+    "1 cm/day",
+    "2 cm/day",
+    "3 cm/day"
+   ],
+   "answer": 1,
+   "rationale": "About 1 cm (one fingerbreadth) per day.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "The fundus is boggy. First action?",
+   "options": [
+    "Massage the fundus until firm",
+    "Weigh the pads",
+    "Lay her flat",
+    "Ice to the abdomen"
+   ],
+   "answer": 0,
+   "rationale": "Massage until firm (don't over-massage), make sure the bladder is empty, and encourage breastfeeding. Report it if the uterus stays boggy.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "Foul-smelling lochia with a fever on day 5 suggests:",
+   "options": [
+    "Retained placenta",
+    "Infection",
+    "Normal serosa",
+    "Laceration"
+   ],
+   "answer": 1,
+   "rationale": "Foul lochia, with or without fever, is a sign of infection.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "Lochia rubra that continues past day 4 suggests:",
+   "options": [
+    "Infection",
+    "Retained placenta",
+    "Normal finding",
+    "Laceration"
+   ],
+   "answer": 1,
+   "rationale": "Rubra past day 4 points to retained placenta. A return to bright red after serosa or alba points to hemorrhage.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "In REEDA, the A stands for:",
+   "options": [
+    "Appearance",
+    "Approximation",
+    "Alignment",
+    "Anesthesia"
+   ],
+   "answer": 1,
+   "rationale": "Redness, Edema, Ecchymosis, Discharge, Approximation (how well the edges meet).",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "A NON-breastfeeding patient's period usually returns in:",
+   "options": [
+    "2 weeks",
+    "6–8 weeks",
+    "6–12 months",
+    "1 year"
+   ],
+   "answer": 1,
+   "rationale": "6–8 weeks if not breastfeeding. Breastfeeding delays ovulation, usually 6–12 months.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Rh immune globulin is given when:",
+   "options": [
+    "Parent Rh+, baby Rh−",
+    "Parent Rh−, baby Rh+",
+    "Both Rh−",
+    "Both Rh+"
+   ],
+   "answer": 1,
+   "rationale": "Rh-negative parent with an Rh-positive baby. Give the rubella vaccine if she is non-immune.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "Adequate intake for a 6-day-old breastfed baby:",
+   "options": [
+    "3 wet diapers/day",
+    "6–8 wet diapers/day and several stools",
+    "Loses 12% of birth weight",
+    "Feeds 4 times/day"
+   ],
+   "answer": 1,
+   "rationale": "6–8 wet diapers by day 6, several stools, at least 8 feeds, an audible swallow, and no more than 10% weight loss.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "A newborn has lost 12% of birth weight by day 4. The nurse should:",
+   "options": [
+    "Reassure — normal",
+    "Report it; over 10% suggests inadequate intake",
+    "Stop breastfeeding",
+    "Reweigh in 2 weeks"
+   ],
+   "answer": 1,
+   "rationale": "7–10% loss is expected. More than 10% needs follow-up.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Methylergonovine is ordered for atony. Which finding means hold it and check with the provider?",
+   "options": [
+    "BP 158/102",
+    "Boggy fundus",
+    "Heavy lochia",
+    "Pulse 92"
+   ],
+   "answer": 0,
+   "rationale": "Methylergonovine raises BP, so it's avoided in hypertension. Carboprost is avoided in asthma.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Severe perineal pain not relieved by analgesics, with a bulging purplish mass:",
+   "options": [
+    "Infection",
+    "Hemorrhoids",
+    "Hematoma",
+    "Normal swelling"
+   ],
+   "answer": 2,
+   "rationale": "Hematoma. Small ones are treated with ice; large ones need ligation by the provider.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "Sudden chest pain, dyspnea and cough postpartum suggest:",
+   "options": [
+    "DVT",
+    "Pulmonary embolism",
+    "Baby blues",
+    "Mastitis"
+   ],
+   "answer": 1,
+   "rationale": "PE. DVT signs are in the leg: calf pain, edema, colour change, and a circumference increase of more than 2 cm.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "At 1 week she hears voices saying the baby isn't hers. Priority?",
+   "options": [
+    "Reassure — baby blues",
+    "Treat as a medical emergency; keep mother and baby safe",
+    "Follow up in 2 weeks",
+    "Teach self-care"
+   ],
+   "answer": 1,
+   "rationale": "Hallucinations and delusions point to perinatal psychosis, a medical emergency.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "A newborn placed on a cold scale loses heat by:",
+   "options": [
+    "Evaporation",
+    "Conduction",
+    "Convection",
+    "Radiation"
+   ],
+   "answer": 1,
+   "rationale": "Conduction is direct contact with a cold surface. Radiation is heat lost to nearby cold objects not touching the baby.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "Startled newborn throws arms out, palms up:",
+   "options": [
+    "Rooting",
+    "Tonic neck",
+    "Moro",
+    "Stepping"
+   ],
+   "answer": 2,
+   "rationale": "Moro reflex. The slide notes say it stops around 6 months; rooting stops around 4 months.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "The Ballard score is used to:",
+   "options": [
+    "Rate condition at 1 and 5 minutes",
+    "Estimate gestational age",
+    "Screen for jaundice",
+    "Score withdrawal"
+   ],
+   "answer": 1,
+   "rationale": "Ballard estimates gestational age from physical and neuromuscular signs. Rating condition at 1 and 5 minutes is the Apgar.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Which statement about PKU is correct?",
+   "options": [
+    "Autosomal dominant",
+    "Can't process phenylalanine; screened at 24–48 h",
+    "Treated by removing all protein",
+    "Screened at 6 months"
+   ],
+   "answer": 1,
+   "rationale": "PKU is autosomal recessive. It's found by newborn screening at 24–48 h and managed with a careful diet, frequent blood phe checks and sapropterin.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "How is oxytocin given for induction?",
+   "options": [
+    "IV push",
+    "On a secondary IV line through an infusion pump, with continuous fetal monitoring",
+    "IM every 4 hours",
+    "Primary line by gravity"
+   ],
+   "answer": 1,
+   "rationale": "It's a high-alert drug: secondary line, infusion pump, titrated, continuous EFM. That way it can be stopped right away.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Most common SKIN incision for a Caesarean?",
+   "options": [
+    "Vertical",
+    "Transverse (Pfannenstiel)",
+    "Classic",
+    "Low vertical"
+   ],
+   "answer": 1,
+   "rationale": "Pfannenstiel is the most common skin incision. Low transverse is the most common uterine incision.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Why walk early after a Caesarean?",
+   "options": [
+    "Brings milk in faster",
+    "Prevents clots and helps bowels start working",
+    "Hospital policy",
+    "Stops incision bleeding"
+   ],
+   "answer": 1,
+   "rationale": "Early ambulation prevents DVT/PE and helps breathing and peristalsis.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "In BUBBLLEE, the two L's are:",
+   "options": [
+    "Lochia and Legs",
+    "Lactation and Lochia",
+    "Legs and Latch",
+    "Lungs and Lochia"
+   ],
+   "answer": 0,
+   "rationale": "Breasts, Uterus, Bladder, Bowel, Lochia, Legs, Episiotomy/laceration/incision, Emotions.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "A pad weighs 85 g more than dry. Estimated blood loss?",
+   "options": [
+    "8.5 mL",
+    "42 mL",
+    "85 mL",
+    "170 mL"
+   ],
+   "answer": 2,
+   "rationale": "1 g = 1 mL. No more than 1 saturated pad per hour.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Best teaching for a 4th degree laceration:",
+   "options": [
+    "Limit fluids",
+    "High-fibre diet and plenty of fluids",
+    "Avoid BMs for a week",
+    "Low-residue diet"
+   ],
+   "answer": 1,
+   "rationale": "This prevents constipation that could break down the sutured area.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "She cramps every time she breastfeeds. The nurse explains:",
+   "options": [
+    "Sign of infection",
+    "Oxytocin release contracts the uterus; this is normal",
+    "Bladder too full",
+    "Retained placenta"
+   ],
+   "answer": 1,
+   "rationale": "Afterpains are normal. Analgesics (usually acetaminophen) help.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "No void 6 h after birth and no urge. Try first:",
+   "options": [
+    "Indwelling catheter",
+    "Run water and use warm water from the peri-bottle",
+    "Restrict fluids",
+    "Wait until tomorrow"
+   ],
+   "answer": 1,
+   "rationale": "Try non-invasive steps first: privacy, don't rush, running water, hands in warm water, peri-bottle. A full bladder can cause PPH.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Day 1: she keeps retelling her birth story and wants help with meals. Rubin phase?",
+   "options": [
+    "Taking-in",
+    "Taking-hold",
+    "Letting-go",
+    "Baby blues"
+   ],
+   "answer": 0,
+   "rationale": "Taking-in (days 1–2) is dependent and focused on her own needs. Taking-hold is the best time to teach.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "Which INFANT condition contraindicates breastfeeding?",
+   "options": [
+    "Physiological jaundice",
+    "Galactosemia",
+    "Preterm birth",
+    "Cleft lip"
+   ],
+   "answer": 1,
+   "rationale": "Galactosemia. Parent contraindications include HIV, Ebola, untreated brucellosis, illicit drugs, chemo and radioactive isotopes.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Milk at the END of a feed is:",
+   "options": [
+    "Foremilk, watery and low fat",
+    "Hindmilk, higher fat and satisfying",
+    "Colostrum",
+    "Same as at the start"
+   ],
+   "answer": 1,
+   "rationale": "Foremilk quenches thirst. Hindmilk has more fat, satisfies the baby and supports weight gain.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Which formula statement is safe?",
+   "options": [
+    "I'll prop the bottle",
+    "I'll add extra water",
+    "I'll follow the mixing directions exactly",
+    "I'll microwave the bottle"
+   ],
+   "answer": 2,
+   "rationale": "Over- or under-dilution can cause serious illness. Don't prop the bottle or microwave it.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "PPH on day 5 is classified as:",
+   "options": [
+    "Early PPH",
+    "Late PPH",
+    "Not PPH",
+    "Subinvolution only"
+   ],
+   "answer": 1,
+   "rationale": "Early is within 24 h. Late is 24 h to 12 weeks.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Bleeding vaginal laceration. Until the provider assesses her:",
+   "options": [
+    "High-calorie meal",
+    "Keep her NPO",
+    "Sitz bath",
+    "Walk her to the bathroom"
+   ],
+   "answer": 1,
+   "rationale": "She may need suturing under anesthesia.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Which teaching helps PREVENT puerperal infection?",
+   "options": [
+    "Pads front to back",
+    "Stop antibiotics when better",
+    "Change pads once a day",
+    "Skip hand washing"
+   ],
+   "answer": 0,
+   "rationale": "Hand hygiene, pads front to back, finish all antibiotics, and watch for signs of infection.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Flat and tearful at 2 weeks. Best action?",
+   "options": [
+    "Say it's baby blues",
+    "Screen with a valid depression tool",
+    "Have the partner take over",
+    "Wait until 6 weeks"
+   ],
+   "answer": 1,
+   "rationale": "Never assume it's baby blues. Screen, and refer if the screen is positive.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "6-hour-old with blue hands and feet, pink lips and trunk:",
+   "options": [
+    "Start oxygen",
+    "Normal acrocyanosis",
+    "Call a code",
+    "Heart defect"
+   ],
+   "answer": 1,
+   "rationale": "Acrocyanosis is normal for the first few weeks. Central cyanosis is not.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "A 2-hour-old newborn is sleepy and hard to rouse. Most likely:",
+   "options": [
+    "First period of reactivity",
+    "Period of decreased responsiveness",
+    "Second period of reactivity",
+    "Sepsis"
+   ],
+   "answer": 1,
+   "rationale": "First reactivity is 30–60 min, decreased responsiveness 1–3 h, second reactivity 3–8 h.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "Why is a post-term newborn at risk of hypoglycemia?",
+   "options": [
+    "Excess maternal insulin",
+    "Depleted glycogen from an aging placenta",
+    "Too much brown fat",
+    "Overfeeding"
+   ],
+   "answer": 1,
+   "rationale": "Other post-term risks: oligohydramnios, meconium aspiration, polycythemia, difficult birth, seizures.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Which nursing point is specific to Down syndrome?",
+   "options": [
+    "Hypotonia makes holding harder and adds to heat loss",
+    "Restrict phenylalanine",
+    "Withdrawal at 24–48 h",
+    "Breastfeeding contraindicated"
+   ],
+   "answer": 0,
+   "rationale": "Hypotonia also raises the risk of respiratory illness and constipation. Phe restriction is for PKU; withdrawal at 24–48 h is NAS.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Which uterine incision is a vertical cut high on the uterus and rules out a future induction?",
+   "options": [
+    "Low transverse",
+    "Low vertical",
+    "Classic",
+    "Pfannenstiel"
+   ],
+   "answer": 2,
+   "rationale": "Classic. A previous classic incision (or uterine rupture) contraindicates induction because of rupture risk. Pfannenstiel is a skin incision.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Which is a contraindication to Caesarean birth?",
+   "options": [
+    "Breech",
+    "Abnormal maternal blood clotting",
+    "Placenta previa",
+    "Cord prolapse"
+   ],
+   "answer": 1,
+   "rationale": "Also a fetus that isn't viable or is too premature to survive. Breech, previa and cord prolapse are indications.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "After a Caesarean, catheter urine output is dropping and pulse is rising. Main concern?",
+   "options": [
+    "UTI",
+    "Hemorrhage or shock",
+    "Epidural headache",
+    "Delayed peristalsis"
+   ],
+   "answer": 1,
+   "rationale": "Recovery-room VS and urine output are watched to pick up hemorrhage or shock early.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "Day 3: both breasts hard, warm and sore, no fever. Best teaching?",
+   "options": [
+    "Stop breastfeeding",
+    "Feed often or hand express; supportive bra",
+    "Start antibiotics",
+    "Bind the breasts"
+   ],
+   "answer": 1,
+   "rationale": "This is engorgement as milk comes in (days 2–4). With no fever or redness it isn't mastitis.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "What is expected in the breasts on day 1 postpartum?",
+   "options": [
+    "Hard and engorged",
+    "Soft, with colostrum",
+    "Red and hot",
+    "No secretions until day 7"
+   ],
+   "answer": 1,
+   "rationale": "Day 1: soft with colostrum. Days 2–4: heavier and fuller.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Why does she sit on the edge of the bed before getting up the first time?",
+   "options": [
+    "Prevent orthostatic hypotension and falls",
+    "Reduce afterpains",
+    "Prevent engorgement",
+    "Fix diastasis recti"
+   ],
+   "answer": 0,
+   "rationale": "Orthostatic hypotension is a normal postpartum cardiovascular change.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Exercises for diastasis recti:",
+   "options": [
+    "Sit-ups right away",
+    "Abdominal tightening, head lifts, pelvic tilts, Kegels",
+    "Heavy lifting",
+    "No exercise for 6 months"
+   ],
+   "answer": 1,
+   "rationale": "These are the postpartum exercises on the slides.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Parents say, “If only we'd come in sooner.” Grief stage?",
+   "options": [
+    "Shock",
+    "Anger",
+    "Guilt",
+    "Resolution"
+   ],
+   "answer": 2,
+   "rationale": "Shock and disbelief, anger, guilt, sadness and depression, then gradual resolution.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "After a stillbirth, the best nursing action is to:",
+   "options": [
+    "Discourage seeing the baby",
+    "Offer to let them hold the baby and prepare them for its appearance",
+    "Move them to a busy room",
+    "Say they can try again soon"
+   ],
+   "answer": 1,
+   "rationale": "Also give privacy and mementos, ask about rituals, and refer to support groups.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "Correct way to thaw frozen breast milk:",
+   "options": [
+    "Microwave on low",
+    "In the fridge for 24 h",
+    "On the counter overnight",
+    "Boiling water"
+   ],
+   "answer": 1,
+   "rationale": "Never microwave it. Discard warmed milk after 1–2 h.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Which feeding is dropped LAST when weaning?",
+   "options": [
+    "First daytime feed",
+    "Any daytime feed",
+    "The baby's favourite feed",
+    "All at once"
+   ],
+   "answer": 2,
+   "rationale": "Drop one at a time, daytime first, favourite last.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "At 2 weeks: fundus still palpable, lochia rubra, pelvic heaviness. Suspect:",
+   "options": [
+    "Normal involution",
+    "Subinvolution",
+    "Mastitis",
+    "DVT"
+   ],
+   "answer": 1,
+   "rationale": "Subinvolution is a common cause of late PPH.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "DIC after birth is:",
+   "options": [
+    "Over-activated clotting that uses up clotting factors and causes uncontrolled bleeding",
+    "Retained placenta",
+    "A calf clot",
+    "Vulvar blood collection"
+   ],
+   "answer": 0,
+   "rationale": "DIC is the Thrombin T of the 4 T's.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Anticoagulant teaching includes:",
+   "options": [
+    "Use a firm toothbrush",
+    "Report nosebleeds, bruising or prolonged bleeding; use a soft toothbrush",
+    "Massage the calf daily",
+    "Don't walk for 2 weeks"
+   ],
+   "answer": 1,
+   "rationale": "Also teach how to give the medication.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 9–10: Postpartum",
+   "stem": "Who is MOST at risk for mastitis?",
+   "options": [
+    "Cracked nipples and a poor latch",
+    "Breasts soft after each feed",
+    "Well-fitted bra",
+    "Formula-feeding on day 10"
+   ],
+   "answer": 0,
+   "rationale": "Cracked nipples let bacteria in, and a poor latch leaves the breast full.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "How do newborns mainly produce heat?",
+   "options": [
+    "Shivering",
+    "Sweating",
+    "Brown fat (non-shivering thermogenesis)",
+    "Crying"
+   ],
+   "answer": 2,
+   "rationale": "Sweat glands don't work yet. Cold stress can cause hypoglycemia and respiratory distress.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 8: Labour complications",
+   "stem": "Turn the head right: the right arm and leg extend. Which reflex?",
+   "options": [
+    "Moro",
+    "Rooting",
+    "Tonic neck (fencing)",
+    "Stepping"
+   ],
+   "answer": 2,
+   "rationale": "Tonic neck: the arm and leg on the side the head faces extend.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "A breastfed baby is 3 days old. Expected wet diapers today?",
+   "options": [
+    "1",
+    "About 3",
+    "6–8",
+    "10–12"
+   ],
+   "answer": 1,
+   "rationale": "1 on day 1, then add one per day, reaching 6–8 by day 5.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "Newborn screening is best done at:",
+   "options": [
+    "Birth",
+    "24–48 hours",
+    "2 weeks",
+    "2 months"
+   ],
+   "answer": 1,
+   "rationale": "It covers up to 40 conditions, including PKU, hypothyroidism, galactosemia and sickle cell.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  },
+  {
+   "course": "Maternal/Child",
+   "topic": "Ch 11–12: Newborn",
+   "stem": "A post-term baby born through meconium-stained fluid has grunting, retractions and rhonchi. Expect:",
+   "options": [
+    "Clears in 1 hour",
+    "Meconium aspiration syndrome; tachypnea may last weeks",
+    "Normal transition",
+    "NAS"
+   ],
+   "answer": 1,
+   "rationale": "MAS: respiratory distress, flaring, retractions, cyanosis, grunting, rales/rhonchi, tachypnea over 60.",
+   "source": "Quiz Day Warm-Up (Maternity Quiz 3)"
+  }
+ ]
+}

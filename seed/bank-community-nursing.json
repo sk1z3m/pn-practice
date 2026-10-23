@@ -1,0 +1,1391 @@
+{
+ "course": "Community Nursing",
+ "questions": [
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "Which report introduced the Health Field Concept and shifted Canada from a medical to a behavioural approach?",
+   "options": [
+    "Ottawa Charter",
+    "Epp Report",
+    "Lalonde Report",
+    "Toronto Charter"
+   ],
+   "answer": 2,
+   "rationale": "The Lalonde Report (1974) introduced the Health Field Concept and moved the emphasis from a medical to a behavioural approach.",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "The four elements of the Health Field Concept are:",
+   "options": [
+    "Peace, shelter, food, income",
+    "Biology, lifestyle, environment, health care organization",
+    "Self-care, mutual aid, healthy environments, prevention",
+    "Teams, access, information, healthy living"
+   ],
+   "answer": 1,
+   "rationale": "Lalonde's four elements: biology, lifestyle, environment, health care organization. Peace/shelter/food/income are Ottawa prerequisites; TAIH is the primary health care pillars.",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "Which approach to health uses downstream thinking?",
+   "options": [
+    "Medical",
+    "Behavioural",
+    "Socioenvironmental",
+    "Population health"
+   ],
+   "answer": 0,
+   "rationale": "The medical approach is downstream: treating and curing the individual after the problem exists. The socioenvironmental approach is upstream.",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "A city builds affordable housing to reduce asthma caused by mould. This is an example of:",
+   "options": [
+    "Downstream thinking",
+    "Upstream thinking",
+    "Tertiary prevention",
+    "The medical approach"
+   ],
+   "answer": 1,
+   "rationale": "Upstream thinking acts on policy and social conditions that benefit the whole population, before people get sick.",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "Why was the Ottawa Charter (1986) important?",
+   "options": [
+    "It identified prerequisites for health",
+    "It recommended federal funding levels",
+    "It set nursing standards of practice",
+    "It called for interprofessional education"
+   ],
+   "answer": 0,
+   "rationale": "It identified the prerequisites for health (peace, shelter, education, food, income, stable ecosystem, sustainable resources, social justice and equity).",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "Which is one of the Ottawa Charter's 5 health promotion strategies?",
+   "options": [
+    "Increasing prevention",
+    "Mutual aid",
+    "Strengthening community action",
+    "Reducing inequities"
+   ],
+   "answer": 2,
+   "rationale": "Ottawa's 5: build healthy public policy, create supportive environments, strengthen community action, develop personal skills, reorient health services. The other options are from the Epp Report.",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "The Epp Report's three health challenges are:",
+   "options": [
+    "Self-care, mutual aid, healthy environments",
+    "Reducing inequities, increasing prevention, enhancing coping",
+    "Peace, income, education",
+    "Fostering public participation, strengthening community health services, coordinating healthy public policy"
+   ],
+   "answer": 1,
+   "rationale": "Challenges: reducing inequities, increasing prevention, enhancing coping. Option A is the mechanisms; option D is the implementation strategies.",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "Which document declared poverty the greatest threat to health?",
+   "options": [
+    "Lalonde Report",
+    "Bangkok Charter",
+    "Jakarta Declaration",
+    "Toronto Charter"
+   ],
+   "answer": 2,
+   "rationale": "Jakarta Declaration (1997): added 4 prerequisites and named poverty the greatest threat to health. Bangkok (2005) = health as a human right.",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "In the Population Health Promotion Model, “How can we take action?” is answered by:",
+   "options": [
+    "The determinants of health",
+    "The 5 Ottawa Charter strategies",
+    "Levels from individual to society",
+    "Evidence and values"
+   ],
+   "answer": 1,
+   "rationale": "What = determinants; How = the 5 Ottawa strategies; With whom = levels of action; Why = evidence, values and assumptions.",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "A nurse runs a BP screening clinic at a mall. This is:",
+   "options": [
+    "Primary prevention",
+    "Secondary prevention",
+    "Tertiary prevention",
+    "Health promotion"
+   ],
+   "answer": 1,
+   "rationale": "Screening for early detection is secondary prevention.",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "A patient attends cardiac rehab after a heart attack. This is:",
+   "options": [
+    "Primary prevention",
+    "Secondary prevention",
+    "Tertiary prevention",
+    "Upstream thinking"
+   ],
+   "answer": 2,
+   "rationale": "Rehab during convalescence to prevent progression is tertiary prevention.",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "A teen gets the HPV vaccine. This is:",
+   "options": [
+    "Primary prevention",
+    "Secondary prevention",
+    "Tertiary prevention",
+    "Disease management"
+   ],
+   "answer": 0,
+   "rationale": "Immunization protects before any disease exists: primary prevention.",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "Illness differs from disease in that illness is:",
+   "options": [
+    "Objective and detectable by medical tests",
+    "A subjective experience of loss of health",
+    "Always caused by a pathogen",
+    "The same as being unhealthy"
+   ],
+   "answer": 1,
+   "rationale": "Illness is subjective; disease is the objective state that medicine can detect.",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "Health Belief Model: “Healthy food is too expensive for me” is an example of perceived:",
+   "options": [
+    "Susceptibility",
+    "Severity",
+    "Benefits",
+    "Barriers"
+   ],
+   "answer": 3,
+   "rationale": "An obstacle or cost to taking action is a perceived barrier.",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 1: Health & health promotion",
+   "stem": "Which model says a person with a chronic condition can still experience real wellness, because health is a spectrum?",
+   "options": [
+    "Health Belief Model",
+    "Basic Human Needs Model",
+    "Health–Illness Continuum",
+    "Transtheoretical Model"
+   ],
+   "answer": 2,
+   "rationale": "The Health–Illness Continuum treats health as a spectrum rather than “healthy vs. sick.”",
+   "source": "Chapter 1 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "Which is one of the three goals of patient education?",
+   "options": [
+    "Reducing hospital costs",
+    "Restoring health",
+    "Increasing nurse efficiency",
+    "Replacing physician teaching"
+   ],
+   "answer": 1,
+   "rationale": "The three goals: promoting health and preventing illness, restoring health, and coping with impaired functioning (optimizing quality of life).",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "A nurse teaches a stroke survivor's family how to help with transfers at home. Which goal of patient education is this?",
+   "options": [
+    "Promoting health and preventing illness",
+    "Restoring health",
+    "Coping with impaired functioning",
+    "Health maintenance"
+   ],
+   "answer": 2,
+   "rationale": "Helping a patient and family live with a lasting limitation is coping with impaired functioning (optimizing quality of life).",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "In planning to teach range-of-motion exercises to a post-op patient, the nurse should consider which domain of learning?",
+   "options": [
+    "Cognitive",
+    "Psychomotor",
+    "Affective",
+    "Environmental"
+   ],
+   "answer": 1,
+   "rationale": "Skills that combine mental and muscle activity are psychomotor. This is the slide 16 quick-quiz question.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "A newly diagnosed diabetic is coming to accept the need for daily insulin. Which domain of learning is this?",
+   "options": [
+    "Cognitive",
+    "Psychomotor",
+    "Affective",
+    "Social"
+   ],
+   "answer": 2,
+   "rationale": "Affective learning involves attitudes, feelings, values and acceptance.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "A patient explains in her own words how insulin lowers blood sugar. Which domain of learning is this?",
+   "options": [
+    "Cognitive",
+    "Psychomotor",
+    "Affective",
+    "Motivational"
+   ],
+   "answer": 0,
+   "rationale": "Cognitive learning is understanding: intellectual behaviours that require thinking.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "A patient says, “I know I should quit smoking, but I'm not ready yet.” Which Transtheoretical stage is this?",
+   "options": [
+    "Precontemplation",
+    "Contemplation",
+    "Preparation",
+    "Action"
+   ],
+   "answer": 1,
+   "rationale": "Contemplation: aware of the problem and the change needed, but not yet intending to act soon.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "A patient has bought nicotine patches and set a quit date for next week. Which stage is this?",
+   "options": [
+    "Contemplation",
+    "Preparation",
+    "Action",
+    "Maintenance"
+   ],
+   "answer": 1,
+   "rationale": "Preparation: intends to take action soon and is getting ready.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "A patient doesn't believe their drinking is a problem at all. Which stage, and what is the nurse's task?",
+   "options": [
+    "Contemplation; facilitate action",
+    "Precontemplation; create awareness",
+    "Preparation; educate",
+    "Maintenance; reinforce"
+   ],
+   "answer": 1,
+   "rationale": "Precontemplation = unaware of the problem. The nurse's task is to create awareness and challenge values and beliefs.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "What is the correct order of the Transtheoretical Model stages?",
+   "options": [
+    "Contemplation, precontemplation, action, preparation, maintenance",
+    "Precontemplation, contemplation, preparation, action, maintenance",
+    "Preparation, contemplation, action, maintenance, precontemplation",
+    "Precontemplation, preparation, contemplation, action, maintenance"
+   ],
+   "answer": 1,
+   "rationale": "Precontemplation, contemplation, preparation, action, maintenance.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "Which is one of the three basic learning principles?",
+   "options": [
+    "Teaching approach",
+    "Motivation to learn",
+    "Return demonstration",
+    "Health literacy"
+   ],
+   "answer": 1,
+   "rationale": "The three basic learning principles: learning environment, ability to learn, and motivation to learn.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "A patient in severe pain after surgery can't focus on discharge teaching. Which learning principle is most affected?",
+   "options": [
+    "Learning environment",
+    "Ability to learn",
+    "Motivation to learn",
+    "Self-efficacy"
+   ],
+   "answer": 1,
+   "rationale": "Ability to learn depends on physical, emotional and intellectual capability. Pain, fatigue and anxiety reduce it.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "A person's belief in their own ability to successfully complete a task is called:",
+   "options": [
+    "Motivation",
+    "Self-efficacy",
+    "Task mastery",
+    "Health literacy"
+   ],
+   "answer": 1,
+   "rationale": "Self-efficacy is a person's perceived ability to successfully complete a task.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "A patient wants to learn to manage their diabetes so they can earn praise from their family. Which type of motive is this?",
+   "options": [
+    "Social motive",
+    "Task mastery motive",
+    "Physical motive",
+    "Affective motive"
+   ],
+   "answer": 0,
+   "rationale": "Social motives reflect a need for connection, social approval or self-esteem. Task mastery = achievement. Physical = maintaining or improving health.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "Setting SMART learning objectives happens in which step of the teaching process?",
+   "options": [
+    "Assessment",
+    "Planning",
+    "Implementation",
+    "Evaluation"
+   ],
+   "answer": 1,
+   "rationale": "Planning: develop the teaching plan, set goals, SMART objectives and outcomes, and choose methods with the patient.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "Having a patient perform a return demonstration of an insulin injection is part of:",
+   "options": [
+    "Assessment",
+    "Planning",
+    "Implementation",
+    "Evaluation"
+   ],
+   "answer": 3,
+   "rationale": "Evaluation determines whether the patient actually learned, measured by their performance of the expected outcomes.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "Which is a teaching APPROACH (not a teaching method)?",
+   "options": [
+    "Role playing",
+    "Entrusting",
+    "Simulation",
+    "Group instruction"
+   ],
+   "answer": 1,
+   "rationale": "Approaches: telling, selling, participating, entrusting, reinforcing. Methods: one-on-one discussion, group instruction, demonstrations, analogies, role playing, simulation.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "The teaching process and the nursing process are best described as:",
+   "options": [
+    "Identical processes",
+    "Unrelated processes",
+    "Related and concurrent, but the nursing process is broader",
+    "Related, but the teaching process is broader"
+   ],
+   "answer": 2,
+   "rationale": "Both use assessment, diagnosis, planning, implementation and evaluation, and they happen at the same time, but the nursing process is broader.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Ch 21: Patient education",
+   "stem": "Teaching and learning begin when:",
+   "options": [
+    "The nurse schedules a teaching session",
+    "A person identifies a knowledge or skill deficit",
+    "The physician writes a discharge order",
+    "The patient signs a consent form"
+   ],
+   "answer": 1,
+   "rationale": "Teaching and learning begin when a person identifies a knowledge or skill deficit.",
+   "source": "Chapter 21 Retest"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "The WHO (1984) describes health as:",
+   "options": [
+    "The absence of disease",
+    "A resource for everyday living, not the object of living",
+    "A state of complete physical fitness",
+    "Something only the health care system provides"
+   ],
+   "answer": 1,
+   "rationale": "Health is a resource for everyday living, a positive concept emphasizing social and personal resources and physical capacities [Ch 1, slide 5].",
+   "source": "Health Promotion Self-Test · Ch 1, slide 5"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A patient with well-managed diabetes says she feels healthy and fulfilled. Which model best explains this?",
+   "options": [
+    "Health Belief Model",
+    "Health–Illness Continuum",
+    "Transtheoretical Model",
+    "Medical model"
+   ],
+   "answer": 1,
+   "rationale": "Health is a spectrum; someone with a chronic condition can still experience genuine wellness [Models PowerPoint].",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which approach to health is most associated with the Lalonde Report?",
+   "options": [
+    "Medical",
+    "Behavioural",
+    "Socioenvironmental",
+    "Population health"
+   ],
+   "answer": 1,
+   "rationale": "Lalonde (1974) shifted Canada from a medical to a behavioural approach, focused on individual lifestyle [slide 11].",
+   "source": "Health Promotion Self-Test · slide 11"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which is NOT one of the Ottawa Charter's prerequisites for health?",
+   "options": [
+    "Peace",
+    "Shelter",
+    "Access to specialists",
+    "Social justice and equity"
+   ],
+   "answer": 2,
+   "rationale": "Prerequisites: peace, shelter, education, food, income, stable ecosystem, sustainable resources, social justice and equity [slide 16].",
+   "source": "Health Promotion Self-Test · slide 16"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A community group lobbies city council for safe bike lanes. Which Ottawa Charter strategy is this?",
+   "options": [
+    "Develop personal skills",
+    "Strengthen community action",
+    "Reorient health services",
+    "Increasing prevention"
+   ],
+   "answer": 1,
+   "rationale": "Community members acting together = strengthen community action. ('Increasing prevention' is an Epp challenge, not an Ottawa strategy.)",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A hospital shifts funding from acute care into prevention programs. Which Ottawa Charter strategy is this?",
+   "options": [
+    "Build healthy public policy",
+    "Create supportive environments",
+    "Reorient health services",
+    "Develop personal skills"
+   ],
+   "answer": 2,
+   "rationale": "Moving health services toward prevention and promotion = reorient health services.",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "In the Epp Report, self-care, mutual aid and healthy environments are the:",
+   "options": [
+    "Health challenges",
+    "Health promotion mechanisms",
+    "Implementation strategies",
+    "Prerequisites for health"
+   ],
+   "answer": 1,
+   "rationale": "Challenges: reducing inequities, increasing prevention, enhancing coping. Mechanisms: self-care, mutual aid, healthy environments. Strategies: public participation, community health services, healthy public policy [slide 19].",
+   "source": "Health Promotion Self-Test · slide 19"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A support group for new parents is an example of which Epp mechanism?",
+   "options": [
+    "Self-care",
+    "Mutual aid",
+    "Healthy environments",
+    "Reducing inequities"
+   ],
+   "answer": 1,
+   "rationale": "People helping each other cope = mutual aid.",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which document affirmed health as a human right and emphasized mental and spiritual well-being?",
+   "options": [
+    "Jakarta Declaration",
+    "Bangkok Charter",
+    "Toronto Charter",
+    "Lalonde Report"
+   ],
+   "answer": 1,
+   "rationale": "Bangkok Charter (2005). Jakarta (1997) = poverty is the greatest threat. Toronto = social determinants of health [slide 21].",
+   "source": "Health Promotion Self-Test · slide 21"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "In the Population Health Promotion Model, “With whom can we act?” is answered by:",
+   "options": [
+    "The determinants of health",
+    "The 5 Ottawa strategies",
+    "Levels from individual, family and community to sector and society",
+    "Evidence and values"
+   ],
+   "answer": 2,
+   "rationale": "What = determinants; How = Ottawa strategies; With whom = levels of action; Why = evidence-based decision making, values and assumptions.",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "The Population Health Promotion Model holds that responsibility for a population's health lies with:",
+   "options": [
+    "Individuals only",
+    "The health care system only",
+    "Society",
+    "Physicians"
+   ],
+   "answer": 2,
+   "rationale": "Society is responsible for its members' health status [slide 34].",
+   "source": "Health Promotion Self-Test · slide 34"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A family with low income can't afford fresh food and lives in crowded housing. These are examples of:",
+   "options": [
+    "Lifestyle choices",
+    "Social determinants of health",
+    "Health care organization",
+    "Tertiary prevention"
+   ],
+   "answer": 1,
+   "rationale": "Income, food insecurity and housing are social determinants of health; they set the context for personal health practices [slides 23–25].",
+   "source": "Health Promotion Self-Test · slides 23–25"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A nurse teaches a grade 5 class about handwashing. This is:",
+   "options": [
+    "Primary prevention",
+    "Secondary prevention",
+    "Tertiary prevention",
+    "Downstream thinking"
+   ],
+   "answer": 0,
+   "rationale": "Education about safe, healthy practices before disease occurs = primary prevention.",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A diabetic patient attends a chronic disease management program. This is:",
+   "options": [
+    "Primary prevention",
+    "Secondary prevention",
+    "Tertiary prevention",
+    "Upstream thinking"
+   ],
+   "answer": 2,
+   "rationale": "Managing an existing disease to prevent progression = tertiary prevention.",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A province funds school breakfast programs for all children. This is:",
+   "options": [
+    "Upstream thinking",
+    "Downstream thinking",
+    "Tertiary prevention",
+    "The medical approach"
+   ],
+   "answer": 0,
+   "rationale": "A policy changing conditions for everyone before illness = upstream.",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Primary health care differs from primary care because it:",
+   "options": [
+    "Only includes physician visits",
+    "Includes primary care plus health education, nutrition, family planning, immunizations and more",
+    "Is only provided in hospitals",
+    "Focuses only on treatment"
+   ],
+   "answer": 1,
+   "rationale": "Primary care = personal health services. Primary health care = broader [Ch 2, slide 3].",
+   "source": "Health Promotion Self-Test · Ch 2, slide 3"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which is one of the four pillars of primary health care?",
+   "options": [
+    "Funding",
+    "Healthy living",
+    "Specialists",
+    "Research"
+   ],
+   "answer": 1,
+   "rationale": "Teams, Access, Information, Healthy living [Ch 2, slide 4].",
+   "source": "Health Promotion Self-Test · Ch 2, slide 4"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "The Sustainable Development Goals (2015) focus on:",
+   "options": [
+    "Only reducing child mortality",
+    "Social determinants of health, well-being, poverty and sustainability",
+    "Only infectious disease",
+    "Hospital funding"
+   ],
+   "answer": 1,
+   "rationale": "17 universal goals, 15-year targets [Ch 11, slide 8].",
+   "source": "Health Promotion Self-Test · Ch 11, slide 8"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which was one of the 8 Millennium Development Goals?",
+   "options": [
+    "Affordable clean energy for all",
+    "Reduce child mortality",
+    "Reduce inequality within countries",
+    "Climate action"
+   ],
+   "answer": 1,
+   "rationale": "MDG #4: reduce child mortality. The others are SDGs.",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Environmental sustainability is best defined as:",
+   "options": [
+    "The interdependence of humans, plants and animals",
+    "The responsibility to conserve natural resources and protect ecosystems, now and in the future",
+    "The health of human civilization and natural systems",
+    "Long-term shifts in weather patterns"
+   ],
+   "answer": 1,
+   "rationale": "Option A = One Health; C = planetary health; D = climate change [Ch 11, slides 12–13].",
+   "source": "Health Promotion Self-Test · Ch 11, slides 12–13"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Health equity means:",
+   "options": [
+    "Everyone receives identical care",
+    "Everyone has a fair opportunity to reach their fullest health potential",
+    "Health spending is equal across provinces",
+    "There are no differences in health between groups"
+   ],
+   "answer": 1,
+   "rationale": "Equity = fair opportunity, not identical treatment [Ch 11, slide 10].",
+   "source": "Health Promotion Self-Test · Ch 11, slide 10"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which is a noncommunicable disease?",
+   "options": [
+    "Tuberculosis",
+    "Ebola",
+    "Chronic respiratory disease",
+    "H1N1"
+   ],
+   "answer": 2,
+   "rationale": "NCDs are chronic and not spread between people.",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A patient wants to learn insulin injections so he can return to work and feel accomplished. Which motive is this?",
+   "options": [
+    "Social motive",
+    "Task mastery motive",
+    "Physical motive",
+    "Affective motive"
+   ],
+   "answer": 1,
+   "rationale": "Task mastery = desire for achievement. Social = approval/connection. Physical = maintaining or improving health [Ch 21, slide 7].",
+   "source": "Health Promotion Self-Test · Ch 21, slide 7"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which is one of the 4 key motivators for health behaviour change?",
+   "options": [
+    "The cost of the medication",
+    "The person's vulnerability to the threat",
+    "The nurse's experience",
+    "The time of day"
+   ],
+   "answer": 1,
+   "rationale": "Severity of the threat, vulnerability to it, effectiveness of the response, and the person's ability to make the change [slide 8].",
+   "source": "Health Promotion Self-Test · slide 8"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A noisy, crowded room makes it hard for a patient to focus on teaching. Which learning principle is affected?",
+   "options": [
+    "Ability to learn",
+    "Motivation to learn",
+    "Learning environment",
+    "Self-efficacy"
+   ],
+   "answer": 2,
+   "rationale": "The learning environment allows a person to attend to instruction [slide 6].",
+   "source": "Health Promotion Self-Test · slide 6"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A patient says, “I've been exercising daily for the past 3 weeks.” Which Transtheoretical stage, and what's the nurse's task?",
+   "options": [
+    "Preparation; educate",
+    "Action; facilitate action",
+    "Maintenance; reinforce",
+    "Contemplation; motivate"
+   ],
+   "answer": 1,
+   "rationale": "Actively practising the new behaviour = action. Nurse facilitates action.",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A patient has stayed smoke-free for a year and asks for strategies to avoid relapse. Which stage?",
+   "options": [
+    "Action",
+    "Preparation",
+    "Maintenance",
+    "Precontemplation"
+   ],
+   "answer": 2,
+   "rationale": "Maintenance: working to sustain the change. Nurse reinforces and sends reminders.",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Teaching a patient to accept a new ostomy and feel comfortable with it targets which domain?",
+   "options": [
+    "Cognitive",
+    "Affective",
+    "Psychomotor",
+    "Social"
+   ],
+   "answer": 1,
+   "rationale": "Attitudes, feelings and acceptance = affective.",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which is an example of a nursing diagnosis used in the teaching process?",
+   "options": [
+    "Deficient knowledge",
+    "Pneumonia",
+    "Hypertension",
+    "Fracture"
+   ],
+   "answer": 0,
+   "rationale": "Teaching-related diagnoses: deficient knowledge, health-seeking behaviours, health maintenance, health self-management [slide 19].",
+   "source": "Health Promotion Self-Test · slide 19"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which is a teaching METHOD (not an approach)?",
+   "options": [
+    "Telling",
+    "Entrusting",
+    "Demonstration",
+    "Reinforcing"
+   ],
+   "answer": 2,
+   "rationale": "Methods: one-on-one, group, preparatory instruction, demonstrations, analogies, role playing, simulation. Approaches: telling, selling, participating, entrusting, reinforcing.",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which is a barrier to learning the nurse must watch for?",
+   "options": [
+    "High health literacy",
+    "Sensory alterations",
+    "A quiet room",
+    "Strong motivation"
+   ],
+   "answer": 1,
+   "rationale": "Barriers: illiteracy, learning disabilities, low health literacy, sensory alterations, language, culture, severe illness [slide 25].",
+   "source": "Health Promotion Self-Test · slide 25"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "How does the nurse know teaching was successful?",
+   "options": [
+    "The nurse finished the teaching plan",
+    "The patient performs the expected outcomes",
+    "The patient signed the form",
+    "The family was present"
+   ],
+   "answer": 1,
+   "rationale": "Success depends on the patient's performance of expected outcomes, e.g., a return demonstration [slide 26].",
+   "source": "Health Promotion Self-Test · slide 26"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Health Belief Model: a doctor's reminder letter prompting a flu shot is a:",
+   "options": [
+    "Perceived barrier",
+    "Cue to action",
+    "Perceived severity",
+    "Perceived susceptibility"
+   ],
+   "answer": 1,
+   "rationale": "Cues to action: events or reminders that trigger action (provider advice, symptoms, media, reminder texts).",
+   "source": "Health Promotion Self-Test"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which document introduced the Health Field Concept?",
+   "options": [
+    "Ottawa Charter",
+    "Lalonde Report",
+    "Epp Report",
+    "Bangkok Charter"
+   ],
+   "answer": 1,
+   "rationale": "Lalonde (1974): biology, lifestyle, environment, health care organization.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which document named poverty as the greatest threat to health?",
+   "options": [
+    "Toronto Charter",
+    "Bangkok Charter",
+    "Jakarta Declaration",
+    "Epp Report"
+   ],
+   "answer": 2,
+   "rationale": "Jakarta = poverty. Bangkok = rights. Toronto = determinants.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which document affirmed health as a human right?",
+   "options": [
+    "Jakarta Declaration",
+    "Bangkok Charter",
+    "Lalonde Report",
+    "Toronto Charter"
+   ],
+   "answer": 1,
+   "rationale": "Bangkok (2005) = rights, plus mental and spiritual well-being.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which document identified the social determinants of health as important to health?",
+   "options": [
+    "Toronto Charter",
+    "Ottawa Charter",
+    "Jakarta Declaration",
+    "Lalonde Report"
+   ],
+   "answer": 0,
+   "rationale": "Toronto = social determinants.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which two documents were both published in 1986?",
+   "options": [
+    "Lalonde and Ottawa",
+    "Ottawa and Epp",
+    "Epp and Jakarta",
+    "Bangkok and Toronto"
+   ],
+   "answer": 1,
+   "rationale": "Ottawa Charter and Epp Report (Achieving Health for All), both 1986.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Put these in order, earliest first:",
+   "options": [
+    "Ottawa, Lalonde, Jakarta, Bangkok",
+    "Lalonde, Ottawa, Jakarta, Bangkok",
+    "Lalonde, Jakarta, Ottawa, Bangkok",
+    "Bangkok, Jakarta, Ottawa, Lalonde"
+   ],
+   "answer": 1,
+   "rationale": "Lalonde 1974 → Ottawa 1986 → Jakarta 1997 → Bangkok 2005.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "“Reducing inequities, increasing prevention, enhancing coping” are the Epp Report's:",
+   "options": [
+    "Mechanisms",
+    "Health challenges",
+    "Implementation strategies",
+    "Prerequisites"
+   ],
+   "answer": 1,
+   "rationale": "Challenges. Mechanisms = self-care, mutual aid, healthy environments.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which is an Ottawa Charter strategy, NOT an Epp item?",
+   "options": [
+    "Mutual aid",
+    "Develop personal skills",
+    "Enhancing coping",
+    "Self-care"
+   ],
+   "answer": 1,
+   "rationale": "Ottawa's 5: build healthy public policy, create supportive environments, strengthen community action, develop personal skills, reorient health services.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Population Health Promotion Model: “On WHAT can we take action?”",
+   "options": [
+    "The 5 Ottawa strategies",
+    "The determinants of health",
+    "Levels of action",
+    "Evidence and values"
+   ],
+   "answer": 1,
+   "rationale": "What = determinants.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Population Health Promotion Model: “With WHOM can we act?”",
+   "options": [
+    "The determinants of health",
+    "The 5 Ottawa strategies",
+    "Individual, family, community, sector/system, society",
+    "Evidence and values"
+   ],
+   "answer": 2,
+   "rationale": "With whom = levels of action.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Population Health Promotion Model: “WHY take action?”",
+   "options": [
+    "Evidence-based decision making, values and assumptions",
+    "The determinants of health",
+    "Levels of action",
+    "The 5 Ottawa strategies"
+   ],
+   "answer": 0,
+   "rationale": "Why = evidence, values and assumptions.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A nurse treats a patient's lung cancer with chemotherapy. This is:",
+   "options": [
+    "Upstream",
+    "Downstream"
+   ],
+   "answer": 1,
+   "rationale": "One sick person, after the problem exists = downstream.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A city bans smoking on patios and in parks. This is:",
+   "options": [
+    "Upstream",
+    "Downstream"
+   ],
+   "answer": 0,
+   "rationale": "Changes conditions for everyone before illness = upstream.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "The approach that relies on the health care system to keep populations healthy is the:",
+   "options": [
+    "Medical approach",
+    "Behavioural approach",
+    "Socioenvironmental approach",
+    "Population health approach"
+   ],
+   "answer": 0,
+   "rationale": "Medical = downstream; health care system is paramount.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which concept describes the interdependence of humans, plants and animals?",
+   "options": [
+    "Planetary health",
+    "One Health",
+    "Environmental sustainability",
+    "Global health"
+   ],
+   "answer": 1,
+   "rationale": "One Health. Planetary = civilization + natural systems. Sustainability = responsibility to conserve.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A free community flu clinic is:",
+   "options": [
+    "Primary prevention",
+    "Secondary prevention",
+    "Tertiary prevention"
+   ],
+   "answer": 0,
+   "rationale": "Immunization before disease = primary.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Routine Pap smear screening is:",
+   "options": [
+    "Primary prevention",
+    "Secondary prevention",
+    "Tertiary prevention"
+   ],
+   "answer": 1,
+   "rationale": "Screening for early detection = secondary.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A stroke survivor attends physiotherapy to regain function. This is:",
+   "options": [
+    "Primary prevention",
+    "Secondary prevention",
+    "Tertiary prevention"
+   ],
+   "answer": 2,
+   "rationale": "Rehab after disease = tertiary.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Four pillars of primary health care:",
+   "options": [
+    "Teams, Access, Information, Healthy living",
+    "Peace, Shelter, Food, Income",
+    "Biology, Lifestyle, Environment, Health care",
+    "Self-care, Mutual aid, Coping, Prevention"
+   ],
+   "answer": 0,
+   "rationale": "TAIH.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "The MDGs had ___ goals (2000); the SDGs have ___ goals (2015).",
+   "options": [
+    "17; 8",
+    "8; 17",
+    "8; 8",
+    "17; 17"
+   ],
+   "answer": 1,
+   "rationale": "Older = smaller: 8 MDGs, 17 SDGs.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A patient says, “I've picked a quit date and bought nicotine gum.” Stage?",
+   "options": [
+    "Contemplation",
+    "Preparation",
+    "Action",
+    "Maintenance"
+   ],
+   "answer": 1,
+   "rationale": "Preparation (not 'planning'). Nurse's task: educate.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A patient performs a return demonstration of wound care. Which step of the teaching process?",
+   "options": [
+    "Assessment",
+    "Planning",
+    "Implementation",
+    "Evaluation"
+   ],
+   "answer": 3,
+   "rationale": "Implementation = you show them. Evaluation = they show you.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Learning to draw up insulin is which domain?",
+   "options": [
+    "Cognitive",
+    "Affective",
+    "Psychomotor"
+   ],
+   "answer": 2,
+   "rationale": "Skills combining mental and muscle activity = psychomotor.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "The three basic learning principles are:",
+   "options": [
+    "Environment, ability, motivation",
+    "Cognitive, affective, psychomotor",
+    "Assessment, planning, evaluation",
+    "Telling, selling, entrusting"
+   ],
+   "answer": 0,
+   "rationale": "Learning environment, ability to learn, motivation to learn.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Health Belief Model: “Diabetes runs in my family, so I could get it.”",
+   "options": [
+    "Perceived susceptibility",
+    "Perceived severity",
+    "Perceived barrier",
+    "Cue to action"
+   ],
+   "answer": 0,
+   "rationale": "Belief about one's own risk = susceptibility.",
+   "source": "Quiz Day Warm-up (Health Promotion)"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which concept focuses on the interdependence of humans, plants and animals?",
+   "options": [
+    "Planetary health",
+    "One Health",
+    "Environmental sustainability",
+    "Global health governance"
+   ],
+   "answer": 1,
+   "rationale": "One Health = humans, plants and animals are interdependent. Planetary health = human civilization + natural systems. Environmental sustainability = responsibility to conserve resources.",
+   "source": "Sunday Retests: Health Promotion"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which are the four pillars of primary health care?",
+   "options": [
+    "Teams, access, information, healthy living",
+    "Peace, shelter, food, income",
+    "Self-care, mutual aid, healthy environments, coping",
+    "Biology, lifestyle, environment, health care"
+   ],
+   "answer": 0,
+   "rationale": "TAIH: Teams, Access, Information, Healthy living. The others are Ottawa prerequisites, Epp, and Lalonde.",
+   "source": "Sunday Retests: Health Promotion"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "MDGs vs. SDGs:",
+   "options": [
+    "MDGs 2015, 17 goals; SDGs 2000, 8 goals",
+    "MDGs 2000, 8 goals; SDGs 2015, 17 goals",
+    "Both 2000",
+    "MDGs 2000, 17 goals; SDGs 2015, 8 goals"
+   ],
+   "answer": 1,
+   "rationale": "MDGs: UN 2000, 8 goals. SDGs: UN 2015, 17 goals, 15-year targets.",
+   "source": "Sunday Retests: Health Promotion"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A health INEQUITY is:",
+   "options": [
+    "Any difference in health between groups",
+    "A fair opportunity for all to reach full health potential",
+    "A difference in health that is unfair or stems from injustice",
+    "A metric of morbidity and mortality"
+   ],
+   "answer": 2,
+   "rationale": "Inequity = unfair, avoidable differences. Equity = fair opportunity. GBD = the metric.",
+   "source": "Sunday Retests: Health Promotion"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Which historical approach to health uses upstream thinking?",
+   "options": [
+    "Medical",
+    "Behavioural",
+    "Socioenvironmental",
+    "Biomedical"
+   ],
+   "answer": 2,
+   "rationale": "Socioenvironmental = upstream: policy-level health promotion and prevention that benefit the whole population [Ch 1, slide 14]. Medical = downstream.",
+   "source": "Sunday Retests: Upstream vs. downstream · Ch 1, slide 14"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "Downstream thinking focuses on:",
+   "options": [
+    "Policies that benefit the whole population",
+    "Individual health concerns, treatment and cure",
+    "Changing social structures",
+    "Preventing illness before it starts"
+   ],
+   "answer": 1,
+   "rationale": "Downstream: individual treatment and cure; the health care system is seen as the key to keeping people healthy [slide 10].",
+   "source": "Sunday Retests: Upstream vs. downstream · slide 10"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "An ER team treats a child having an asthma attack. This is:",
+   "options": [
+    "Upstream",
+    "Downstream"
+   ],
+   "answer": 1,
+   "rationale": "Treating an individual after the problem exists = downstream. Fixing the mouldy housing that triggered it would be upstream.",
+   "source": "Sunday Retests: Upstream vs. downstream"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "The province raises tobacco taxes and bans smoking in public places. This is:",
+   "options": [
+    "Upstream",
+    "Downstream"
+   ],
+   "answer": 0,
+   "rationale": "A policy that protects the whole population before illness = upstream.",
+   "source": "Sunday Retests: Upstream vs. downstream"
+  },
+  {
+   "course": "Community Nursing",
+   "topic": "Health promotion: Quiz 1 review",
+   "stem": "A hospital runs a cardiac rehab program for patients after a heart attack. This is:",
+   "options": [
+    "Upstream",
+    "Downstream"
+   ],
+   "answer": 1,
+   "rationale": "Care for individuals who are already ill = downstream (it's also tertiary prevention). Watch out: prevention-sounding words don't make something upstream. Ask whether it targets one sick person or the conditions for everyone.",
+   "source": "Sunday Retests: Upstream vs. downstream"
+  }
+ ]
+}

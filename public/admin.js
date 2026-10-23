@@ -65,13 +65,16 @@
   window.addEventListener('hashchange', () => adminKey && start());
 
   // ---------- questions ----------
-  const qState = { status: 'draft', course: '', q: '' };
+  const qState = { status: 'draft', course: '', topic: '', q: '' };
   async function questions() {
     const params = new URLSearchParams();
     if (qState.status) params.set('status', qState.status);
     if (qState.course) params.set('course', qState.course);
     if (qState.q) params.set('q', qState.q);
     const r = await api('/api/admin/questions?' + params);
+    const topicList = [...new Set(r.questions.map((x) => x.topic))].sort();
+    if (qState.topic && !topicList.includes(qState.topic)) qState.topic = '';
+    if (qState.topic) r.questions = r.questions.filter((x) => x.topic === qState.topic);
     const c = r.counts;
     html(`
       <h1>Question bank</h1>
@@ -81,6 +84,7 @@
           ${[['draft', 'Drafts'], ['approved', 'Approved'], ['retired', 'Retired'], ['', 'All']].map(([v, l]) => `<option value="${v}" ${qState.status === v ? 'selected' : ''}>${l}</option>`).join('')}
         </select>
         <select id="fCourse" style="width:auto"><option value="">All courses</option>${r.courses.map((x) => `<option ${qState.course === x ? 'selected' : ''}>${esc(x)}</option>`).join('')}</select>
+        <select id="fTopic" style="width:auto"><option value="">All topics</option>${topicList.map((x) => `<option ${qState.topic === x ? 'selected' : ''}>${esc(x)}</option>`).join('')}</select>
         <input type="text" id="fQ" placeholder="Search text, topic, source" value="${esc(qState.q)}" style="flex:1;min-width:160px">
       </div>
       <div class="bar row">
@@ -95,7 +99,8 @@
 
     const reload = () => questions().catch((e) => html(err(e)));
     document.getElementById('fStatus').onchange = (e) => { qState.status = e.target.value; reload(); };
-    document.getElementById('fCourse').onchange = (e) => { qState.course = e.target.value; reload(); };
+    document.getElementById('fCourse').onchange = (e) => { qState.course = e.target.value; qState.topic = ''; reload(); };
+    document.getElementById('fTopic').onchange = (e) => { qState.topic = e.target.value; reload(); };
     let t; document.getElementById('fQ').oninput = (e) => { clearTimeout(t); t = setTimeout(() => { qState.q = e.target.value; reload(); }, 350); };
     document.getElementById('selAll').onchange = (e) => document.querySelectorAll('.sel').forEach((b) => (b.checked = e.target.checked));
     document.querySelectorAll('[data-bulk]').forEach((b) => (b.onclick = async () => {
@@ -193,7 +198,8 @@ Reply with ONLY valid JSON in exactly this format, no other text:
         <button class="small secondary" id="copyPrompt">Copy prompt</button>
       </div>
       <div class="card">
-        <strong>2. Paste Claude's JSON here</strong>
+        <strong>2. Paste Claude's JSON here, or choose a .json file</strong>
+        <div class="row" style="justify-content:flex-start;margin-top:6px"><input type="file" id="file" accept=".json,application/json" style="font-size:.9rem"></div>
         <textarea id="json" style="min-height:220px;font-family:ui-monospace,monospace;font-size:.85rem;margin-top:8px" placeholder='{"course": "...", "questions": [...]}'></textarea>
         <div class="grid2" style="margin-top:8px">
           <label class="field"><span>Course (used if a question doesn't name one)</span><input type="text" id="dCourse"></label>
@@ -228,13 +234,19 @@ Reply with ONLY valid JSON in exactly this format, no other text:
       });
       const blocking = problems.filter((p) => !p.includes('rationale'));
       const topics = [...new Set(list.map((q) => q.topic || 'General'))];
+      const courses = [...new Set(list.map((q) => q.course || course).filter(Boolean))];
       pv.innerHTML = `<div class="notice ${blocking.length ? 'error' : 'good'}">
-        ${list.length} questions · course: ${esc(course || '(missing)')} · topics: ${esc(topics.join(', '))}
+        ${list.length} questions · course: ${esc(courses.join(', ') || '(missing)')} · ${topics.length} topic${topics.length === 1 ? '' : 's'}: ${esc(topics.join(', '))}
         ${problems.length ? `<ul class="small" style="margin:6px 0 0">${problems.slice(0, 15).map((p) => `<li>${esc(p)}</li>`).join('')}${problems.length > 15 ? `<li>…and ${problems.length - 15} more</li>` : ''}</ul>` : ''}</div>`;
       if (!blocking.length) { parsed = { list, course }; document.getElementById('go').disabled = false; }
     };
     document.getElementById('check').onclick = check;
     document.getElementById('json').oninput = () => { document.getElementById('go').disabled = true; };
+    document.getElementById('file').onchange = async (e) => {
+      const f = e.target.files[0]; if (!f) return;
+      document.getElementById('json').value = await f.text();
+      check();
+    };
     document.getElementById('go').onclick = async (e) => {
       check(); if (!parsed) return;
       e.target.disabled = true;
