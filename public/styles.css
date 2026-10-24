@@ -163,3 +163,9 @@ td.num, th.num { text-align: right; white-space: nowrap; }
 .seg { display: flex; gap: 6px; flex-wrap: wrap; }
 .seg button { flex: 1 1 64px; background: var(--card); color: var(--text); border: 1px solid var(--line); padding: 9px 10px; }
 .seg button.on { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+
+/* question updates */
+.update-note { display: block; text-decoration: none; color: var(--text); border: 1px solid var(--accent); }
+.update-note span { color: var(--accent); white-space: nowrap; }
+.navdot { display: inline-block; margin-left: 4px; min-width: 17px; padding: 0 5px; border-radius: 999px; background: var(--bad); color: #fff; font-size: .7rem; font-weight: 700; line-height: 17px; text-align: center; vertical-align: 1px; }
+.card.read { opacity: .85; }

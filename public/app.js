@@ -50,6 +50,7 @@
     [/^\/review\/(\d+)$/, (m) => rankedReview(+m[1])],
     [/^\/leaderboard(?:\/(\w+))?$/, (m) => leaderboard(m[1])],
     [/^\/(?:profile|me)$/, mePage],
+    [/^\/updates$/, updatesPage],
   ];
   let lastHash = location.hash;
   async function router() {
@@ -182,7 +183,7 @@
     if (!hasCode() && !store.get('pn_skip')) { location.hash = '#/welcome'; return; }
     html('<p class="muted">Loading…</p>');
     const [cat, ranked, me] = await Promise.all([api('/api/catalog'), api('/api/ranked'), hasCode() ? api('/api/me').catch(() => null) : null]);
-    if (me) store.set(LS_NICK, me.nickname);
+    if (me) { store.set(LS_NICK, me.nickname); setUpdateBadge(me.unreadUpdates); }
     const nick = store.get(LS_NICK);
     const open = ranked.tests.filter((t) => t.status === 'open');
     const upcoming = ranked.tests.filter((t) => t.status === 'upcoming');
@@ -208,6 +209,7 @@
 
     html(`
       <h1>${nick ? `Hi, ${esc(nick)}` : 'PN Practice'}</h1>
+      ${me && me.unreadUpdates ? `<a class="notice update-note" href="#/updates">🔔 <strong>${me.unreadUpdates} question${me.unreadUpdates === 1 ? '' : 's'} you've answered ${me.unreadUpdates === 1 ? 'was' : 'were'} corrected.</strong> <span>See what changed →</span></a>` : ''}
       ${!hasCode() ? `<div class="notice small">You're practising without a study code, so results aren't saved. <a href="#/welcome">Get a code</a></div>` : ''}
       <h2>Practice</h2>
       <p class="small muted">Unlimited attempts, a new mix of questions each time, and instant feedback.</p>
@@ -573,6 +575,44 @@
     }
   }
 
+
+  // ---------- question updates (corrections) ----------
+  function setUpdateBadge(n) {
+    const link = document.querySelector('[data-nav="profile"]');
+    if (!link) return;
+    let b = link.querySelector('.navdot');
+    if (n && !b) { b = document.createElement('span'); b.className = 'navdot'; link.appendChild(b); }
+    if (b) { if (n) { b.textContent = n; b.title = `${n} question update${n === 1 ? '' : 's'}`; } else b.remove(); }
+  }
+  async function updatesPage() {
+    if (!hasCode()) { location.hash = '#/welcome'; return; }
+    const r = await api('/api/updates');
+    const changeWords = { answer: 'correct answer', options: 'answer choices', question: 'question wording', rationale: 'explanation' };
+    html(`
+      <p class="small"><a href="#/profile">← Profile</a></p>
+      <h1>Question updates</h1>
+      <p class="small muted">When a question you've answered is corrected (often thanks to a student's flag), it shows up here.</p>
+      ${r.updates.length ? r.updates.map((u) => {
+        const d = u.data || {};
+        const what = (d.changes || []).map((c) => changeWords[c] || c);
+        const ranked = (d.ranked || []).filter((x) => x.old !== x.new);
+        return `<div class="card ${u.read_at ? 'read' : ''}">
+          <div class="row small muted">${u.read_at ? '' : '<span class="pill open">New</span>'}<span>Corrected ${fmtDate(u.created_at)}</span>${what.length ? `<span>· updated ${esc(what.join(', '))}</span>` : ''}</div>
+          ${d.flagged ? '<div class="notice good small" style="margin:8px 0 0">⚑ Thanks for flagging this question. Your report helped fix it.</div>' : ''}
+          <div class="stem" style="margin:10px 0 8px">${esc(d.stem)}</div>
+          ${d.oldStem ? `<div class="small muted" style="margin-bottom:8px">Previously: <s>${esc(d.oldStem)}</s></div>` : ''}
+          <div class="option correct"><span class="letter">✓</span><span><strong>Correct answer:</strong> ${esc(d.answer)}</span></div>
+          ${d.oldAnswer ? `<div class="option" style="margin-top:6px"><span class="letter">✕</span><span class="muted">Previously marked correct: <s>${esc(d.oldAnswer)}</s></span></div>` : ''}
+          ${d.rationale ? `<div class="rationale small">${esc(d.rationale)}</div>` : ''}
+          ${ranked.map((x) => `<div class="small" style="margin-top:8px">Your score on <a href="#/leaderboard/test${x.test}">${esc(x.title)}</a> was updated: <s>${x.old}/${x.total}</s> → <strong>${x.new}/${x.total}</strong></div>`).join('')}
+        </div>`;
+      }).join('') : '<div class="card empty">No updates yet.</div>'}`);
+    if (r.updates.some((u) => !u.read_at)) {
+      try { await api('/api/updates/read', { method: 'POST' }); } catch {}
+      setUpdateBadge(0);
+    }
+  }
+
   // ---------- me ----------
   async function mePage() {
     if (!hasCode()) { location.hash = '#/welcome'; return; }
@@ -583,9 +623,11 @@
       throw e;
     }
     const code = store.get(LS_CODE);
+    setUpdateBadge(r.unreadUpdates);
     html(`
       <h1>${esc(r.nickname)}</h1>
       ${r.hidden ? '<div class="notice small">An admin has hidden you from leaderboards.</div>' : ''}
+      ${r.unreadUpdates ? `<a class="notice update-note" href="#/updates">🔔 <strong>${r.unreadUpdates} new question update${r.unreadUpdates === 1 ? '' : 's'}.</strong> <span>See what changed →</span></a>` : '<p class="small"><a href="#/updates">Question updates</a></p>'}
       <h2>Leaderboards</h2>
       <div class="card">
         <div class="row"><strong>${r.onLeaderboard ? 'You\'re on the leaderboards' : 'You\'ve opted out'}</strong><span class="pill ${r.onLeaderboard ? 'open' : 'closed'}">${r.onLeaderboard ? 'Visible' : 'Private'}</span></div>

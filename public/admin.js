@@ -170,7 +170,8 @@
         </div>
       </div></div></div>`;
   }
-  function editQuestion(q, el, done) {
+  function editQuestion(q, el, done, opts = {}) {
+    const notifyDefault = opts.notify ?? !!q.openFlags;
     el.innerHTML = `<form class="stack" id="ef${q.id}">
       <div class="grid2">
         <label class="field"><span>Course</span><input type="text" name="course" value="${esc(q.course)}"></label>
@@ -181,6 +182,8 @@
         <input type="text" name="opt${i}" value="${esc(q.options[i] || '')}" placeholder="${i < 2 ? 'Option' : 'Option (optional)'}" style="flex:1"></div>`).join('')}
       <label class="field"><span>Rationale</span><textarea name="rationale">${esc(q.rationale)}</textarea></label>
       <label class="field"><span>Source (deck / slide)</span><input type="text" name="source" value="${esc(q.source)}"></label>
+      <label class="check small" title="Sent only if the question, options, answer or rationale actually change">
+        <input type="checkbox" name="notify" ${notifyDefault ? 'checked' : ''}> Notify students who answered or flagged this question that it was corrected</label>
       <div class="msg"></div>
       <div class="row"><button>Save</button><button type="button" class="ghost cancel">Cancel</button></div>
     </form>`;
@@ -196,10 +199,15 @@
       const options = raw.filter(Boolean);
       const answer = raw.slice(0, chosen).filter(Boolean).length;
       try {
-        await api(`/api/admin/questions/${q.id}`, { method: 'PUT', body: {
+        const res = await api(`/api/admin/questions/${q.id}`, { method: 'PUT', body: {
           course: fd.get('course'), topic: fd.get('topic'), stem: fd.get('stem'), options, answer,
-          rationale: fd.get('rationale'), source: fd.get('source') } });
-        done(true);
+          rationale: fd.get('rationale'), source: fd.get('source'), notify: fd.get('notify') === 'on' } });
+        await done(true, res);
+        const bits = [];
+        if (res.notified) bits.push(`${res.notified} student${res.notified === 1 ? '' : 's'} notified`);
+        if (res.rescored) bits.push(`${res.rescored} ranked score${res.rescored === 1 ? '' : 's'} updated`);
+        const m = document.getElementById('msg');
+        if (m) flash(m, `Question saved${bits.length ? ': ' + bits.join(', ') : ''}.`);
       } catch (e2) { flash(f.querySelector('.msg'), e2.message, false); }
     };
   }
@@ -269,8 +277,8 @@
           const holder = card.querySelector('.qbody');
           editQuestion(q, holder, async (saved) => {
             if (saved && confirm('Saved. Mark this question\'s flags as resolved?')) await api('/api/admin/flags/resolve', { method: 'POST', body: { questionId: qid, status: 'resolved' } });
-            flags(); refreshFlagCount();
-          });
+            await flags(); refreshFlagCount();
+          }, { notify: true });
         }
       } catch (e2) { flash(document.getElementById('msg'), e2.message, false); }
     };

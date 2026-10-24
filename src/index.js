@@ -108,7 +108,7 @@ async function me(env, request) {
   const p = await requirePlayer(env, request);
   const now = Date.now();
   const week = now - 7 * 864e5;
-  const [practice, weekly, ranked, coverage] = await env.DB.batch([
+  const [practice, weekly, ranked, coverage, unread] = await env.DB.batch([
     env.DB.prepare(`SELECT q.course, COUNT(*) AS answered, SUM(pa.correct) AS correct
       FROM practice_answers pa JOIN questions q ON q.id = pa.question_id
       WHERE pa.player_id = ? GROUP BY q.course ORDER BY q.course`).bind(p.id),
@@ -120,6 +120,7 @@ async function me(env, request) {
     env.DB.prepare(`SELECT q.course, COUNT(*) AS total, COUNT(s.question_id) AS seen
       FROM questions q LEFT JOIN question_seen s ON s.question_id = q.id AND s.player_id = ?
       WHERE q.status = 'approved' GROUP BY q.course ORDER BY q.course`).bind(p.id),
+    env.DB.prepare('SELECT COUNT(*) AS n FROM notifications WHERE player_id = ? AND read_at IS NULL').bind(p.id),
   ]);
   return json({
     nickname: p.nickname,
@@ -130,6 +131,7 @@ async function me(env, request) {
     weeklyCorrect: weekly.results[0]?.n || 0,
     ranked: ranked.results,
     coverage: coverage.results,
+    unreadUpdates: unread.results[0]?.n || 0,
   });
 }
 
@@ -555,6 +557,77 @@ async function adminUpdateQuestion(env, request, id) {
   const status = ['draft', 'approved', 'retired'].includes(body.status) ? body.status : existing.status;
   await env.DB.prepare(`UPDATE questions SET course=?, topic=?, stem=?, options=?, answer=?, rationale=?, source=?, status=?, updated_at=? WHERE id=?`)
     .bind(q.course, q.topic, q.stem, JSON.stringify(q.options), q.answer, q.rationale, q.source, status, Date.now(), id).run();
+
+  // What changed that students would care about (course/topic/source moves don't count)
+  const oldOpts = JSON.parse(existing.options);
+  const oldAnswerText = oldOpts[existing.answer], newAnswerText = q.options[q.answer];
+  const changes = [];
+  if (oldAnswerText !== newAnswerText) changes.push('answer');
+  if (JSON.stringify(oldOpts) !== JSON.stringify(q.options)) changes.push('options');
+  if (existing.stem !== q.stem) changes.push('question');
+  if (existing.rationale !== q.rationale) changes.push('rationale');
+
+  // If the correct answer moved, re-score ranked attempts that included this question
+  const rescored = changes.includes('answer') || existing.answer !== q.answer ? await rescoreRanked(env, id) : new Map();
+
+  let notified = 0;
+  if (body.notify && changes.length) {
+    const { results } = await env.DB.prepare(`SELECT player_id, MAX(flagged) AS flagged FROM (
+        SELECT player_id, 0 AS flagged FROM practice_answers WHERE question_id = ?
+        UNION ALL SELECT a.player_id, 0 FROM ranked_attempts a JOIN ranked_questions rq ON rq.test_id = a.test_id
+          WHERE rq.question_id = ? AND a.submitted_at IS NOT NULL
+        UNION ALL SELECT player_id, 1 FROM flags WHERE question_id = ? AND player_id IS NOT NULL
+      ) GROUP BY player_id`).bind(id, id, id).all();
+    const now = Date.now();
+    const stmt = env.DB.prepare('INSERT INTO notifications (player_id, question_id, kind, data, created_at) VALUES (?, ?, ?, ?, ?)');
+    const rows = results.map((r) => stmt.bind(r.player_id, id, 'question_corrected', JSON.stringify({
+      stem: q.stem, oldStem: existing.stem !== q.stem ? existing.stem : null,
+      answer: newAnswerText, oldAnswer: changes.includes('answer') ? oldAnswerText : null,
+      rationale: q.rationale, changes, flagged: !!r.flagged,
+      ranked: rescored.get(r.player_id) || [],
+    }), now));
+    for (let i = 0; i < rows.length; i += 50) await env.DB.batch(rows.slice(i, i + 50));
+    notified = rows.length;
+  }
+  const rescoredCount = [...rescored.values()].reduce((n, list) => n + list.filter((x) => x.old !== x.new).length, 0);
+  return json({ ok: true, changes, notified, rescored: rescoredCount });
+}
+
+// Recalculate every submitted ranked attempt on tests that contain this question.
+// Returns Map(player_id -> [{test, title, old, new, total}]) for the attempts that were looked at.
+async function rescoreRanked(env, questionId) {
+  const out = new Map();
+  const { results: tests } = await env.DB.prepare(`SELECT DISTINCT t.id, t.title FROM ranked_tests t
+    JOIN ranked_questions rq ON rq.test_id = t.id WHERE rq.question_id = ?`).bind(questionId).all();
+  for (const t of tests) {
+    const qs = await loadTestQuestions(env, t.id);
+    const { results: attempts } = await env.DB.prepare(`SELECT id, player_id, score, answers FROM ranked_attempts
+      WHERE test_id = ? AND submitted_at IS NOT NULL`).bind(t.id).all();
+    const updates = [];
+    for (const a of attempts) {
+      const ans = JSON.parse(a.answers || '{}');
+      const score = qs.reduce((n, q) => n + (ans[q.id] === q.answer ? 1 : 0), 0);
+      if (score !== a.score) updates.push(env.DB.prepare('UPDATE ranked_attempts SET score = ? WHERE id = ?').bind(score, a.id));
+      if (!out.has(a.player_id)) out.set(a.player_id, []);
+      out.get(a.player_id).push({ test: t.id, title: t.title, old: a.score, new: score, total: qs.length });
+    }
+    if (updates.length) await env.DB.batch(updates);
+  }
+  return out;
+}
+
+// ---------- student notifications ----------
+
+async function listUpdates(env, request) {
+  const p = await requirePlayer(env, request);
+  const { results } = await env.DB.prepare(`SELECT id, question_id, kind, data, created_at, read_at FROM notifications
+    WHERE player_id = ? ORDER BY created_at DESC LIMIT 50`).bind(p.id).all();
+  return json({ updates: results.map((n) => ({ ...n, data: JSON.parse(n.data || '{}') })) });
+}
+
+async function readUpdates(env, request) {
+  const p = await requirePlayer(env, request);
+  await env.DB.prepare('UPDATE notifications SET read_at = ? WHERE player_id = ? AND read_at IS NULL').bind(Date.now(), p.id).run();
   return json({ ok: true });
 }
 
@@ -703,10 +776,11 @@ async function deleteSelf(env, request) {
 
 async function deletePlayerData(env, p) {
   const id = p.id;
-  const [, practice, , attempts] = await env.DB.batch([
+  const [, practice, , , attempts] = await env.DB.batch([
     env.DB.prepare('UPDATE flags SET player_id = NULL WHERE player_id = ?').bind(id),
     env.DB.prepare('DELETE FROM practice_answers WHERE player_id = ?').bind(id),
     env.DB.prepare('DELETE FROM question_seen WHERE player_id = ?').bind(id),
+    env.DB.prepare('DELETE FROM notifications WHERE player_id = ?').bind(id),
     env.DB.prepare('DELETE FROM ranked_attempts WHERE player_id = ?').bind(id),
     env.DB.prepare('DELETE FROM players WHERE id = ?').bind(id),
   ]);
@@ -779,6 +853,8 @@ async function route(request, env) {
   if (path === '/api/me' && m === 'GET') return me(env, request);
   if (path === '/api/me/settings' && m === 'POST') return updateSettings(env, request);
   if (path === '/api/me/delete' && m === 'POST') return deleteSelf(env, request);
+  if (path === '/api/updates' && m === 'GET') return listUpdates(env, request);
+  if (path === '/api/updates/read' && m === 'POST') return readUpdates(env, request);
   if (path === '/api/catalog' && m === 'GET') return catalog(env);
   if (path === '/api/practice/start' && m === 'POST') return practiceStart(env, request);
   if (path === '/api/practice/answer' && m === 'POST') return practiceAnswer(env, request);
