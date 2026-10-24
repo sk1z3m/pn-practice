@@ -163,11 +163,63 @@ async function catalog(env) {
     GROUP BY course, topic ORDER BY course, topic`).bind(Date.now()).all();
   const courses = {};
   for (const r of results) {
-    (courses[r.course] ||= { course: r.course, total: 0, topics: [] });
+    (courses[r.course] ||= { course: r.course, total: 0, topics: [], groups: [] });
     courses[r.course].topics.push({ topic: r.topic, n: r.n });
     courses[r.course].total += r.n;
   }
+  // Topic groups: only list topics that currently have live questions, and hide empty groups.
+  for (const g of await loadGroups(env)) {
+    const c = courses[g.course]; if (!c) continue;
+    const live = g.topics.filter((t) => c.topics.some((x) => x.topic === t));
+    const n = live.reduce((a, t) => a + c.topics.find((x) => x.topic === t).n, 0);
+    if (n) c.groups.push({ id: g.id, name: g.name, topics: live, n });
+  }
   return json({ courses: Object.values(courses) });
+}
+
+// ---------- topic groups ----------
+const byName = (a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' });
+async function loadGroups(env, course) {
+  const stmt = course
+    ? env.DB.prepare('SELECT * FROM topic_groups WHERE course = ?').bind(course)
+    : env.DB.prepare('SELECT * FROM topic_groups');
+  const { results } = await stmt.all();
+  return results.map((g) => {
+    let topics = [];
+    try { topics = JSON.parse(g.topics); } catch {}
+    return { id: g.id, course: g.course, name: g.name, topics: Array.isArray(topics) ? topics : [], updatedAt: g.updated_at };
+  }).sort(byName);
+}
+const saveGroupTopics = (env, id, topics) =>
+  env.DB.prepare('UPDATE topic_groups SET topics = ?, updated_at = ? WHERE id = ?').bind(JSON.stringify(topics), Date.now(), id);
+
+async function adminGroups(env) {
+  return json({ groups: await loadGroups(env) });
+}
+async function adminSaveGroup(env, request, id) {
+  const body = await readBody(request);
+  const course = cleanText(body.course, 100), name = cleanText(body.name, 60);
+  const topics = [...new Set((Array.isArray(body.topics) ? body.topics : []).map((t) => cleanText(t, 100)).filter(Boolean))];
+  if (!course) throw new HttpError(400, 'Pick a course');
+  if (!name) throw new HttpError(400, 'Give the group a name, e.g. Test 1');
+  if (!topics.length) throw new HttpError(400, 'Tick at least one topic');
+  const clash = (await loadGroups(env, course)).find((g) => g.name.toLowerCase() === name.toLowerCase() && g.id !== id);
+  if (clash) throw new HttpError(409, `There's already a group called “${clash.name}” in ${course}`);
+  const now = Date.now();
+  if (id) {
+    const r = await env.DB.prepare('UPDATE topic_groups SET course = ?, name = ?, topics = ?, updated_at = ? WHERE id = ?')
+      .bind(course, name, JSON.stringify(topics), now, id).run();
+    if (!r.meta.changes) throw new HttpError(404, 'Group not found');
+  } else {
+    const r = await env.DB.prepare('INSERT INTO topic_groups (course, name, topics, created_at, updated_at) VALUES (?, ?, ?, ?, ?)')
+      .bind(course, name, JSON.stringify(topics), now, now).run();
+    id = r.meta.last_row_id;
+  }
+  return json({ id, course, name, topics });
+}
+async function adminDeleteGroup(env, id) {
+  await env.DB.prepare('DELETE FROM topic_groups WHERE id = ?').bind(id).run();
+  return json({ ok: true });
 }
 
 async function practiceStart(env, request) {
@@ -844,6 +896,19 @@ async function adminMoveTopics(env, request) {
   if (!toTopic) throw new HttpError(400, 'Enter the new topic name');
   const r = await env.DB.prepare(`UPDATE questions SET course = ?, topic = ?, updated_at = ?
     WHERE course = ? AND topic IN (${from.map(() => '?').join(',')})`).bind(toCourse, toTopic, Date.now(), course, ...from).run();
+  // Keep groups pointing at the right topics: a rename/merge within the course swaps the name in;
+  // topics moved to another course drop out of this course's groups.
+  const updates = [];
+  for (const g of await loadGroups(env, course)) {
+    if (!g.topics.some((t) => from.includes(t))) continue;
+    const next = [];
+    for (const t of g.topics) {
+      const name = from.includes(t) ? (toCourse === course ? toTopic : null) : t;
+      if (name && !next.includes(name)) next.push(name);
+    }
+    updates.push(saveGroupTopics(env, g.id, next));
+  }
+  if (updates.length) await env.DB.batch(updates);
   return json({ moved: r.meta.changes, course: toCourse, topic: toTopic });
 }
 
@@ -856,6 +921,7 @@ async function adminRenameCourse(env, request) {
   const [q] = await env.DB.batch([
     env.DB.prepare('UPDATE questions SET course = ?, updated_at = ? WHERE course = ?').bind(to, now, from),
     env.DB.prepare('UPDATE ranked_tests SET course = ? WHERE course = ?').bind(to, from),
+    env.DB.prepare('UPDATE topic_groups SET course = ?, updated_at = ? WHERE course = ?').bind(to, now, from),
   ]);
   return json({ moved: q.meta.changes, course: to });
 }
@@ -929,6 +995,12 @@ async function route(request, env) {
     if (path === '/api/admin/topics/move' && m === 'POST') return adminMoveTopics(env, request);
     if (path === '/api/admin/courses/rename' && m === 'POST') return adminRenameCourse(env, request);
     if (path === '/api/admin/questions/move' && m === 'POST') return adminMoveQuestions(env, request);
+    if (path === '/api/admin/groups' && m === 'GET') return adminGroups(env);
+    if (path === '/api/admin/groups' && m === 'POST') return adminSaveGroup(env, request, 0);
+    if ((x = path.match(/^\/api\/admin\/groups\/(\d+)$/))) {
+      if (m === 'PUT') return adminSaveGroup(env, request, +x[1]);
+      if (m === 'DELETE') return adminDeleteGroup(env, +x[1]);
+    }
     if (path === '/api/admin/flags' && m === 'GET') return adminFlags(env, url);
     if (path === '/api/admin/flags/resolve' && m === 'POST') return adminResolveFlags(env, request);
     if (path === '/api/admin/players' && m === 'GET') return adminPlayers(env);

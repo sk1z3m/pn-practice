@@ -163,6 +163,13 @@ td.num, th.num { text-align: right; white-space: nowrap; }
 .seg { display: flex; gap: 6px; flex-wrap: wrap; }
 .seg button { flex: 1 1 64px; background: var(--card); color: var(--text); border: 1px solid var(--line); padding: 9px 10px; }
 .seg button.on { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+.seg.wrap button { flex: 0 1 auto; }
+
+/* topic groups */
+.group-links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+.chip { display: inline-block; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: .85rem; color: var(--text); text-decoration: none; background: var(--card); }
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+.chip.stale { text-decoration: line-through; color: var(--muted); }
 
 /* question updates */
 .update-note { display: block; text-decoration: none; color: var(--text); border: 1px solid var(--accent); }

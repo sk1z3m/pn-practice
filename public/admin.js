@@ -53,7 +53,7 @@
   }
 
   // ---------- tabs ----------
-  const tabs = { questions, topics, import: importTab, flags, ranked, players };
+  const tabs = { questions, topics, groups, import: importTab, flags, ranked, players };
   async function start() {
     nav.style.display = '';
     const tab = location.hash.replace('#', '') || 'questions';
@@ -307,6 +307,88 @@
       </div></div>`;
   }
 
+
+  // ---------- groups ----------
+  // Named sets of topics (e.g. "Test 1") that students can pick in one tap on the practice screen.
+  let groupCourse = '';
+  async function groups() {
+    const [t, g] = await Promise.all([api('/api/admin/topics'), api('/api/admin/groups')]);
+    const courses = [...new Set(t.topics.map((x) => x.course))];
+    if (!courses.includes(groupCourse)) groupCourse = courses[0] || '';
+    const topicsHere = t.topics.filter((x) => x.course === groupCourse);
+    const live = Object.fromEntries(topicsHere.map((x) => [x.topic, x.approved || 0]));
+    const list = g.groups.filter((x) => x.course === groupCourse);
+    const liveCount = (grp) => grp.topics.reduce((a, name) => a + (live[name] || 0), 0);
+    html(`
+      <h1>Groups</h1>
+      <p class="small muted">A group is a named set of topics, like “Test 1”. Students see groups as quick-pick buttons when they start practice, and can still adjust the topics after picking one. Renaming or merging a topic on the Topics tab updates any groups that use it.</p>
+      <div class="tabs">${courses.map((c) => `<button data-course="${esc(c)}" class="${c === groupCourse ? 'active' : ''}">${esc(c)}</button>`).join('')}</div>
+      <div id="msg"></div>
+      <div class="row" style="margin-bottom:10px"><span class="small muted">${list.length} group${list.length === 1 ? '' : 's'} in ${esc(groupCourse)}</span><span class="spacer"></span><button class="small" id="newGroup">New group</button></div>
+      <div id="editor"></div>
+      <div id="groupList">${list.length ? list.map((grp) => {
+        const n = liveCount(grp);
+        return `<div class="card" data-id="${grp.id}">
+          <div class="row"><strong>${esc(grp.name)}</strong>
+            <span class="small muted">${grp.topics.length} topic${grp.topics.length === 1 ? '' : 's'} · ${n} live question${n === 1 ? '' : 's'}</span>
+            ${n ? '' : '<span class="pill draft">hidden from students (no live questions)</span>'}
+            <span class="spacer"></span><button class="small ghost" data-act="edit">Edit</button><button class="small ghost" data-act="delete">Delete</button></div>
+          <div class="group-links" style="border:0;padding-top:0">${grp.topics.map((name) => name in live
+            ? `<span class="chip">${esc(name)} <span class="muted">(${live[name]})</span></span>`
+            : `<span class="chip stale" title="No questions in this topic any more">${esc(name)}</span>`).join('')}</div>
+        </div>`;
+      }).join('') : '<div class="card empty">No groups yet. Use “New group” to make one, e.g. “Test 1” with the topics on that test.</div>'}</div>`);
+    const reload = () => groups().catch((e) => html(err(e)));
+    const msg = (text, ok = true) => flash(document.getElementById('msg'), text, ok);
+    document.querySelectorAll('[data-course]').forEach((b) => (b.onclick = () => { groupCourse = b.dataset.course; reload(); }));
+
+    const openEditor = (grp) => {
+      const box = document.getElementById('editor');
+      const chosen = new Set(grp ? grp.topics : []);
+      box.innerHTML = `<div class="card">
+        <strong>${grp ? `Edit “${esc(grp.name)}”` : 'New group'}</strong>
+        <label class="field" style="margin-top:8px"><span>Name</span><input type="text" id="gName" maxlength="60" value="${esc(grp ? grp.name : '')}" placeholder="e.g. Test 1"></label>
+        <div class="field"><span>Topics in ${esc(groupCourse)}</span>
+          <div class="row small" style="margin:2px 0 4px"><a href="#" id="gAll">All</a> · <a href="#" id="gNone">None</a><span class="spacer"></span><span class="muted" id="gCount"></span></div>
+          <div id="gTopics">${topicsHere.map((x) => `<label class="check"><input type="checkbox" value="${esc(x.topic)}" ${chosen.has(x.topic) ? 'checked' : ''}> ${esc(x.topic)} <span class="muted small">(${x.approved || 0} live${x.draft ? `, ${x.draft} draft` : ''})</span></label>`).join('')}</div>
+        </div>
+        <div class="row"><button class="small" id="gSave">Save group</button><button class="small ghost" id="gCancel">Cancel</button></div>
+      </div>`;
+      const ticks = () => [...box.querySelectorAll('#gTopics input')];
+      const count = () => {
+        const sel = ticks().filter((b) => b.checked).map((b) => b.value);
+        const n = sel.reduce((a, name) => a + (live[name] || 0), 0);
+        document.getElementById('gCount').textContent = `${sel.length} topic${sel.length === 1 ? '' : 's'} · ${n} live question${n === 1 ? '' : 's'}`;
+      };
+      count();
+      box.querySelector('#gTopics').onchange = count;
+      document.getElementById('gAll').onclick = (e) => { e.preventDefault(); ticks().forEach((b) => (b.checked = true)); count(); };
+      document.getElementById('gNone').onclick = (e) => { e.preventDefault(); ticks().forEach((b) => (b.checked = false)); count(); };
+      document.getElementById('gCancel').onclick = () => { box.innerHTML = ''; };
+      document.getElementById('gName').focus();
+      document.getElementById('gSave').onclick = async () => {
+        // Only topics that still exist are listed, so saving also drops any stale names.
+        const body = { course: groupCourse, name: document.getElementById('gName').value.trim(), topics: ticks().filter((b) => b.checked).map((b) => b.value) };
+        try {
+          await api(grp ? `/api/admin/groups/${grp.id}` : '/api/admin/groups', { method: grp ? 'PUT' : 'POST', body });
+          await groups();
+          msg(`${grp ? 'Saved' : 'Created'} “${body.name}”.`);
+        } catch (e) { flash(document.getElementById('msg'), e.message, false); }
+      };
+      box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    };
+    document.getElementById('newGroup').onclick = () => openEditor(null);
+    document.getElementById('groupList').onclick = async (e) => {
+      const b = e.target.closest('button[data-act]'); if (!b) return;
+      const grp = list.find((x) => String(x.id) === b.closest('[data-id]').dataset.id);
+      if (b.dataset.act === 'edit') return openEditor(grp);
+      if (b.dataset.act === 'delete') {
+        if (!confirm(`Delete the group “${grp.name}”? Questions and topics aren't affected.`)) return;
+        try { await api(`/api/admin/groups/${grp.id}`, { method: 'DELETE' }); await groups(); msg(`Deleted “${grp.name}”.`); }
+        catch (e2) { msg(e2.message, false); }
+      }
+    };
+  }
 
   // ---------- topics ----------
   let topicCache = null;

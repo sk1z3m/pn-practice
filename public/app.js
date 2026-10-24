@@ -45,6 +45,7 @@
   const routes = [
     [/^\/?$/, home],
     [/^\/welcome$/, welcome],
+    [/^\/practice\/([^/]+)\/(.+)$/, (m) => practiceSetup(decodeURIComponent(m[1]), decodeURIComponent(m[2]))],
     [/^\/practice\/(.+)$/, (m) => practiceSetup(decodeURIComponent(m[1]))],
     [/^\/ranked\/(\d+)$/, (m) => rankedIntro(+m[1])],
     [/^\/review\/(\d+)$/, (m) => rankedReview(+m[1])],
@@ -214,10 +215,13 @@
       <h2>Practice</h2>
       <p class="small muted">Unlimited attempts, a new mix of questions each time, and instant feedback.</p>
       ${cat.courses.length ? cat.courses.map((c) => `
-        <a class="card row" style="text-decoration:none;color:inherit" href="#/practice/${encodeURIComponent(c.course)}">
-          <div><strong>${esc(c.course)}</strong><div class="small muted">${c.total} questions · ${c.topics.length} topic${c.topics.length === 1 ? '' : 's'}</div></div>
-          <span class="spacer"></span><span class="btn small">Practise</span>
-        </a>`).join('') : '<div class="card empty">No practice questions yet.</div>'}
+        <div class="card">
+          <a class="row" style="text-decoration:none;color:inherit" href="#/practice/${encodeURIComponent(c.course)}">
+            <div><strong>${esc(c.course)}</strong><div class="small muted">${c.total} questions · ${c.topics.length} topic${c.topics.length === 1 ? '' : 's'}</div></div>
+            <span class="spacer"></span><span class="btn small">Practise</span>
+          </a>
+          ${c.groups.length ? `<div class="group-links">${c.groups.map((g) => `<a class="chip" href="#/practice/${encodeURIComponent(c.course)}/${encodeURIComponent(g.name)}">${esc(g.name)}</a>`).join('')}</div>` : ''}
+        </div>`).join('') : '<div class="card empty">No practice questions yet.</div>'}
       <h2>Ranked tests</h2>
       <p class="small muted">One attempt. Everyone gets the same questions. Answers unlock when the test closes.</p>
       ${open.length ? open.map(rankedCard).join('') : '<div class="card empty">No ranked tests open right now.</div>'}
@@ -286,17 +290,28 @@
     rememberSeen(r.questions.map((q) => q.id));
     return r;
   }
-  async function practiceSetup(course) {
+  async function practiceSetup(course, groupName) {
     const cat = await api('/api/catalog');
     const c = cat.courses.find((x) => x.course === course);
     if (!c) { html(`<div class="notice">No practice questions for ${esc(course)} yet.</div><a href="#/">Back</a>`); return; }
+    const startGroup = groupName ? c.groups.find((g) => g.name.toLowerCase() === groupName.toLowerCase()) : null;
+    const startTopics = startGroup ? startGroup.topics : c.topics.map((t) => t.topic);
     html(`
       <p class="small"><a href="#/">← Home</a></p>
       <h1>${esc(course)} practice</h1>
+      ${groupName && !startGroup ? `<div class="notice small">“${esc(groupName)}” isn't available any more, so all topics are selected.</div>` : ''}
       <div class="card">
+        ${c.groups.length ? `
+        <div class="field" style="margin-bottom:12px"><span>Quick pick</span>
+          <div class="seg wrap" id="groupSeg" role="radiogroup" aria-label="Quick pick">
+            ${c.groups.map((g) => `<button type="button" role="radio" data-group="${g.id}">${esc(g.name)}</button>`).join('')}
+            <button type="button" role="radio" data-group="all">All topics</button>
+          </div>
+          <div class="small muted" id="groupNote" style="margin-top:6px"></div>
+        </div>` : ''}
         <strong>Topics</strong>
         <div class="row small" style="margin:4px 0"><a href="#" id="all">All</a> · <a href="#" id="none">None</a></div>
-        <div id="topics">${c.topics.map((t) => `<label class="check"><input type="checkbox" value="${esc(t.topic)}" checked> ${esc(t.topic)} <span class="muted small">(${t.n})</span></label>`).join('')}</div>
+        <div id="topics">${c.topics.map((t) => `<label class="check"><input type="checkbox" value="${esc(t.topic)}" ${startTopics.includes(t.topic) ? 'checked' : ''}> ${esc(t.topic)} <span class="muted small">(${t.n})</span></label>`).join('')}</div>
         <div class="field" style="margin-top:12px"><span>Number of questions</span>
           <div class="seg" id="countSeg" role="radiogroup" aria-label="Number of questions">
             ${[10, 20, 40].map((n) => `<button type="button" role="radio" data-n="${n}" aria-checked="${n === 10}" class="${n === 10 ? 'on' : ''}">${n}</button>`).join('')}
@@ -316,11 +331,35 @@
     let choice = 10;
     const seg = document.getElementById('countSeg'), customWrap = document.getElementById('customWrap'), customInput = document.getElementById('customCount');
     const wanted = () => (choice === 'custom' ? parseInt(customInput.value, 10) : choice);
+    // Quick pick: a group ticks exactly its topics. Ticking boxes by hand lights up whichever
+    // group (if any) now matches the selection exactly.
+    const groupSeg = document.getElementById('groupSeg');
+    const syncGroups = () => {
+      if (!groupSeg) return;
+      const sel = boxes().filter((b) => b.checked).map((b) => b.value).sort().join('\n');
+      const key = (list) => [...list].sort().join('\n');
+      const match = c.groups.find((g) => key(g.topics) === sel);
+      const id = match ? String(match.id) : sel === key(c.topics.map((t) => t.topic)) ? 'all' : null;
+      groupSeg.querySelectorAll('button').forEach((b) => {
+        const on = b.dataset.group === id;
+        b.classList.toggle('on', on);
+        b.setAttribute('aria-checked', on);
+      });
+      document.getElementById('groupNote').textContent = match
+        ? `${match.topics.length} topic${match.topics.length === 1 ? '' : 's'}: ${match.topics.join(', ')}` : '';
+    };
+    if (groupSeg) groupSeg.onclick = (e) => {
+      const b = e.target.closest('button'); if (!b) return;
+      const g = c.groups.find((x) => String(x.id) === b.dataset.group);
+      boxes().forEach((x) => (x.checked = g ? g.topics.includes(x.value) : true));
+      updateNote();
+    };
     const updateNote = () => {
       const n = available(), w = wanted();
       document.getElementById('availNote').textContent = !n ? 'Pick at least one topic.'
         : Number.isInteger(w) && w > n ? `Only ${n} question${n === 1 ? '' : 's'} in the topics you picked, so you'll get all ${n}.`
         : `${n} question${n === 1 ? '' : 's'} available in the topics you picked.`;
+      syncGroups();
     };
     seg.onclick = (e) => {
       const b = e.target.closest('button'); if (!b) return;
