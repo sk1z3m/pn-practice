@@ -473,7 +473,10 @@ Reply with ONLY valid JSON in exactly this format, no other text:
         <div id="preview"></div>
         <div class="row"><button class="secondary" id="check">Check</button><button id="go" disabled>Import as drafts</button></div>
         <p class="small muted" style="margin-top:8px">Imported questions start as drafts. Review them on the Questions tab and approve the good ones before students see them.</p>
-      </div>`);
+      </div>
+      <h2>Recent imports</h2>
+      <div id="importList" class="card"><p class="muted small">Loading…</p></div>`);
+    loadImports();
     document.getElementById('copyPrompt').onclick = async (e) => { try { await navigator.clipboard.writeText(PROMPT); e.target.textContent = 'Copied'; } catch {} };
     let parsed = null;
     const check = () => {
@@ -520,10 +523,48 @@ Reply with ONLY valid JSON in exactly this format, no other text:
           course: document.getElementById('dCourse').value.trim() || parsed.course,
           source: document.getElementById('dSource').value.trim(),
           questions: parsed.list } });
-        document.getElementById('preview').innerHTML = `<div class="notice good">Imported ${r.imported} questions as drafts. <a href="#questions">Review them →</a></div>`;
+        document.getElementById('preview').innerHTML = `<div class="notice good">Imported ${r.imported} questions as drafts. <a href="#questions">Review them →</a> Not what you expected? Undo it under Recent imports below.</div>`;
         document.getElementById('json').value = '';
-        qState.status = 'draft';
+        qState.status = 'draft'; topicCache = null;
+        loadImports();
       } catch (e2) { document.getElementById('preview').innerHTML = err(e2); e.target.disabled = false; }
+    };
+  }
+
+  async function loadImports() {
+    const box = document.getElementById('importList');
+    if (!box) return;
+    let r;
+    try { r = await api('/api/admin/imports'); } catch (e) { box.innerHTML = err(e); return; }
+    if (!r.imports.length) { box.innerHTML = '<div class="empty">No imports yet.</div>'; return; }
+    box.innerHTML = `<div class="table-wrap"><table><thead><tr><th>Uploaded</th><th>Course</th><th class="num">Questions</th><th class="num">Topics</th><th>Used by students</th><th></th></tr></thead><tbody>
+      ${r.imports.map((i, k) => {
+        const used = [i.answers && `${i.answers} answer${i.answers === 1 ? '' : 's'}`, i.flags && `${i.flags} flag${i.flags === 1 ? '' : 's'}`, i.inRanked && `${i.inRanked} in ranked test`].filter(Boolean).join(', ');
+        return `<tr data-imp="${i.id}">
+          <td class="small">${fmtDate(i.created_at)}${k === 0 ? ' <span class="pill">latest</span>' : ''}</td>
+          <td class="small">${esc(i.courses)}</td>
+          <td class="num">${i.remaining}${i.remaining !== i.uploaded ? `<span class="small muted"> of ${i.uploaded}</span>` : ''}</td>
+          <td class="num">${i.topics}</td>
+          <td class="small ${used ? '' : 'muted'}">${used || 'not yet'}${i.edited ? `<div class="muted">${i.edited} edited since upload</div>` : ''}</td>
+          <td><button class="small danger" data-undo="${i.id}" ${i.inRanked ? 'disabled title="Some of these questions are in a ranked test"' : ''}>Undo</button></td></tr>`;
+      }).join('')}</tbody></table></div>
+      <p class="small muted" style="margin:8px 0 0">Undo permanently deletes that upload's questions, along with any practice history, flags and update notices attached to them.</p>`;
+    box.onclick = async (e) => {
+      const b = e.target.closest('[data-undo]'); if (!b) return;
+      const i = r.imports.find((x) => x.id === +b.dataset.undo);
+      const warn = [
+        i.answers && `• students have answered these ${i.answers} time${i.answers === 1 ? '' : 's'} (that practice history will be removed)`,
+        i.flags && `• ${i.flags} flag${i.flags === 1 ? '' : 's'} will be removed`,
+        i.edited && `• you've edited ${i.edited} of these questions since uploading`,
+      ].filter(Boolean).join('\n');
+      if (!confirm(`Undo the ${i.courses} upload from ${fmtDate(i.created_at)}?\n\nThis permanently deletes its ${i.remaining} question${i.remaining === 1 ? '' : 's'} (${i.topics} topic${i.topics === 1 ? '' : 's'}).${warn ? '\n\n' + warn : ''}`)) return;
+      b.disabled = true;
+      try {
+        const res = await api(`/api/admin/imports/${i.id}/undo`, { method: 'POST' });
+        topicCache = null;
+        await loadImports();
+        document.getElementById('importList').insertAdjacentHTML('afterbegin', `<div class="notice good">Removed ${res.removed} question${res.removed === 1 ? '' : 's'}.</div>`);
+      } catch (e2) { b.disabled = false; box.insertAdjacentHTML('afterbegin', err(e2)); }
     };
   }
 

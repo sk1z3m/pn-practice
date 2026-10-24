@@ -543,10 +543,45 @@ async function adminImport(env, request) {
   const status = body.status === 'approved' ? 'approved' : 'draft';
   const clean = list.map((raw, i) => validateQuestion({ ...defaults, ...raw, course: raw.course || defaults.course }, i + 1));
   const now = Date.now();
-  const stmt = env.DB.prepare(`INSERT INTO questions (course, topic, stem, options, answer, rationale, source, status, created_at, updated_at)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
-  await env.DB.batch(clean.map((q) => stmt.bind(q.course, q.topic, q.stem, JSON.stringify(q.options), q.answer, q.rationale, q.source, status, now, now)));
-  return json({ imported: clean.length, status });
+  const courses = [...new Set(clean.map((q) => q.course))].join(', ');
+  const imp = await env.DB.prepare('INSERT INTO imports (created_at, courses, count, status) VALUES (?, ?, ?, ?) RETURNING id')
+    .bind(now, courses, clean.length, status).first();
+  const stmt = env.DB.prepare(`INSERT INTO questions (course, topic, stem, options, answer, rationale, source, status, created_at, updated_at, import_id)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
+  await env.DB.batch(clean.map((q) => stmt.bind(q.course, q.topic, q.stem, JSON.stringify(q.options), q.answer, q.rationale, q.source, status, now, now, imp.id)));
+  return json({ imported: clean.length, status, importId: imp.id });
+}
+
+// Recent uploads with what depends on them, so the admin can undo safely
+async function adminImports(env) {
+  const { results } = await env.DB.prepare(`SELECT i.id, i.created_at, i.courses, i.count AS uploaded,
+      (SELECT COUNT(*) FROM questions q WHERE q.import_id = i.id) AS remaining,
+      (SELECT COUNT(DISTINCT q.topic) FROM questions q WHERE q.import_id = i.id) AS topics,
+      (SELECT COUNT(*) FROM questions q WHERE q.import_id = i.id AND q.updated_at > q.created_at) AS edited,
+      (SELECT COUNT(*) FROM practice_answers pa JOIN questions q ON q.id = pa.question_id WHERE q.import_id = i.id) AS answers,
+      (SELECT COUNT(*) FROM flags f JOIN questions q ON q.id = f.question_id WHERE q.import_id = i.id) AS flags,
+      (SELECT COUNT(*) FROM ranked_questions rq JOIN questions q ON q.id = rq.question_id WHERE q.import_id = i.id) AS inRanked
+    FROM imports i ORDER BY i.created_at DESC LIMIT 15`).all();
+  return json({ imports: results });
+}
+
+// Delete every question from one upload, plus the practice history, flags and notices tied to them
+async function adminUndoImport(env, id) {
+  const imp = await env.DB.prepare('SELECT * FROM imports WHERE id = ?').bind(id).first();
+  if (!imp) throw new HttpError(404, 'Import not found');
+  const ranked = await env.DB.prepare(`SELECT COUNT(*) AS n FROM ranked_questions rq JOIN questions q ON q.id = rq.question_id
+    WHERE q.import_id = ?`).bind(id).first();
+  if (ranked.n) throw new HttpError(409, `${ranked.n} question${ranked.n === 1 ? ' from this upload is' : 's from this upload are'} in a ranked test. Delete that test first, or retire the questions instead.`);
+  const sub = 'SELECT id FROM questions WHERE import_id = ?';
+  const res = await env.DB.batch([
+    env.DB.prepare(`DELETE FROM practice_answers WHERE question_id IN (${sub})`).bind(id),
+    env.DB.prepare(`DELETE FROM question_seen WHERE question_id IN (${sub})`).bind(id),
+    env.DB.prepare(`DELETE FROM flags WHERE question_id IN (${sub})`).bind(id),
+    env.DB.prepare(`DELETE FROM notifications WHERE question_id IN (${sub})`).bind(id),
+    env.DB.prepare('DELETE FROM questions WHERE import_id = ?').bind(id),
+    env.DB.prepare('DELETE FROM imports WHERE id = ?').bind(id),
+  ]);
+  return json({ removed: res[4].meta.changes });
 }
 
 async function adminUpdateQuestion(env, request, id) {
@@ -875,6 +910,8 @@ async function route(request, env) {
     if (path === '/api/admin/check') return json({ ok: true });
     if (path === '/api/admin/questions' && m === 'GET') return adminQuestions(env, request, url);
     if (path === '/api/admin/questions/import' && m === 'POST') return adminImport(env, request);
+    if (path === '/api/admin/imports' && m === 'GET') return adminImports(env);
+    if ((x = path.match(/^\/api\/admin\/imports\/(\d+)\/undo$/)) && m === 'POST') return adminUndoImport(env, +x[1]);
     if (path === '/api/admin/questions/status' && m === 'POST') return adminBulkStatus(env, request);
     if ((x = path.match(/^\/api\/admin\/questions\/(\d+)$/))) {
       if (m === 'PUT') return adminUpdateQuestion(env, request, +x[1]);
