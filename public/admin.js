@@ -206,13 +206,37 @@
 
 
   // ---------- flags ----------
+  // Alert banner + nav badge for open flags. Dismissing hides it until more flags come in.
+  const FLAG_SEEN = 'pn_flag_dismissed';
   async function refreshFlagCount() {
     try {
       const r = await api('/api/admin/flags?status=open');
-      const n = r.counts.open || 0;
-      document.getElementById('flagCount').textContent = n ? ` (${n})` : '';
+      const n = r.counts.open || 0, qs = r.groups.length;
+      const badge = document.getElementById('flagCount');
+      badge.textContent = n ? String(n) : '';
+      badge.className = n ? 'navbadge' : '';
+      let bar = document.getElementById('flagAlert');
+      if (!bar) {
+        bar = document.createElement('div');
+        bar.id = 'flagAlert'; bar.setAttribute('role', 'status');
+        document.getElementById('app').before(bar);
+      }
+      let dismissed = 0;
+      try { dismissed = +sessionStorage.getItem(FLAG_SEEN) || 0; } catch {}
+      if (n < dismissed) { dismissed = n; try { sessionStorage.setItem(FLAG_SEEN, String(n)); } catch {} } // so a new flag shows again
+      const onFlags = (location.hash.replace('#', '') || '').startsWith('flags');
+      if (!n || onFlags || n <= dismissed) { bar.innerHTML = ''; return; }
+      bar.innerHTML = `<div class="flag-alert"><span>⚑ <strong>${n} flag${n === 1 ? '' : 's'}</strong> on ${qs} question${qs === 1 ? '' : 's'} waiting for review.</span>
+        <span class="spacer"></span><a class="btn small" href="#flags">Review flags</a>
+        <button class="small ghost" id="flagAlertX" aria-label="Dismiss" title="Hide until new flags arrive">✕</button></div>`;
+      document.getElementById('flagAlertX').onclick = () => {
+        try { sessionStorage.setItem(FLAG_SEEN, String(n)); } catch {}
+        bar.innerHTML = '';
+      };
     } catch {}
   }
+  // Check for new flags every minute while the admin page is open
+  setInterval(() => { if (adminKey && document.visibilityState === 'visible') refreshFlagCount(); }, 60000);
   let flagStatus = 'open';
   async function flags() {
     const r = await api('/api/admin/flags?status=' + flagStatus);
