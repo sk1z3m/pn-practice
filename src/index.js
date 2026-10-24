@@ -566,11 +566,15 @@ async function adminQuestions(env, request, url) {
   const status = url.searchParams.get('status');
   const course = url.searchParams.get('course');
   const q = url.searchParams.get('q');
-  let sql = `SELECT q.*, (SELECT COUNT(*) FROM ranked_questions rq WHERE rq.question_id = q.id) AS inRanked,
-      (SELECT COUNT(*) FROM practice_answers pa WHERE pa.question_id = q.id) AS answered,
-      (SELECT SUM(correct) FROM practice_answers pa WHERE pa.question_id = q.id) AS answeredCorrect,
-      (SELECT COUNT(*) FROM flags f WHERE f.question_id = q.id AND f.status = 'open') AS openFlags
-    FROM questions q WHERE 1=1`;
+  // Per-question stats come from one grouped pass over each table. (Correlated subqueries here
+  // re-scanned practice_answers for every question: ~400k D1 row reads per page load.)
+  let sql = `SELECT q.*, COALESCE(r.n, 0) AS inRanked, COALESCE(a.n, 0) AS answered, a.c AS answeredCorrect,
+      COALESCE(f.n, 0) AS openFlags
+    FROM questions q
+    LEFT JOIN (SELECT question_id, COUNT(*) AS n FROM ranked_questions GROUP BY question_id) r ON r.question_id = q.id
+    LEFT JOIN (SELECT question_id, COUNT(*) AS n, SUM(correct) AS c FROM practice_answers GROUP BY question_id) a ON a.question_id = q.id
+    LEFT JOIN (SELECT question_id, COUNT(*) AS n FROM flags WHERE status = 'open' GROUP BY question_id) f ON f.question_id = q.id
+    WHERE 1=1`;
   const b = [];
   if (status) { sql += ' AND q.status = ?'; b.push(status); }
   if (course) { sql += ' AND q.course = ?'; b.push(course); }
