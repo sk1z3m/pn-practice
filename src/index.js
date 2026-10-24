@@ -713,6 +713,60 @@ async function deletePlayerData(env, p) {
   return { deleted: p.nickname, practiceAnswers: practice.meta.changes, rankedAttempts: attempts.meta.changes };
 }
 
+// ---------- topics & courses (organise the question bank) ----------
+
+async function adminTopics(env) {
+  const { results } = await env.DB.prepare(`SELECT course, topic,
+      COUNT(*) AS total,
+      SUM(status = 'approved') AS approved, SUM(status = 'draft') AS draft, SUM(status = 'retired') AS retired
+    FROM questions GROUP BY course, topic ORDER BY course, topic`).all();
+  return json({ topics: results });
+}
+
+// Move every question in the given topics (within one course) to a new topic name and/or course.
+// Renaming to a topic that already exists merges them.
+async function adminMoveTopics(env, request) {
+  const body = await readBody(request);
+  const course = cleanText(body.course, 100);
+  const from = [...new Set((Array.isArray(body.topics) ? body.topics : []).map((t) => cleanText(t, 100)).filter(Boolean))];
+  const toCourse = cleanText(body.toCourse, 100) || course;
+  const toTopic = cleanText(body.toTopic, 100);
+  if (!course || !from.length) throw new HttpError(400, 'Pick at least one topic');
+  if (!toTopic) throw new HttpError(400, 'Enter the new topic name');
+  const r = await env.DB.prepare(`UPDATE questions SET course = ?, topic = ?, updated_at = ?
+    WHERE course = ? AND topic IN (${from.map(() => '?').join(',')})`).bind(toCourse, toTopic, Date.now(), course, ...from).run();
+  return json({ moved: r.meta.changes, course: toCourse, topic: toTopic });
+}
+
+// Rename a course, or merge it into another course (topics keep their names).
+async function adminRenameCourse(env, request) {
+  const body = await readBody(request);
+  const from = cleanText(body.from, 100), to = cleanText(body.to, 100);
+  if (!from || !to) throw new HttpError(400, 'Enter the new course name');
+  const now = Date.now();
+  const [q] = await env.DB.batch([
+    env.DB.prepare('UPDATE questions SET course = ?, updated_at = ? WHERE course = ?').bind(to, now, from),
+    env.DB.prepare('UPDATE ranked_tests SET course = ? WHERE course = ?').bind(to, from),
+  ]);
+  return json({ moved: q.meta.changes, course: to });
+}
+
+// Set course and/or topic on hand-picked questions.
+async function adminMoveQuestions(env, request) {
+  const body = await readBody(request);
+  const ids = [...new Set((body.ids || []).map((x) => parseInt(x, 10)).filter(Number.isInteger))];
+  const course = cleanText(body.course, 100), topic = cleanText(body.topic, 100);
+  if (!ids.length) throw new HttpError(400, 'Select some questions first');
+  if (!course && !topic) throw new HttpError(400, 'Enter a topic or course');
+  const sets = [], binds = [];
+  if (course) { sets.push('course = ?'); binds.push(course); }
+  if (topic) { sets.push('topic = ?'); binds.push(topic); }
+  const stmt = env.DB.prepare(`UPDATE questions SET ${sets.join(', ')}, updated_at = ? WHERE id = ?`);
+  const now = Date.now();
+  await env.DB.batch(ids.map((id) => stmt.bind(...binds, now, id)));
+  return json({ moved: ids.length });
+}
+
 // ---------- router ----------
 
 async function route(request, env) {
@@ -758,6 +812,10 @@ async function route(request, env) {
     }
     if ((x = path.match(/^\/api\/admin\/ranked\/(\d+)\/results$/)) && m === 'GET') return adminRankedResults(env, +x[1]);
     if ((x = path.match(/^\/api\/admin\/attempts\/(\d+)$/)) && m === 'DELETE') return adminDeleteAttempt(env, +x[1]);
+    if (path === '/api/admin/topics' && m === 'GET') return adminTopics(env);
+    if (path === '/api/admin/topics/move' && m === 'POST') return adminMoveTopics(env, request);
+    if (path === '/api/admin/courses/rename' && m === 'POST') return adminRenameCourse(env, request);
+    if (path === '/api/admin/questions/move' && m === 'POST') return adminMoveQuestions(env, request);
     if (path === '/api/admin/flags' && m === 'GET') return adminFlags(env, url);
     if (path === '/api/admin/flags/resolve' && m === 'POST') return adminResolveFlags(env, request);
     if (path === '/api/admin/players' && m === 'GET') return adminPlayers(env);

@@ -53,7 +53,7 @@
   }
 
   // ---------- tabs ----------
-  const tabs = { questions, import: importTab, flags, ranked, players };
+  const tabs = { questions, topics, import: importTab, flags, ranked, players };
   async function start() {
     nav.style.display = '';
     const tab = location.hash.replace('#', '') || 'questions';
@@ -91,12 +91,42 @@
       <div class="bar row">
         <label class="check"><input type="checkbox" id="selAll"> Select all (${r.questions.length})</label>
         <span class="spacer"></span>
+        <button class="small secondary" id="moveOpen">Move selected…</button>
         <button class="small" data-bulk="approved">Approve selected</button>
         <button class="small ghost" data-bulk="draft">Move to drafts</button>
         <button class="small danger" data-bulk="retired">Retire selected</button>
       </div>
+      <div id="moveBox" class="card" hidden>
+        <strong>Move selected questions</strong>
+        <div class="grid2" style="margin-top:8px">
+          <label class="field"><span>Course (leave as-is to keep)</span>
+            <select id="mvCourse"><option value="">Keep current course</option>${r.courses.map((x) => `<option>${esc(x)}</option>`).join('')}</select></label>
+          <label class="field"><span>Topic</span><input type="text" id="mvTopic" list="allTopics" placeholder="Pick or type a topic"></label>
+        </div>
+        <div class="row"><button class="small" id="moveGo">Move</button><button class="small ghost" id="moveCancel">Cancel</button></div>
+      </div>
+      <datalist id="allTopics"></datalist>
       <div id="msg"></div>
       <div id="list">${r.questions.length ? r.questions.map(qCard).join('') : '<div class="card empty">Nothing here.</div>'}</div>`);
+    fillTopicList();
+    const selectedIds = () => [...document.querySelectorAll('.sel:checked')].map((x) => +x.value);
+    document.getElementById('moveOpen').onclick = () => {
+      if (!selectedIds().length) return flash(document.getElementById('msg'), 'Select some questions first', false);
+      document.getElementById('moveBox').hidden = false; document.getElementById('mvTopic').focus();
+    };
+    document.getElementById('moveCancel').onclick = () => { document.getElementById('moveBox').hidden = true; };
+    document.getElementById('moveGo').onclick = async () => {
+      const ids = selectedIds();
+      const course = document.getElementById('mvCourse').value, topic = document.getElementById('mvTopic').value.trim();
+      if (!ids.length) return flash(document.getElementById('msg'), 'Select some questions first', false);
+      if (!course && !topic) return flash(document.getElementById('msg'), 'Pick a course or enter a topic', false);
+      try {
+        const res = await api('/api/admin/questions/move', { method: 'POST', body: { ids, course, topic } });
+        topicCache = null;
+        await questions();
+        flash(document.getElementById('msg'), `Moved ${res.moved} question${res.moved === 1 ? '' : 's'}${topic ? ` to “${topic}”` : ''}${course ? ` in ${course}` : ''}.`);
+      } catch (e2) { flash(document.getElementById('msg'), e2.message, false); }
+    };
 
     const reload = () => questions().catch((e) => html(err(e)));
     document.getElementById('fStatus').onchange = (e) => { qState.status = e.target.value; reload(); };
@@ -144,7 +174,7 @@
     el.innerHTML = `<form class="stack" id="ef${q.id}">
       <div class="grid2">
         <label class="field"><span>Course</span><input type="text" name="course" value="${esc(q.course)}"></label>
-        <label class="field"><span>Topic</span><input type="text" name="topic" value="${esc(q.topic)}"></label>
+        <label class="field"><span>Topic</span><input type="text" name="topic" value="${esc(q.topic)}" list="allTopics"></label>
       </div>
       <label class="field"><span>Question</span><textarea name="stem">${esc(q.stem)}</textarea></label>
       ${[0, 1, 2, 3, 4, 5].map((i) => `<div class="row"><label class="check" title="Correct answer"><input type="radio" name="answer" value="${i}" ${i === q.answer ? 'checked' : ''}> ${L(i)}</label>
@@ -243,6 +273,137 @@
           <button class="small ghost" data-act="dismiss">Dismiss</button>`
         : '<button class="small ghost" data-act="reopen">Reopen</button>'}
       </div></div>`;
+  }
+
+
+  // ---------- topics ----------
+  let topicCache = null;
+  async function fillTopicList() {
+    try {
+      if (!topicCache) topicCache = (await api('/api/admin/topics')).topics;
+      const dl = document.getElementById('allTopics');
+      if (dl) dl.innerHTML = [...new Set(topicCache.map((t) => t.topic))].sort().map((t) => `<option value="${esc(t)}">`).join('');
+    } catch {}
+  }
+  let topicCourse = '';
+  async function topics() {
+    const r = await api('/api/admin/topics');
+    topicCache = r.topics;
+    const courses = [...new Set(r.topics.map((t) => t.course))];
+    if (!courses.includes(topicCourse)) topicCourse = courses[0] || '';
+    const list = r.topics.filter((t) => t.course === topicCourse);
+    const sum = (k) => list.reduce((a, t) => a + (t[k] || 0), 0);
+    html(`
+      <h1>Topics</h1>
+      <p class="small muted">Rename topics, merge several into one, or move them to another course. Renaming a topic to a name that already exists merges them. Students see these topics when they set up practice.</p>
+      <div class="tabs">${courses.map((c) => `<button data-course="${esc(c)}" class="${c === topicCourse ? 'active' : ''}">${esc(c)}</button>`).join('')}</div>
+      <div class="card">
+        <div class="row"><strong>${esc(topicCourse)}</strong><span class="small muted">${list.length} topic${list.length === 1 ? '' : 's'} · ${sum('approved')} live · ${sum('draft')} drafts · ${sum('retired')} retired</span>
+          <span class="spacer"></span><button class="small ghost" id="courseRename">Rename or merge course…</button></div>
+        <div id="courseBox" hidden style="margin-top:10px">
+          <label class="field"><span>New course name (pick an existing course to merge into it)</span>
+            <input type="text" id="courseTo" list="courseList" value="${esc(topicCourse)}"></label>
+          <datalist id="courseList">${courses.filter((c) => c !== topicCourse).map((c) => `<option value="${esc(c)}">`).join('')}</datalist>
+          <div class="row"><button class="small" id="courseGo">Save</button><button class="small ghost" id="courseCancel">Cancel</button></div>
+        </div>
+      </div>
+      <div class="bar row">
+        <label class="check"><input type="checkbox" id="tAll"> Select all</label>
+        <span class="small muted" id="tCount"></span>
+        <span class="spacer"></span>
+        <button class="small" id="mergeOpen">Merge / move selected…</button>
+      </div>
+      <div id="mergeBox" class="card" hidden>
+        <strong>Move <span id="mergeN"></span> into one topic</strong>
+        <div class="grid2" style="margin-top:8px">
+          <label class="field"><span>Topic name</span><input type="text" id="mergeTo" list="allTopics" placeholder="e.g. Stress & coping"></label>
+          <label class="field"><span>Course</span><select id="mergeCourse">${courses.map((c) => `<option ${c === topicCourse ? 'selected' : ''}>${esc(c)}</option>`).join('')}</select></label>
+        </div>
+        <div class="row"><button class="small" id="mergeGo">Move questions</button><button class="small ghost" id="mergeCancel">Cancel</button></div>
+      </div>
+      <datalist id="allTopics"></datalist>
+      <div id="msg"></div>
+      <div class="card table-wrap">
+        ${list.length ? `<table><thead><tr><th></th><th>Topic</th><th class="num">Live</th><th class="num">Drafts</th><th class="num">Retired</th><th></th></tr></thead><tbody>
+          ${list.map((t) => `<tr data-topic="${esc(t.topic)}">
+            <td><input type="checkbox" class="tsel" value="${esc(t.topic)}"></td>
+            <td class="tname">${esc(t.topic)}</td>
+            <td class="num">${t.approved || 0}</td><td class="num">${t.draft || 0}</td><td class="num">${t.retired || 0}</td>
+            <td class="row" style="justify-content:flex-end"><button class="small ghost" data-act="rename">Rename</button><button class="small ghost" data-act="view">View</button></td></tr>`).join('')}
+        </tbody></table>` : '<div class="empty">No topics in this course.</div>'}
+      </div>`);
+    fillTopicList();
+    const reload = () => topics().catch((e) => html(err(e)));
+    const msg = (t, ok = true) => flash(document.getElementById('msg'), t, ok);
+    const selected = () => [...document.querySelectorAll('.tsel:checked')].map((b) => b.value);
+    const updateCount = () => {
+      const s = selected(), n = s.reduce((a, name) => a + (list.find((t) => t.topic === name)?.total || 0), 0);
+      document.getElementById('tCount').textContent = s.length ? `${s.length} topic${s.length === 1 ? '' : 's'}, ${n} question${n === 1 ? '' : 's'}` : '';
+      document.getElementById('mergeN').textContent = `${s.length} topic${s.length === 1 ? '' : 's'} (${n} question${n === 1 ? '' : 's'})`;
+    };
+    document.querySelectorAll('[data-course]').forEach((b) => (b.onclick = () => { topicCourse = b.dataset.course; reload(); }));
+    document.getElementById('tAll').onchange = (e) => { document.querySelectorAll('.tsel').forEach((b) => (b.checked = e.target.checked)); updateCount(); };
+    document.querySelector('.table-wrap').onchange = updateCount;
+
+    // merge / move selected topics
+    document.getElementById('mergeOpen').onclick = () => {
+      if (!selected().length) return msg('Tick the topics you want to merge or move', false);
+      updateCount(); document.getElementById('mergeBox').hidden = false; document.getElementById('mergeTo').focus();
+    };
+    document.getElementById('mergeCancel').onclick = () => { document.getElementById('mergeBox').hidden = true; };
+    document.getElementById('mergeGo').onclick = async () => {
+      const from = selected(), toTopic = document.getElementById('mergeTo').value.trim(), toCourse = document.getElementById('mergeCourse').value;
+      if (!from.length) return msg('Tick the topics you want to merge or move', false);
+      if (!toTopic) return msg('Enter the topic name to move them into', false);
+      try {
+        const res = await api('/api/admin/topics/move', { method: 'POST', body: { course: topicCourse, topics: from, toTopic, toCourse } });
+        if (toCourse !== topicCourse) topicCourse = toCourse;
+        await topics();
+        msg(`Moved ${res.moved} question${res.moved === 1 ? '' : 's'} from ${from.length} topic${from.length === 1 ? '' : 's'} into “${res.topic}”.`);
+      } catch (e) { msg(e.message, false); }
+    };
+
+    // rename one topic inline
+    document.querySelector('.table-wrap').onclick = async (e) => {
+      const b = e.target.closest('button'); if (!b) return;
+      const row = b.closest('tr'), name = row.dataset.topic;
+      if (b.dataset.act === 'view') { qState.status = ''; qState.course = topicCourse; qState.topic = name; qState.q = ''; location.hash = '#questions'; return; }
+      if (b.dataset.act === 'rename') {
+        const cell = row.querySelector('.tname');
+        cell.innerHTML = `<form class="row" style="gap:6px"><input type="text" value="${esc(name)}" list="allTopics" style="flex:1;min-width:160px"><button class="small">Save</button><button type="button" class="small ghost" data-cancel>Cancel</button></form>`;
+        const form = cell.querySelector('form'), input = form.querySelector('input');
+        input.focus(); input.select();
+        form.querySelector('[data-cancel]').onclick = () => { cell.textContent = name; };
+        form.onsubmit = async (ev) => {
+          ev.preventDefault();
+          const to = input.value.trim();
+          if (!to || to === name) { cell.textContent = name; return; }
+          const existing = list.find((t) => t.topic === to);
+          if (existing && !confirm(`“${to}” already exists. Merge “${name}” into it?`)) return;
+          try {
+            const res = await api('/api/admin/topics/move', { method: 'POST', body: { course: topicCourse, topics: [name], toTopic: to } });
+            await topics();
+            msg(existing ? `Merged “${name}” into “${to}” (${res.moved} questions).` : `Renamed “${name}” to “${to}”.`);
+          } catch (e2) { msg(e2.message, false); }
+        };
+      }
+    };
+
+    // rename / merge course
+    document.getElementById('courseRename').onclick = () => { document.getElementById('courseBox').hidden = false; document.getElementById('courseTo').select(); };
+    document.getElementById('courseCancel').onclick = () => { document.getElementById('courseBox').hidden = true; };
+    document.getElementById('courseGo').onclick = async () => {
+      const to = document.getElementById('courseTo').value.trim();
+      if (!to || to === topicCourse) { document.getElementById('courseBox').hidden = true; return; }
+      const merging = courses.includes(to);
+      if (merging && !confirm(`Merge all of “${topicCourse}” into “${to}”? Topics keep their names, so you can tidy them up afterwards.`)) return;
+      try {
+        const res = await api('/api/admin/courses/rename', { method: 'POST', body: { from: topicCourse, to } });
+        const old = topicCourse; topicCourse = to;
+        await topics();
+        msg(merging ? `Merged “${old}” into “${to}” (${res.moved} questions).` : `Renamed course to “${to}”.`);
+      } catch (e) { msg(e.message, false); }
+    };
   }
 
   // ---------- import ----------
