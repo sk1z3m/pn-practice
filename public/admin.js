@@ -439,7 +439,7 @@
   }
 
   // ---------- import ----------
-  const PROMPT = `Using ONLY the content in the attached lecture deck, write 25 multiple-choice questions for second-year Practical Nursing students.
+  const PROMPT = `Using ONLY the content in the attached lecture deck(s), write multiple-choice questions for second-year Practical Nursing students. Provide the response as a downloadable .json file.
 
 Rules:
 - 4 options each, exactly one clearly correct answer, plausible wrong answers
@@ -447,11 +447,11 @@ Rules:
 - Vary which letter is correct
 - Rationale: 1–3 sentences explaining why the answer is right (and why a tempting wrong answer is wrong, if useful)
 - Source: deck title and slide number the question comes from
-- Topic: a short topic name from the deck (reuse the same names so questions group well)
+- Topic: use the file name of the deck the question comes from, exactly as it appears, without the file extension (for example, "Week 6 Pain Part 1.pptx" becomes "Week 6 Pain Part 1"). Every question from the same file must have exactly the same topic. Do NOT create sub-topics from slide headings or sections.
 
-Reply with ONLY valid JSON in exactly this format, no other text:
+The .json file must contain ONLY valid JSON in exactly this format, no other text:
 {"course": "Pharmacology", "questions": [
-  {"topic": "Opioids", "stem": "Question text?", "options": ["A text", "B text", "C text", "D text"], "answer": "B", "rationale": "Why B is correct.", "source": "Week 6 Pain, slide 14"}
+  {"topic": "Week 6 Pain Part 1", "stem": "Question text?", "options": ["A text", "B text", "C text", "D text"], "answer": "B", "rationale": "Why B is correct.", "source": "Week 6 Pain Part 1, slide 14"}
 ]}`;
   async function importTab() {
     html(`
