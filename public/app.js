@@ -52,6 +52,7 @@
     [/^\/leaderboard(?:\/(\w+))?$/, (m) => leaderboard(m[1])],
     [/^\/(?:profile|me)$/, mePage],
     [/^\/updates$/, updatesPage],
+    [/^\/code\/([A-Za-z0-9-]+)$/, (m) => codeLink(m[1])],
   ];
   let lastHash = location.hash;
   async function router() {
@@ -118,6 +119,28 @@
   window.addEventListener('hashchange', router);
 
   // ---------- welcome / study code ----------
+  // Personal sign-in link (#/code/XXXX-XXXXX) from the Profile page: checks the code, saves it on this
+  // device, and swaps the address back to the home page so the code doesn't sit in the address bar.
+  const signInLink = (code) => `${location.origin}${location.pathname}#/code/${encodeURIComponent(code)}`;
+  async function codeLink(raw) {
+    const code = decodeURIComponent(raw).trim().toUpperCase();
+    const previous = store.get(LS_CODE);
+    store.set(LS_CODE, code);
+    try {
+      const r = await api('/api/me');
+      store.set(LS_NICK, r.nickname);
+      history.replaceState(null, '', '#/');
+      await router();
+      toast(`Signed in as ${r.nickname}`);
+    } catch (err) {
+      if (previous) store.set(LS_CODE, previous); else store.del(LS_CODE);
+      history.replaceState(null, '', '#/code');
+      html(`<h1>Sign-in link didn't work</h1>
+        <div class="notice error">${err.status === 401 ? 'That study code wasn\'t found. It may have been replaced or the link may be incomplete.' : esc(err.message)}</div>
+        <a class="btn" href="#/welcome">Enter your code instead</a>`);
+    }
+  }
+
   function welcome() {
     html(`
       <h1>Welcome</h1>
@@ -690,6 +713,8 @@
         <p class="small muted" style="margin:4px 0 0">Use it to sign in on another device. Keep it private.</p>
         <div class="code-box" id="codeBox">••••••••••</div>
         <div class="row"><button class="secondary small" id="reveal">Show</button><button class="secondary small" id="copy">Copy</button></div>
+        <p class="small muted" style="margin:12px 0 4px"><strong>Sign-in link.</strong> Bookmark it or save it somewhere safe. Opening it signs you in on any device or browser. Anyone with the link can use your account, so don't share it.</p>
+        <div class="row"><button class="secondary small" id="copyLink">Copy sign-in link</button></div>
       </div>
       <h2>Practice</h2>
       <div class="card">
@@ -761,6 +786,10 @@
     };
     document.getElementById('copy').onclick = async (e) => {
       try { await navigator.clipboard.writeText(code); e.target.textContent = 'Copied'; } catch { e.target.textContent = 'Copy failed'; }
+    };
+    document.getElementById('copyLink').onclick = async (e) => {
+      try { await navigator.clipboard.writeText(signInLink(code)); e.target.textContent = 'Link copied'; }
+      catch { prompt('Copy your sign-in link:', signInLink(code)); }
     };
     document.getElementById('signout').onclick = (e) => {
       e.preventDefault();

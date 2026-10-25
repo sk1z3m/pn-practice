@@ -811,8 +811,11 @@ The .json file must contain ONLY valid JSON in exactly this format, no other tex
           box.innerHTML = `<div class="card"><strong>New study code for ${esc(r.nickname)}</strong>
             <p class="small muted" style="margin:4px 0 0">Pass this on to them now. It won't be shown again.</p>
             <div class="code-box">${esc(r.code)}</div>
-            <div class="row"><button class="small secondary" id="copyCode">Copy</button><button class="small ghost" id="doneCode">Done</button></div></div>`;
+            <div class="row"><button class="small secondary" id="copyCode">Copy code</button><button class="small secondary" id="copyLink">Copy sign-in link</button><button class="small ghost" id="doneCode">Done</button></div>
+            <p class="small muted" style="margin:6px 0 0">The sign-in link signs them straight in when they open it.</p></div>`;
           document.getElementById('copyCode').onclick = async (e) => { try { await navigator.clipboard.writeText(r.code); e.target.textContent = 'Copied'; } catch {} };
+          const link = `${location.origin}/#/code/${encodeURIComponent(r.code)}`;
+          document.getElementById('copyLink').onclick = async (e) => { try { await navigator.clipboard.writeText(link); e.target.textContent = 'Link copied'; } catch { prompt('Copy the sign-in link:', link); } };
           document.getElementById('doneCode').onclick = () => { box.innerHTML = ''; };
           box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           return;
