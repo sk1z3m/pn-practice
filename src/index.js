@@ -850,6 +850,21 @@ async function adminUpdatePlayer(env, request, id) {
   return json({ ok: true });
 }
 
+// Replace a player's lost study code. Only the hash is stored, so the new code is returned once
+// for the admin to pass on; the old code stops working. Progress stays attached to the player.
+async function adminNewCode(env, id) {
+  const p = await env.DB.prepare('SELECT nickname FROM players WHERE id = ?').bind(id).first();
+  if (!p) throw new HttpError(404, 'Player not found');
+  for (let tries = 0; tries < 5; tries++) {
+    const code = newCode();
+    try {
+      await env.DB.prepare('UPDATE players SET code_hash = ? WHERE id = ?').bind(await sha256(code), id).run();
+      return json({ code, nickname: p.nickname });
+    } catch { /* code collision — try another */ }
+  }
+  throw new HttpError(500, 'Could not create a code, please try again');
+}
+
 // Permanently delete a player and their history. Their flags are kept but made anonymous.
 async function adminDeletePlayer(env, id) {
   const p = await env.DB.prepare('SELECT id, nickname FROM players WHERE id = ?').bind(id).first();
@@ -1008,6 +1023,7 @@ async function route(request, env) {
     if (path === '/api/admin/flags' && m === 'GET') return adminFlags(env, url);
     if (path === '/api/admin/flags/resolve' && m === 'POST') return adminResolveFlags(env, request);
     if (path === '/api/admin/players' && m === 'GET') return adminPlayers(env);
+    if ((x = path.match(/^\/api\/admin\/players\/([\w-]+)\/new-code$/)) && m === 'POST') return adminNewCode(env, x[1]);
     if ((x = path.match(/^\/api\/admin\/players\/([\w-]+)$/))) {
       if (m === 'PUT') return adminUpdatePlayer(env, request, x[1]);
       if (m === 'DELETE') return adminDeletePlayer(env, x[1]);

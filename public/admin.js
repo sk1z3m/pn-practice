@@ -784,13 +784,15 @@ The .json file must contain ONLY valid JSON in exactly this format, no other tex
     const r = await api('/api/admin/players');
     html(`
       <h1>Players</h1>
-      <p class="small muted">Study codes aren't stored and can't be shown. You can rename a nickname, hide someone from leaderboards, or delete them entirely. "Opted out" means the student chose to stay off leaderboards.</p>
+      <p class="small muted">Study codes aren't stored and can't be shown. Students can see their own code on their Profile page. If someone loses theirs, use <strong>New code</strong> to give them a replacement; their progress stays. You can also rename a nickname, hide someone from leaderboards, or delete them entirely. "Opted out" means the student chose to stay off leaderboards.</p>
       <div id="msg"></div>
+      <div id="newCode"></div>
       <div class="card table-wrap">
         ${r.players.length ? `<table><thead><tr><th>Nickname</th><th>Joined</th><th class="num">Seen</th><th class="num">Practice</th><th class="num">Ranked</th><th></th></tr></thead><tbody>
         ${r.players.map((p) => `<tr data-id="${p.id}"><td>${esc(p.nickname)}${p.hidden ? ' <span class="pill closed">hidden</span>' : ''}${p.optedOut ? ' <span class="pill">opted out</span>' : ''}</td>
           <td class="small">${fmtDate(p.created_at)}</td><td class="num">${p.questionsSeen}</td><td class="num">${p.practiceAnswers}</td><td class="num">${p.rankedTests}</td>
           <td class="row"><button class="small secondary" data-act="rename">Rename</button>
+          <button class="small secondary" data-act="code" data-nick="${esc(p.nickname)}">New code</button>
           <button class="small ghost" data-act="hide" data-h="${p.hidden ? 0 : 1}">${p.hidden ? 'Unhide' : 'Hide'}</button>
           <button class="small danger" data-act="delete" data-nick="${esc(p.nickname)}">Delete</button></td></tr>`).join('')}
         </tbody></table>` : '<div class="empty">No players yet.</div>'}
@@ -801,6 +803,19 @@ The .json file must contain ONLY valid JSON in exactly this format, no other tex
         if (b.dataset.act === 'rename') {
           const n = prompt('New nickname'); if (!n) return;
           await api(`/api/admin/players/${id}`, { method: 'PUT', body: { nickname: n } });
+        } else if (b.dataset.act === 'code') {
+          const nick = b.dataset.nick;
+          if (!confirm(`Give ${nick} a new study code?\n\nTheir old code will stop working on every device. Their progress, scores and nickname stay the same.`)) return;
+          const r = await api(`/api/admin/players/${id}/new-code`, { method: 'POST' });
+          const box = document.getElementById('newCode');
+          box.innerHTML = `<div class="card"><strong>New study code for ${esc(r.nickname)}</strong>
+            <p class="small muted" style="margin:4px 0 0">Pass this on to them now. It won't be shown again.</p>
+            <div class="code-box">${esc(r.code)}</div>
+            <div class="row"><button class="small secondary" id="copyCode">Copy</button><button class="small ghost" id="doneCode">Done</button></div></div>`;
+          document.getElementById('copyCode').onclick = async (e) => { try { await navigator.clipboard.writeText(r.code); e.target.textContent = 'Copied'; } catch {} };
+          document.getElementById('doneCode').onclick = () => { box.innerHTML = ''; };
+          box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          return;
         } else if (b.dataset.act === 'delete') {
           const nick = b.dataset.nick;
           if (!confirm(`Permanently delete ${nick}?\n\nThis removes their study code, nickname, practice history and ranked test attempts. Their code will stop working. Any questions they flagged stay, but become anonymous.\n\nThis can't be undone.`)) return;
