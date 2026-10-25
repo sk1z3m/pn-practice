@@ -622,14 +622,17 @@ async function adminImport(env, request) {
 
 // Recent uploads with what depends on them, so the admin can undo safely
 async function adminImports(env) {
+  // One grouped pass per table, then joined to the imports (per-import subqueries re-read the tables each time).
   const { results } = await env.DB.prepare(`SELECT i.id, i.created_at, i.courses, i.count AS uploaded,
-      (SELECT COUNT(*) FROM questions q WHERE q.import_id = i.id) AS remaining,
-      (SELECT COUNT(DISTINCT q.topic) FROM questions q WHERE q.import_id = i.id) AS topics,
-      (SELECT COUNT(*) FROM questions q WHERE q.import_id = i.id AND q.updated_at > q.created_at) AS edited,
-      (SELECT COUNT(*) FROM practice_answers pa JOIN questions q ON q.id = pa.question_id WHERE q.import_id = i.id) AS answers,
-      (SELECT COUNT(*) FROM flags f JOIN questions q ON q.id = f.question_id WHERE q.import_id = i.id) AS flags,
-      (SELECT COUNT(*) FROM ranked_questions rq JOIN questions q ON q.id = rq.question_id WHERE q.import_id = i.id) AS inRanked
-    FROM imports i ORDER BY i.created_at DESC LIMIT 15`).all();
+      COALESCE(s.remaining, 0) AS remaining, COALESCE(s.topics, 0) AS topics, COALESCE(s.edited, 0) AS edited,
+      COALESCE(a.n, 0) AS answers, COALESCE(f.n, 0) AS flags, COALESCE(r.n, 0) AS inRanked
+    FROM imports i
+    LEFT JOIN (SELECT import_id, COUNT(*) AS remaining, COUNT(DISTINCT topic) AS topics, SUM(updated_at > created_at) AS edited
+      FROM questions WHERE import_id IS NOT NULL GROUP BY import_id) s ON s.import_id = i.id
+    LEFT JOIN (SELECT q.import_id, COUNT(*) AS n FROM practice_answers pa JOIN questions q ON q.id = pa.question_id GROUP BY q.import_id) a ON a.import_id = i.id
+    LEFT JOIN (SELECT q.import_id, COUNT(*) AS n FROM flags fl JOIN questions q ON q.id = fl.question_id GROUP BY q.import_id) f ON f.import_id = i.id
+    LEFT JOIN (SELECT q.import_id, COUNT(*) AS n FROM ranked_questions rq JOIN questions q ON q.id = rq.question_id GROUP BY q.import_id) r ON r.import_id = i.id
+    ORDER BY i.created_at DESC LIMIT 15`).all();
   return json({ imports: results });
 }
 
