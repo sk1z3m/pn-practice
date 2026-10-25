@@ -157,7 +157,19 @@ async function updateSettings(env, request) {
   return json({ nickname: r.nickname, onLeaderboard: !r.leaderboard_opt_out, lbPrompted: !!r.lb_prompted });
 }
 
+// The course/topic list barely changes but is loaded on every home and practice-setup page, so each
+// Worker instance keeps it for a minute. Any admin change clears this instance's copy straight away.
+const CATALOG_TTL = 60 * 1000;
+let catalogCache = null; // { at, body }
 async function catalog(env) {
+  if (catalogCache && Date.now() - catalogCache.at < CATALOG_TTL) {
+    return new Response(catalogCache.body, { headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' } });
+  }
+  const res = await buildCatalog(env);
+  catalogCache = { at: Date.now(), body: await res.clone().text() };
+  return res;
+}
+async function buildCatalog(env) {
   const { results } = await env.DB.prepare(`SELECT course, topic, COUNT(*) AS n FROM questions
     WHERE status = 'approved' AND id NOT IN (${LOCKED_SQL})
     GROUP BY course, topic ORDER BY course, topic`).bind(Date.now()).all();
@@ -992,6 +1004,7 @@ async function route(request, env) {
 
   if (path.startsWith('/api/admin')) {
     requireAdmin(env, request);
+    if (m !== 'GET') catalogCache = null;
     if (path === '/api/admin/check') return json({ ok: true });
     if (path === '/api/admin/questions' && m === 'GET') return adminQuestions(env, request, url);
     if (path === '/api/admin/questions/import' && m === 'POST') return adminImport(env, request);
