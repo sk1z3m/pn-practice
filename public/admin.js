@@ -665,7 +665,7 @@ The .json file must contain ONLY valid JSON in exactly this format, no other tex
   }
 
   async function rankedNew() {
-    const r = await api('/api/admin/questions?status=approved');
+    const [r, g] = await Promise.all([api('/api/admin/questions?status=approved'), api('/api/admin/groups')]);
     const courses = [...new Set(r.questions.map((q) => q.course))];
     const now = Date.now();
     const nextWeek = now + 7 * 864e5;
@@ -679,6 +679,10 @@ The .json file must contain ONLY valid JSON in exactly this format, no other tex
           <label class="field"><span>Description (optional)</span><input type="text" name="description"></label>
           <label class="field"><span>Opens</span><input type="datetime-local" name="opens" value="${toLocalInput(now)}" required></label>
           <label class="field"><span>Closes</span><input type="datetime-local" name="closes" value="${toLocalInput(nextWeek)}" required></label>
+        </div>
+        <div class="field" id="groupWrap" style="margin:6px 0 0"><span>Groups <span class="muted">(pick one or more to limit the questions to their topics)</span></span>
+          <div class="seg wrap" id="groupSeg"></div>
+          <div class="small muted" id="groupNote" style="margin-top:4px"></div>
         </div>
         <div class="row" style="margin:6px 0">
           <strong>Questions</strong> <span class="small muted" id="selCount"></span><span class="spacer"></span>
@@ -695,16 +699,55 @@ The .json file must contain ONLY valid JSON in exactly this format, no other tex
     const courseSel = document.getElementById('course');
     const picker = document.getElementById('picker');
     const topicF = document.getElementById('topicF');
-    const count = () => (document.getElementById('selCount').textContent = `(${picker.querySelectorAll('input:checked').length} selected)`);
-    const renderPicker = () => {
-      const qs = r.questions.filter((q) => q.course === courseSel.value);
-      const topics = [...new Set(qs.map((q) => q.topic))];
-      topicF.innerHTML = `<option value="">All topics</option>${topics.map((t) => `<option>${esc(t)}</option>`).join('')}`;
-      picker.innerHTML = qs.map((q) => `<label class="check" data-topic="${esc(q.topic)}"><input type="checkbox" value="${q.id}"><span><span class="small muted">#${q.id} · ${esc(q.topic)}${q.inRanked ? ' · used in another ranked test' : ''}</span><br>${esc(q.stem)}</span></label>`).join('') || '<div class="empty">No approved questions for this course.</div>';
+    const groupSeg = document.getElementById('groupSeg');
+    const selectedGroups = new Set();
+    const count = () => {
+      const shown = [...picker.querySelectorAll('[data-topic]')].filter((el) => el.style.display !== 'none').length;
+      document.getElementById('selCount').textContent = `(${picker.querySelectorAll('input:checked').length} selected · ${shown} shown)`;
+    };
+    // Topics allowed by the chosen groups (null = no group chosen, so every topic is allowed).
+    const groupTopics = () => {
+      if (!selectedGroups.size) return null;
+      return new Set(g.groups.filter((x) => selectedGroups.has(x.id)).flatMap((x) => x.topics));
+    };
+    const applyFilter = () => {
+      const allowed = groupTopics();
+      picker.querySelectorAll('[data-topic]').forEach((el) => {
+        const t = el.dataset.topic;
+        el.style.display = (!allowed || allowed.has(t)) && (!topicF.value || t === topicF.value) ? '' : 'none';
+      });
+      const chosen = g.groups.filter((x) => selectedGroups.has(x.id));
+      document.getElementById('groupNote').textContent = chosen.length
+        ? `Topics: ${[...allowed].join(', ')}` : '';
       count();
     };
+    const renderTopicFilter = () => {
+      const allowed = groupTopics();
+      const qs = r.questions.filter((q) => q.course === courseSel.value && (!allowed || allowed.has(q.topic)));
+      const topics = [...new Set(qs.map((q) => q.topic))];
+      if (topicF.value && !topics.includes(topicF.value)) topicF.value = '';
+      const keep = topicF.value;
+      topicF.innerHTML = `<option value="">All topics</option>${topics.map((t) => `<option ${t === keep ? 'selected' : ''}>${esc(t)}</option>`).join('')}`;
+    };
+    const renderGroups = () => {
+      const list = g.groups.filter((x) => x.course === courseSel.value);
+      document.getElementById('groupWrap').style.display = list.length ? '' : 'none';
+      groupSeg.innerHTML = list.map((x) => `<button type="button" role="checkbox" data-group="${x.id}" aria-checked="${selectedGroups.has(x.id)}" class="${selectedGroups.has(x.id) ? 'on' : ''}">${esc(x.name)}</button>`).join('');
+    };
+    groupSeg.onclick = (e) => {
+      const b = e.target.closest('[data-group]'); if (!b) return;
+      const id = +b.dataset.group;
+      if (selectedGroups.has(id)) selectedGroups.delete(id); else selectedGroups.add(id);
+      renderGroups(); renderTopicFilter(); applyFilter();
+    };
+    const renderPicker = () => {
+      selectedGroups.clear();
+      const qs = r.questions.filter((q) => q.course === courseSel.value);
+      picker.innerHTML = qs.map((q) => `<label class="check" data-topic="${esc(q.topic)}"><input type="checkbox" value="${q.id}"><span><span class="small muted">#${q.id} · ${esc(q.topic)}${q.inRanked ? ' · used in another ranked test' : ''}</span><br>${esc(q.stem)}</span></label>`).join('') || '<div class="empty">No approved questions for this course.</div>';
+      renderGroups(); renderTopicFilter(); applyFilter();
+    };
     courseSel.onchange = renderPicker;
-    topicF.onchange = () => picker.querySelectorAll('[data-topic]').forEach((el) => (el.style.display = !topicF.value || el.dataset.topic === topicF.value ? '' : 'none'));
+    topicF.onchange = applyFilter;
     picker.onchange = count;
     document.getElementById('clear').onclick = () => { picker.querySelectorAll('input').forEach((b) => (b.checked = false)); count(); };
     document.getElementById('rand').onclick = () => {
